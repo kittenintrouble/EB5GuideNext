@@ -182,10 +182,31 @@
 "base.favorite.add" = "즐겨찾기에 추가";
 "base.favorite.remove" = "즐겨찾기에서 제거";
 
+
 ///////////////////////////
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "퀴즈로 스스로를 테스트하세요";
+"quiz.title" = "EB-5 퀴즈";
+"quiz.row.progress_format" = "정답 %1$d / %2$d";
+"quiz.progress_format" = "%1$d / %2$d";
+"quiz.action.next" = "다음";
+"quiz.action.finish" = "완료";
+"quiz.action.restart" = "퀴즈 다시 풀기";
+"quiz.action.close" = "닫기";
+"quiz.feedback.incorrect" = "정답이 아닙니다. 강조된 답을 확인하거나 그대로 진행하세요.";
+"quiz.feedback.correct_answer" = "정답: %1$@";
+"quiz.result.summary_format" = "%2$d문제 중 %1$d문제를 맞혔습니다";
+"quiz.result.percentage_format" = "%.0f%%";
+"quiz.result.average_time" = "문항당 평균 시간";
+"quiz.result.average_time_value" = "%.1f초";
+"quiz.result.attempts" = "시도 횟수";
+"quiz.result.best_score" = "최고 점수";
+"quiz.result.best_score_value" = "정답 %1$d / %2$d";
+"quiz.result.message.perfect" = "완벽한 점수입니다!";
+"quiz.result.message.great" = "잘하셨어요!";
+"quiz.result.message.keep_going" = "조금 더 복습하고 다시 도전하세요.";
+"quiz.prompt.match_description" = "\"%1$@\"에 가장 잘 맞는 요약은 무엇인가요?";
 
 
 ///////////////////////////
@@ -198,4 +219,3 @@
 // Projects
 ///////////////////////////
 "projects.placeholder" = "EB-5 프로젝트를 살펴보세요";
-

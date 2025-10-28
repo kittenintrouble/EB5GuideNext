@@ -187,6 +187,26 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "Test yourself with quizzes";
+"quiz.title" = "EB-5 Quizzes";
+"quiz.row.progress_format" = "%1$d / %2$d correct";
+"quiz.progress_format" = "%1$d of %2$d";
+"quiz.action.next" = "Next";
+"quiz.action.finish" = "Finish";
+"quiz.action.restart" = "Restart Quiz";
+"quiz.action.close" = "Close";
+"quiz.feedback.incorrect" = "Not quite — review the highlighted answer or continue with your choice.";
+"quiz.feedback.correct_answer" = "Correct answer: %1$@";
+"quiz.result.summary_format" = "You answered %1$d out of %2$d correctly";
+"quiz.result.percentage_format" = "%.0f%%";
+"quiz.result.average_time" = "Average time per question";
+"quiz.result.average_time_value" = "%.1f s";
+"quiz.result.attempts" = "Attempts";
+"quiz.result.best_score" = "Best score";
+"quiz.result.best_score_value" = "%1$d / %2$d correct";
+"quiz.result.message.perfect" = "Perfect score!";
+"quiz.result.message.great" = "Great job!";
+"quiz.result.message.keep_going" = "Keep going—review the lessons and try again.";
+"quiz.prompt.match_description" = "Which summary best matches \"%1$@\"?";
 
 
 ///////////////////////////

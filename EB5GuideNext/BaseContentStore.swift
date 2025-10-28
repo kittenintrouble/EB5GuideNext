@@ -42,7 +42,7 @@ final class BaseContentStore: ObservableObject {
 
     private static let favoritesKey = "base.favorite.article_ids"
     private static let completedKey = "base.completed.article_ids"
-    private static let categoryOrder = [
+    static let categoryOrder = [
         "Compliance",
         "EB-5 Basics",
         "Foundations",
@@ -134,6 +134,11 @@ final class BaseContentStore: ObservableObject {
     func appearanceCategoryName(forArticleID id: Int) -> String? {
         loadEnglishReferenceIfNeeded()
         return englishReferenceByID[id]?.category
+    }
+
+    func canonicalSubcategoryName(forArticleID id: Int) -> String? {
+        loadEnglishReferenceIfNeeded()
+        return englishReferenceByID[id]?.subcategory
     }
 
     func canonicalSubcategoryName(for articles: [EB5Article]) -> String? {

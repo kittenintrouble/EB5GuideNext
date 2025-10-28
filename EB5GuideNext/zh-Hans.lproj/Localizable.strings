@@ -187,6 +187,26 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "通过测验检验自己";
+"quiz.title" = "EB-5 测验";
+"quiz.row.progress_format" = "正确 %1$d / %2$d";
+"quiz.progress_format" = "%1$d / %2$d";
+"quiz.action.next" = "下一题";
+"quiz.action.finish" = "完成";
+"quiz.action.restart" = "重新开始测验";
+"quiz.action.close" = "关闭";
+"quiz.feedback.incorrect" = "答案不正确，可选择高亮项或继续保持当前选择。";
+"quiz.feedback.correct_answer" = "正确答案：%1$@";
+"quiz.result.summary_format" = "共 %2$d 题，你答对了 %1$d 题";
+"quiz.result.percentage_format" = "%.0f%%";
+"quiz.result.average_time" = "每题平均耗时";
+"quiz.result.average_time_value" = "%.1f 秒";
+"quiz.result.attempts" = "尝试次数";
+"quiz.result.best_score" = "最佳成绩";
+"quiz.result.best_score_value" = "正确 %1$d / %2$d";
+"quiz.result.message.perfect" = "满分！";
+"quiz.result.message.great" = "干得好！";
+"quiz.result.message.keep_going" = "继续练习，再接再厉。";
+"quiz.prompt.match_description" = "哪段摘要最符合“%1$@”？";
 
 
 ///////////////////////////
@@ -199,4 +219,3 @@
 // Projects
 ///////////////////////////
 "projects.placeholder" = "探索 EB-5 项目";
-

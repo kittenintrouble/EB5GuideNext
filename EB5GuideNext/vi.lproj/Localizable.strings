@@ -187,6 +187,26 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "Tự kiểm tra bằng các bài kiểm tra";
+"quiz.title" = "Bài kiểm tra EB-5";
+"quiz.row.progress_format" = "%1$d / %2$d câu đúng";
+"quiz.progress_format" = "%1$d trên %2$d";
+"quiz.action.next" = "Tiếp tục";
+"quiz.action.finish" = "Hoàn thành";
+"quiz.action.restart" = "Làm lại bài kiểm tra";
+"quiz.action.close" = "Đóng";
+"quiz.feedback.incorrect" = "Chưa chính xác – xem câu trả lời được tô sáng hoặc tiếp tục với lựa chọn của bạn.";
+"quiz.feedback.correct_answer" = "Đáp án đúng: %1$@";
+"quiz.result.summary_format" = "Bạn trả lời đúng %1$d trên %2$d câu";
+"quiz.result.percentage_format" = "%.0f%%";
+"quiz.result.average_time" = "Thời gian trung bình mỗi câu";
+"quiz.result.average_time_value" = "%.1f giây";
+"quiz.result.attempts" = "Số lần thử";
+"quiz.result.best_score" = "Điểm cao nhất";
+"quiz.result.best_score_value" = "Đúng %1$d / %2$d câu";
+"quiz.result.message.perfect" = "Điểm tuyệt đối!";
+"quiz.result.message.great" = "Làm rất tốt!";
+"quiz.result.message.keep_going" = "Hãy tiếp tục ôn và thử lại nhé.";
+"quiz.prompt.match_description" = "Bản tóm tắt nào phù hợp nhất với \"%1$@\"?";
 
 
 ///////////////////////////
@@ -199,4 +219,3 @@
 // Projects
 ///////////////////////////
 "projects.placeholder" = "Khám phá các dự án EB-5";
-
