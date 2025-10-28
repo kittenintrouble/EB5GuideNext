@@ -28,6 +28,19 @@ final class LanguageManager: ObservableObject {
         return NSLocalizedString(key, comment: "")
     }
 
+    func localizedFormat(_ key: String, arguments: [CVarArg]) -> String {
+        let format = localizedString(for: key)
+        return String(format: format, locale: currentLocale, arguments: arguments)
+    }
+
+    func localizedFormat(_ key: String, _ args: CVarArg...) -> String {
+        localizedFormat(key, arguments: args)
+    }
+
+    func completionText(completed: Int, total: Int) -> String {
+        localizedFormat("base.completed_format", completed, total)
+    }
+
     private func normalize(_ code: String) -> String {
         switch code.lowercased() {
         case "zh", "zh-cn", "zh-hans": return "zh-Hans"

@@ -17,10 +17,9 @@ struct MainTabView: View {
     }
 }
 
-struct HomeView: View { var body: some View { NavigationStack { Text("home.placeholder").navigationTitle("tab.home") } } }
-struct BaseView: View { var body: some View { NavigationStack { Text("base.placeholder").navigationTitle("tab.base") } } }
-struct QuizzesView: View { var body: some View { NavigationStack { Text("quizzes.placeholder").navigationTitle("tab.quizzes") } } }
-struct NewsView: View { var body: some View { NavigationStack { Text("news.placeholder").navigationTitle("tab.news") } } }
-struct ProjectsView: View { var body: some View { NavigationStack { Text("projects.placeholder").navigationTitle("tab.projects") } } }
+struct HomeView: View { var body: some View { NavigationStack { Text("home.placeholder").navigationTitle("tab.home").navigationBarTitleDisplayMode(.large) } } }
+struct QuizzesView: View { var body: some View { NavigationStack { Text("quizzes.placeholder").navigationTitle("tab.quizzes").navigationBarTitleDisplayMode(.large) } } }
+struct NewsView: View { var body: some View { NavigationStack { Text("news.placeholder").navigationTitle("tab.news").navigationBarTitleDisplayMode(.large) } } }
+struct ProjectsView: View { var body: some View { NavigationStack { Text("projects.placeholder").navigationTitle("tab.projects").navigationBarTitleDisplayMode(.large) } } }
 
 #Preview { MainTabView() }

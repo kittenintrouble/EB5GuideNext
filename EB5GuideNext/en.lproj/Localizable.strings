@@ -172,6 +172,15 @@
 // Base
 ///////////////////////////
 "base.placeholder" = "Base content";
+"base.back" = "Back";
+"base.completed_format" = "Completed: %lld/%lld";
+"base.examples" = "Examples";
+"base.article.mark_completed" = "Mark completed";
+"base.article.completed" = "Completed";
+"base.article.completed_badge" = "Completed";
+"base.article.unavailable" = "This article is unavailable in the current language.";
+"base.favorite.add" = "Add to favorites";
+"base.favorite.remove" = "Remove from favorites";
 
 
 ///////////////////////////
@@ -190,4 +199,3 @@
 // Projects
 ///////////////////////////
 "projects.placeholder" = "Explore EB-5 projects";
-

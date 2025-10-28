@@ -1,0 +1,3004 @@
+[
+  {
+    "id": 1,
+    "title": "EB-5 Program Overview",
+    "category": "Foundations",
+    "subcategory": "Program Basics",
+    "description": "The EB-5 Immigrant Investor Program allows qualified foreign investors to obtain a U.S. green card by investing in a new commercial enterprise that creates jobs for American workers.",
+    "shortDescription": "How EB-5 connects investment to permanent residency.",
+    "examples": [
+      "Investing $800,000 in a targeted employment area (TEA) project",
+      "Creating or preserving at least 10 full-time U.S. jobs"
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2,
+    "title": "Direct vs. Regional Center Investment",
+    "category": "Foundations",
+    "subcategory": "Investment Models",
+    "description": "Investors may choose between direct investments, where they manage the business operations, and regional center investments, where they join pooled projects managed by professionals.",
+    "shortDescription": "Comparing the two main EB-5 investment paths.",
+    "examples": [
+      "Owning and operating a restaurant as a direct investor",
+      "Participating in a real estate development through a regional center"
+    ],
+    "dayNumber": 2,
+    "isCompleted": false
+  },
+  {
+    "id": 3,
+    "title": "Job Creation Requirements",
+    "category": "Compliance",
+    "subcategory": "USCIS Criteria",
+    "description": "Every EB-5 investment must lead to the creation of at least 10 full-time positions for qualifying U.S. workers within two years of the investor receiving conditional residency.",
+    "shortDescription": "Why job creation is the centerpiece of EB-5 eligibility.",
+    "examples": [
+      "Hiring hotel staff for a new development",
+      "Counting indirect jobs supported by a regional center project"
+    ],
+    "dayNumber": 3,
+    "isCompleted": false
+  },
+  {
+    "id": 101,
+    "title": "Minimum Investment Amount",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "To qualify for the EB-5 program, an investor must invest a minimum of $1,050,000 in a standard area or $800,000 in a Targeted Employment Area (TEA) or qualified infrastructure project. These thresholds were established in 2022 and may adjust every five years for inflation.",
+    "shortDescription": "To qualify for the EB-5 program, an investor must invest a minimum of $1,050,000 in a standard area or $800,000 in a Targeted Employment…",
+    "examples": [
+      "An investor choosing a rural development project classified as a TEA only needs to invest $800,000 instead of $1.05 million.",
+      "A luxury real estate project in a non-TEA urban zone would require the full $1.05 million investment to qualify for EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 102,
+    "title": "Job Creation Requirement",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "Each EB-5 investment must result in the creation of at least 10 full-time jobs for U.S. workers. These positions must be sustained for a minimum of two years and must be filled by qualified U.S. employees—not including the investor or their immediate family.",
+    "shortDescription": "Each EB-5 investment must result in the creation of at least 10 full-time jobs for U.S.",
+    "examples": [
+      "A new restaurant hires 12 full-time employees to run operations, satisfying the job creation requirement.",
+      "A regional center project may calculate indirect job creation using economic modeling tools like IMPLAN."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 103,
+    "title": "New Commercial Enterprise",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "The investment must be made in a new commercial enterprise established after November 29, 1990, or in a substantially restructured or expanded existing business. Passive investments, like purchasing real estate for personal use, do not qualify.",
+    "shortDescription": "The investment must be made in a new commercial enterprise established after November 29, 1990, or in a substantially restructured or…",
+    "examples": [
+      "Purchasing a residential property does not count as a qualifying investment for EB-5.",
+      "Expanding a local chain by 40% in workforce and physical footprint can qualify as a restructured business under EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 104,
+    "title": "Lawful Source of Funds",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "Investors must prove that the funds used for the EB-5 investment were obtained through lawful means. Acceptable sources include business profits, salaries, loans, gifts, or inheritance. Documentation such as bank records, tax returns, and contracts must be provided to trace the origin of the funds.",
+    "shortDescription": "Investors must prove that the funds used for the EB-5 investment were obtained through lawful means.",
+    "examples": [
+      "An investor sells a business and provides tax returns, sales agreements, and deposit records to show the origin of the investment capital.",
+      "If the capital is a gift, the investor must submit a gift letter along with the donor's financial documents proving the lawful source."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 105,
+    "title": "Capital at Risk Requirement",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "The invested capital must be at risk for the purpose of generating a return. There can be no guarantees of return or redemption of the funds. The investment must be subject to loss to meet EB-5 regulations.",
+    "shortDescription": "The invested capital must be at risk for the purpose of generating a return.",
+    "examples": [
+      "A developer cannot guarantee that the investment will be returned after five years—this would disqualify the investment.",
+      "Investors in a project understand that they may not receive their capital back if the project fails financially."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 106,
+    "title": "Full-Time Job Definition",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "A full-time job for EB-5 purposes means employment of at least 35 working hours per week. It must be permanent and filled by a qualifying U.S. worker—not a temporary, part-time, or contract position.",
+    "shortDescription": "A full-time job for EB-5 purposes means employment of at least 35 working hours per week.",
+    "examples": [
+      "Hiring a staff member for 40 hours per week qualifies as full-time employment.",
+      "Two part-time roles adding up to 35 hours do not qualify as one full-time job."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 107,
+    "title": "Targeted Employment Area (TEA) Eligibility",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "To qualify for the reduced investment amount of $800,000, the EB-5 investment must be made in a TEA, defined as a rural area or one with high unemployment (at least 150% of the national average).",
+    "shortDescription": "To qualify for the reduced investment amount of $800,000, the EB-5 investment must be made in a TEA, defined as a rural area or one with…",
+    "examples": [
+      "A rural town outside a metropolitan area qualifies as a TEA under current USCIS rules.",
+      "A project in a city district with 9% unemployment qualifies if the national rate is around 6%."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 108,
+    "title": "Investor's Active Role",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "The investor must engage in the management of the new enterprise. This requirement can be met by acting as a corporate officer or board member, or as a limited partner with defined voting rights.",
+    "shortDescription": "The investor must engage in the management of the new enterprise.",
+    "examples": [
+      "An investor running a restaurant directly satisfies the active management condition.",
+      "As a limited partner in a regional center, an investor has voting rights on major decisions—this also qualifies."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 109,
+    "title": "Sustainment of Investment",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "The EB-5 investment must remain 'at risk' and deployed for the duration of the two-year conditional residency period. Early return of funds can result in denial of the I-829 petition.",
+    "shortDescription": "The EB-5 investment must remain 'at risk' and deployed for the duration of the two-year conditional residency period.",
+    "examples": [
+      "Funds are redeployed to another qualifying project if the original one ends before the I-829 is filed.",
+      "Returning investment capital before the 2-year mark without fulfilling job creation may lead to denial."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 110,
+    "title": "Evidence of Job Creation",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "Investors must submit documentation to show that their investment resulted in the required job creation. Acceptable evidence includes payroll records, tax documents, and third-party economic analyses.",
+    "shortDescription": "Investors must submit documentation to show that their investment resulted in the required job creation.",
+    "examples": [
+      "Submitting W-2s and payroll ledgers for 10 full-time employees hired by the investor's business.",
+      "A regional center provides an economist’s report modeling indirect job creation from the project."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 111,
+    "title": "Business Plan Requirement",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "A comprehensive business plan is required to demonstrate the viability of the new enterprise and the likelihood of creating at least 10 jobs. It must include financial projections, hiring timelines, and detailed business activities.",
+    "shortDescription": "A comprehensive business plan is required to demonstrate the viability of the new enterprise and the likelihood of creating at least 10…",
+    "examples": [
+      "A restaurant startup includes a 5-year financial forecast and staffing chart in its business plan.",
+      "A construction firm submits a project schedule showing hiring phases and expected job creation dates."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 112,
+    "title": "Proof of Investment",
+    "category": "EB-5 Basics",
+    "subcategory": "Eligibility Requirements",
+    "description": "Applicants must provide clear evidence that the invested funds have been committed to the new commercial enterprise. This can include bank transfers, subscription agreements, and escrow documentation.",
+    "shortDescription": "Applicants must provide clear evidence that the invested funds have been committed to the new commercial enterprise.",
+    "examples": [
+      "An investor submits a wire transfer receipt and escrow agreement to show the funds have been properly committed.",
+      "A signed capital contribution agreement confirms the investor’s participation in the business."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 201,
+    "title": "Permanent Residency for Investor and Family",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "The EB-5 program offers a direct path to U.S. permanent residency (Green Card) for the investor, their spouse, and unmarried children under 21 years old. This allows the entire family to live, work, and study anywhere in the U.S.",
+    "shortDescription": "The EB-5 program offers a direct path to U.S.",
+    "examples": [
+      "An investor and their spouse, along with two teenage children, receive Green Cards after successful EB-5 petition approval.",
+      "The family can relocate to any U.S. state, regardless of where the EB-5 investment project is located."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 202,
+    "title": "Freedom to Live and Work Anywhere in the U.S.",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "EB-5 Green Card holders are not tied to a specific employer or geographic area. They are free to choose any location to live and pursue employment, education, or business opportunities throughout the United States.",
+    "shortDescription": "EB-5 Green Card holders are not tied to a specific employer or geographic area.",
+    "examples": [
+      "An investor funds a project in Texas but chooses to settle in California with their family.",
+      "The investor’s spouse is free to work in any industry or even start their own business."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 203,
+    "title": "Path to U.S. Citizenship",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "After maintaining permanent residency for five years (including the two conditional years), EB-5 Green Card holders may apply for U.S. citizenship, provided they meet all naturalization requirements.",
+    "shortDescription": "After maintaining permanent residency for five years (including the two conditional years), EB-5 Green Card holders may apply for U.S.",
+    "examples": [
+      "An investor receives a Green Card in 2025 and becomes eligible to apply for U.S. citizenship in 2030.",
+      "Children included in the EB-5 petition can also apply for citizenship after five years of permanent residency.",
+      "Children over 18 may naturalize independently, while younger children may automatically acquire citizenship if parents do.",
+      "The investor’s spouse applies for naturalization five years after becoming a conditional resident."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 204,
+    "title": "No Sponsorship Required",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "Unlike employment-based or family-based immigration, the EB-5 program does not require a U.S. employer or family member to sponsor the applicant. The investor qualifies independently based on their capital investment.",
+    "shortDescription": "Unlike employment-based or family-based immigration, the EB-5 program does not require a U.S.",
+    "examples": [
+      "An entrepreneur from Brazil invests in a qualified project and obtains a Green Card without needing a job offer or family connection.",
+      "EB-5 applicants are not subject to the same lengthy sponsorship-based immigration queues."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 205,
+    "title": "Educational Advantages for Children",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "Children of EB-5 investors are eligible to attend U.S. schools as residents, often qualifying for in-state tuition at public universities. They also avoid student visa restrictions and have more flexibility in employment while studying.",
+    "shortDescription": "Children of EB-5 investors are eligible to attend U.S.",
+    "examples": [
+      "An EB-5 investor’s child enrolls in a California university and pays reduced in-state tuition rates.",
+      "Unlike F-1 students, children of EB-5 holders can apply for internships or work without needing special permits."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 206,
+    "title": "Ability to Start a Business",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "Green Card holders can freely establish or invest in businesses in the U.S. without requiring additional work authorization. This is particularly beneficial for entrepreneurs who want to manage or expand their ventures.",
+    "shortDescription": "Green Card holders can freely establish or invest in businesses in the U.S.",
+    "examples": [
+      "An investor opens a new café chain in New York and hires U.S. staff without any further immigration steps.",
+      "The investor can expand their existing business from abroad into the U.S. market."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 207,
+    "title": "Travel Flexibility",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "With a Green Card, EB-5 investors and their families can travel freely in and out of the U.S. They are not subject to visa restrictions that often apply to temporary work or student visa holders.",
+    "shortDescription": "With a Green Card, EB-5 investors and their families can travel freely in and out of the U.S.",
+    "examples": [
+      "An EB-5 investor travels internationally for business and re-enters the U.S. without needing a visa.",
+      "Green Card holders can use their status to visit family abroad and return to the U.S. freely."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 208,
+    "title": "Retirement Opportunities",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "EB-5 investors may use their permanent resident status to retire in the U.S., enjoying access to healthcare, quality of life, and the ability to sponsor other family members later.",
+    "shortDescription": "EB-5 investors may use their permanent resident status to retire in the U.S., enjoying access to healthcare, quality of life, and the…",
+    "examples": [
+      "A retired investor settles in Florida and enjoys full access to Medicare after becoming a U.S. citizen.",
+      "Permanent residency allows the investor to bring aging parents to the U.S. through family-based immigration."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 209,
+    "title": "Relatively Quick Route to Green Card",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "Compared to many other immigration programs, EB-5 offers a relatively fast path to obtaining permanent residency—especially for applicants from countries without visa backlogs or those investing in reserved visa categories (rural or high-unemployment areas).",
+    "shortDescription": "Compared to many other immigration programs, EB-5 offers a relatively fast path to obtaining permanent residency—especially for applicants…",
+    "examples": [
+      "An investor from a low-demand country receives a conditional Green Card within 18–24 months of filing.",
+      "Investments in rural TEAs may be eligible for priority processing and set-aside visa allocations."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 210,
+    "title": "Investment Opportunity",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "In addition to the immigration benefit, EB-5 investors may earn a return on their investment depending on the project structure. While the primary goal is the Green Card, some projects offer modest returns or equity.",
+    "shortDescription": "In addition to the immigration benefit, EB-5 investors may earn a return on their investment depending on the project structure.",
+    "examples": [
+      "A regional center project offers a 1% annual return to investors in addition to immigration benefits.",
+      "Some direct investors retain equity in a growing business and earn profits long-term."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 211,
+    "title": "Same Benefits as Other Green Card Holders",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "Once granted, EB-5 Green Cards provide the same rights as any other permanent resident card. This includes legal work authorization, public education, driver’s licenses, and access to certain healthcare services.",
+    "shortDescription": "Once granted, EB-5 Green Cards provide the same rights as any other permanent resident card.",
+    "examples": [
+      "EB-5 investors can apply for Social Security numbers, driver's licenses, and public school enrollment for their children.",
+      "They are also eligible to apply for Medicare after meeting the required residency period."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 212,
+    "title": "Family Unity",
+    "category": "EB-5 Basics",
+    "subcategory": "Benefits of EB-5",
+    "description": "The EB-5 program enables families to immigrate together. The primary applicant, their spouse, and children under 21 are processed under the same application, helping keep families united during the immigration journey.",
+    "shortDescription": "The EB-5 program enables families to immigrate together.",
+    "examples": [
+      "An investor’s entire family moves to the U.S. under a single EB-5 petition.",
+      "Children can attend school immediately and integrate into American society while parents run the business."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 301,
+    "title": "Creation of EB-5 Program (1990)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "The EB-5 Immigrant Investor Program was created by the U.S. Congress in 1990 through the Immigration Act. It was designed to attract foreign investment into the U.S. economy and stimulate job growth by offering lawful permanent residence in return for qualifying investments.",
+    "shortDescription": "The EB-5 Immigrant Investor Program was created by the U.S.",
+    "examples": [
+      "The 1990 law established a $1 million investment threshold and a $500,000 threshold for rural or high-unemployment areas.",
+      "Initially, the program was relatively unknown and underutilized due to unclear regulations and limited awareness."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 302,
+    "title": "Introduction of Regional Centers (1992)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "In 1992, Congress launched the Immigrant Investor Pilot Program, which introduced EB-5 Regional Centers. These entities were designed to facilitate pooled investments and allow indirect job creation through economic modeling.",
+    "shortDescription": "In 1992, Congress launched the Immigrant Investor Pilot Program, which introduced EB-5 Regional Centers.",
+    "examples": [
+      "Regional centers enabled investors to support large-scale projects, like real estate developments, without managing day-to-day operations.",
+      "This innovation helped popularize EB-5 by making it more accessible to passive investors."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 303,
+    "title": "Low Early Adoption Rates",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "Throughout the 1990s, participation in the EB-5 program remained limited. The program struggled due to lack of promotion, administrative delays, and confusing rules. Less than 1,000 visas were issued annually in the early years.",
+    "shortDescription": "Throughout the 1990s, participation in the EB-5 program remained limited.",
+    "examples": [
+      "In 1995, only a few hundred EB-5 visas were granted, compared to the 10,000 visa cap.",
+      "Many potential investors avoided EB-5 due to legal uncertainty and unclear USCIS guidance."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 304,
+    "title": "Reform Efforts in the Early 2000s",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "During the early 2000s, the U.S. government issued clarification memos and precedents to improve the EB-5 program’s transparency and investor confidence. This included key decisions like Matter of Ho and Matter of Izummi that defined business plan and investment standards.",
+    "shortDescription": "During the early 2000s, the U.S.",
+    "examples": [
+      "The Matter of Ho precedent established requirements for a credible business plan.",
+      "These reforms helped prevent fraudulent or vague investments from being approved."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 305,
+    "title": "Growth During the 2008 Financial Crisis",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "The 2008 financial crisis made traditional funding sources scarce, prompting U.S. developers to turn to EB-5 investors for capital. This marked a turning point in the program’s popularity and growth.",
+    "shortDescription": "The 2008 financial crisis made traditional funding sources scarce, prompting U.S.",
+    "examples": [
+      "Real estate projects in New York, California, and Florida began actively using EB-5 funds.",
+      "Between 2008 and 2015, EB-5 raised over $20 billion in foreign investment for U.S. projects."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 306,
+    "title": "Surge in Chinese Applicants (2010s)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "During the 2010s, the majority of EB-5 investors were Chinese nationals. Demand surged, leading to visa backlogs and long wait times due to per-country visa caps.",
+    "shortDescription": "During the 2010s, the majority of EB-5 investors were Chinese nationals.",
+    "examples": [
+      "At its peak, China accounted for over 80% of all EB-5 visa applications.",
+      "Chinese applicants faced wait times exceeding 5–10 years due to oversubscription."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 307,
+    "title": "Jay Peak Fraud Scandal (2016)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "In 2016, a major EB-5 fraud case surfaced involving the Jay Peak ski resort in Vermont. Project developers misused investor funds, leading to SEC intervention and significant reforms to the program.",
+    "shortDescription": "In 2016, a major EB-5 fraud case surfaced involving the Jay Peak ski resort in Vermont.",
+    "examples": [
+      "Over $200 million was misused, affecting hundreds of investors.",
+      "The incident highlighted the need for greater oversight and transparency in the EB-5 program."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 308,
+    "title": "Modernization Rule (2019)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "The EB-5 Modernization Rule, implemented in November 2019, raised the minimum investment amount to $900,000 for TEA projects and reformed TEA designations. It aimed to reduce abuses and enhance program integrity.",
+    "shortDescription": "The EB-5 Modernization Rule, implemented in November 2019, raised the minimum investment amount to $900,000 for TEA projects and reformed…",
+    "examples": [
+      "Minimum investment increased from $500,000 to $900,000 in TEAs.",
+      "TEA designation authority shifted from states to the federal government (USCIS)."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 309,
+    "title": "Court Vacates 2019 Rule (2021)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "In June 2021, a federal court vacated the 2019 Modernization Rule due to procedural issues. This temporarily reduced the investment threshold back to $500,000 and caused market uncertainty.",
+    "shortDescription": "In June 2021, a federal court vacated the 2019 Modernization Rule due to procedural issues.",
+    "examples": [
+      "For a few months in 2021, investors rushed to file under the lower $500,000 threshold.",
+      "The court decision created confusion among investors, developers, and attorneys."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 310,
+    "title": "Regional Center Program Lapse (2021)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "The EB-5 Regional Center Program expired in June 2021 when Congress failed to reauthorize it. This pause in the program delayed processing and caused major disruption in the industry.",
+    "shortDescription": "The EB-5 Regional Center Program expired in June 2021 when Congress failed to reauthorize it.",
+    "examples": [
+      "No new I-526 petitions through regional centers were accepted for nearly a year.",
+      "Investors in ongoing projects were left in limbo, awaiting legislative action."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 311,
+    "title": "EB-5 Reform and Integrity Act (2022)",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "In March 2022, Congress passed the EB-5 Reform and Integrity Act, reauthorizing the Regional Center Program and introducing strict integrity and compliance measures, including visa set-asides for rural and distressed areas.",
+    "shortDescription": "In March 2022, Congress passed the EB-5 Reform and Integrity Act, reauthorizing the Regional Center Program and introducing strict…",
+    "examples": [
+      "The Act reinstated regional centers through 2027 and reserved 32% of visas for TEAs and infrastructure projects.",
+      "It also introduced mandatory audits, background checks, and fund tracking systems."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 312,
+    "title": "Visa Set-Asides and Rural Prioritization",
+    "category": "EB-5 Basics",
+    "subcategory": "History of EB-5",
+    "description": "The 2022 Reform Act established visa set-asides to prioritize investments in rural areas (20%), high-unemployment areas (10%), and infrastructure projects (2%). These categories benefit from faster processing and less backlog.",
+    "shortDescription": "The 2022 Reform Act established visa set-asides to prioritize investments in rural areas (20%), high-unemployment areas (10%), and…",
+    "examples": [
+      "An investor in a rural project may receive a visa faster due to reserved category processing.",
+      "Visa set-asides encourage economic development outside major metro areas."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 401,
+    "title": "C5 Visa Category",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "The C5 category refers to EB-5 investors who make a direct investment in a commercial enterprise located in a non-TEA (Targeted Employment Area). This is a standard classification for direct investors outside of designated areas.",
+    "shortDescription": "The C5 category refers to EB-5 investors who make a direct investment in a commercial enterprise located in a non-TEA (Targeted Employment…",
+    "examples": [
+      "An investor contributes $1.05 million to a manufacturing business in a major U.S. city and receives a C5 visa.",
+      "C5 applies when the project is not located in a rural or high-unemployment zone."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 402,
+    "title": "T5 Visa Category",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "The T5 category applies to direct EB-5 investors whose investment is located in a Targeted Employment Area (TEA). This allows for a reduced investment threshold of $800,000.",
+    "shortDescription": "The T5 category applies to direct EB-5 investors whose investment is located in a Targeted Employment Area (TEA).",
+    "examples": [
+      "A direct investment in a rural area qualifies under T5 and requires only $800,000.",
+      "The investor starts a business in an area of high unemployment and applies under the T5 category."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 403,
+    "title": "I5 and R5 Visa Categories",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "I5 and R5 are reserved for investors using the Regional Center route. I5 is for investments in non-TEA areas, while R5 is for those in TEAs. These categories allow indirect job creation through regional center projects.",
+    "shortDescription": "I5 and R5 are reserved for investors using the Regional Center route.",
+    "examples": [
+      "An investor contributes to a hotel development through a regional center in a rural zone and receives an R5 visa.",
+      "I5 is used when the regional center project is not located in a TEA."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 404,
+    "title": "Reserved Visa Categories (Post-2022)",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "Following the 2022 EB-5 Reform and Integrity Act, 32% of EB-5 visas are reserved annually: 20% for rural projects, 10% for high-unemployment TEAs, and 2% for infrastructure projects. These have separate queues and faster processing.",
+    "shortDescription": "Following the 2022 EB-5 Reform and Integrity Act, 32% of EB-5 visas are reserved annually: 20% for rural projects, 10% for…",
+    "examples": [
+      "A rural infrastructure investment qualifies for two different reserved categories: rural and infrastructure.",
+      "Investors in reserved visa categories may skip the waiting line for unreserved visas."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 405,
+    "title": "Unreserved Visa Category",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "Unreserved EB-5 visas are the default category for investors whose projects do not fall into rural, high-unemployment, or infrastructure categories. These visas make up about 68% of the total annual allocation.",
+    "shortDescription": "Unreserved EB-5 visas are the default category for investors whose projects do not fall into rural, high-unemployment, or infrastructure…",
+    "examples": [
+      "An EB-5 investor in a luxury urban hotel falls under the unreserved visa category.",
+      "Applicants from countries with high demand may experience wait times in this category."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 406,
+    "title": "Conditional Permanent Residency",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "All EB-5 visa recipients initially receive conditional permanent residency for two years. During this time, they must fulfill the job creation and investment maintenance requirements to obtain a 10-year Green Card.",
+    "shortDescription": "All EB-5 visa recipients initially receive conditional permanent residency for two years.",
+    "examples": [
+      "After receiving an EB-5 visa, the investor enters the U.S. as a conditional resident.",
+      "To remove conditions, the investor must file Form I-829 within 90 days before the second anniversary."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 407,
+    "title": "Visa Bulletin and Backlogs",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "The Visa Bulletin, issued monthly by the U.S. Department of State, shows which EB-5 applicants are eligible for visa issuance. Some countries may have backlogs due to per-country caps.",
+    "shortDescription": "The Visa Bulletin, issued monthly by the U.S.",
+    "examples": [
+      "Applicants from India and China may face wait times due to demand exceeding annual visa limits.",
+      "Investors should track the Visa Bulletin to know when their priority date becomes current."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 408,
+    "title": "Family Members Under EB-5",
+    "category": "EB-5 Basics",
+    "subcategory": "EB-5 Visa Types",
+    "description": "An EB-5 investor’s spouse and unmarried children under 21 can obtain conditional Green Cards as derivative beneficiaries. They receive the same visa type and benefits as the principal applicant.",
+    "shortDescription": "An EB-5 investor’s spouse and unmarried children under 21 can obtain conditional Green Cards as derivative beneficiaries.",
+    "examples": [
+      "The investor’s child, aged 19, and spouse both receive conditional Green Cards along with the principal applicant.",
+      "Derivative family members must also file I-829 with the main applicant to remove conditions."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 501,
+    "title": "Definition of Direct Investment",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "Direct investment in the EB-5 program means the investor is personally involved in managing a new commercial enterprise, without the use of a Regional Center. The investment must create at least 10 direct full-time jobs.",
+    "shortDescription": "Direct investment in the EB-5 program means the investor is personally involved in managing a new commercial enterprise, without the use of…",
+    "examples": [
+      "An investor opens a restaurant and directly oversees operations and staff.",
+      "A manufacturing plant funded and operated by the investor qualifies as direct EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 502,
+    "title": "Job Creation Must Be Direct",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "In direct EB-5 investments, all job creation must be direct and verifiable within the enterprise. Indirect or induced jobs do not count toward the EB-5 requirement.",
+    "shortDescription": "In direct EB-5 investments, all job creation must be direct and verifiable within the enterprise.",
+    "examples": [
+      "The business hires 12 employees with payroll records and job descriptions for each.",
+      "Using third-party modeling for job creation is not permitted in direct EB-5 projects."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 503,
+    "title": "Active Management Role Required",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "The investor must be actively involved in managing the business. This can be fulfilled by being a corporate officer, director, or a day-to-day operations manager.",
+    "shortDescription": "The investor must be actively involved in managing the business.",
+    "examples": [
+      "The investor holds the title of CEO and is responsible for hiring and strategy.",
+      "Serving on the company's board with meaningful decision-making authority qualifies as active involvement."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 504,
+    "title": "Common Direct Investment Industries",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "Popular sectors for direct EB-5 investments include restaurants, retail franchises, manufacturing, logistics, and service businesses. These industries typically allow for clear job creation and direct involvement.",
+    "shortDescription": "Popular sectors for direct EB-5 investments include restaurants, retail franchises, manufacturing, logistics, and service businesses.",
+    "examples": [
+      "An investor opens three Subway franchise locations and employs over 30 people.",
+      "A tech entrepreneur launches a software development company and hires local programmers."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 505,
+    "title": "Business Plan and Documentation",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "A comprehensive business plan is essential for direct EB-5. It must detail the business model, timeline for hiring, financial projections, and the management structure of the company.",
+    "shortDescription": "A comprehensive business plan is essential for direct EB-5.",
+    "examples": [
+      "The investor provides a 5-year business plan including marketing strategy and staffing projections.",
+      "Hiring schedules and job descriptions are included to demonstrate job creation plans."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 506,
+    "title": "No Pooling of Investments",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "Unlike regional center investments, direct EB-5 does not allow pooling of funds from multiple investors into a single enterprise unless each investor creates their own 10 jobs and meets other criteria.",
+    "shortDescription": "Unlike regional center investments, direct EB-5 does not allow pooling of funds from multiple investors into a single enterprise unless…",
+    "examples": [
+      "Two investors cannot split a $1.6M investment in a single business unless 20 jobs are created.",
+      "Each investor must be tied to a specific job creation plan."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 507,
+    "title": "Suitability for Entrepreneurial Investors",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "Direct investment is ideal for entrepreneurs who want hands-on control over their business and are comfortable managing daily operations and complying with USCIS requirements themselves.",
+    "shortDescription": "Direct investment is ideal for entrepreneurs who want hands-on control over their business and are comfortable managing daily operations…",
+    "examples": [
+      "A business owner relocates from abroad to open a similar company in the U.S. under EB-5.",
+      "Investors with management experience prefer direct investment to control growth and operations."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 508,
+    "title": "Risk and Responsibility",
+    "category": "Investment",
+    "subcategory": "Direct Investment",
+    "description": "Direct investors assume full business risk and operational responsibility. If the business fails or job creation is not achieved, the investor may lose eligibility for permanent residency.",
+    "shortDescription": "Direct investors assume full business risk and operational responsibility.",
+    "examples": [
+      "If a direct investment business closes after one year, USCIS may deny removal of conditions due to unmet job creation.",
+      "Failure to meet payroll requirements can jeopardize the investor’s I-829 petition."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 601,
+    "title": "Definition of a Regional Center",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "A Regional Center is a USCIS-designated economic unit that sponsors EB-5 projects. It facilitates pooled investments and allows job creation to be counted both directly and indirectly through economic modeling.",
+    "shortDescription": "A Regional Center is a USCIS-designated economic unit that sponsors EB-5 projects.",
+    "examples": [
+      "A Regional Center in Florida sponsors a real estate project and aggregates capital from 50 EB-5 investors.",
+      "USCIS-approved Regional Centers often focus on construction, infrastructure, or energy projects."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 602,
+    "title": "Indirect Job Creation Allowed",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "One of the key advantages of Regional Centers is that they allow indirect and induced jobs to count toward the EB-5 job creation requirement, based on economic impact analysis.",
+    "shortDescription": "One of the key advantages of Regional Centers is that they allow indirect and induced jobs to count toward the EB-5 job creation…",
+    "examples": [
+      "Jobs created at suppliers or service providers supporting the project count as indirect employment.",
+      "Using the IMPLAN model, a regional center shows that 10+ jobs per investor are projected from the development."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 603,
+    "title": "Pooled Investments",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "Regional Centers aggregate investments from multiple EB-5 investors into a single large-scale project. Each investor must still meet the minimum capital and job creation requirements individually.",
+    "shortDescription": "Regional Centers aggregate investments from multiple EB-5 investors into a single large-scale project.",
+    "examples": [
+      "A $100 million hotel project pools funds from 100 EB-5 investors, each contributing $1 million.",
+      "The pooled capital funds major infrastructure with measurable job impact across sectors."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 604,
+    "title": "Investor Role Is Passive",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "EB-5 investors in Regional Center projects typically have a passive role, often as limited partners. They are not involved in daily management but retain voting rights on major decisions.",
+    "shortDescription": "EB-5 investors in Regional Center projects typically have a passive role, often as limited partners.",
+    "examples": [
+      "An investor holds a limited partner position in an LLC and reviews quarterly financial reports.",
+      "Passive investors allow professionals to handle business operations and project development."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 605,
+    "title": "Administrative Fees",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "Regional Centers typically charge an administrative fee on top of the investment amount. These fees range from $50,000 to $80,000 and cover project management, compliance, and legal expenses.",
+    "shortDescription": "Regional Centers typically charge an administrative fee on top of the investment amount.",
+    "examples": [
+      "An EB-5 investor pays $800,000 as capital and $70,000 as an admin fee to the Regional Center.",
+      "Administrative fees are used for economic reports, immigration legal support, and due diligence."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 606,
+    "title": "Annual Compliance and Reporting",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "Regional Centers must file annual reports with USCIS to maintain designation. These reports include project updates, job creation analysis, and investor progress.",
+    "shortDescription": "Regional Centers must file annual reports with USCIS to maintain designation.",
+    "examples": [
+      "A Regional Center submits Form I-956G annually to report job creation metrics and investor data.",
+      "Failure to report can result in termination of USCIS designation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 607,
+    "title": "USCIS Oversight and Audits",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "USCIS has the authority to audit Regional Centers and revoke their designation for noncompliance or fraud. The 2022 Reform Act significantly strengthened oversight requirements.",
+    "shortDescription": "USCIS has the authority to audit Regional Centers and revoke their designation for noncompliance or fraud.",
+    "examples": [
+      "The Jay Peak case led to stricter regulations and audit protocols.",
+      "Random site visits and fund tracking are now part of USCIS compliance checks."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 608,
+    "title": "Popularity of Regional Centers",
+    "category": "Investment",
+    "subcategory": "Regional Centers",
+    "description": "Over 90% of EB-5 applicants choose Regional Center projects due to the flexibility of job creation and reduced personal management obligations.",
+    "shortDescription": "Over 90% of EB-5 applicants choose Regional Center projects due to the flexibility of job creation and reduced personal management…",
+    "examples": [
+      "Regional Centers are especially popular among investors seeking passive immigration options.",
+      "Investors from abroad prefer not to relocate immediately or run a business hands-on."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 701,
+    "title": "What is a Targeted Employment Area (TEA)?",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "A Targeted Employment Area (TEA) is either a rural area or a region with high unemployment, as defined by USCIS. Investments made in TEAs qualify for the reduced EB-5 minimum investment amount of $800,000.",
+    "shortDescription": "A Targeted Employment Area (TEA) is either a rural area or a region with high unemployment, as defined by USCIS.",
+    "examples": [
+      "A rural farming town with under 20,000 residents qualifies as a TEA.",
+      "A city neighborhood with unemployment 150% above the national average is designated as a TEA."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 702,
+    "title": "Rural Area TEA Qualification",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "To qualify as rural, an area must be outside of a metropolitan statistical area (MSA) and have a population of less than 20,000 people. This designation encourages EB-5 investment in underserved rural communities.",
+    "shortDescription": "To qualify as rural, an area must be outside of a metropolitan statistical area (MSA) and have a population of less than 20,000 people.",
+    "examples": [
+      "A town in central Idaho, far from any major city, is considered rural under EB-5 guidelines.",
+      "Projects in rural TEAs receive visa priority under the 2022 Reform Act."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 703,
+    "title": "High-Unemployment TEA Criteria",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "High-unemployment TEAs are urban or suburban areas where the unemployment rate is at least 150% of the national average. These areas must be supported by data and meet USCIS standards.",
+    "shortDescription": "High-unemployment TEAs are urban or suburban areas where the unemployment rate is at least 150% of the national average.",
+    "examples": [
+      "A district in Detroit with an unemployment rate 1.5x the national average is eligible as a TEA.",
+      "USCIS uses Census Tracts and Department of Labor statistics to verify eligibility."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 704,
+    "title": "TEA Certification and Documentation",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "As of 2022, USCIS now determines TEA eligibility, no longer delegating this to individual states. Investors or project sponsors must provide data to support TEA qualification at the time of filing.",
+    "shortDescription": "As of 2022, USCIS now determines TEA eligibility, no longer delegating this to individual states.",
+    "examples": [
+      "Investors must submit unemployment data and census maps with their I-526E petition.",
+      "The project sponsor includes a TEA analysis from an economist as part of the business plan."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 705,
+    "title": "TEA and Reduced Investment Amount",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "TEA designation allows EB-5 investors to invest $800,000 instead of the standard $1,050,000. This financial incentive encourages investment in areas most in need of economic development.",
+    "shortDescription": "TEA designation allows EB-5 investors to invest $800,000 instead of the standard $1,050,000.",
+    "examples": [
+      "An investor saves $250,000 by choosing to invest in a high-unemployment TEA.",
+      "The majority of EB-5 investments are made in TEAs due to this reduced capital requirement."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 706,
+    "title": "Visa Set-Asides for TEA Projects",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "The 2022 EB-5 Reform and Integrity Act introduced visa set-asides: 20% for rural TEAs and 10% for high-unemployment TEAs. These categories receive priority processing and separate visa queues.",
+    "shortDescription": "The 2022 EB-5 Reform and Integrity Act introduced visa set-asides: 20% for rural TEAs and 10% for high-unemployment TEAs.",
+    "examples": [
+      "An investor in a rural project may receive their visa faster due to a dedicated 20% set-aside.",
+      "TEA investments help investors avoid long wait times associated with standard visa categories."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 707,
+    "title": "Economic Impact of TEA Investments",
+    "category": "Investment",
+    "subcategory": "Targeted Employment Areas",
+    "description": "TEA investments are intended to stimulate job creation and economic activity in distressed or underserved regions. These projects often include affordable housing, hospitals, and small business development.",
+    "shortDescription": "TEA investments are intended to stimulate job creation and economic activity in distressed or underserved regions.",
+    "examples": [
+      "A high-unemployment TEA project includes building a community health clinic that creates 40 jobs.",
+      "Rural TEA investments can support infrastructure upgrades such as broadband or utilities."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 801,
+    "title": "What Does 'At Risk' Mean?",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "EB-5 investment funds must be placed 'at risk' for the purpose of generating a return. This means there can be no guarantees of return or redemption, and the investor must face the possibility of financial loss.",
+    "shortDescription": "EB-5 investment funds must be placed 'at risk' for the purpose of generating a return.",
+    "examples": [
+      "A developer cannot promise to repay the investor regardless of project outcome.",
+      "Investors in EB-5 projects accept the business risk of potential loss or delayed return."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 802,
+    "title": "No Redemption Agreements Allowed",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "Any agreement that allows the investor to demand repayment or requires the business to repurchase the investment violates the 'at risk' rule. The capital must remain subject to market forces and outcomes.",
+    "shortDescription": "Any agreement that allows the investor to demand repayment or requires the business to repurchase the investment violates the 'at risk'…",
+    "examples": [
+      "A buy-back clause stating the business will repurchase the investment after five years is prohibited.",
+      "USCIS has denied petitions where the investment was treated like a loan with repayment terms."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 803,
+    "title": "No Guaranteed Returns",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "EB-5 investments cannot offer fixed, guaranteed, or minimum returns. Offering even a low but guaranteed return violates EB-5 eligibility rules, as it undermines the risk element.",
+    "shortDescription": "EB-5 investments cannot offer fixed, guaranteed, or minimum returns.",
+    "examples": [
+      "An agreement offering 2% guaranteed annual return on investment is not EB-5 compliant.",
+      "All returns must be based on project performance and subject to loss."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 804,
+    "title": "Allowed Business Structures",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "EB-5 investments may take the form of equity (ownership) or a loan, provided the loan is unsecured, subordinated, and not guaranteed. Equity investments are commonly used in direct EB-5 projects.",
+    "shortDescription": "EB-5 investments may take the form of equity (ownership) or a loan, provided the loan is unsecured, subordinated, and not guaranteed.",
+    "examples": [
+      "A regional center may use investor capital as a subordinated loan to the project developer.",
+      "Equity investments grant the investor a share of ownership and profits, but not guaranteed return."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 805,
+    "title": "Use of Escrow Accounts",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "Funds may be held in escrow and released to the project upon approval of the investor’s I-526 or I-526E petition. This structure protects the investor during the early stages without violating the 'at risk' rule.",
+    "shortDescription": "Funds may be held in escrow and released to the project upon approval of the investor’s I-526 or I-526E petition.",
+    "examples": [
+      "An investor’s funds are released from escrow only after their I-526 is approved by USCIS.",
+      "Escrow agreements are reviewed by USCIS to ensure funds become 'at risk' once released.",
+      "Investor funds are held in escrow and released only after USCIS approves the petition.",
+      "The escrow agreement defines who controls the funds and under what conditions they are released."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 806,
+    "title": "Sustainment Period Requirement",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "Investment funds must remain 'at risk' and deployed in the business for at least two years from the date of conditional residency. Premature withdrawal of capital can lead to denial of the I-829 petition.",
+    "shortDescription": "Investment funds must remain 'at risk' and deployed in the business for at least two years from the date of conditional residency.",
+    "examples": [
+      "Funds withdrawn before the end of the two-year conditional period can jeopardize Green Card eligibility.",
+      "Redeployment of funds into another project is allowed if the original project ends early."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 807,
+    "title": "Redeployment of Capital",
+    "category": "Investment",
+    "subcategory": "At-Risk Investments",
+    "description": "If the original project concludes before the sustainment period ends, capital must be redeployed into another EB-5 compliant activity. This ensures the investment remains at risk and supports job creation.",
+    "shortDescription": "If the original project concludes before the sustainment period ends, capital must be redeployed into another EB-5 compliant activity.",
+    "examples": [
+      "After a hotel project is completed, remaining funds are invested into a warehouse development.",
+      "Redeployment must occur within a commercially reasonable time and in the same NCE."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 901,
+    "title": "Standard Investment Amount",
+    "category": "Investment",
+    "subcategory": "Investment Amounts",
+    "description": "As of 2022, the standard minimum investment amount for the EB-5 program is $1,050,000. This applies to projects that are not located in designated Targeted Employment Areas (TEAs) or infrastructure projects.",
+    "shortDescription": "As of 2022, the standard minimum investment amount for the EB-5 program is $1,050,000.",
+    "examples": [
+      "An investor starting a business in downtown Los Angeles contributes $1,050,000.",
+      "Non-TEA commercial projects must meet this higher investment threshold."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 902,
+    "title": "Reduced Investment for TEAs and Infrastructure",
+    "category": "Investment",
+    "subcategory": "Investment Amounts",
+    "description": "The minimum investment amount is reduced to $800,000 for EB-5 projects located in rural areas, high-unemployment zones, or designated infrastructure projects administered by public agencies.",
+    "shortDescription": "The minimum investment amount is reduced to $800,000 for EB-5 projects located in rural areas, high-unemployment zones, or designated…",
+    "examples": [
+      "An investor places $800,000 into a rural solar energy facility.",
+      "A transportation hub project sponsored by a public agency qualifies at the reduced threshold."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 903,
+    "title": "Inflation Adjustment Every 5 Years",
+    "category": "Investment",
+    "subcategory": "Investment Amounts",
+    "description": "Under the EB-5 Reform and Integrity Act of 2022, the investment thresholds will be adjusted for inflation every five years to reflect economic conditions and preserve the program’s value.",
+    "shortDescription": "Under the EB-5 Reform and Integrity Act of 2022, the investment thresholds will be adjusted for inflation every five years to reflect…",
+    "examples": [
+      "If inflation increases significantly, the $800,000 TEA threshold could be raised in the next update.",
+      "The next review is expected to occur in 2027, five years after the 2022 adjustment."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 904,
+    "title": "Capital Contribution Requirements",
+    "category": "Investment",
+    "subcategory": "Investment Amounts",
+    "description": "EB-5 investment funds must be irrevocably committed to the enterprise and must not include borrowed funds secured by the assets of the EB-5 business. Gifts or personal loans may qualify with proper documentation.",
+    "shortDescription": "EB-5 investment funds must be irrevocably committed to the enterprise and must not include borrowed funds secured by the assets of the EB-5…",
+    "examples": [
+      "An investor uses proceeds from a property sale as their EB-5 investment.",
+      "A gifted amount from a relative is allowed if it includes a formal gift letter and source documentation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 905,
+    "title": "Multiple Investors in the Same Project",
+    "category": "Investment",
+    "subcategory": "Investment Amounts",
+    "description": "If a project includes multiple EB-5 investors, each one must independently meet the full minimum investment requirement and be credited with the creation of 10 new jobs.",
+    "shortDescription": "If a project includes multiple EB-5 investors, each one must independently meet the full minimum investment requirement and be credited…",
+    "examples": [
+      "Two investors in the same business each invest $800,000 and are linked to 10 jobs each.",
+      "Each investor's funds must be traceable and separately accounted for in job creation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 906,
+    "title": "Source of Funds Compliance",
+    "category": "Investment",
+    "subcategory": "Investment Amounts",
+    "description": "Regardless of the investment amount, all capital used in an EB-5 petition must be legally sourced. USCIS requires full documentation tracing the origin and lawful path of the funds.",
+    "shortDescription": "Regardless of the investment amount, all capital used in an EB-5 petition must be legally sourced.",
+    "examples": [
+      "Bank records and tax returns are submitted to show how the investor accumulated $800,000.",
+      "Failure to prove lawful source may result in petition denial, even if the amount is correct."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1001,
+    "title": "Real Estate Development Projects",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "Real estate developments are among the most common EB-5 investment types, especially through regional centers. Projects often include hotels, mixed-use buildings, or multifamily housing.",
+    "shortDescription": "Real estate developments are among the most common EB-5 investment types, especially through regional centers.",
+    "examples": [
+      "An EB-5 investor participates in a regional center project to build a new Hilton hotel.",
+      "Multifamily apartment developments in high-growth areas often qualify for EB-5 funding."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1002,
+    "title": "Infrastructure Projects",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "Infrastructure projects administered by government agencies or public-private partnerships may qualify for EB-5 at the reduced investment level. These include transportation, utilities, or water systems.",
+    "shortDescription": "Infrastructure projects administered by government agencies or public-private partnerships may qualify for EB-5 at the reduced investment…",
+    "examples": [
+      "EB-5 capital is used to support the expansion of a municipal airport.",
+      "A public agency partners with private developers to upgrade water pipelines with EB-5 investment."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1003,
+    "title": "Manufacturing and Industrial Projects",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "Direct EB-5 investors may choose to start or expand factories, production facilities, or other industrial businesses. These projects often produce high numbers of direct jobs.",
+    "shortDescription": "Direct EB-5 investors may choose to start or expand factories, production facilities, or other industrial businesses.",
+    "examples": [
+      "An investor opens a furniture manufacturing plant that hires 20 workers.",
+      "A food processing company expands production using EB-5 funds."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1004,
+    "title": "Franchise and Retail Operations",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "EB-5 investors may open and operate franchise businesses like restaurants or retail stores. These businesses can qualify if they create at least 10 full-time jobs.",
+    "shortDescription": "EB-5 investors may open and operate franchise businesses like restaurants or retail stores.",
+    "examples": [
+      "An investor opens three Dunkin’ franchise locations with a combined staff of 30.",
+      "A direct investment in a supermarket chain expansion qualifies under EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1005,
+    "title": "Healthcare and Medical Facilities",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "Healthcare-related EB-5 projects include hospitals, senior living centers, or medical clinics. These projects are often developed through regional centers and generate long-term employment.",
+    "shortDescription": "Healthcare-related EB-5 projects include hospitals, senior living centers, or medical clinics.",
+    "examples": [
+      "An EB-5-funded nursing home creates over 60 jobs for nurses and support staff.",
+      "A regional center develops an outpatient medical facility using investor capital."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1006,
+    "title": "Technology and Innovation Startups",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "EB-5 investors with entrepreneurial experience may create tech companies in fields like software, e-commerce, or medical devices. These projects often require a direct EB-5 path.",
+    "shortDescription": "EB-5 investors with entrepreneurial experience may create tech companies in fields like software, e-commerce, or medical devices.",
+    "examples": [
+      "A biotech entrepreneur launches a diagnostics lab and employs 15 specialists.",
+      "A mobile app development company hires 12 software engineers under EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1007,
+    "title": "Education and Training Facilities",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "Investments in charter schools, training centers, or university-affiliated facilities may qualify for EB-5 if they generate qualifying jobs and meet all program criteria.",
+    "shortDescription": "Investments in charter schools, training centers, or university-affiliated facilities may qualify for EB-5 if they generate qualifying jobs…",
+    "examples": [
+      "A charter school is developed using EB-5 funds and employs teachers and staff.",
+      "An investor funds a vocational training center in a rural area under a TEA designation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1008,
+    "title": "Hospitality and Entertainment",
+    "category": "Investment",
+    "subcategory": "Investment Projects Types",
+    "description": "Entertainment complexes, event centers, and tourism-driven projects like resorts are eligible EB-5 investments when job creation is clearly documented.",
+    "shortDescription": "Entertainment complexes, event centers, and tourism-driven projects like resorts are eligible EB-5 investments when job creation is clearly…",
+    "examples": [
+      "A resort in a national park expansion is funded with EB-5 capital.",
+      "A mixed-use entertainment district generates hundreds of jobs and qualifies under EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1101,
+    "title": "Lawful Personal Savings",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "EB-5 investors may use personal savings accumulated through legal income such as salaries, bonuses, dividends, or self-employment. Full documentation of earnings history is required.",
+    "shortDescription": "EB-5 investors may use personal savings accumulated through legal income such as salaries, bonuses, dividends, or self-employment.",
+    "examples": [
+      "An investor uses savings from 10 years of salary at a multinational corporation.",
+      "Payslips, employment contracts, and tax returns are submitted as evidence."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1102,
+    "title": "Proceeds from Property Sales",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "Investors can use capital gained from selling real estate or other personal assets. Documents must prove ownership, sale transaction, and transfer of proceeds.",
+    "shortDescription": "Investors can use capital gained from selling real estate or other personal assets.",
+    "examples": [
+      "An apartment sold in Dubai generates $1 million for an EB-5 investment.",
+      "The investor submits the deed, sales contract, and bank transfer records."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1103,
+    "title": "Gifts from Family Members",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "EB-5 funds can be received as a gift from a relative. A notarized gift letter must be included, and the gift giver must prove the lawful source of their funds.",
+    "shortDescription": "EB-5 funds can be received as a gift from a relative.",
+    "examples": [
+      "A parent gifts $800,000 to their child for an EB-5 investment.",
+      "The parent provides financial records to show the origin of gifted funds."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1104,
+    "title": "Inheritance",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "Inherited money or property can be used for EB-5 as long as documentation shows the legal transfer and lawful source of the decedent’s wealth.",
+    "shortDescription": "Inherited money or property can be used for EB-5 as long as documentation shows the legal transfer and lawful source of the decedent’s…",
+    "examples": [
+      "An investor inherits land and sells it to fund their EB-5 petition.",
+      "Will, probate, and sales records are used to trace the funds."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1105,
+    "title": "Business Profits",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "Profits from a business legally owned by the investor can be used for EB-5. Ownership, income generation, and financial records must be presented.",
+    "shortDescription": "Profits from a business legally owned by the investor can be used for EB-5.",
+    "examples": [
+      "An investor draws dividends from a logistics company to finance the EB-5.",
+      "Corporate tax filings, bank statements, and registration documents are submitted."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1106,
+    "title": "Unsecured Personal Loans",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "USCIS allows unsecured personal loans to be used in EB-5, provided the investor is personally liable and the loan is not secured by EB-5 business assets.",
+    "shortDescription": "USCIS allows unsecured personal loans to be used in EB-5, provided the investor is personally liable and the loan is not secured by EB-5…",
+    "examples": [
+      "An investor takes a bank loan against their personal credit and invests the funds.",
+      "The loan contract and proof of liability are submitted with the petition."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1107,
+    "title": "Secured Loans (Conditions Apply)",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "Loans secured by the investor's personal assets (not EB-5 enterprise assets) may be allowed. Proper valuation and lien documentation must be included.",
+    "shortDescription": "Loans secured by the investor's personal assets (not EB-5 enterprise assets) may be allowed.",
+    "examples": [
+      "A loan secured against the investor’s private residence is used for EB-5.",
+      "Appraisal and mortgage documents are submitted to USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1108,
+    "title": "Multiple Funding Sources",
+    "category": "Investment",
+    "subcategory": "Funding Sources",
+    "description": "Investors can combine various lawful sources of funds to reach the EB-5 investment threshold. Each source must be clearly documented and lawfully obtained.",
+    "shortDescription": "Investors can combine various lawful sources of funds to reach the EB-5 investment threshold.",
+    "examples": [
+      "An investor uses a combination of savings, inheritance, and a gift from family.",
+      "Each portion is separately documented and included in the I-526 petition."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1201,
+    "title": "Project Track Record",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Review the developer's and regional center’s past project history, including successful EB-5 completions, job creation, and return of capital to investors. This helps reduce investment risk.",
+    "shortDescription": "Review the developer's and regional center’s past project history, including successful EB-5 completions, job creation, and return of…",
+    "examples": [
+      "A developer with a history of completing five EB-5 projects and returning capital is considered lower risk.",
+      "Avoid projects led by first-time developers or those with unresolved past failures."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1202,
+    "title": "Project Location and Demand",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Assess the demand and demographics of the area where the project is located. Properties in growing regions with strong economic drivers tend to be more successful.",
+    "shortDescription": "Assess the demand and demographics of the area where the project is located.",
+    "examples": [
+      "A multifamily housing project in Austin, Texas may benefit from population growth and housing demand.",
+      "A hotel located in a declining tourism zone carries higher vacancy and financial risk."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1203,
+    "title": "TEA Qualification",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Projects in Targeted Employment Areas (TEAs) qualify for reduced investment thresholds and may offer visa set-aside advantages, especially in rural or high-unemployment zones.",
+    "shortDescription": "Projects in Targeted Employment Areas (TEAs) qualify for reduced investment thresholds and may offer visa set-aside advantages, especially…",
+    "examples": [
+      "A project located in a rural TEA may allow the investor to qualify at the $800,000 level.",
+      "TEA status can provide priority visa processing and shorter wait times."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1204,
+    "title": "Capital Stack Transparency",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Evaluate how the EB-5 investment fits within the project’s overall capital structure. Projects with healthy debt-equity ratios and clear financial planning reduce risk.",
+    "shortDescription": "Evaluate how the EB-5 investment fits within the project’s overall capital structure.",
+    "examples": [
+      "A project with 25% developer equity, 50% bank loan, and 25% EB-5 funding may be considered balanced.",
+      "If EB-5 funds are used as the sole or majority source, the risk may be elevated."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1205,
+    "title": "Exit Strategy for EB-5 Investors",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Look for a clearly defined and realistic exit strategy that outlines when and how the investor’s capital will be returned, post-sustainment period.",
+    "shortDescription": "Look for a clearly defined and realistic exit strategy that outlines when and how the investor’s capital will be returned, post-sustainment…",
+    "examples": [
+      "An exit strategy tied to property sale or refinancing after 5–7 years is common.",
+      "Beware of vague promises or lack of detail on investor repayment timelines."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1206,
+    "title": "Job Creation Projections",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Review how the project plans to create jobs. Look for projects with strong job creation buffers—more than 10 jobs per investor—to minimize risk of falling short.",
+    "shortDescription": "Review how the project plans to create jobs.",
+    "examples": [
+      "A hotel project expecting 15 jobs per investor gives more protection than one projecting exactly 10.",
+      "Projects relying solely on indirect job creation may be riskier."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1207,
+    "title": "Third-Party Due Diligence",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Independent due diligence reports by legal, financial, or immigration experts can provide insights into the credibility and structure of the project.",
+    "shortDescription": "Independent due diligence reports by legal, financial, or immigration experts can provide insights into the credibility and structure of…",
+    "examples": [
+      "Investors request a third-party legal opinion on project compliance with EB-5 rules.",
+      "An economic report from a reputable firm evaluates job creation assumptions."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1208,
+    "title": "Escrow and Fund Flow Structure",
+    "category": "Real Estate & Business",
+    "subcategory": "Selecting Real Estate Projects",
+    "description": "Understand how investor funds are held and released. Strong projects use third-party escrow to hold capital until I-526 approval and maintain transparency.",
+    "shortDescription": "Understand how investor funds are held and released.",
+    "examples": [
+      "Investor funds are released from escrow only after USCIS approval of their petition.",
+      "Some projects release funds immediately, which may increase risk if I-526 is denied."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1301,
+    "title": "Commercial Real Estate",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Commercial real estate projects include office buildings, shopping centers, industrial parks, and hotels. These are common EB-5 investments due to high job creation potential and large-scale capital needs.",
+    "shortDescription": "Commercial real estate projects include office buildings, shopping centers, industrial parks, and hotels.",
+    "examples": [
+      "An EB-5 investor funds construction of a 20-story office tower leased to tech companies.",
+      "A mixed-use commercial building includes retail space and a business center."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1302,
+    "title": "Residential Real Estate",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Residential projects consist of apartment buildings, condominiums, and housing developments. These often provide affordable or workforce housing in urban or suburban settings.",
+    "shortDescription": "Residential projects consist of apartment buildings, condominiums, and housing developments.",
+    "examples": [
+      "A regional center develops a 200-unit apartment complex in a TEA.",
+      "A suburban housing development is built to meet local family housing demand."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1303,
+    "title": "Mixed-Use Developments",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Mixed-use projects combine residential, commercial, and sometimes hospitality or entertainment components in one development, increasing job creation diversity and tenant appeal.",
+    "shortDescription": "Mixed-use projects combine residential, commercial, and sometimes hospitality or entertainment components in one development, increasing…",
+    "examples": [
+      "A downtown project combines a hotel, retail mall, and residential units.",
+      "Investors benefit from multiple revenue streams and job sources."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1304,
+    "title": "Hospitality Projects",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Hotels, resorts, and conference centers are commonly used in EB-5 due to high job creation during construction and ongoing operations such as staffing, catering, and management.",
+    "shortDescription": "Hotels, resorts, and conference centers are commonly used in EB-5 due to high job creation during construction and ongoing operations such…",
+    "examples": [
+      "EB-5 investors help finance a 300-room hotel near a convention center.",
+      "Luxury resort developments include golf courses and spas, creating diverse jobs."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1305,
+    "title": "Student and Senior Housing",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Specialized housing like dormitories or senior living facilities are growing EB-5 asset classes. These developments offer reliable tenancy and ongoing staff-based job creation.",
+    "shortDescription": "Specialized housing like dormitories or senior living facilities are growing EB-5 asset classes.",
+    "examples": [
+      "An EB-5 investment builds assisted living apartments with medical and care staff.",
+      "Student housing projects near universities are in high demand and typically fully leased."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1306,
+    "title": "Industrial Real Estate",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Industrial EB-5 projects include warehouses, distribution centers, and logistics hubs. These may be attractive due to growing e-commerce demand and operational job creation.",
+    "shortDescription": "Industrial EB-5 projects include warehouses, distribution centers, and logistics hubs.",
+    "examples": [
+      "An EB-5 warehouse development supports a regional shipping network.",
+      "A cold-storage logistics center employs technicians, drivers, and support staff."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1307,
+    "title": "Affordable Housing Projects",
+    "category": "Real Estate & Business",
+    "subcategory": "Types of Real Estate Investments",
+    "description": "Affordable housing projects meet community needs and often receive local support or incentives. They align with EB-5 objectives of job creation and development in underserved areas.",
+    "shortDescription": "Affordable housing projects meet community needs and often receive local support or incentives.",
+    "examples": [
+      "An investor helps fund low-income rental housing in an urban TEA.",
+      "These projects often qualify for additional tax credits or public grants."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1401,
+    "title": "Importance of Market Demand",
+    "category": "Real Estate & Business",
+    "subcategory": "Market Analysis",
+    "description": "Assessing market demand is critical to ensure project success and job creation. Strong demand reduces vacancy risk and increases profitability, enhancing the likelihood of a successful EB-5 outcome.",
+    "shortDescription": "Assessing market demand is critical to ensure project success and job creation.",
+    "examples": [
+      "A housing development near a growing university sees high occupancy rates.",
+      "Market analysis shows unmet demand for medical services in a rural town."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1402,
+    "title": "Economic and Demographic Trends",
+    "category": "Real Estate & Business",
+    "subcategory": "Market Analysis",
+    "description": "Investors should examine population growth, employment rates, and income levels in the target area. These indicators reflect long-term viability and sustainability of a project.",
+    "shortDescription": "Investors should examine population growth, employment rates, and income levels in the target area.",
+    "examples": [
+      "A logistics project is backed by job growth in the regional e-commerce sector.",
+      "High median income and low unemployment support a luxury apartment investment."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1403,
+    "title": "Competitive Landscape",
+    "category": "Real Estate & Business",
+    "subcategory": "Market Analysis",
+    "description": "Analyzing existing supply and competitors helps evaluate if the project fills a gap in the market or faces oversaturation, which could hinder revenue and job creation.",
+    "shortDescription": "Analyzing existing supply and competitors helps evaluate if the project fills a gap in the market or faces oversaturation, which could…",
+    "examples": [
+      "A feasibility study shows a shortage of student housing near a state university.",
+      "An office tower project may struggle in a market with rising commercial vacancies."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1404,
+    "title": "Third-Party Market Studies",
+    "category": "Real Estate & Business",
+    "subcategory": "Market Analysis",
+    "description": "Independent market studies offer valuable insights and improve credibility with USCIS and lenders. These reports evaluate job creation potential and project alignment with regional needs.",
+    "shortDescription": "Independent market studies offer valuable insights and improve credibility with USCIS and lenders.",
+    "examples": [
+      "An economic research firm provides a market demand study for a retail complex.",
+      "Lenders and investors rely on third-party reports to verify assumptions."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1405,
+    "title": "Local Government and Planning Support",
+    "category": "Real Estate & Business",
+    "subcategory": "Market Analysis",
+    "description": "Endorsements or inclusion in city or state development plans can validate demand and increase a project’s success chances. Supportive zoning and infrastructure are key signals.",
+    "shortDescription": "Endorsements or inclusion in city or state development plans can validate demand and increase a project’s success chances.",
+    "examples": [
+      "A project listed in the city’s redevelopment plan receives fast-track permitting.",
+      "Local incentives signal alignment with regional economic development goals."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1406,
+    "title": "Risk Factors in Market Timing",
+    "category": "Real Estate & Business",
+    "subcategory": "Market Analysis",
+    "description": "Poor timing in launching a project may lead to underperformance. Consider cyclical risks like economic downturns, seasonal fluctuations, or policy changes affecting demand.",
+    "shortDescription": "Poor timing in launching a project may lead to underperformance.",
+    "examples": [
+      "Launching a hotel project during a tourism slump may delay job creation.",
+      "Interest rate hikes or construction cost inflation can derail projections."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1501,
+    "title": "Site Selection and Feasibility",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "Project development begins with selecting a location and evaluating its feasibility. This includes land acquisition, zoning, utility access, and initial cost estimates.",
+    "shortDescription": "Project development begins with selecting a location and evaluating its feasibility.",
+    "examples": [
+      "A real estate developer chooses a suburban plot near transit routes for a mixed-use project.",
+      "Feasibility study shows local demand supports the proposed development."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1502,
+    "title": "Planning and Design",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "Developers engage architects, engineers, and consultants to design the project. Site plans, structural blueprints, and aesthetic designs are prepared at this stage.",
+    "shortDescription": "Developers engage architects, engineers, and consultants to design the project.",
+    "examples": [
+      "Architects design a hotel with 250 rooms, event space, and a rooftop restaurant.",
+      "Civil engineers assess the site’s drainage and environmental impact."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1503,
+    "title": "Permits and Entitlements",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "This phase includes securing permits, licenses, and regulatory approvals from local and state authorities. It can be time-consuming but is necessary for legal construction.",
+    "shortDescription": "This phase includes securing permits, licenses, and regulatory approvals from local and state authorities.",
+    "examples": [
+      "The city planning board grants zoning approval for residential density increase.",
+      "The developer obtains building permits and fire safety clearance."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1504,
+    "title": "Capital Raising and Financing",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "Developers secure funding from a mix of sources: equity, loans, and potentially EB-5 capital. A clear capital stack is essential for project launch.",
+    "shortDescription": "Developers secure funding from a mix of sources: equity, loans, and potentially EB-5 capital.",
+    "examples": [
+      "EB-5 funds cover 30% of project costs alongside a senior loan from a commercial bank.",
+      "Investors review the capital structure to assess financial viability."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1505,
+    "title": "Construction Phase",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "The project moves into construction after financing is finalized. This is where most EB-5 job creation occurs through direct and indirect employment.",
+    "shortDescription": "The project moves into construction after financing is finalized.",
+    "examples": [
+      "Hundreds of construction workers are hired for a 24-month build schedule.",
+      "Suppliers and subcontractors generate additional economic impact."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1506,
+    "title": "Operations and Stabilization",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "After construction, the project is leased, sold, or opened for operations. Stabilization involves achieving target occupancy or revenue, which supports EB-5 job creation verification.",
+    "shortDescription": "After construction, the project is leased, sold, or opened for operations.",
+    "examples": [
+      "A completed apartment complex reaches 90% occupancy within six months.",
+      "A retail center signs long-term lease agreements with anchor tenants."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1507,
+    "title": "Exit and Repayment to Investors",
+    "category": "Real Estate & Business",
+    "subcategory": "Project Development Cycle",
+    "description": "The final phase involves repayment to investors once job creation and sustainment requirements are met. This is typically done through refinancing, asset sale, or distributions.",
+    "shortDescription": "The final phase involves repayment to investors once job creation and sustainment requirements are met.",
+    "examples": [
+      "A commercial property is sold to institutional investors, returning capital to EB-5 participants.",
+      "Refinancing enables the project to repay investors post I-829 approval."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1601,
+    "title": "Commercial Real Estate Overview",
+    "category": "Real Estate & Business",
+    "subcategory": "Commercial vs Residential",
+    "description": "Commercial real estate includes office buildings, shopping centers, hotels, warehouses, and industrial spaces. These projects typically involve higher capital, longer timelines, and more job creation.",
+    "shortDescription": "Commercial real estate includes office buildings, shopping centers, hotels, warehouses, and industrial spaces.",
+    "examples": [
+      "An EB-5 investor helps finance a hotel with retail shops and conference facilities.",
+      "Commercial projects often involve larger teams, boosting indirect job creation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1602,
+    "title": "Residential Real Estate Overview",
+    "category": "Real Estate & Business",
+    "subcategory": "Commercial vs Residential",
+    "description": "Residential properties include apartment complexes, condominiums, and townhomes. These developments may offer quicker construction timelines and more stable occupancy.",
+    "shortDescription": "Residential properties include apartment complexes, condominiums, and townhomes.",
+    "examples": [
+      "An investor supports a 120-unit apartment building in a growing suburb.",
+      "Residential demand is driven by local population growth and housing shortages."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1603,
+    "title": "Revenue Models",
+    "category": "Real Estate & Business",
+    "subcategory": "Commercial vs Residential",
+    "description": "Commercial properties often rely on leasing space to businesses, which can yield high returns but be sensitive to market cycles. Residential real estate generates income from rent and is less volatile.",
+    "shortDescription": "Commercial properties often rely on leasing space to businesses, which can yield high returns but be sensitive to market cycles.",
+    "examples": [
+      "Office space in downtown areas commands high rent but fluctuates with economic conditions.",
+      "Apartment buildings generate consistent cash flow if occupancy remains strong."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1604,
+    "title": "Job Creation Considerations",
+    "category": "Real Estate & Business",
+    "subcategory": "Commercial vs Residential",
+    "description": "Commercial projects often generate more jobs, including management, retail, hospitality, and maintenance roles. Residential projects typically produce fewer long-term jobs but strong construction employment.",
+    "shortDescription": "Commercial projects often generate more jobs, including management, retail, hospitality, and maintenance roles.",
+    "examples": [
+      "A hotel project employs chefs, receptionists, and maintenance staff long term.",
+      "A housing development creates jobs primarily during the construction phase."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1605,
+    "title": "Exit Strategies",
+    "category": "Real Estate & Business",
+    "subcategory": "Commercial vs Residential",
+    "description": "Commercial exits may involve refinancing or sale to institutional buyers. Residential projects often sell individual units or entire buildings to local investors or funds.",
+    "shortDescription": "Commercial exits may involve refinancing or sale to institutional buyers.",
+    "examples": [
+      "A commercial shopping plaza is refinanced to return capital to investors.",
+      "A residential development sells completed units in phases to recoup investment."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1606,
+    "title": "Risk Profiles",
+    "category": "Real Estate & Business",
+    "subcategory": "Commercial vs Residential",
+    "description": "Commercial projects can be higher risk due to dependency on tenant leasing and economic conditions. Residential projects may be lower risk in strong housing markets, but offer lower returns.",
+    "shortDescription": "Commercial projects can be higher risk due to dependency on tenant leasing and economic conditions.",
+    "examples": [
+      "An office building in a struggling metro area faces high vacancy risk.",
+      "Suburban housing may offer steady returns but limited upside potential."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1701,
+    "title": "What is an EB-5 Business Plan?",
+    "category": "Real Estate & Business",
+    "subcategory": "EB-5 Business Plan",
+    "description": "An EB-5 business plan outlines how the investor’s capital will be used and how the project will meet job creation requirements. It must comply with Matter of Ho, a USCIS precedent that defines business plan credibility.",
+    "shortDescription": "An EB-5 business plan outlines how the investor’s capital will be used and how the project will meet job creation requirements.",
+    "examples": [
+      "A business plan describes how a new restaurant chain will create 15 full-time jobs.",
+      "The plan includes timelines, staffing charts, and marketing strategies."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1702,
+    "title": "Matter of Ho Compliance",
+    "category": "Real Estate & Business",
+    "subcategory": "EB-5 Business Plan",
+    "description": "To be approvable, EB-5 business plans must meet USCIS standards under Matter of Ho, including detailed hiring schedules, budget forecasts, market analysis, and legal structure.",
+    "shortDescription": "To be approvable, EB-5 business plans must meet USCIS standards under Matter of Ho, including detailed hiring schedules, budget forecasts,…",
+    "examples": [
+      "A plan includes a 5-year financial projection and employee breakdown by department.",
+      "Failure to show a direct link between capital use and job creation may lead to denial."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1703,
+    "title": "Elements of a Compliant Plan",
+    "category": "Real Estate & Business",
+    "subcategory": "EB-5 Business Plan",
+    "description": "Key components of a strong EB-5 business plan include: executive summary, industry analysis, operational strategy, staffing plan, market need, risk factors, and financial projections.",
+    "shortDescription": "Key components of a strong EB-5 business plan include: executive summary, industry analysis, operational strategy, staffing plan, market…",
+    "examples": [
+      "A project includes a SWOT analysis to identify operational strengths and risks.",
+      "The staffing plan outlines 12 full-time roles to be filled in the first 18 months."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1704,
+    "title": "Role of Economic Reports",
+    "category": "Real Estate & Business",
+    "subcategory": "EB-5 Business Plan",
+    "description": "For regional center projects, economic reports are included in the business plan to calculate job creation using USCIS-approved models like IMPLAN or RIMS II.",
+    "shortDescription": "For regional center projects, economic reports are included in the business plan to calculate job creation using USCIS-approved models like…",
+    "examples": [
+      "An economic analysis shows how a construction project will create 150 direct and indirect jobs.",
+      "IMPLAN modeling demonstrates that each EB-5 investor is linked to at least 10 jobs."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1705,
+    "title": "Project Timeline and Milestones",
+    "category": "Real Estate & Business",
+    "subcategory": "EB-5 Business Plan",
+    "description": "The plan must show a realistic timeline for project development, job creation, and investor involvement. This helps USCIS evaluate feasibility and compliance with job creation deadlines.",
+    "shortDescription": "The plan must show a realistic timeline for project development, job creation, and investor involvement.",
+    "examples": [
+      "The plan shows construction starting in Q3 and first hires occurring in Q4.",
+      "Investor capital is scheduled to be deployed within 60 days of USCIS approval."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1706,
+    "title": "Consistency Across EB-5 Documentation",
+    "category": "Real Estate & Business",
+    "subcategory": "EB-5 Business Plan",
+    "description": "The business plan must align with other EB-5 documentation, including the Form I-526E, private placement memorandum (PPM), and offering documents. Discrepancies can result in delays or denials.",
+    "shortDescription": "The business plan must align with other EB-5 documentation, including the Form I-526E, private placement memorandum (PPM), and offering…",
+    "examples": [
+      "The staffing chart in the business plan matches job creation numbers in Form I-526E.",
+      "A mismatch between capital structure in the PPM and business plan could trigger an RFE."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1801,
+    "title": "Hospitality Project in Florida",
+    "category": "Real Estate & Business",
+    "subcategory": "Case Studies",
+    "description": "A group of 40 EB-5 investors funded a luxury resort near Miami. The regional center structured the investment as a loan. The project exceeded job creation goals and returned capital after 6 years.",
+    "shortDescription": "A group of 40 EB-5 investors funded a luxury resort near Miami.",
+    "examples": [
+      "Each investor created 14.2 jobs according to an economic impact report.",
+      "Investors received a return of capital after stabilization and refinancing."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1802,
+    "title": "Rural Manufacturing Facility in Ohio",
+    "category": "Real Estate & Business",
+    "subcategory": "Case Studies",
+    "description": "A direct investor launched a small factory in a TEA-designated rural town. The project created 16 direct jobs and met EB-5 sustainment requirements, leading to successful I-829 approval.",
+    "shortDescription": "A direct investor launched a small factory in a TEA-designated rural town.",
+    "examples": [
+      "The business employed 3 shifts of workers across production and logistics.",
+      "The investor actively managed operations and expanded after the first year."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1803,
+    "title": "Senior Living Center in California",
+    "category": "Real Estate & Business",
+    "subcategory": "Case Studies",
+    "description": "An EB-5 project involved development of a senior living community in a suburban California area. Over 100 jobs were created, and the regional center facilitated full repayment after 5 years.",
+    "shortDescription": "An EB-5 project involved development of a senior living community in a suburban California area.",
+    "examples": [
+      "Nurses, kitchen staff, and administrators formed the core of direct employment.",
+      "Job creation was calculated through both direct and indirect modeling."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1804,
+    "title": "Logistics Hub in Texas",
+    "category": "Real Estate & Business",
+    "subcategory": "Case Studies",
+    "description": "A regional center raised $40 million from EB-5 investors to develop a logistics hub in southern Texas. Despite construction delays, the project completed on budget and on time.",
+    "shortDescription": "A regional center raised $40 million from EB-5 investors to develop a logistics hub in southern Texas.",
+    "examples": [
+      "The job creation buffer allowed the project to remain compliant despite timeline changes.",
+      "USCIS approved all I-829 petitions due to consistent employment tracking."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1805,
+    "title": "Mixed-Use Urban Project in New York",
+    "category": "Real Estate & Business",
+    "subcategory": "Case Studies",
+    "description": "A high-profile Manhattan development combined office, retail, and residential components. EB-5 investors participated alongside institutional equity and bank loans.",
+    "shortDescription": "A high-profile Manhattan development combined office, retail, and residential components.",
+    "examples": [
+      "More than 1,000 jobs were created across all phases of the project.",
+      "Investors experienced delayed exit timelines due to pandemic-related leasing impacts."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1806,
+    "title": "Charter School Expansion in Arizona",
+    "category": "Real Estate & Business",
+    "subcategory": "Case Studies",
+    "description": "EB-5 funding supported construction of two new charter school campuses in Phoenix. The project was backed by state educational funding and created 60+ direct jobs.",
+    "shortDescription": "EB-5 funding supported construction of two new charter school campuses in Phoenix.",
+    "examples": [
+      "Teachers, administrators, and facility staff counted toward job creation.",
+      "Charter school expansion projects have become increasingly popular with EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1901,
+    "title": "Filing Form I-526 or I-526E",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Petition Process",
+    "description": "The EB-5 process begins with filing Form I-526 (direct) or I-526E (regional center). This petition shows the investor's lawful source of funds and job-creating investment plan.",
+    "shortDescription": "The EB-5 process begins with filing Form I-526 (direct) or I-526E (regional center).",
+    "examples": [
+      "An investor includes bank records, tax returns, and a comprehensive business plan with the I-526 petition.",
+      "For regional center projects, I-526E is used and includes the center's documentation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1902,
+    "title": "USCIS Review and Processing",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Petition Process",
+    "description": "USCIS reviews the petition for eligibility, fund traceability, and job creation strategy. If needed, they may issue a Request for Evidence (RFE) or Notice of Intent to Deny (NOID).",
+    "shortDescription": "USCIS reviews the petition for eligibility, fund traceability, and job creation strategy.",
+    "examples": [
+      "USCIS asks for clarification on employment documentation and timeline in an RFE.",
+      "An investor submits additional evidence proving lawful source of a gift."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1903,
+    "title": "Approval and Visa Availability",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Petition Process",
+    "description": "Once Form I-526/I-526E is approved, the investor must check the Visa Bulletin to confirm if a visa is available for their country. If current, they can proceed to apply for a Green Card.",
+    "shortDescription": "Once Form I-526/I-526E is approved, the investor must check the Visa Bulletin to confirm if a visa is available for their country.",
+    "examples": [
+      "An Indian investor waits for their priority date to become current before moving forward.",
+      "Investors from low-demand countries may proceed immediately after I-526 approval."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1904,
+    "title": "Adjustment of Status or Consular Processing",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Petition Process",
+    "description": "If in the U.S., the investor files Form I-485 for status adjustment. If abroad, they apply through consular processing using DS-260 at a U.S. embassy.",
+    "shortDescription": "If in the U.S., the investor files Form I-485 for status adjustment.",
+    "examples": [
+      "A student on an F-1 visa in the U.S. files I-485 to adjust to EB-5 status.",
+      "An investor living abroad schedules a consulate interview after DS-260 submission."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1905,
+    "title": "Conditional Green Card Issuance",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Petition Process",
+    "description": "Upon approval of adjustment or consular process, the investor receives a two-year conditional Green Card. They must meet investment and job creation goals within this period.",
+    "shortDescription": "Upon approval of adjustment or consular process, the investor receives a two-year conditional Green Card.",
+    "examples": [
+      "An investor receives a conditional Green Card and relocates to the U.S. with their family.",
+      "The investor receives a conditional Green Card and relocates to manage the business.",
+      "The two-year period begins on the date of U.S. entry or adjustment approval.",
+      "The two-year period starts from the date of entry or adjustment approval."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1906,
+    "title": "Filing Form I-829 to Remove Conditions",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Petition Process",
+    "description": "Within 90 days before the second anniversary of receiving a conditional Green Card, the investor must file Form I-829 to prove the investment was sustained and jobs were created.",
+    "shortDescription": "Within 90 days before the second anniversary of receiving a conditional Green Card, the investor must file Form I-829 to prove the…",
+    "examples": [
+      "The investor includes payroll records, tax documents, and financial statements with I-829.",
+      "Failure to timely file I-829 may result in loss of permanent residency."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2001,
+    "title": "Form I-526 / I-526E – Immigrant Petition",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Application Forms",
+    "description": "Form I-526 (or I-526E for regional center investors) initiates the EB-5 process. It demonstrates the investor’s eligibility, lawful source of funds, and job-creating investment plan.",
+    "shortDescription": "Form I-526 (or I-526E for regional center investors) initiates the EB-5 process.",
+    "examples": [
+      "A direct EB-5 investor files Form I-526 with proof of investment in a restaurant business.",
+      "A regional center participant submits Form I-526E along with the project’s economic report."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2002,
+    "title": "Form I-485 – Adjustment of Status",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Application Forms",
+    "description": "If the investor is already in the U.S., they file Form I-485 to adjust their status to lawful permanent resident after their I-526 is approved and a visa is available.",
+    "shortDescription": "If the investor is already in the U.S., they file Form I-485 to adjust their status to lawful permanent resident after their I-526 is…",
+    "examples": [
+      "An investor on an H-1B visa uses I-485 to switch to EB-5 conditional resident status.",
+      "Form I-485 includes biometrics, medical exam, and personal history details."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2003,
+    "title": "Form DS-260 – Consular Processing",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Application Forms",
+    "description": "Investors residing outside the U.S. use Form DS-260 to apply for an immigrant visa at a U.S. consulate after I-526/I-526E approval and visa availability.",
+    "shortDescription": "Investors residing outside the U.S.",
+    "examples": [
+      "An investor in India completes DS-260 to schedule their visa interview at the U.S. Embassy.",
+      "Form DS-260 is submitted online via the National Visa Center portal."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2004,
+    "title": "Form I-829 – Remove Conditions",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Application Forms",
+    "description": "Filed within 90 days before the two-year conditional period expires, Form I-829 requests removal of conditions and proves that the investor met job creation and investment sustainment requirements.",
+    "shortDescription": "Filed within 90 days before the two-year conditional period expires, Form I-829 requests removal of conditions and proves that the investor…",
+    "examples": [
+      "The I-829 includes payroll records, business licenses, and investment bank statements.",
+      "Once approved, the investor and their family receive permanent Green Cards valid for 10 years."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2005,
+    "title": "Form I-956K – Agent Registration",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Application Forms",
+    "description": "Any person acting as a promoter, finder, or agent for an EB-5 project must file Form I-956K to disclose their relationship with the regional center and confirm compliance with USCIS regulations.",
+    "shortDescription": "Any person acting as a promoter, finder, or agent for an EB-5 project must file Form I-956K to disclose their relationship with the…",
+    "examples": [
+      "A marketing agent working with a regional center files I-956K to register with USCIS.",
+      "Failure to file I-956K can result in disqualification of investor petitions linked to the agent."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2006,
+    "title": "Form I-956F – Project Application",
+    "category": "Immigration & Legal Process",
+    "subcategory": "EB-5 Application Forms",
+    "description": "Form I-956F must be submitted by regional centers for each EB-5 project offering. It contains the project's business plan, economic report, securities documents, and job creation model.",
+    "shortDescription": "Form I-956F must be submitted by regional centers for each EB-5 project offering.",
+    "examples": [
+      "A regional center submits I-956F with a full set of project documents before investors can file I-526E.",
+      "The project must be approved under I-956F for investors to proceed."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2102,
+    "title": "Rights of Conditional Residents",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Green Card Process",
+    "description": "EB-5 conditional Green Card holders have full rights to live, work, and study in the U.S. They can travel, open businesses, and enroll children in public schools.",
+    "shortDescription": "EB-5 conditional Green Card holders have full rights to live, work, and study in the U.S.",
+    "examples": [
+      "An investor's spouse starts a business while their child attends a U.S. university.",
+      "The family is not subject to visa restrictions once conditional status is granted."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2103,
+    "title": "Conditions Removal via Form I-829",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Green Card Process",
+    "description": "To convert the conditional Green Card into a permanent one, the investor must file Form I-829 within the 90-day window before the card expires. This proves investment sustainment and job creation.",
+    "shortDescription": "To convert the conditional Green Card into a permanent one, the investor must file Form I-829 within the 90-day window before the card…",
+    "examples": [
+      "The investor submits payroll, tax records, and proof of capital use with Form I-829.",
+      "Once approved, a 10-year unconditional Green Card is issued."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2104,
+    "title": "10-Year Green Card (Permanent Residency)",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Green Card Process",
+    "description": "Once Form I-829 is approved, the investor and their qualifying family members receive a permanent Green Card valid for 10 years. It is renewable and serves as proof of lawful permanent residency.",
+    "shortDescription": "Once Form I-829 is approved, the investor and their qualifying family members receive a permanent Green Card valid for 10 years.",
+    "examples": [
+      "The investor receives a 10-year Green Card and no longer needs to prove job creation.",
+      "Family members receive the same permanent status and enjoy full residency rights."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2105,
+    "title": "Maintaining Green Card Status",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Green Card Process",
+    "description": "To keep Green Card status, residents must not abandon their intent to live in the U.S., avoid long absences, and comply with tax and residency obligations.",
+    "shortDescription": "To keep Green Card status, residents must not abandon their intent to live in the U.S., avoid long absences, and comply with tax and…",
+    "examples": [
+      "Spending more than 6 months abroad could trigger abandonment concerns.",
+      "Filing U.S. tax returns and maintaining ties to the U.S. help preserve status."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2106,
+    "title": "Eligibility for U.S. Citizenship",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Green Card Process",
+    "description": "After 5 years of lawful permanent residency (including conditional status), EB-5 investors may apply for naturalization if they meet physical presence, language, and civics requirements.",
+    "shortDescription": "After 5 years of lawful permanent residency (including conditional status), EB-5 investors may apply for naturalization if they meet…",
+    "examples": [
+      "An investor applies for U.S. citizenship five years after receiving their conditional Green Card.",
+      "The naturalization process includes a background check and citizenship interview."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2201,
+    "title": "Adjustment of Status (AOS) Overview",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Adjustment of Status vs Consular Processing",
+    "description": "Adjustment of Status allows EB-5 investors already in the U.S. to change from a nonimmigrant to immigrant status by filing Form I-485 without leaving the country.",
+    "shortDescription": "Adjustment of Status allows EB-5 investors already in the U.S.",
+    "examples": [
+      "An F-1 student files I-485 after their I-526 approval to become a conditional Green Card holder.",
+      "The investor remains in the U.S. during processing and receives a work/travel permit."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2202,
+    "title": "Consular Processing Overview",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Adjustment of Status vs Consular Processing",
+    "description": "Consular processing applies to EB-5 investors living outside the U.S. After I-526/I-526E approval, they apply for an immigrant visa through a U.S. consulate in their home country.",
+    "shortDescription": "Consular processing applies to EB-5 investors living outside the U.S.",
+    "examples": [
+      "An investor in China schedules a visa interview at the U.S. Consulate in Guangzhou.",
+      "After DS-260 approval, the investor receives a visa and enters the U.S. as a conditional resident."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2203,
+    "title": "AOS Processing Timeline and Benefits",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Adjustment of Status vs Consular Processing",
+    "description": "Adjustment of Status often includes faster access to work and travel authorization (EAD/AP) and avoids the need for international travel. Processing time varies by USCIS workload.",
+    "shortDescription": "Adjustment of Status often includes faster access to work and travel authorization (EAD/AP) and avoids the need for international travel.",
+    "examples": [
+      "A student receives an EAD card within 90 days of filing Form I-485.",
+      "Advance parole allows the investor to travel abroad while AOS is pending."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2204,
+    "title": "Consular Interview and Entry to the U.S.",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Adjustment of Status vs Consular Processing",
+    "description": "In consular processing, the applicant must attend a visa interview abroad. Once approved, they enter the U.S. and activate their EB-5 Green Card status upon arrival.",
+    "shortDescription": "In consular processing, the applicant must attend a visa interview abroad.",
+    "examples": [
+      "The visa stamp is issued by the consulate after the medical exam and background checks.",
+      "The Green Card is mailed after the investor enters the U.S. through a port of entry."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2205,
+    "title": "Factors in Choosing Between AOS and Consular",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Adjustment of Status vs Consular Processing",
+    "description": "Choosing between Adjustment of Status and Consular Processing depends on current location, visa availability, travel needs, and immigration history. Legal counsel is often necessary.",
+    "shortDescription": "Choosing between Adjustment of Status and Consular Processing depends on current location, visa availability, travel needs, and immigration…",
+    "examples": [
+      "A business visitor on a B-1 visa may not qualify for AOS due to intent issues.",
+      "An H-1B worker with dual intent can safely use AOS while remaining employed."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2206,
+    "title": "Travel Considerations During Processing",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Adjustment of Status vs Consular Processing",
+    "description": "Those applying for AOS must avoid international travel without advance parole. Consular applicants should remain abroad until their visa is issued to avoid denial.",
+    "shortDescription": "Those applying for AOS must avoid international travel without advance parole.",
+    "examples": [
+      "An AOS applicant who travels without a travel document risks petition abandonment.",
+      "Consular processing requires patience while awaiting interview scheduling overseas."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2301,
+    "title": "Role of Immigration Attorneys",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Immigration Attorneys & Consultants",
+    "description": "Immigration attorneys provide legal advice, prepare and file EB-5 forms, and help ensure compliance with USCIS regulations. They are licensed and regulated professionals with expertise in immigration law.",
+    "shortDescription": "Immigration attorneys provide legal advice, prepare and file EB-5 forms, and help ensure compliance with USCIS regulations.",
+    "examples": [
+      "An attorney drafts Form I-526 and reviews the business plan for compliance with Matter of Ho.",
+      "The attorney communicates with USCIS and responds to Requests for Evidence (RFEs)."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2302,
+    "title": "Choosing a Qualified EB-5 Attorney",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Immigration Attorneys & Consultants",
+    "description": "Investors should select attorneys with EB-5 experience, strong references, and a track record of approvals. Avoid generalists or those without a deep understanding of EB-5 rules and compliance.",
+    "shortDescription": "Investors should select attorneys with EB-5 experience, strong references, and a track record of approvals.",
+    "examples": [
+      "An experienced EB-5 attorney helps avoid common errors in job creation documentation.",
+      "Checking client testimonials and approval history can help assess credibility."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2303,
+    "title": "Role of Migration Agents and Consultants",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Immigration Attorneys & Consultants",
+    "description": "Migration agents and consultants assist with project selection, documentation, and coordination with legal teams. They are not licensed to provide legal advice unless they are also attorneys.",
+    "shortDescription": "Migration agents and consultants assist with project selection, documentation, and coordination with legal teams.",
+    "examples": [
+      "An agent helps the investor evaluate regional center projects and submit financial records.",
+      "Non-attorney consultants cannot provide legal opinions or represent clients before USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2304,
+    "title": "Agent Registration Requirement (I-956K)",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Immigration Attorneys & Consultants",
+    "description": "Under the EB-5 Reform and Integrity Act, all agents promoting EB-5 projects must file Form I-956K with USCIS. This ensures transparency and accountability in the investment process.",
+    "shortDescription": "Under the EB-5 Reform and Integrity Act, all agents promoting EB-5 projects must file Form I-956K with USCIS.",
+    "examples": [
+      "A consultant promoting an EB-5 project must register via I-956K before marketing to investors.",
+      "Failure to register may disqualify the investor’s petition."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2305,
+    "title": "Avoiding Fraudulent Consultants",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Immigration Attorneys & Consultants",
+    "description": "Investors should be cautious of unregistered agents, exaggerated claims, or guarantees of success. Only licensed attorneys should handle legal filings and strategy.",
+    "shortDescription": "Investors should be cautious of unregistered agents, exaggerated claims, or guarantees of success.",
+    "examples": [
+      "An agent promising guaranteed Green Cards is likely violating EB-5 laws.",
+      "The investor checks a consultant’s I-956K registration and legal background before engagement."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2306,
+    "title": "Working With a Professional Team",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Immigration Attorneys & Consultants",
+    "description": "Successful EB-5 applicants often work with a team of professionals including attorneys, financial planners, project analysts, and translators to ensure accuracy and completeness.",
+    "shortDescription": "Successful EB-5 applicants often work with a team of professionals including attorneys, financial planners, project analysts, and…",
+    "examples": [
+      "The investor’s team includes an immigration attorney, CPA, and EB-5 consultant.",
+      "A collaborative approach ensures legal compliance and proper fund documentation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2401,
+    "title": "Insufficient Job Creation",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Common EB-5 Issues & Denials",
+    "description": "Failure to create at least 10 full-time qualifying jobs is a leading reason for EB-5 petition denials, especially at the I-829 stage.",
+    "shortDescription": "Failure to create at least 10 full-time qualifying jobs is a leading reason for EB-5 petition denials, especially at the I-829 stage.",
+    "examples": [
+      "A project anticipated 12 jobs per investor but only created 8, resulting in denial.",
+      "Lack of payroll records or credible economic modeling can trigger job-related RFE."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2402,
+    "title": "Unclear or Unverifiable Source of Funds",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Common EB-5 Issues & Denials",
+    "description": "USCIS requires detailed documentation of how the investor lawfully obtained and transferred funds. Any gaps, inconsistencies, or suspicious transactions may lead to a denial.",
+    "shortDescription": "USCIS requires detailed documentation of how the investor lawfully obtained and transferred funds.",
+    "examples": [
+      "An investor failed to document a large wire transfer received from an offshore account.",
+      "Missing tax returns or sale deeds raised concerns about fund legality."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2403,
+    "title": "Improper Use of Escrow or Loan Terms",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Common EB-5 Issues & Denials",
+    "description": "Agreements that guarantee a return of capital or tie investment to repayment timelines violate EB-5's 'at risk' rule and result in USCIS denial.",
+    "shortDescription": "Agreements that guarantee a return of capital or tie investment to repayment timelines violate EB-5's 'at risk' rule and result in USCIS…",
+    "examples": [
+      "A side agreement promised capital return within five years regardless of job creation.",
+      "The investor’s funds never left escrow, so they were not considered at risk."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2404,
+    "title": "Inadequate Business Plan",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Common EB-5 Issues & Denials",
+    "description": "A business plan that lacks credibility, detail, or job creation strategy may fail to meet Matter of Ho standards and lead to denial at the I-526 or I-829 stage.",
+    "shortDescription": "A business plan that lacks credibility, detail, or job creation strategy may fail to meet Matter of Ho standards and lead to denial at the…",
+    "examples": [
+      "The plan did not show specific hiring schedules or employment structure.",
+      "Projected jobs were not clearly tied to capital deployment."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2405,
+    "title": "Late or Missed Filings",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Common EB-5 Issues & Denials",
+    "description": "Failing to file Form I-829 within 90 days before the conditional Green Card expires can result in loss of residency and denial, even if the project met all other requirements.",
+    "shortDescription": "Failing to file Form I-829 within 90 days before the conditional Green Card expires can result in loss of residency and denial, even if the…",
+    "examples": [
+      "An investor missed the I-829 deadline and lost lawful permanent resident status.",
+      "Even a strong case may be denied if it is filed late or lacks a valid explanation."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2406,
+    "title": "Fraud or Misrepresentation",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Common EB-5 Issues & Denials",
+    "description": "Providing false documents or misrepresenting facts in any part of the EB-5 process can result in petition denial, permanent inadmissibility, and legal consequences.",
+    "shortDescription": "Providing false documents or misrepresenting facts in any part of the EB-5 process can result in petition denial, permanent…",
+    "examples": [
+      "An investor claimed job creation that was later proven fabricated by USCIS audit.",
+      "Falsifying income statements led to a permanent bar from entering the U.S."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2501,
+    "title": "Eligibility of Spouse and Children",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Family Immigration through EB-5",
+    "description": "The EB-5 program allows the investor's spouse and unmarried children under the age of 21 to receive conditional Green Cards as derivative beneficiaries.",
+    "shortDescription": "The EB-5 program allows the investor's spouse and unmarried children under the age of 21 to receive conditional Green Cards as derivative…",
+    "examples": [
+      "An investor applies with their spouse and two minor children, who all receive Green Cards.",
+      "Each family member is included in the same I-526 or I-526E petition."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2502,
+    "title": "Education and Work Rights for Family",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Family Immigration through EB-5",
+    "description": "Family members who receive Green Cards can study in public or private schools and are eligible to work in the U.S. without additional permits.",
+    "shortDescription": "Family members who receive Green Cards can study in public or private schools and are eligible to work in the U.S.",
+    "examples": [
+      "A child of an EB-5 investor enrolls in a state university and qualifies for in-state tuition.",
+      "The investor’s spouse begins work at a healthcare clinic after receiving their Green Card."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2503,
+    "title": "Maintaining Dependent Status",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Family Immigration through EB-5",
+    "description": "Children must remain unmarried and under age 21 at the time of visa issuance to qualify as dependents. The Child Status Protection Act (CSPA) may help preserve eligibility despite delays.",
+    "shortDescription": "Children must remain unmarried and under age 21 at the time of visa issuance to qualify as dependents.",
+    "examples": [
+      "A child turns 21 during petition processing but remains eligible under CSPA.",
+      "If the child marries, they lose eligibility as a derivative beneficiary."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2504,
+    "title": "Permanent Residency for Family",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Family Immigration through EB-5",
+    "description": "After Form I-829 is approved, all eligible family members receive unconditional Green Cards and retain permanent residency rights independently from the main investor.",
+    "shortDescription": "After Form I-829 is approved, all eligible family members receive unconditional Green Cards and retain permanent residency rights…",
+    "examples": [
+      "The investor’s spouse and children receive 10-year Green Cards after I-829 approval.",
+      "Family members are not required to reapply separately—they are included in the I-829."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2506,
+    "title": "Future Family Sponsorship Options",
+    "category": "Immigration & Legal Process",
+    "subcategory": "Family Immigration through EB-5",
+    "description": "Once an EB-5 investor becomes a permanent resident or citizen, they may sponsor other relatives such as parents, adult children, or siblings through family-based immigration channels.",
+    "shortDescription": "Once an EB-5 investor becomes a permanent resident or citizen, they may sponsor other relatives such as parents, adult children, or…",
+    "examples": [
+      "A naturalized investor files an immigrant petition for their elderly parents.",
+      "Family sponsorship is not part of EB-5 but may follow once Green Card or citizenship is obtained."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2601,
+    "title": "Risk of Business Failure",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Investment Risks",
+    "description": "EB-5 investments are subject to the same risks as any commercial venture. If the business fails, the investor may lose both their capital and eligibility for permanent residency.",
+    "shortDescription": "EB-5 investments are subject to the same risks as any commercial venture.",
+    "examples": [
+      "A restaurant closes due to poor location and market conditions, failing to create jobs.",
+      "The investor cannot remove conditions without proving successful investment outcomes."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2602,
+    "title": "Job Creation Shortfall",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Investment Risks",
+    "description": "If a project does not create or sustain at least 10 full-time jobs per investor, USCIS may deny the I-829 petition and permanent residency will not be granted.",
+    "shortDescription": "If a project does not create or sustain at least 10 full-time jobs per investor, USCIS may deny the I-829 petition and permanent residency…",
+    "examples": [
+      "Construction delays prevent job creation during the conditional period.",
+      "Underperformance leads to staff layoffs before jobs can be documented."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2603,
+    "title": "Project Delays or Cancellations",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Investment Risks",
+    "description": "Development projects may face delays due to permitting issues, financing gaps, or external economic factors, which can affect EB-5 timelines and compliance.",
+    "shortDescription": "Development projects may face delays due to permitting issues, financing gaps, or external economic factors, which can affect EB-5…",
+    "examples": [
+      "A hotel project is delayed due to zoning disputes, pushing job creation beyond the required window.",
+      "The investor's I-829 filing is postponed due to construction not reaching job milestones."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2604,
+    "title": "Visa Backlogs and Country Caps",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Investment Risks",
+    "description": "Applicants from countries with high EB-5 demand may face long waiting periods due to annual visa limits per country, which can delay Green Card issuance even after investment approval.",
+    "shortDescription": "Applicants from countries with high EB-5 demand may face long waiting periods due to annual visa limits per country, which can delay Green…",
+    "examples": [
+      "Investors from India and China often experience multi-year delays due to oversubscription.",
+      "A child's age-out risk increases while waiting for a visa number to become available."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2605,
+    "title": "Risk of Fraud or Mismanagement",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Investment Risks",
+    "description": "Investors may be vulnerable to dishonest project sponsors or unregistered agents. Fraudulent or mismanaged projects can lead to financial loss and petition denial.",
+    "shortDescription": "Investors may be vulnerable to dishonest project sponsors or unregistered agents.",
+    "examples": [
+      "The Jay Peak case involved misuse of investor funds and led to major USCIS reforms.",
+      "An investor unknowingly joins a project with inflated job projections and poor execution."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2606,
+    "title": "Economic and Political Risks",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Investment Risks",
+    "description": "Market downturns, interest rate changes, inflation, or immigration policy shifts can all impact EB-5 investments, either financially or procedurally.",
+    "shortDescription": "Market downturns, interest rate changes, inflation, or immigration policy shifts can all impact EB-5 investments, either financially or…",
+    "examples": [
+      "A recession reduces hotel revenue, limiting job creation and investor returns.",
+      "Legislative delays in EB-5 reauthorization create program uncertainty."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2701,
+    "title": "Understanding Project Structure",
+    "category": "Risk Management",
+    "subcategory": "Due Diligence Process",
+    "description": "Before investing, EB-5 applicants should understand how the project is structured—who the developers are, how funds are used, and what roles each party plays.",
+    "shortDescription": "Before investing, EB-5 applicants should understand how the project is structured—who the developers are, how funds are used, and what…",
+    "examples": [
+      "An investor reviews a project’s organizational chart and capital stack diagram.",
+      "A reputable developer with a clear track record reduces project risk."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2702,
+    "title": "Assessing Regional Center Credentials",
+    "category": "Risk Management",
+    "subcategory": "Due Diligence Process",
+    "description": "Review the experience, approval history, and integrity of the regional center sponsoring the project. A strong compliance record and I-829 approval rates are key indicators.",
+    "shortDescription": "Review the experience, approval history, and integrity of the regional center sponsoring the project.",
+    "examples": [
+      "A regional center with hundreds of successful petitions is more reliable.",
+      "The investor requests a history of job creation and capital return from past projects."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2703,
+    "title": "Reviewing Economic Reports",
+    "category": "Risk Management",
+    "subcategory": "Due Diligence Process",
+    "description": "Third-party economic impact reports help determine whether job creation projections are realistic and based on sound modeling techniques.",
+    "shortDescription": "Third-party economic impact reports help determine whether job creation projections are realistic and based on sound modeling techniques.",
+    "examples": [
+      "The IMPLAN report forecasts job creation based on $100M in construction spending.",
+      "The investor ensures that job buffers exceed the 10-job minimum requirement."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2704,
+    "title": "Legal and Financial Review",
+    "category": "Risk Management",
+    "subcategory": "Due Diligence Process",
+    "description": "A thorough legal and financial review helps uncover potential red flags. Investors should engage attorneys and financial advisors to evaluate offering documents and escrow arrangements.",
+    "shortDescription": "A thorough legal and financial review helps uncover potential red flags.",
+    "examples": [
+      "An attorney reviews the PPM and escrow agreements to verify fund flow and risk disclosures.",
+      "A financial expert examines whether the return model is realistic and SEC-compliant."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2705,
+    "title": "Background Checks on Sponsors",
+    "category": "Risk Management",
+    "subcategory": "Due Diligence Process",
+    "description": "Conduct background checks on the developers, general partners, or managers of the EB-5 project to identify litigation history, bankruptcies, or other red flags.",
+    "shortDescription": "Conduct background checks on the developers, general partners, or managers of the EB-5 project to identify litigation history,…",
+    "examples": [
+      "A background search reveals a principal previously involved in a failed EB-5 project.",
+      "Investors verify that all key parties are in good legal standing."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2706,
+    "title": "Evaluating Exit Strategy",
+    "category": "Risk Management",
+    "subcategory": "Due Diligence Process",
+    "description": "A clearly defined exit strategy gives investors a roadmap for when and how they may receive return of capital. Look for realistic timelines and market-supported projections.",
+    "shortDescription": "A clearly defined exit strategy gives investors a roadmap for when and how they may receive return of capital.",
+    "examples": [
+      "The plan includes a projected refinance or property sale in year six.",
+      "Vague or overly optimistic exit language may signal potential risk."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2801,
+    "title": "Recognizing Red Flags",
+    "category": "Risk Management",
+    "subcategory": "Fraud Prevention",
+    "description": "Investors should be alert to signs of potential fraud, such as unrealistic return promises, lack of transparency, unregistered agents, or unverifiable project details.",
+    "shortDescription": "Investors should be alert to signs of potential fraud, such as unrealistic return promises, lack of transparency, unregistered agents, or…",
+    "examples": [
+      "A project guarantees both immigration success and capital return—an immediate red flag.",
+      "The regional center refuses to disclose detailed financials or ownership structure."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2802,
+    "title": "Verifying Agent and Project Registration",
+    "category": "Risk Management",
+    "subcategory": "Fraud Prevention",
+    "description": "Investors should ensure their project is associated with a USCIS-approved regional center and that any intermediaries have filed Form I-956K to register with USCIS.",
+    "shortDescription": "Investors should ensure their project is associated with a USCIS-approved regional center and that any intermediaries have filed Form…",
+    "examples": [
+      "The investor checks USCIS’s website for the regional center’s designation.",
+      "An agent shows their I-956K confirmation before offering EB-5 services."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2803,
+    "title": "Requesting Escrow Account Transparency",
+    "category": "Risk Management",
+    "subcategory": "Fraud Prevention",
+    "description": "Escrow accounts help safeguard investor capital. Investors should request documentation on escrow agents, release conditions, and legal oversight.",
+    "shortDescription": "Escrow accounts help safeguard investor capital.",
+    "examples": [
+      "The investor receives a copy of the escrow agreement outlining release upon I-526 approval.",
+      "A third-party escrow manager confirms controls over fund access."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2804,
+    "title": "Reviewing Offering Documents Carefully",
+    "category": "Risk Management",
+    "subcategory": "Fraud Prevention",
+    "description": "Thoroughly review the private placement memorandum (PPM), subscription agreement, and business plan. All disclosures, risks, and terms must be clearly outlined and realistic.",
+    "shortDescription": "Thoroughly review the private placement memorandum (PPM), subscription agreement, and business plan.",
+    "examples": [
+      "A lawyer reviews the PPM and flags inconsistencies in the job creation model.",
+      "The investor verifies that capital repayment terms align with EB-5 regulations."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2805,
+    "title": "Use of Independent Legal and Financial Advisors",
+    "category": "Risk Management",
+    "subcategory": "Fraud Prevention",
+    "description": "Independent advisors not affiliated with the project can provide unbiased opinions and detect fraud risk. Investors should avoid relying solely on project representatives.",
+    "shortDescription": "Independent advisors not affiliated with the project can provide unbiased opinions and detect fraud risk.",
+    "examples": [
+      "An unaffiliated immigration lawyer reviews compliance with USCIS requirements.",
+      "An independent CPA evaluates financial projections and fund flow."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2806,
+    "title": "Understanding EB-5 Program Rules",
+    "category": "Risk Management",
+    "subcategory": "Fraud Prevention",
+    "description": "Educating oneself on EB-5 rules reduces vulnerability to misrepresentation. Investors should understand investment, job creation, and sustainment requirements before committing funds.",
+    "shortDescription": "Educating oneself on EB-5 rules reduces vulnerability to misrepresentation.",
+    "examples": [
+      "An investor learns that guaranteed returns are not allowed under EB-5 law.",
+      "Familiarity with Form I-526 content helps the investor identify missing evidence."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2901,
+    "title": "Understanding Exit Strategy Basics",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Project Exit Strategies",
+    "description": "An exit strategy outlines how and when EB-5 investors may be repaid their capital after completing immigration requirements. It is a critical part of project evaluation.",
+    "shortDescription": "An exit strategy outlines how and when EB-5 investors may be repaid their capital after completing immigration requirements.",
+    "examples": [
+      "The project plan includes a proposed refinance event in year 6.",
+      "An exit strategy tied to asset sale post-job creation period helps ensure compliance."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2902,
+    "title": "Exit via Refinancing",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Project Exit Strategies",
+    "description": "Many projects plan to repay EB-5 investors through refinancing after stabilization. This is common in real estate where revenue streams support new financing to replace EB-5 capital.",
+    "shortDescription": "Many projects plan to repay EB-5 investors through refinancing after stabilization.",
+    "examples": [
+      "A multifamily apartment complex is refinanced by a bank loan, allowing EB-5 investors to exit.",
+      "Refinancing occurs once occupancy reaches 90% and NOI targets are met."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2903,
+    "title": "Exit via Property Sale",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Project Exit Strategies",
+    "description": "Some EB-5 projects plan to sell the developed asset after completion and job creation. Proceeds from the sale are then used to repay investors.",
+    "shortDescription": "Some EB-5 projects plan to sell the developed asset after completion and job creation.",
+    "examples": [
+      "The developer sells a hotel to a private equity firm at a target price to repay EB-5 funds.",
+      "An industrial warehouse is sold post-lease up to institutional buyers."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2904,
+    "title": "Exit via Revenue Sharing",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Project Exit Strategies",
+    "description": "In rare cases, EB-5 investments are repaid over time through revenue sharing. While less common, this method may be used when long-term income supports scheduled distributions.",
+    "shortDescription": "In rare cases, EB-5 investments are repaid over time through revenue sharing.",
+    "examples": [
+      "An entertainment venue uses ticket revenue to return investor capital over 8 years.",
+      "The business provides quarterly reports and dividend payments based on performance."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2905,
+    "title": "Restrictions on Exit Timing",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Project Exit Strategies",
+    "description": "EB-5 funds must remain invested and at risk for the full sustainment period. Early exits are not permitted before the investor files Form I-829. Exit strategies must account for this timing.",
+    "shortDescription": "EB-5 funds must remain invested and at risk for the full sustainment period.",
+    "examples": [
+      "Investors cannot be repaid until after their two-year conditional residency period ends.",
+      "A refinance is planned only after the last I-829 filing window is complete."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2906,
+    "title": "Transparency in Exit Planning",
+    "category": "Risk Management",
+    "subcategory": "EB-5 Project Exit Strategies",
+    "description": "The exit strategy must be clearly disclosed in offering documents. Investors should seek transparency on timing, repayment method, contingencies, and legal structure.",
+    "shortDescription": "The exit strategy must be clearly disclosed in offering documents.",
+    "examples": [
+      "The Private Placement Memorandum outlines refinance terms, timeline, and potential risks.",
+      "Investors review exit terms with legal counsel before committing capital."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3002,
+    "title": "Legal Review of Offering Documents",
+    "category": "Risk Management",
+    "subcategory": "Legal and Financial Safeguards",
+    "description": "Investors should have legal counsel review the Private Placement Memorandum (PPM), subscription agreement, and all offering materials to identify risks and confirm EB-5 compliance.",
+    "shortDescription": "Investors should have legal counsel review the Private Placement Memorandum (PPM), subscription agreement, and all offering materials to…",
+    "examples": [
+      "An immigration attorney flags discrepancies in the capital deployment section of the PPM.",
+      "A securities lawyer confirms that investor rights are clearly protected in the agreement."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3003,
+    "title": "Third-Party Fund Administration",
+    "category": "Risk Management",
+    "subcategory": "Legal and Financial Safeguards",
+    "description": "Independent fund administrators ensure proper accounting and fund use tracking. They provide transparency and reduce the risk of misuse by developers or regional centers.",
+    "shortDescription": "Independent fund administrators ensure proper accounting and fund use tracking.",
+    "examples": [
+      "A third-party fund manager monitors capital deployment and provides quarterly reports to investors.",
+      "Investors request verification from the administrator before approving fund release."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3004,
+    "title": "Developer Equity Commitment",
+    "category": "Risk Management",
+    "subcategory": "Legal and Financial Safeguards",
+    "description": "Projects where developers contribute significant equity show strong alignment with investor interests. This reduces risk and enhances the likelihood of project completion and capital preservation.",
+    "shortDescription": "Projects where developers contribute significant equity show strong alignment with investor interests.",
+    "examples": [
+      "The developer contributes 20% of project costs from their own funds before accepting EB-5 capital.",
+      "High equity participation demonstrates commitment and financial stability."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3005,
+    "title": "Securities Compliance and Disclosures",
+    "category": "Risk Management",
+    "subcategory": "Legal and Financial Safeguards",
+    "description": "EB-5 investments must comply with U.S. securities laws. Disclosures must clearly explain risks, fees, conflicts of interest, and use of funds. Proper registration or exemption is required.",
+    "shortDescription": "EB-5 investments must comply with U.S.",
+    "examples": [
+      "The PPM includes required disclosures under Regulation D of the SEC.",
+      "Misleading or missing information may expose the issuer to liability and jeopardize the investor’s status."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3006,
+    "title": "Regular Reporting and Transparency",
+    "category": "Risk Management",
+    "subcategory": "Legal and Financial Safeguards",
+    "description": "Ongoing updates and disclosures help investors monitor progress and compliance. Trusted projects share construction milestones, job creation data, and financial updates on a routine basis.",
+    "shortDescription": "Ongoing updates and disclosures help investors monitor progress and compliance.",
+    "examples": [
+      "The investor receives monthly updates from the project with job metrics and timelines.",
+      "Transparent communication improves confidence and helps identify issues early."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  }
+]

@@ -172,7 +172,15 @@
 // Base
 ///////////////////////////
 "base.placeholder" = "기본 콘텐츠";
-
+"base.back" = "뒤로";
+"base.completed_format" = "완료: %lld/%lld";
+"base.examples" = "예시";
+"base.article.mark_completed" = "완료로 표시";
+"base.article.completed" = "완료됨";
+"base.article.completed_badge" = "완료됨";
+"base.article.unavailable" = "현재 언어에서는 이 항목을 이용할 수 없습니다.";
+"base.favorite.add" = "즐겨찾기에 추가";
+"base.favorite.remove" = "즐겨찾기에서 제거";
 
 ///////////////////////////
 // Quizzes

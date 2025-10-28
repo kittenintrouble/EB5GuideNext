@@ -6,14 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		FABD18BB2EB0E01A0045C6FF /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18BA2EB0E01A0045C6FF /* en.lproj */; };
-		FABD18BE2EB0E0320045C6FF /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18BD2EB0E0320045C6FF /* zh-Hans.lproj */; };
-		FABD18C02EB0E03D0045C6FF /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18BF2EB0E03D0045C6FF /* vi.lproj */; };
-		FABD18C22EB0E0460045C6FF /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18C12EB0E0460045C6FF /* ko.lproj */; };
-		FABD18C42EB0E0840045C6FF /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18C32EB0E0840045C6FF /* Base.lproj */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		FABD18862EB0CEC70045C6FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -42,22 +34,9 @@
 		FABD18C32EB0E0840045C6FF /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = EB5GuideNext/Base.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FABD18B92EB0DF630045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"/Localized: Localizable.strings",
-			);
-			target = FABD18772EB0CEC70045C6FF /* EB5GuideNext */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FABD187A2EB0CEC70045C6FF /* EB5GuideNext */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				FABD18B92EB0DF630045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */,
-			);
 			path = EB5GuideNext;
 			sourceTree = "<group>";
 		};
@@ -246,11 +225,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABD18C42EB0E0840045C6FF /* Base.lproj in Resources */,
-				FABD18C22EB0E0460045C6FF /* ko.lproj in Resources */,
-				FABD18C02EB0E03D0045C6FF /* vi.lproj in Resources */,
-				FABD18BE2EB0E0320045C6FF /* zh-Hans.lproj in Resources */,
-				FABD18BB2EB0E01A0045C6FF /* en.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

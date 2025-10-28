@@ -1,0 +1,3004 @@
+[
+  {
+    "id": 1,
+    "title": "Tổng quan về Chương trình EB-5",
+    "category": "Nền tảng",
+    "subcategory": "Những điều cơ bản về chương trình",
+    "description": "Chương trình Nhà đầu tư Nhập cư EB-5 cho phép các nhà đầu tư nước ngoài đủ điều kiện nhận thẻ xanh Hoa Kỳ bằng cách đầu tư vào một doanh nghiệp thương mại mới tạo việc làm cho người lao động Mỹ.",
+    "shortDescription": "Cách EB-5 kết nối đầu tư với thẻ xanh.",
+    "examples": [
+      "Đầu tư 800.000 đô la vào một dự án khu vực việc làm mục tiêu (TEA)",
+      "Tạo ra hoặc duy trì ít nhất 10 việc làm toàn thời gian cho người lao động Hoa Kỳ"
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2,
+    "title": "Đầu tư Trực tiếp và Đầu tư qua Trung tâm Vùng",
+    "category": "Nền tảng",
+    "subcategory": "Các mô hình đầu tư",
+    "description": "Các nhà đầu tư có thể lựa chọn giữa đầu tư trực tiếp, nơi họ quản lý hoạt động kinh doanh, và đầu tư qua trung tâm vùng, nơi họ tham gia vào các dự án gộp vốn được quản lý bởi các chuyên gia.",
+    "shortDescription": "So sánh hai con đường đầu tư EB-5 chính.",
+    "examples": [
+      "Sở hữu và vận hành một nhà hàng với tư cách là nhà đầu tư trực tiếp",
+      "Tham gia vào một dự án phát triển bất động sản thông qua một trung tâm vùng"
+    ],
+    "dayNumber": 2,
+    "isCompleted": false
+  },
+  {
+    "id": 3,
+    "title": "Yêu cầu về Tạo việc làm",
+    "category": "Tuân thủ",
+    "subcategory": "Tiêu chí của USCIS",
+    "description": "Mỗi khoản đầu tư EB-5 phải dẫn đến việc tạo ra ít nhất 10 vị trí toàn thời gian cho người lao động Hoa Kỳ đủ điều kiện trong vòng hai năm kể từ khi nhà đầu tư nhận được thẻ xanh có điều kiện.",
+    "shortDescription": "Tại sao việc tạo việc làm là trung tâm của điều kiện EB-5.",
+    "examples": [
+      "Tuyển dụng nhân viên khách sạn cho một dự án phát triển mới",
+      "Tính cả các công việc gián tiếp được hỗ trợ bởi một dự án của trung tâm vùng"
+    ],
+    "dayNumber": 3,
+    "isCompleted": false
+  },
+  {
+    "id": 101,
+    "title": "Số tiền đầu tư tối thiểu",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Để đủ điều kiện tham gia chương trình EB-5, nhà đầu tư phải đầu tư tối thiểu 1.050.000 đô la vào khu vực tiêu chuẩn hoặc 800.000 đô la vào Khu vực Việc làm Mục tiêu (TEA) hoặc dự án cơ sở hạ tầng đủ điều kiện. Các ngưỡng này được thiết lập vào năm 2022 và có thể điều chỉnh sau mỗi năm năm để theo kịp lạm phát.",
+    "shortDescription": "Để đủ điều kiện tham gia chương trình EB-5, nhà đầu tư phải đầu tư tối thiểu 1.050.000 đô la vào khu vực tiêu chuẩn hoặc 800.000 đô la vào Khu vực Việc làm Mục tiêu…",
+    "examples": [
+      "Một nhà đầu tư chọn một dự án phát triển nông thôn được phân loại là TEA chỉ cần đầu tư 800.000 đô la thay vì 1,05 triệu đô la.",
+      "Một dự án bất động sản sang trọng trong một khu đô thị không phải TEA sẽ yêu cầu khoản đầu tư đầy đủ 1,05 triệu đô la để đủ điều kiện EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 102,
+    "title": "Yêu cầu về tạo việc làm",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Mỗi khoản đầu tư EB-5 phải tạo ra ít nhất 10 việc làm toàn thời gian cho người lao động Hoa Kỳ. Những vị trí này phải được duy trì trong tối thiểu hai năm và phải được lấp đầy bởi những nhân viên Hoa Kỳ đủ điều kiện — không bao gồm nhà đầu tư hoặc gia đình trực hệ của họ.",
+    "shortDescription": "Mỗi khoản đầu tư EB-5 phải tạo ra ít nhất 10 việc làm toàn thời gian cho người lao động Hoa Kỳ.",
+    "examples": [
+      "Một nhà hàng mới tuyển dụng 12 nhân viên toàn thời gian để vận hành, đáp ứng yêu cầu tạo việc làm.",
+      "Một dự án trung tâm vùng có thể tính toán việc tạo việc làm gián tiếp bằng các công cụ mô hình kinh tế như IMPLAN."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 103,
+    "title": "Doanh nghiệp thương mại mới",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Khoản đầu tư phải được thực hiện vào một doanh nghiệp thương mại mới được thành lập sau ngày 29 tháng 11 năm 1990, hoặc vào một doanh nghiệp hiện có được tái cấu trúc hoặc mở rộng đáng kể. Các khoản đầu tư thụ động, như mua bất động sản để sử dụng cá nhân, không đủ điều kiện.",
+    "shortDescription": "Khoản đầu tư phải được thực hiện vào một doanh nghiệp thương mại mới được thành lập sau ngày 29 tháng 11 năm 1990, hoặc vào một doanh nghiệp được tái cấu trúc hoặc mở rộng đáng kể…",
+    "examples": [
+      "Việc mua một bất động sản nhà ở không được tính là một khoản đầu tư đủ điều kiện cho EB-5.",
+      "Việc mở rộng một chuỗi cửa hàng địa phương thêm 40% về lực lượng lao động và diện tích mặt bằng có thể đủ điều kiện là một doanh nghiệp được tái cấu trúc theo EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 104,
+    "title": "Nguồn vốn hợp pháp",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Các nhà đầu tư phải chứng minh rằng số tiền được sử dụng cho khoản đầu tư EB-5 có được thông qua các phương tiện hợp pháp. Các nguồn được chấp nhận bao gồm lợi nhuận kinh doanh, tiền lương, các khoản vay, quà tặng hoặc thừa kế. Các tài liệu như hồ sơ ngân hàng, tờ khai thuế và hợp đồng phải được cung cấp để truy tìm nguồn gốc của số tiền.",
+    "shortDescription": "Các nhà đầu tư phải chứng minh rằng số tiền được sử dụng cho khoản đầu tư EB-5 có được thông qua các phương tiện hợp pháp.",
+    "examples": [
+      "Một nhà đầu tư bán một doanh nghiệp và cung cấp tờ khai thuế, thỏa thuận mua bán và hồ sơ tiền gửi để chứng minh nguồn gốc của vốn đầu tư.",
+      "Nếu vốn là một món quà, nhà đầu tư phải nộp một lá thư quà tặng cùng với các tài liệu tài chính của người tặng để chứng minh nguồn gốc hợp pháp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 105,
+    "title": "Yêu cầu về vốn gặp rủi ro",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Vốn đầu tư phải gặp rủi ro với mục đích tạo ra lợi nhuận. Không thể có bất kỳ sự đảm bảo nào về việc hoàn lại hoặc mua lại số tiền. Khoản đầu tư phải có nguy cơ bị mất để đáp ứng các quy định của EB-5.",
+    "shortDescription": "Vốn đầu tư phải gặp rủi ro với mục đích tạo ra lợi nhuận.",
+    "examples": [
+      "Một nhà phát triển không thể đảm bảo rằng khoản đầu tư sẽ được hoàn lại sau năm năm — điều này sẽ làm cho khoản đầu tư không đủ điều kiện.",
+      "Các nhà đầu tư trong một dự án hiểu rằng họ có thể không nhận lại được vốn của mình nếu dự án thất bại về mặt tài chính."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 106,
+    "title": "Định nghĩa công việc toàn thời gian",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Một công việc toàn thời gian cho các mục đích của EB-5 có nghĩa là việc làm ít nhất 35 giờ làm việc mỗi tuần. Nó phải là lâu dài và được lấp đầy bởi một công nhân Hoa Kỳ đủ điều kiện — không phải là một vị trí tạm thời, bán thời gian hoặc hợp đồng.",
+    "shortDescription": "Một công việc toàn thời gian cho các mục đích của EB-5 có nghĩa là việc làm ít nhất 35 giờ làm việc mỗi tuần.",
+    "examples": [
+      "Việc thuê một nhân viên làm việc 40 giờ mỗi tuần đủ điều kiện là việc làm toàn thời gian.",
+      "Hai vai trò bán thời gian cộng lại là 35 giờ không đủ điều kiện là một công việc toàn thời gian."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 107,
+    "title": "Điều kiện của Khu vực Việc làm Mục tiêu (TEA)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Để đủ điều kiện cho số tiền đầu tư giảm là 800.000 đô la, khoản đầu tư EB-5 phải được thực hiện tại một TEA, được định nghĩa là một khu vực nông thôn hoặc một khu vực có tỷ lệ thất nghiệp cao (ít nhất 150% so với mức trung bình quốc gia).",
+    "shortDescription": "Để đủ điều kiện cho số tiền đầu tư giảm là 800.000 đô la, khoản đầu tư EB-5 phải được thực hiện tại một TEA, được định nghĩa là một khu vực nông thôn hoặc một khu vực có…",
+    "examples": [
+      "Một thị trấn nông thôn bên ngoài một khu vực đô thị đủ điều kiện là TEA theo các quy tắc hiện hành của USCIS.",
+      "Một dự án trong một quận thành phố với tỷ lệ thất nghiệp 9% đủ điều kiện nếu tỷ lệ quốc gia là khoảng 6%."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 108,
+    "title": "Vai trò tích cực của nhà đầu tư",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Nhà đầu tư phải tham gia vào việc quản lý doanh nghiệp mới. Yêu cầu này có thể được đáp ứng bằng cách đóng vai trò là một cán bộ công ty hoặc thành viên hội đồng quản trị, hoặc là một đối tác hữu hạn có quyền biểu quyết xác định.",
+    "shortDescription": "Nhà đầu tư phải tham gia vào việc quản lý doanh nghiệp mới.",
+    "examples": [
+      "Một nhà đầu tư điều hành trực tiếp một nhà hàng đáp ứng điều kiện quản lý tích cực.",
+      "Với tư cách là một đối tác hữu hạn trong một trung tâm vùng, một nhà đầu tư có quyền biểu quyết về các quyết định lớn — điều này cũng đủ điều kiện."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 109,
+    "title": "Duy trì đầu tư",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Khoản đầu tư EB-5 phải duy trì 'gặp rủi ro' và được triển khai trong suốt thời gian cư trú có điều kiện hai năm. Việc hoàn trả tiền sớm có thể dẫn đến việc từ chối đơn I-829.",
+    "shortDescription": "Khoản đầu tư EB-5 phải duy trì 'gặp rủi ro' và được triển khai trong suốt thời gian cư trú có điều kiện hai năm.",
+    "examples": [
+      "Các quỹ được tái triển khai sang một dự án đủ điều kiện khác nếu dự án ban đầu kết thúc trước khi I-829 được nộp.",
+      "Việc hoàn lại vốn đầu tư trước mốc 2 năm mà không hoàn thành việc tạo việc làm có thể dẫn đến việc từ chối."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 110,
+    "title": "Bằng chứng về việc tạo việc làm",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Các nhà đầu tư phải nộp tài liệu để chứng minh rằng khoản đầu tư của họ đã tạo ra số lượng việc làm cần thiết. Các bằng chứng được chấp nhận bao gồm hồ sơ trả lương, tài liệu thuế và các phân tích kinh tế của bên thứ ba.",
+    "shortDescription": "Các nhà đầu tư phải nộp tài liệu để chứng minh rằng khoản đầu tư của họ đã tạo ra số lượng việc làm cần thiết.",
+    "examples": [
+      "Nộp W-2 và sổ cái lương cho 10 nhân viên toàn thời gian được thuê bởi doanh nghiệp của nhà đầu tư.",
+      "Một trung tâm vùng cung cấp báo cáo của một nhà kinh tế học mô hình hóa việc tạo việc làm gián tiếp từ dự án."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 111,
+    "title": "Yêu cầu về kế hoạch kinh doanh",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Một kế hoạch kinh doanh toàn diện là cần thiết để chứng minh khả năng tồn tại của doanh nghiệp mới và khả năng tạo ra ít nhất 10 việc làm. Nó phải bao gồm các dự báo tài chính, thời gian biểu tuyển dụng và các hoạt động kinh doanh chi tiết.",
+    "shortDescription": "Một kế hoạch kinh doanh toàn diện là cần thiết để chứng minh khả năng tồn tại của doanh nghiệp mới và khả năng tạo ra ít nhất 10…",
+    "examples": [
+      "Một công ty khởi nghiệp nhà hàng bao gồm một dự báo tài chính 5 năm và biểu đồ nhân sự trong kế hoạch kinh doanh của mình.",
+      "Một công ty xây dựng nộp một lịch trình dự án cho thấy các giai đoạn tuyển dụng và ngày tạo việc làm dự kiến."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 112,
+    "title": "Bằng chứng đầu tư",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Yêu cầu về điều kiện",
+    "description": "Các ứng viên phải cung cấp bằng chứng rõ ràng rằng các khoản tiền đầu tư đã được cam kết cho doanh nghiệp thương mại mới. Điều này có thể bao gồm chuyển khoản ngân hàng, thỏa thuận đăng ký mua và tài liệu ký quỹ.",
+    "shortDescription": "Các ứng viên phải cung cấp bằng chứng rõ ràng rằng các khoản tiền đầu tư đã được cam kết cho doanh nghiệp thương mại mới.",
+    "examples": [
+      "Một nhà đầu tư nộp biên nhận chuyển khoản và thỏa thuận ký quỹ để chứng minh các khoản tiền đã được cam kết đúng cách.",
+      "Một thỏa thuận đóng góp vốn đã ký xác nhận sự tham gia của nhà đầu tư vào doanh nghiệp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 201,
+    "title": "Thường trú nhân cho nhà đầu tư và gia đình",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Chương trình EB-5 cung cấp một con đường trực tiếp đến tình trạng thường trú nhân Hoa Kỳ (Thẻ xanh) cho nhà đầu tư, vợ/chồng của họ và con cái chưa kết hôn dưới 21 tuổi. Điều này cho phép cả gia đình sống, làm việc và học tập ở bất cứ đâu tại Hoa Kỳ.",
+    "shortDescription": "Chương trình EB-5 cung cấp một con đường trực tiếp đến Hoa Kỳ.",
+    "examples": [
+      "Một nhà đầu tư và vợ/chồng của họ, cùng với hai đứa con vị thành niên, nhận được Thẻ xanh sau khi đơn EB-5 được chấp thuận thành công.",
+      "Gia đình có thể chuyển đến bất kỳ tiểu bang nào của Hoa Kỳ, bất kể dự án đầu tư EB-5 được đặt ở đâu."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 202,
+    "title": "Tự do sinh sống và làm việc ở bất cứ đâu tại Hoa Kỳ",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Những người có Thẻ xanh EB-5 không bị ràng buộc với một chủ lao động hoặc khu vực địa lý cụ thể. Họ được tự do lựa chọn bất kỳ địa điểm nào để sinh sống và theo đuổi các cơ hội việc làm, giáo dục hoặc kinh doanh trên khắp Hoa Kỳ.",
+    "shortDescription": "Những người có Thẻ xanh EB-5 không bị ràng buộc với một chủ lao động hoặc khu vực địa lý cụ thể.",
+    "examples": [
+      "Một nhà đầu tư tài trợ cho một dự án ở Texas nhưng chọn định cư ở California cùng gia đình.",
+      "Vợ/chồng của nhà đầu tư được tự do làm việc trong bất kỳ ngành nào hoặc thậm chí bắt đầu kinh doanh riêng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 203,
+    "title": "Con đường đến quốc tịch Hoa Kỳ",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Sau khi duy trì tình trạng thường trú nhân trong năm năm (bao gồm cả hai năm có điều kiện), những người có Thẻ xanh EB-5 có thể nộp đơn xin quốc tịch Hoa Kỳ, miễn là họ đáp ứng tất cả các yêu cầu nhập tịch.",
+    "shortDescription": "Sau khi duy trì tình trạng thường trú nhân trong năm năm (bao gồm cả hai năm có điều kiện), những người có Thẻ xanh EB-5 có thể nộp đơn xin quốc tịch Hoa Kỳ.",
+    "examples": [
+      "Một nhà đầu tư nhận được Thẻ xanh vào năm 2025 và đủ điều kiện nộp đơn xin quốc tịch Hoa Kỳ vào năm 2030.",
+      "Trẻ em được bao gồm trong đơn EB-5 cũng có thể nộp đơn xin quốc tịch sau năm năm thường trú.",
+      "Trẻ em trên 18 tuổi có thể nhập tịch độc lập, trong khi trẻ nhỏ hơn có thể tự động có quốc tịch nếu cha mẹ có.",
+      "Vợ/chồng của nhà đầu tư nộp đơn xin nhập tịch năm năm sau khi trở thành thường trú nhân có điều kiện."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 204,
+    "title": "Không yêu cầu bảo lãnh",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Không giống như nhập cư dựa trên việc làm hoặc gia đình, chương trình EB-5 không yêu cầu chủ lao động hoặc thành viên gia đình ở Hoa Kỳ bảo lãnh cho người nộp đơn. Nhà đầu tư đủ điều kiện độc lập dựa trên khoản đầu tư vốn của họ.",
+    "shortDescription": "Không giống như nhập cư dựa trên việc làm hoặc gia đình, chương trình EB-5 không yêu cầu một người Hoa Kỳ.",
+    "examples": [
+      "Một doanh nhân từ Brazil đầu tư vào một dự án đủ điều kiện và nhận được Thẻ xanh mà không cần lời mời làm việc hoặc mối quan hệ gia đình.",
+      "Những người nộp đơn EB-5 không phải chịu những hàng đợi nhập cư dài dựa trên bảo lãnh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 205,
+    "title": "Lợi thế giáo dục cho trẻ em",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Con cái của các nhà đầu tư EB-5 đủ điều kiện theo học các trường học ở Hoa Kỳ với tư cách là thường trú nhân, thường đủ điều kiện nhận học phí trong bang tại các trường đại học công lập. Họ cũng tránh được các hạn chế về thị thực sinh viên và có nhiều linh hoạt hơn trong việc làm trong khi học.",
+    "shortDescription": "Con cái của các nhà đầu tư EB-5 đủ điều kiện theo học tại các trường học của Hoa Kỳ.",
+    "examples": [
+      "Con của một nhà đầu tư EB-5 đăng ký vào một trường đại học ở California và trả mức học phí giảm trong tiểu bang.",
+      "Không giống như sinh viên F-1, con cái của những người có EB-5 có thể nộp đơn xin thực tập hoặc làm việc mà không cần giấy phép đặc biệt."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 206,
+    "title": "Khả năng khởi nghiệp",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Những người có Thẻ xanh có thể tự do thành lập hoặc đầu tư vào các doanh nghiệp ở Hoa Kỳ mà không cần thêm giấy phép làm việc. Điều này đặc biệt có lợi cho các doanh nhân muốn quản lý hoặc mở rộng các dự án kinh doanh của họ.",
+    "shortDescription": "Những người có Thẻ xanh có thể tự do thành lập hoặc đầu tư vào các doanh nghiệp tại Hoa Kỳ.",
+    "examples": [
+      "Một nhà đầu tư mở một chuỗi quán cà phê mới ở New York và thuê nhân viên Hoa Kỳ mà không cần thêm bất kỳ bước nhập cư nào.",
+      "Nhà đầu tư có thể mở rộng hoạt động kinh doanh hiện có của họ từ nước ngoài vào thị trường Hoa Kỳ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 207,
+    "title": "Linh hoạt đi lại",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Với Thẻ xanh, các nhà đầu tư EB-5 và gia đình của họ có thể tự do đi lại trong và ngoài Hoa Kỳ. Họ không phải chịu các hạn chế về thị thực thường áp dụng cho những người có thị thực lao động hoặc sinh viên tạm thời.",
+    "shortDescription": "Với Thẻ xanh, các nhà đầu tư EB-5 và gia đình của họ có thể tự do đi lại trong và ngoài Hoa Kỳ.",
+    "examples": [
+      "Một nhà đầu tư EB-5 đi công tác quốc tế và tái nhập cảnh Hoa Kỳ mà không cần thị thực.",
+      "Những người có Thẻ xanh có thể sử dụng tình trạng của mình để thăm gia đình ở nước ngoài và trở về Hoa Kỳ một cách tự do."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 208,
+    "title": "Cơ hội nghỉ hưu",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Các nhà đầu tư EB-5 có thể sử dụng tình trạng thường trú nhân của mình để nghỉ hưu tại Hoa Kỳ, được hưởng quyền truy cập vào dịch vụ chăm sóc sức khỏe, chất lượng cuộc sống và khả năng bảo lãnh cho các thành viên gia đình khác sau này.",
+    "shortDescription": "Các nhà đầu tư EB-5 có thể sử dụng tình trạng thường trú nhân của mình để nghỉ hưu tại Hoa Kỳ, được hưởng quyền truy cập vào dịch vụ chăm sóc sức khỏe, chất lượng cuộc sống và…",
+    "examples": [
+      "Một nhà đầu tư đã nghỉ hưu định cư tại Florida và được hưởng toàn bộ quyền truy cập Medicare sau khi trở thành công dân Hoa Kỳ.",
+      "Tình trạng thường trú nhân cho phép nhà đầu tư đưa cha mẹ già sang Hoa Kỳ thông qua chương trình nhập cư dựa trên gia đình."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 209,
+    "title": "Con đường tương đối nhanh chóng để có được Thẻ xanh",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "So với nhiều chương trình nhập cư khác, EB-5 cung cấp một con đường tương đối nhanh chóng để có được tình trạng thường trú nhân — đặc biệt đối với những người nộp đơn từ các quốc gia không có tồn đọng thị thực hoặc những người đầu tư vào các loại thị thực dành riêng (khu vực nông thôn hoặc thất nghiệp cao).",
+    "shortDescription": "So với nhiều chương trình nhập cư khác, EB-5 cung cấp một con đường tương đối nhanh chóng để có được tình trạng thường trú nhân — đặc biệt đối với những người nộp đơn…",
+    "examples": [
+      "Một nhà đầu tư từ một quốc gia có nhu cầu thấp nhận được Thẻ xanh có điều kiện trong vòng 18–24 tháng kể từ khi nộp đơn.",
+      "Các khoản đầu tư vào các TEA nông thôn có thể đủ điều kiện để được xử lý ưu tiên và phân bổ thị thực dành riêng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 210,
+    "title": "Cơ hội đầu tư",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Ngoài lợi ích về nhập cư, các nhà đầu tư EB-5 có thể kiếm được lợi nhuận từ khoản đầu tư của họ tùy thuộc vào cấu trúc của dự án. Mặc dù mục tiêu chính là Thẻ xanh, một số dự án cung cấp lợi nhuận khiêm tốn hoặc vốn chủ sở hữu.",
+    "shortDescription": "Ngoài lợi ích về nhập cư, các nhà đầu tư EB-5 có thể kiếm được lợi nhuận từ khoản đầu tư của họ tùy thuộc vào cấu trúc của dự án.",
+    "examples": [
+      "Một dự án trung tâm vùng cung cấp lợi nhuận hàng năm 1% cho các nhà đầu tư ngoài các lợi ích về nhập cư.",
+      "Một số nhà đầu tư trực tiếp giữ lại vốn chủ sở hữu trong một doanh nghiệp đang phát triển và kiếm được lợi nhuận lâu dài."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 211,
+    "title": "Các lợi ích tương tự như những người có Thẻ xanh khác",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Một khi được cấp, Thẻ xanh EB-5 cung cấp các quyền tương tự như bất kỳ thẻ thường trú nhân nào khác. Điều này bao gồm giấy phép làm việc hợp pháp, giáo dục công lập, giấy phép lái xe và quyền truy cập vào một số dịch vụ chăm sóc sức khỏe.",
+    "shortDescription": "Một khi được cấp, Thẻ xanh EB-5 cung cấp các quyền tương tự như bất kỳ thẻ thường trú nhân nào khác.",
+    "examples": [
+      "Các nhà đầu tư EB-5 có thể xin số An sinh xã hội, giấy phép lái xe và đăng ký học tại trường công lập cho con cái của họ.",
+      "Họ cũng đủ điều kiện để xin Medicare sau khi đáp ứng thời gian cư trú yêu cầu."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 212,
+    "title": "Đoàn tụ gia đình",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lợi ích của EB-5",
+    "description": "Chương trình EB-5 cho phép các gia đình cùng nhau nhập cư. Người nộp đơn chính, vợ/chồng và con cái dưới 21 tuổi được xử lý theo cùng một đơn, giúp các gia đình đoàn tụ trong hành trình nhập cư.",
+    "shortDescription": "Chương trình EB-5 cho phép các gia đình cùng nhau nhập cư.",
+    "examples": [
+      "Toàn bộ gia đình của một nhà đầu tư chuyển đến Hoa Kỳ theo một đơn EB-5 duy nhất.",
+      "Trẻ em có thể đi học ngay lập tức và hòa nhập vào xã hội Mỹ trong khi cha mẹ điều hành công việc kinh doanh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 301,
+    "title": "Thành lập Chương trình EB-5 (1990)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Chương trình Nhà đầu tư Nhập cư EB-5 được Quốc hội Hoa Kỳ thành lập vào năm 1990 thông qua Đạo luật Nhập cư. Nó được thiết kế để thu hút đầu tư nước ngoài vào nền kinh tế Hoa Kỳ và kích thích tăng trưởng việc làm bằng cách cung cấp quyền thường trú hợp pháp để đổi lấy các khoản đầu tư đủ điều kiện.",
+    "shortDescription": "Chương trình Nhà đầu tư Nhập cư EB-5 được thành lập bởi Hoa Kỳ.",
+    "examples": [
+      "Luật năm 1990 đã thiết lập ngưỡng đầu tư 1 triệu đô la và ngưỡng 500.000 đô la cho các khu vực nông thôn hoặc thất nghiệp cao.",
+      "Ban đầu, chương trình tương đối ít được biết đến và ít được sử dụng do các quy định không rõ ràng và nhận thức hạn chế."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 302,
+    "title": "Giới thiệu các Trung tâm Vùng (1992)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Năm 1992, Quốc hội đã khởi động Chương trình Thí điểm Nhà đầu tư Nhập cư, giới thiệu các Trung tâm Vùng EB-5. Các đơn vị này được thiết kế để tạo điều kiện cho các khoản đầu tư gộp và cho phép tạo việc làm gián tiếp thông qua mô hình kinh tế.",
+    "shortDescription": "Năm 1992, Quốc hội đã khởi động Chương trình Thí điểm Nhà đầu tư Nhập cư, giới thiệu các Trung tâm Vùng EB-5.",
+    "examples": [
+      "Các trung tâm vùng cho phép các nhà đầu tư hỗ trợ các dự án quy mô lớn, như phát triển bất động sản, mà không cần quản lý các hoạt động hàng ngày.",
+      "Sự đổi mới này đã giúp phổ biến EB-5 bằng cách làm cho nó dễ tiếp cận hơn với các nhà đầu tư thụ động."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 303,
+    "title": "Tỷ lệ chấp nhận ban đầu thấp",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Trong suốt những năm 1990, sự tham gia vào chương trình EB-5 vẫn còn hạn chế. Chương trình gặp khó khăn do thiếu quảng bá, sự chậm trễ trong quản lý và các quy tắc khó hiểu. Ít hơn 1.000 thị thực được cấp hàng năm trong những năm đầu.",
+    "shortDescription": "Trong suốt những năm 1990, sự tham gia vào chương trình EB-5 vẫn còn hạn chế.",
+    "examples": [
+      "Năm 1995, chỉ có vài trăm thị thực EB-5 được cấp, so với giới hạn 10.000 thị thực.",
+      "Nhiều nhà đầu tư tiềm năng đã tránh EB-5 do sự không chắc chắn về mặt pháp lý và hướng dẫn không rõ ràng của USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 304,
+    "title": "Những nỗ lực cải cách vào đầu những năm 2000",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Trong đầu những năm 2000, chính phủ Hoa Kỳ đã ban hành các bản ghi nhớ làm rõ và các tiền lệ để cải thiện tính minh bạch và sự tin tưởng của nhà đầu tư vào chương trình EB-5. Điều này bao gồm các quyết định quan trọng như Vụ án Ho và Vụ án Izummi đã xác định các tiêu chuẩn về kế hoạch kinh doanh và đầu tư.",
+    "shortDescription": "Trong đầu những năm 2000, Hoa Kỳ.",
+    "examples": [
+      "Tiền lệ Vụ án Ho đã thiết lập các yêu cầu cho một kế hoạch kinh doanh đáng tin cậy.",
+      "Những cải cách này đã giúp ngăn chặn các khoản đầu tư gian lận hoặc mơ hồ được chấp thuận."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 305,
+    "title": "Tăng trưởng trong cuộc khủng hoảng tài chính năm 2008",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Cuộc khủng hoảng tài chính năm 2008 đã làm cho các nguồn tài trợ truyền thống trở nên khan hiếm, khiến các nhà phát triển Hoa Kỳ chuyển sang các nhà đầu tư EB-5 để tìm vốn. Điều này đánh dấu một bước ngoặt trong sự phổ biến và tăng trưởng của chương trình.",
+    "shortDescription": "Cuộc khủng hoảng tài chính năm 2008 đã làm cho các nguồn tài trợ truyền thống trở nên khan hiếm, khiến Hoa Kỳ.",
+    "examples": [
+      "Các dự án bất động sản ở New York, California và Florida bắt đầu tích cực sử dụng các quỹ EB-5.",
+      "Từ năm 2008 đến 2015, EB-5 đã huy động được hơn 20 tỷ đô la đầu tư nước ngoài cho các dự án của Hoa Kỳ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 306,
+    "title": "Sự gia tăng của những người nộp đơn Trung Quốc (những năm 2010)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Trong những năm 2010, phần lớn các nhà đầu tư EB-5 là công dân Trung Quốc. Nhu cầu tăng vọt, dẫn đến tồn đọng thị thực và thời gian chờ đợi lâu do giới hạn thị thực theo từng quốc gia.",
+    "shortDescription": "Trong những năm 2010, phần lớn các nhà đầu tư EB-5 là công dân Trung Quốc.",
+    "examples": [
+      "Ở thời kỳ đỉnh cao, Trung Quốc chiếm hơn 80% tổng số đơn xin thị thực EB-5.",
+      "Những người nộp đơn Trung Quốc phải đối mặt với thời gian chờ đợi vượt quá 5-10 năm do quá tải."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 307,
+    "title": "Vụ bê bối gian lận Jay Peak (2016)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Năm 2016, một vụ gian lận EB-5 lớn đã nổi lên liên quan đến khu nghỉ mát trượt tuyết Jay Peak ở Vermont. Các nhà phát triển dự án đã lạm dụng tiền của nhà đầu tư, dẫn đến sự can thiệp của SEC và những cải cách đáng kể cho chương trình.",
+    "shortDescription": "Năm 2016, một vụ gian lận EB-5 lớn đã nổi lên liên quan đến khu nghỉ mát trượt tuyết Jay Peak ở Vermont.",
+    "examples": [
+      "Hơn 200 triệu đô la đã bị lạm dụng, ảnh hưởng đến hàng trăm nhà đầu tư.",
+      "Vụ việc đã nêu bật sự cần thiết phải có sự giám sát và minh bạch hơn trong chương trình EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 308,
+    "title": "Quy tắc Hiện đại hóa (2019)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Quy tắc Hiện đại hóa EB-5, được thực hiện vào tháng 11 năm 2019, đã nâng số tiền đầu tư tối thiểu lên 900.000 đô la cho các dự án TEA và cải cách các chỉ định TEA. Nó nhằm mục đích giảm thiểu lạm dụng và tăng cường tính toàn vẹn của chương trình.",
+    "shortDescription": "Quy tắc Hiện đại hóa EB-5, được thực hiện vào tháng 11 năm 2019, đã nâng số tiền đầu tư tối thiểu lên 900.000 đô la cho các dự án TEA và cải cách…",
+    "examples": [
+      "Đầu tư tối thiểu đã tăng từ 500.000 đô la lên 900.000 đô la trong các TEA.",
+      "Thẩm quyền chỉ định TEA đã chuyển từ các tiểu bang sang chính phủ liên bang (USCIS)."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 309,
+    "title": "Tòa án hủy bỏ Quy tắc năm 2019 (2021)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Vào tháng 6 năm 2021, một tòa án liên bang đã hủy bỏ Quy tắc Hiện đại hóa năm 2019 do các vấn đề về thủ tục. Điều này tạm thời giảm ngưỡng đầu tư trở lại 500.000 đô la và gây ra sự không chắc chắn trên thị trường.",
+    "shortDescription": "Vào tháng 6 năm 2021, một tòa án liên bang đã hủy bỏ Quy tắc Hiện đại hóa năm 2019 do các vấn đề về thủ tục.",
+    "examples": [
+      "Trong vài tháng vào năm 2021, các nhà đầu tư đã đổ xô nộp đơn theo ngưỡng 500.000 đô la thấp hơn.",
+      "Quyết định của tòa án đã tạo ra sự nhầm lẫn giữa các nhà đầu tư, nhà phát triển và luật sư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 310,
+    "title": "Chương trình Trung tâm Vùng hết hạn (2021)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Chương trình Trung tâm Vùng EB-5 đã hết hạn vào tháng 6 năm 2021 khi Quốc hội không gia hạn. Sự tạm dừng này trong chương trình đã trì hoãn việc xử lý và gây ra sự gián đoạn lớn trong ngành.",
+    "shortDescription": "Chương trình Trung tâm Vùng EB-5 đã hết hạn vào tháng 6 năm 2021 khi Quốc hội không gia hạn.",
+    "examples": [
+      "Không có đơn I-526 mới nào thông qua các trung tâm vùng được chấp nhận trong gần một năm.",
+      "Các nhà đầu tư trong các dự án đang diễn ra đã bị bỏ lại trong tình trạng lấp lửng, chờ đợi hành động lập pháp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 311,
+    "title": "Đạo luật Cải cách và Liêm chính EB-5 (2022)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Vào tháng 3 năm 2022, Quốc hội đã thông qua Đạo luật Cải cách và Liêm chính EB-5, gia hạn Chương trình Trung tâm Vùng và đưa ra các biện pháp liêm chính và tuân thủ nghiêm ngặt, bao gồm cả việc dành riêng thị thực cho các khu vực nông thôn và khó khăn.",
+    "shortDescription": "Vào tháng 3 năm 2022, Quốc hội đã thông qua Đạo luật Cải cách và Liêm chính EB-5, gia hạn Chương trình Trung tâm Vùng và giới thiệu nghiêm ngặt…",
+    "examples": [
+      "Đạo luật đã khôi phục các trung tâm vùng cho đến năm 2027 và dành 32% thị thực cho các TEA và các dự án cơ sở hạ tầng.",
+      "Nó cũng giới thiệu các cuộc kiểm toán bắt buộc, kiểm tra lý lịch và các hệ thống theo dõi quỹ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 312,
+    "title": "Dành riêng thị thực và ưu tiên nông thôn",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Lịch sử của EB-5",
+    "description": "Đạo luật Cải cách năm 2022 đã thiết lập việc dành riêng thị thực để ưu tiên các khoản đầu tư vào các khu vực nông thôn (20%), các khu vực thất nghiệp cao (10%) và các dự án cơ sở hạ tầng (2%). Các loại này được hưởng lợi từ việc xử lý nhanh hơn và ít tồn đọng hơn.",
+    "shortDescription": "Đạo luật Cải cách năm 2022 đã thiết lập việc dành riêng thị thực để ưu tiên các khoản đầu tư vào các khu vực nông thôn (20%), các khu vực thất nghiệp cao (10%), và…",
+    "examples": [
+      "Một nhà đầu tư vào một dự án nông thôn có thể nhận được thị thực nhanh hơn do việc xử lý theo danh mục dành riêng.",
+      "Việc dành riêng thị thực khuyến khích phát triển kinh tế bên ngoài các khu vực đô thị lớn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 401,
+    "title": "Hạng mục thị thực C5",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Hạng mục C5 đề cập đến các nhà đầu tư EB-5 thực hiện đầu tư trực tiếp vào một doanh nghiệp thương mại nằm ở khu vực không phải TEA (Khu vực Việc làm Mục tiêu). Đây là một phân loại tiêu chuẩn cho các nhà đầu tư trực tiếp bên ngoài các khu vực được chỉ định.",
+    "shortDescription": "Hạng mục C5 đề cập đến các nhà đầu tư EB-5 thực hiện đầu tư trực tiếp vào một doanh nghiệp thương mại nằm ở khu vực không phải TEA (Khu vực Việc làm Mục tiêu)…",
+    "examples": [
+      "Một nhà đầu tư đóng góp 1,05 triệu đô la cho một doanh nghiệp sản xuất tại một thành phố lớn của Hoa Kỳ và nhận được thị thực C5.",
+      "C5 được áp dụng khi dự án không nằm trong khu vực nông thôn hoặc khu vực thất nghiệp cao."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 402,
+    "title": "Hạng mục thị thực T5",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Hạng mục T5 áp dụng cho các nhà đầu tư EB-5 trực tiếp có khoản đầu tư nằm trong Khu vực Việc làm Mục tiêu (TEA). Điều này cho phép giảm ngưỡng đầu tư xuống còn 800.000 đô la.",
+    "shortDescription": "Hạng mục T5 áp dụng cho các nhà đầu tư EB-5 trực tiếp có khoản đầu tư nằm trong Khu vực Việc làm Mục tiêu (TEA).",
+    "examples": [
+      "Một khoản đầu tư trực tiếp vào một khu vực nông thôn đủ điều kiện theo T5 và chỉ yêu cầu 800.000 đô la.",
+      "Nhà đầu tư bắt đầu kinh doanh tại một khu vực có tỷ lệ thất nghiệp cao và nộp đơn theo hạng mục T5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 403,
+    "title": "Các hạng mục thị thực I5 và R5",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "I5 và R5 được dành riêng cho các nhà đầu tư sử dụng con đường Trung tâm Vùng. I5 dành cho các khoản đầu tư vào các khu vực không phải TEA, trong khi R5 dành cho các khoản đầu tư vào các TEA. Các hạng mục này cho phép tạo việc làm gián tiếp thông qua các dự án của trung tâm vùng.",
+    "shortDescription": "I5 và R5 được dành riêng cho các nhà đầu tư sử dụng con đường Trung tâm Vùng.",
+    "examples": [
+      "Một nhà đầu tư đóng góp vào một dự án phát triển khách sạn thông qua một trung tâm vùng trong một khu vực nông thôn và nhận được thị thực R5.",
+      "I5 được sử dụng khi dự án của trung tâm vùng không nằm trong một TEA."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 404,
+    "title": "Các hạng mục thị thực dành riêng (sau năm 2022)",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Sau Đạo luật Cải cách và Liêm chính EB-5 năm 2022, 32% thị thực EB-5 được dành riêng hàng năm: 20% cho các dự án nông thôn, 10% cho các TEA có tỷ lệ thất nghiệp cao và 2% cho các dự án cơ sở hạ tầng. Các hạng mục này có hàng đợi riêng và được xử lý nhanh hơn.",
+    "shortDescription": "Sau Đạo luật Cải cách và Liêm chính EB-5 năm 2022, 32% thị thực EB-5 được dành riêng hàng năm: 20% cho các dự án nông thôn, 10% cho…",
+    "examples": [
+      "Một khoản đầu tư cơ sở hạ tầng nông thôn đủ điều kiện cho hai hạng mục dành riêng khác nhau: nông thôn và cơ sở hạ tầng.",
+      "Các nhà đầu tư trong các hạng mục thị thực dành riêng có thể bỏ qua hàng chờ đợi cho các thị thực không dành riêng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 405,
+    "title": "Hạng mục thị thực không dành riêng",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Các thị thực EB-5 không dành riêng là hạng mục mặc định cho các nhà đầu tư có dự án không thuộc các hạng mục nông thôn, thất nghiệp cao hoặc cơ sở hạ tầng. Các thị thực này chiếm khoảng 68% tổng số phân bổ hàng năm.",
+    "shortDescription": "Các thị thực EB-5 không dành riêng là hạng mục mặc định cho các nhà đầu tư có dự án không thuộc các hạng mục nông thôn, thất nghiệp cao hoặc cơ sở hạ tầng…",
+    "examples": [
+      "Một nhà đầu tư EB-5 vào một khách sạn đô thị sang trọng thuộc hạng mục thị thực không dành riêng.",
+      "Những người nộp đơn từ các quốc gia có nhu cầu cao có thể gặp phải thời gian chờ đợi trong hạng mục này."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 406,
+    "title": "Thường trú nhân có điều kiện",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Tất cả những người nhận thị thực EB-5 ban đầu đều nhận được tình trạng thường trú nhân có điều kiện trong hai năm. Trong thời gian này, họ phải hoàn thành các yêu cầu về tạo việc làm và duy trì đầu tư để có được Thẻ xanh 10 năm.",
+    "shortDescription": "Tất cả những người nhận thị thực EB-5 ban đầu đều nhận được tình trạng thường trú nhân có điều kiện trong hai năm.",
+    "examples": [
+      "Sau khi nhận được thị thực EB-5, nhà đầu tư nhập cảnh vào Hoa Kỳ với tư cách là thường trú nhân có điều kiện.",
+      "Để xóa bỏ các điều kiện, nhà đầu tư phải nộp Mẫu I-829 trong vòng 90 ngày trước ngày kỷ niệm thứ hai."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 407,
+    "title": "Bản tin thị thực và tồn đọng",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Bản tin thị thực, được Bộ Ngoại giao Hoa Kỳ ban hành hàng tháng, cho thấy những người nộp đơn EB-5 nào đủ điều kiện để được cấp thị thực. Một số quốc gia có thể có tồn đọng do giới hạn theo từng quốc gia.",
+    "shortDescription": "Bản tin thị thực, được Bộ Ngoại giao Hoa Kỳ ban hành hàng tháng.",
+    "examples": [
+      "Những người nộp đơn từ Ấn Độ và Trung Quốc có thể phải đối mặt với thời gian chờ đợi do nhu cầu vượt quá giới hạn thị thực hàng năm.",
+      "Các nhà đầu tư nên theo dõi Bản tin thị thực để biết khi nào ngày ưu tiên của họ trở thành hiện hành."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 408,
+    "title": "Thành viên gia đình theo EB-5",
+    "category": "Cơ bản về EB-5",
+    "subcategory": "Các loại thị thực EB-5",
+    "description": "Vợ/chồng và con cái chưa kết hôn dưới 21 tuổi của một nhà đầu tư EB-5 có thể nhận được Thẻ xanh có điều kiện với tư cách là người thụ hưởng phái sinh. Họ nhận được cùng loại thị thực và các lợi ích như người nộp đơn chính.",
+    "shortDescription": "Vợ/chồng và con cái chưa kết hôn dưới 21 tuổi của một nhà đầu tư EB-5 có thể nhận được Thẻ xanh có điều kiện với tư cách là người thụ hưởng phái sinh.",
+    "examples": [
+      "Con của nhà đầu tư, 19 tuổi, và vợ/chồng đều nhận được Thẻ xanh có điều kiện cùng với người nộp đơn chính.",
+      "Các thành viên gia đình phái sinh cũng phải nộp I-829 cùng với người nộp đơn chính để xóa bỏ các điều kiện."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 501,
+    "title": "Định nghĩa về đầu tư trực tiếp",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Đầu tư trực tiếp trong chương trình EB-5 có nghĩa là nhà đầu tư tham gia cá nhân vào việc quản lý một doanh nghiệp thương mại mới, mà không sử dụng Trung tâm Vùng. Khoản đầu tư phải tạo ra ít nhất 10 việc làm toàn thời gian trực tiếp.",
+    "shortDescription": "Đầu tư trực tiếp trong chương trình EB-5 có nghĩa là nhà đầu tư tham gia cá nhân vào việc quản lý một doanh nghiệp thương mại mới, mà không sử dụng…",
+    "examples": [
+      "Một nhà đầu tư mở một nhà hàng và trực tiếp giám sát hoạt động và nhân viên.",
+      "Một nhà máy sản xuất được tài trợ và vận hành bởi nhà đầu tư đủ điều kiện là EB-5 trực tiếp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 502,
+    "title": "Việc tạo việc làm phải là trực tiếp",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Trong các khoản đầu tư EB-5 trực tiếp, tất cả việc tạo việc làm phải là trực tiếp và có thể xác minh được trong doanh nghiệp. Các công việc gián tiếp hoặc phát sinh không được tính vào yêu cầu của EB-5.",
+    "shortDescription": "Trong các khoản đầu tư EB-5 trực tiếp, tất cả việc tạo việc làm phải là trực tiếp và có thể xác minh được trong doanh nghiệp.",
+    "examples": [
+      "Doanh nghiệp thuê 12 nhân viên có hồ sơ trả lương và mô tả công việc cho mỗi người.",
+      "Việc sử dụng mô hình của bên thứ ba để tạo việc làm không được phép trong các dự án EB-5 trực tiếp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 503,
+    "title": "Yêu cầu vai trò quản lý tích cực",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Nhà đầu tư phải tham gia tích cực vào việc quản lý doanh nghiệp. Điều này có thể được hoàn thành bằng cách trở thành một cán bộ công ty, giám đốc hoặc người quản lý hoạt động hàng ngày.",
+    "shortDescription": "Nhà đầu tư phải tham gia tích cực vào việc quản lý doanh nghiệp.",
+    "examples": [
+      "Nhà đầu tư giữ chức danh CEO và chịu trách nhiệm tuyển dụng và chiến lược.",
+      "Phục vụ trong hội đồng quản trị của công ty với quyền ra quyết định có ý nghĩa đủ điều kiện là tham gia tích cực."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 504,
+    "title": "Các ngành đầu tư trực tiếp phổ biến",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Các lĩnh vực phổ biến cho các khoản đầu tư EB-5 trực tiếp bao gồm nhà hàng, nhượng quyền bán lẻ, sản xuất, hậu cần và các doanh nghiệp dịch vụ. Các ngành này thường cho phép tạo việc làm rõ ràng và tham gia trực tiếp.",
+    "shortDescription": "Các lĩnh vực phổ biến cho các khoản đầu tư EB-5 trực tiếp bao gồm nhà hàng, nhượng quyền bán lẻ, sản xuất, hậu cần và các doanh nghiệp dịch vụ.",
+    "examples": [
+      "Một nhà đầu tư mở ba địa điểm nhượng quyền của Subway và tuyển dụng hơn 30 người.",
+      "Một doanh nhân công nghệ thành lập một công ty phát triển phần mềm và thuê các lập trình viên địa phương."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 505,
+    "title": "Kế hoạch kinh doanh và tài liệu",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Một kế hoạch kinh doanh toàn diện là điều cần thiết cho EB-5 trực tiếp. Nó phải chi tiết mô hình kinh doanh, thời gian biểu tuyển dụng, dự báo tài chính và cơ cấu quản lý của công ty.",
+    "shortDescription": "Một kế hoạch kinh doanh toàn diện là điều cần thiết cho EB-5 trực tiếp.",
+    "examples": [
+      "Nhà đầu tư cung cấp một kế hoạch kinh doanh 5 năm bao gồm chiến lược tiếp thị và dự báo nhân sự.",
+      "Lịch trình tuyển dụng và mô tả công việc được bao gồm để chứng minh kế hoạch tạo việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 506,
+    "title": "Không gộp vốn đầu tư",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Không giống như các khoản đầu tư của trung tâm vùng, EB-5 trực tiếp không cho phép gộp vốn từ nhiều nhà đầu tư vào một doanh nghiệp duy nhất trừ khi mỗi nhà đầu tư tạo ra 10 việc làm riêng của họ và đáp ứng các tiêu chí khác.",
+    "shortDescription": "Không giống như các khoản đầu tư của trung tâm vùng, EB-5 trực tiếp không cho phép gộp vốn từ nhiều nhà đầu tư vào một doanh nghiệp duy nhất trừ khi…",
+    "examples": [
+      "Hai nhà đầu tư không thể chia sẻ khoản đầu tư 1,6 triệu đô la vào một doanh nghiệp duy nhất trừ khi 20 việc làm được tạo ra.",
+      "Mỗi nhà đầu tư phải được gắn với một kế hoạch tạo việc làm cụ thể."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 507,
+    "title": "Phù hợp với các nhà đầu tư doanh nhân",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Đầu tư trực tiếp là lý tưởng cho các doanh nhân muốn có quyền kiểm soát trực tiếp đối với doanh nghiệp của họ và cảm thấy thoải mái khi tự quản lý các hoạt động hàng ngày và tuân thủ các yêu cầu của USCIS.",
+    "shortDescription": "Đầu tư trực tiếp là lý tưởng cho các doanh nhân muốn có quyền kiểm soát trực tiếp đối với doanh nghiệp của họ và cảm thấy thoải mái khi quản lý các hoạt động hàng ngày…",
+    "examples": [
+      "Một chủ doanh nghiệp chuyển từ nước ngoài để mở một công ty tương tự ở Hoa Kỳ theo EB-5.",
+      "Các nhà đầu tư có kinh nghiệm quản lý thích đầu tư trực tiếp để kiểm soát tăng trưởng và hoạt động."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 508,
+    "title": "Rủi ro và trách nhiệm",
+    "category": "Đầu tư",
+    "subcategory": "Đầu tư trực tiếp",
+    "description": "Các nhà đầu tư trực tiếp chịu toàn bộ rủi ro kinh doanh và trách nhiệm hoạt động. Nếu doanh nghiệp thất bại hoặc không đạt được mục tiêu tạo việc làm, nhà đầu tư có thể mất quyền thường trú.",
+    "shortDescription": "Các nhà đầu tư trực tiếp chịu toàn bộ rủi ro kinh doanh và trách nhiệm hoạt động.",
+    "examples": [
+      "Nếu một doanh nghiệp đầu tư trực tiếp đóng cửa sau một năm, USCIS có thể từ chối việc xóa bỏ các điều kiện do không đáp ứng việc tạo việc làm.",
+      "Việc không đáp ứng các yêu cầu về trả lương có thể gây nguy hiểm cho đơn I-829 của nhà đầu tư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 601,
+    "title": "Định nghĩa về một Trung tâm Vùng",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Một Trung tâm Vùng là một đơn vị kinh tế được USCIS chỉ định tài trợ cho các dự án EB-5. Nó tạo điều kiện cho các khoản đầu tư gộp và cho phép việc tạo việc làm được tính cả trực tiếp và gián tiếp thông qua mô hình kinh tế.",
+    "shortDescription": "Một Trung tâm Vùng là một đơn vị kinh tế được USCIS chỉ định tài trợ cho các dự án EB-5.",
+    "examples": [
+      "Một Trung tâm Vùng ở Florida tài trợ cho một dự án bất động sản và tập hợp vốn từ 50 nhà đầu tư EB-5.",
+      "Các Trung tâm Vùng được USCIS phê duyệt thường tập trung vào các dự án xây dựng, cơ sở hạ tầng hoặc năng lượng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 602,
+    "title": "Cho phép tạo việc làm gián tiếp",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Một trong những lợi thế chính của các Trung tâm Vùng là chúng cho phép các công việc gián tiếp và phát sinh được tính vào yêu cầu tạo việc làm của EB-5, dựa trên phân tích tác động kinh tế.",
+    "shortDescription": "Một trong những lợi thế chính của các Trung tâm Vùng là chúng cho phép các công việc gián tiếp và phát sinh được tính vào việc tạo việc làm của EB-5…",
+    "examples": [
+      "Các công việc được tạo ra tại các nhà cung cấp hoặc nhà cung cấp dịch vụ hỗ trợ dự án được tính là việc làm gián tiếp.",
+      "Sử dụng mô hình IMPLAN, một trung tâm vùng cho thấy hơn 10 việc làm cho mỗi nhà đầu tư được dự kiến từ việc phát triển."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 603,
+    "title": "Các khoản đầu tư gộp",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Các Trung tâm Vùng tổng hợp các khoản đầu tư từ nhiều nhà đầu tư EB-5 vào một dự án quy mô lớn duy nhất. Mỗi nhà đầu tư vẫn phải đáp ứng các yêu cầu về vốn và tạo việc làm tối thiểu một cách riêng lẻ.",
+    "shortDescription": "Các Trung tâm Vùng tổng hợp các khoản đầu tư từ nhiều nhà đầu tư EB-5 vào một dự án quy mô lớn duy nhất.",
+    "examples": [
+      "Một dự án khách sạn trị giá 100 triệu đô la gộp vốn từ 100 nhà đầu tư EB-5, mỗi người đóng góp 1 triệu đô la.",
+      "Vốn gộp tài trợ cho cơ sở hạ tầng lớn với tác động việc làm có thể đo lường được trên các lĩnh vực."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 604,
+    "title": "Vai trò của nhà đầu tư là thụ động",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Các nhà đầu tư EB-5 trong các dự án của Trung tâm Vùng thường có vai trò thụ động, thường là các đối tác hữu hạn. Họ không tham gia vào việc quản lý hàng ngày nhưng vẫn giữ quyền biểu quyết về các quyết định lớn.",
+    "shortDescription": "Các nhà đầu tư EB-5 trong các dự án của Trung tâm Vùng thường có vai trò thụ động, thường là các đối tác hữu hạn.",
+    "examples": [
+      "Một nhà đầu tư giữ vị trí đối tác hữu hạn trong một LLC và xem xét các báo cáo tài chính hàng quý.",
+      "Các nhà đầu tư thụ động cho phép các chuyên gia xử lý các hoạt động kinh doanh và phát triển dự án."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 605,
+    "title": "Phí hành chính",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Các Trung tâm Vùng thường tính một khoản phí hành chính ngoài số tiền đầu tư. Các khoản phí này dao động từ 50.000 đến 80.000 đô la và bao gồm quản lý dự án, tuân thủ và các chi phí pháp lý.",
+    "shortDescription": "Các Trung tâm Vùng thường tính một khoản phí hành chính ngoài số tiền đầu tư.",
+    "examples": [
+      "Một nhà đầu tư EB-5 trả 800.000 đô la vốn và 70.000 đô la phí quản lý cho Trung tâm Vùng.",
+      "Phí hành chính được sử dụng cho các báo cáo kinh tế, hỗ trợ pháp lý nhập cư và thẩm định."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 606,
+    "title": "Tuân thủ và báo cáo hàng năm",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Các Trung tâm Vùng phải nộp báo cáo hàng năm cho USCIS để duy trì sự chỉ định. Các báo cáo này bao gồm cập nhật dự án, phân tích tạo việc làm và tiến độ của nhà đầu tư.",
+    "shortDescription": "Các Trung tâm Vùng phải nộp báo cáo hàng năm cho USCIS để duy trì sự chỉ định.",
+    "examples": [
+      "Một Trung tâm Vùng nộp Mẫu I-956G hàng năm để báo cáo các chỉ số tạo việc làm và dữ liệu nhà đầu tư.",
+      "Việc không báo cáo có thể dẫn đến việc chấm dứt sự chỉ định của USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 607,
+    "title": "Giám sát và kiểm toán của USCIS",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "USCIS có thẩm quyền kiểm toán các Trung tâm Vùng và thu hồi sự chỉ định của họ vì không tuân thủ hoặc gian lận. Đạo luật Cải cách năm 2022 đã tăng cường đáng kể các yêu cầu giám sát.",
+    "shortDescription": "USCIS có thẩm quyền kiểm toán các Trung tâm Vùng và thu hồi sự chỉ định của họ vì không tuân thủ hoặc gian lận.",
+    "examples": [
+      "Vụ án Jay Peak đã dẫn đến các quy định và quy trình kiểm toán nghiêm ngặt hơn.",
+      "Các chuyến thăm địa điểm ngẫu nhiên và theo dõi quỹ hiện là một phần của các cuộc kiểm tra tuân thủ của USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 608,
+    "title": "Sự phổ biến của các Trung tâm Vùng",
+    "category": "Đầu tư",
+    "subcategory": "Các Trung tâm Vùng",
+    "description": "Hơn 90% người nộp đơn EB-5 chọn các dự án của Trung tâm Vùng do sự linh hoạt trong việc tạo việc làm và giảm bớt các nghĩa vụ quản lý cá nhân.",
+    "shortDescription": "Hơn 90% người nộp đơn EB-5 chọn các dự án của Trung tâm Vùng do sự linh hoạt trong việc tạo việc làm và giảm bớt các nghĩa vụ quản lý cá nhân…",
+    "examples": [
+      "Các Trung tâm Vùng đặc biệt phổ biến trong số các nhà đầu tư tìm kiếm các lựa chọn nhập cư thụ động.",
+      "Các nhà đầu tư từ nước ngoài thích không di dời ngay lập tức hoặc điều hành một doanh nghiệp trực tiếp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 701,
+    "title": "Khu vực Việc làm Mục tiêu (TEA) là gì?",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Một Khu vực Việc làm Mục tiêu (TEA) là một khu vực nông thôn hoặc một khu vực có tỷ lệ thất nghiệp cao, theo định nghĩa của USCIS. Các khoản đầu tư được thực hiện tại các TEA đủ điều kiện để được hưởng mức đầu tư tối thiểu EB-5 giảm là 800.000 đô la.",
+    "shortDescription": "Một Khu vực Việc làm Mục tiêu (TEA) là một khu vực nông thôn hoặc một khu vực có tỷ lệ thất nghiệp cao, theo định nghĩa của USCIS.",
+    "examples": [
+      "Một thị trấn nông nghiệp nông thôn có dưới 20.000 cư dân đủ điều kiện là một TEA.",
+      "Một khu phố thành phố có tỷ lệ thất nghiệp cao hơn 150% so với mức trung bình quốc gia được chỉ định là một TEA."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 702,
+    "title": "Điều kiện TEA khu vực nông thôn",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Để đủ điều kiện là nông thôn, một khu vực phải nằm ngoài một khu vực thống kê đô thị (MSA) và có dân số dưới 20.000 người. Sự chỉ định này khuyến khích đầu tư EB-5 vào các cộng đồng nông thôn chưa được phục vụ.",
+    "shortDescription": "Để đủ điều kiện là nông thôn, một khu vực phải nằm ngoài một khu vực thống kê đô thị (MSA) và có dân số dưới 20.000 người.",
+    "examples": [
+      "Một thị trấn ở trung tâm Idaho, xa bất kỳ thành phố lớn nào, được coi là nông thôn theo hướng dẫn của EB-5.",
+      "Các dự án tại các TEA nông thôn được ưu tiên thị thực theo Đạo luật Cải cách năm 2022."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 703,
+    "title": "Tiêu chí TEA thất nghiệp cao",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Các TEA thất nghiệp cao là các khu vực đô thị hoặc ngoại ô nơi tỷ lệ thất nghiệp ít nhất là 150% so với mức trung bình quốc gia. Các khu vực này phải được hỗ trợ bởi dữ liệu và đáp ứng các tiêu chuẩn của USCIS.",
+    "shortDescription": "Các TEA thất nghiệp cao là các khu vực đô thị hoặc ngoại ô nơi tỷ lệ thất nghiệp ít nhất là 150% so với mức trung bình quốc gia.",
+    "examples": [
+      "Một quận ở Detroit có tỷ lệ thất nghiệp cao gấp 1,5 lần mức trung bình quốc gia đủ điều kiện là một TEA.",
+      "USCIS sử dụng các Vùng điều tra dân số và thống kê của Bộ Lao động để xác minh tính đủ điều kiện."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 704,
+    "title": "Chứng nhận và tài liệu TEA",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Kể từ năm 2022, USCIS hiện xác định tính đủ điều kiện của TEA, không còn giao việc này cho các tiểu bang riêng lẻ. Các nhà đầu tư hoặc nhà tài trợ dự án phải cung cấp dữ liệu để hỗ trợ việc đủ điều kiện TEA tại thời điểm nộp đơn.",
+    "shortDescription": "Kể từ năm 2022, USCIS hiện xác định tính đủ điều kiện của TEA, không còn giao việc này cho các tiểu bang riêng lẻ.",
+    "examples": [
+      "Các nhà đầu tư phải nộp dữ liệu thất nghiệp và bản đồ điều tra dân số cùng với đơn I-526E của họ.",
+      "Nhà tài trợ dự án bao gồm một phân tích TEA từ một nhà kinh tế học như một phần của kế hoạch kinh doanh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 705,
+    "title": "TEA và số tiền đầu tư giảm",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Sự chỉ định TEA cho phép các nhà đầu tư EB-5 đầu tư 800.000 đô la thay vì 1.050.000 đô la tiêu chuẩn. Sự khuyến khích tài chính này khuyến khích đầu tư vào các khu vực cần phát triển kinh tế nhất.",
+    "shortDescription": "Sự chỉ định TEA cho phép các nhà đầu tư EB-5 đầu tư 800.000 đô la thay vì 1.050.000 đô la tiêu chuẩn.",
+    "examples": [
+      "Một nhà đầu tư tiết kiệm được 250.000 đô la bằng cách chọn đầu tư vào một TEA có tỷ lệ thất nghiệp cao.",
+      "Phần lớn các khoản đầu tư EB-5 được thực hiện tại các TEA do yêu cầu vốn giảm này."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 706,
+    "title": "Dành riêng thị thực cho các dự án TEA",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Đạo luật Cải cách và Liêm chính EB-5 năm 2022 đã giới thiệu việc dành riêng thị thực: 20% cho các TEA nông thôn và 10% cho các TEA có tỷ lệ thất nghiệp cao. Các hạng mục này được ưu tiên xử lý và có hàng đợi thị thực riêng.",
+    "shortDescription": "Đạo luật Cải cách và Liêm chính EB-5 năm 2022 đã giới thiệu việc dành riêng thị thực: 20% cho các TEA nông thôn và 10% cho các TEA có tỷ lệ thất nghiệp cao.",
+    "examples": [
+      "Một nhà đầu tư vào một dự án nông thôn có thể nhận được thị thực của họ nhanh hơn do có 20% thị thực được dành riêng.",
+      "Các khoản đầu tư TEA giúp các nhà đầu tư tránh được thời gian chờ đợi lâu liên quan đến các hạng mục thị thực tiêu chuẩn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 707,
+    "title": "Tác động kinh tế của các khoản đầu tư TEA",
+    "category": "Đầu tư",
+    "subcategory": "Các Khu vực Việc làm Mục tiêu",
+    "description": "Các khoản đầu tư TEA nhằm mục đích kích thích tạo việc làm và hoạt động kinh tế ở các khu vực khó khăn hoặc chưa được phục vụ. Các dự án này thường bao gồm nhà ở giá rẻ, bệnh viện và phát triển doanh nghiệp nhỏ.",
+    "shortDescription": "Các khoản đầu tư TEA nhằm mục đích kích thích tạo việc làm và hoạt động kinh tế ở các khu vực khó khăn hoặc chưa được phục vụ.",
+    "examples": [
+      "Một dự án TEA có tỷ lệ thất nghiệp cao bao gồm việc xây dựng một phòng khám sức khỏe cộng đồng tạo ra 40 việc làm.",
+      "Các khoản đầu tư TEA nông thôn có thể hỗ trợ nâng cấp cơ sở hạ tầng như băng thông rộng hoặc các tiện ích."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 801,
+    "title": "'Gặp rủi ro' có nghĩa là gì?",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Các quỹ đầu tư EB-5 phải được đặt 'gặp rủi ro' với mục đích tạo ra lợi nhuận. Điều này có nghĩa là không thể có bất kỳ sự đảm bảo nào về việc hoàn lại hoặc mua lại, và nhà đầu tư phải đối mặt với khả năng thua lỗ tài chính.",
+    "shortDescription": "Các quỹ đầu tư EB-5 phải được đặt 'gặp rủi ro' với mục đích tạo ra lợi nhuận.",
+    "examples": [
+      "Một nhà phát triển không thể hứa sẽ hoàn trả cho nhà đầu tư bất kể kết quả của dự án.",
+      "Các nhà đầu tư trong các dự án EB-5 chấp nhận rủi ro kinh doanh về khả năng thua lỗ hoặc hoàn vốn chậm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 802,
+    "title": "Không cho phép các thỏa thuận mua lại",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Bất kỳ thỏa thuận nào cho phép nhà đầu tư yêu cầu hoàn trả hoặc yêu cầu doanh nghiệp mua lại khoản đầu tư đều vi phạm quy tắc 'gặp rủi ro'. Vốn phải chịu sự chi phối của các lực lượng và kết quả thị trường.",
+    "shortDescription": "Bất kỳ thỏa thuận nào cho phép nhà đầu tư yêu cầu hoàn trả hoặc yêu cầu doanh nghiệp mua lại khoản đầu tư đều vi phạm quy tắc 'gặp rủi ro'…",
+    "examples": [
+      "Một điều khoản mua lại nêu rõ rằng doanh nghiệp sẽ mua lại khoản đầu tư sau năm năm là bị cấm.",
+      "USCIS đã từ chối các đơn mà khoản đầu tư được coi như một khoản vay có điều khoản hoàn trả."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 803,
+    "title": "Không có lợi nhuận đảm bảo",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Các khoản đầu tư EB-5 không thể cung cấp lợi nhuận cố định, đảm bảo hoặc tối thiểu. Việc cung cấp ngay cả một lợi nhuận thấp nhưng được đảm bảo cũng vi phạm các quy tắc đủ điều kiện của EB-5, vì nó làm suy yếu yếu tố rủi ro.",
+    "shortDescription": "Các khoản đầu tư EB-5 không thể cung cấp lợi nhuận cố định, đảm bảo hoặc tối thiểu.",
+    "examples": [
+      "Một thỏa thuận cung cấp lợi nhuận hàng năm được đảm bảo 2% trên khoản đầu tư không tuân thủ EB-5.",
+      "Tất cả lợi nhuận phải dựa trên hiệu suất của dự án và có nguy cơ thua lỗ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 804,
+    "title": "Các cấu trúc kinh doanh được phép",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Các khoản đầu tư EB-5 có thể dưới dạng vốn chủ sở hữu (quyền sở hữu) hoặc một khoản vay, miễn là khoản vay đó không có bảo đảm, thứ cấp và không được đảm bảo. Các khoản đầu tư vốn chủ sở hữu thường được sử dụng trong các dự án EB-5 trực tiếp.",
+    "shortDescription": "Các khoản đầu tư EB-5 có thể dưới dạng vốn chủ sở hữu (quyền sở hữu) hoặc một khoản vay, miễn là khoản vay đó không có bảo đảm, thứ cấp và không được đảm bảo.",
+    "examples": [
+      "Một trung tâm vùng có thể sử dụng vốn của nhà đầu tư như một khoản vay thứ cấp cho nhà phát triển dự án.",
+      "Các khoản đầu tư vốn chủ sở hữu cấp cho nhà đầu tư một phần quyền sở hữu và lợi nhuận, nhưng không đảm bảo lợi nhuận."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 805,
+    "title": "Sử dụng tài khoản ký quỹ",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Các quỹ có thể được giữ trong ký quỹ và giải ngân cho dự án sau khi đơn I-526 hoặc I-526E của nhà đầu tư được chấp thuận. Cấu trúc này bảo vệ nhà đầu tư trong giai đoạn đầu mà không vi phạm quy tắc 'gặp rủi ro'.",
+    "shortDescription": "Các quỹ có thể được giữ trong ký quỹ và giải ngân cho dự án sau khi đơn I-526 hoặc I-526E của nhà đầu tư được chấp thuận.",
+    "examples": [
+      "Các quỹ của một nhà đầu tư chỉ được giải ngân khỏi ký quỹ sau khi I-526 của họ được USCIS chấp thuận.",
+      "Các thỏa thuận ký quỹ được USCIS xem xét để đảm bảo các quỹ trở thành 'gặp rủi ro' sau khi được giải ngân.",
+      "Các quỹ của nhà đầu tư được giữ trong ký quỹ và chỉ được giải ngân sau khi USCIS chấp thuận đơn.",
+      "Thỏa thuận ký quỹ xác định ai kiểm soát các quỹ và trong những điều kiện nào chúng được giải ngân."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 806,
+    "title": "Yêu cầu về thời gian duy trì",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Các quỹ đầu tư phải duy trì 'gặp rủi ro' và được triển khai trong doanh nghiệp ít nhất hai năm kể từ ngày có tình trạng cư trú có điều kiện. Việc rút vốn sớm có thể dẫn đến việc từ chối đơn I-829.",
+    "shortDescription": "Các quỹ đầu tư phải duy trì 'gặp rủi ro' và được triển khai trong doanh nghiệp ít nhất hai năm kể từ ngày có tình trạng cư trú có điều kiện.",
+    "examples": [
+      "Các quỹ được rút trước khi kết thúc thời gian có điều kiện hai năm có thể gây nguy hiểm cho việc đủ điều kiện nhận Thẻ xanh.",
+      "Việc tái triển khai các quỹ vào một dự án khác được cho phép nếu dự án ban đầu kết thúc sớm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 807,
+    "title": "Tái triển khai vốn",
+    "category": "Đầu tư",
+    "subcategory": "Các khoản đầu tư gặp rủi ro",
+    "description": "Nếu dự án ban đầu kết thúc trước khi thời gian duy trì kết thúc, vốn phải được tái triển khai vào một hoạt động tuân thủ EB-5 khác. Điều này đảm bảo khoản đầu tư vẫn gặp rủi ro và hỗ trợ tạo việc làm.",
+    "shortDescription": "Nếu dự án ban đầu kết thúc trước khi thời gian duy trì kết thúc, vốn phải được tái triển khai vào một hoạt động tuân thủ EB-5 khác.",
+    "examples": [
+      "Sau khi một dự án khách sạn hoàn thành, các quỹ còn lại được đầu tư vào một dự án phát triển nhà kho.",
+      "Việc tái triển khai phải diễn ra trong một thời gian hợp lý về mặt thương mại và trong cùng một NCE."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 901,
+    "title": "Số tiền đầu tư tiêu chuẩn",
+    "category": "Đầu tư",
+    "subcategory": "Số tiền đầu tư",
+    "description": "Kể từ năm 2022, số tiền đầu tư tối thiểu tiêu chuẩn cho chương trình EB-5 là 1.050.000 đô la. Điều này áp dụng cho các dự án không nằm trong các Khu vực Việc làm Mục tiêu (TEA) được chỉ định hoặc các dự án cơ sở hạ tầng.",
+    "shortDescription": "Kể từ năm 2022, số tiền đầu tư tối thiểu tiêu chuẩn cho chương trình EB-5 là 1.050.000 đô la.",
+    "examples": [
+      "Một nhà đầu tư bắt đầu kinh doanh ở trung tâm thành phố Los Angeles đóng góp 1.050.000 đô la.",
+      "Các dự án thương mại không thuộc TEA phải đáp ứng ngưỡng đầu tư cao hơn này."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 902,
+    "title": "Đầu tư giảm cho các TEA và cơ sở hạ tầng",
+    "category": "Đầu tư",
+    "subcategory": "Số tiền đầu tư",
+    "description": "Số tiền đầu tư tối thiểu được giảm xuống còn 800.000 đô la cho các dự án EB-5 nằm ở các khu vực nông thôn, các khu vực có tỷ lệ thất nghiệp cao hoặc các dự án cơ sở hạ tầng được chỉ định do các cơ quan công cộng quản lý.",
+    "shortDescription": "Số tiền đầu tư tối thiểu được giảm xuống còn 800.000 đô la cho các dự án EB-5 nằm ở các khu vực nông thôn, các khu vực có tỷ lệ thất nghiệp cao hoặc các dự án được chỉ định…",
+    "examples": [
+      "Một nhà đầu tư đầu tư 800.000 đô la vào một cơ sở năng lượng mặt trời ở nông thôn.",
+      "Một dự án trung tâm giao thông do một cơ quan công cộng tài trợ đủ điều kiện ở ngưỡng giảm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 903,
+    "title": "Điều chỉnh lạm phát sau mỗi 5 năm",
+    "category": "Đầu tư",
+    "subcategory": "Số tiền đầu tư",
+    "description": "Theo Đạo luật Cải cách và Liêm chính EB-5 năm 2022, các ngưỡng đầu tư sẽ được điều chỉnh theo lạm phát sau mỗi năm năm để phản ánh các điều kiện kinh tế và duy trì giá trị của chương trình.",
+    "shortDescription": "Theo Đạo luật Cải cách và Liêm chính EB-5 năm 2022, các ngưỡng đầu tư sẽ được điều chỉnh theo lạm phát sau mỗi năm năm để phản ánh…",
+    "examples": [
+      "Nếu lạm phát tăng đáng kể, ngưỡng TEA 800.000 đô la có thể được tăng lên trong bản cập nhật tiếp theo.",
+      "Việc xem xét tiếp theo dự kiến sẽ diễn ra vào năm 2027, năm năm sau khi điều chỉnh năm 2022."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 904,
+    "title": "Yêu cầu về đóng góp vốn",
+    "category": "Đầu tư",
+    "subcategory": "Số tiền đầu tư",
+    "description": "Các quỹ đầu tư EB-5 phải được cam kết không thể hủy ngang cho doanh nghiệp và không được bao gồm các quỹ vay được bảo đảm bằng tài sản của doanh nghiệp EB-5. Quà tặng hoặc các khoản vay cá nhân có thể đủ điều kiện với tài liệu phù hợp.",
+    "shortDescription": "Các quỹ đầu tư EB-5 phải được cam kết không thể hủy ngang cho doanh nghiệp và không được bao gồm các quỹ vay được bảo đảm bằng tài sản của EB-5…",
+    "examples": [
+      "Một nhà đầu tư sử dụng tiền thu được từ việc bán bất động sản làm khoản đầu tư EB-5 của họ.",
+      "Một số tiền được tặng từ một người thân được cho phép nếu nó bao gồm một lá thư quà tặng chính thức và tài liệu nguồn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 905,
+    "title": "Nhiều nhà đầu tư trong cùng một dự án",
+    "category": "Đầu tư",
+    "subcategory": "Số tiền đầu tư",
+    "description": "Nếu một dự án có nhiều nhà đầu tư EB-5, mỗi người phải đáp ứng độc lập yêu cầu đầu tư tối thiểu đầy đủ và được ghi nhận với việc tạo ra 10 việc làm mới.",
+    "shortDescription": "Nếu một dự án có nhiều nhà đầu tư EB-5, mỗi người phải đáp ứng độc lập yêu cầu đầu tư tối thiểu đầy đủ và được ghi nhận…",
+    "examples": [
+      "Hai nhà đầu tư trong cùng một doanh nghiệp mỗi người đầu tư 800.000 đô la và được liên kết với 10 việc làm mỗi người.",
+      "Các quỹ của mỗi nhà đầu tư phải có thể truy xuất được và được hạch toán riêng trong việc tạo việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 906,
+    "title": "Tuân thủ nguồn vốn",
+    "category": "Đầu tư",
+    "subcategory": "Số tiền đầu tư",
+    "description": "Bất kể số tiền đầu tư là bao nhiêu, tất cả vốn được sử dụng trong đơn EB-5 phải có nguồn gốc hợp pháp. USCIS yêu cầu tài liệu đầy đủ truy tìm nguồn gốc và con đường hợp pháp của các quỹ.",
+    "shortDescription": "Bất kể số tiền đầu tư là bao nhiêu, tất cả vốn được sử dụng trong đơn EB-5 phải có nguồn gốc hợp pháp.",
+    "examples": [
+      "Hồ sơ ngân hàng và tờ khai thuế được nộp để cho thấy nhà đầu tư đã tích lũy 800.000 đô la như thế nào.",
+      "Việc không chứng minh được nguồn gốc hợp pháp có thể dẫn đến việc từ chối đơn, ngay cả khi số tiền là chính xác."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1001,
+    "title": "Các dự án phát triển bất động sản",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các dự án phát triển bất động sản là một trong những loại hình đầu tư EB-5 phổ biến nhất, đặc biệt là thông qua các trung tâm vùng. Các dự án thường bao gồm khách sạn, các tòa nhà đa chức năng hoặc nhà ở nhiều gia đình.",
+    "shortDescription": "Các dự án phát triển bất động sản là một trong những loại hình đầu tư EB-5 phổ biến nhất, đặc biệt là thông qua các trung tâm vùng.",
+    "examples": [
+      "Một nhà đầu tư EB-5 tham gia vào một dự án của trung tâm vùng để xây dựng một khách sạn Hilton mới.",
+      "Các dự án phát triển căn hộ nhiều gia đình ở các khu vực tăng trưởng cao thường đủ điều kiện để được tài trợ EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1002,
+    "title": "Các dự án cơ sở hạ tầng",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các dự án cơ sở hạ tầng do các cơ quan chính phủ hoặc các đối tác công tư quản lý có thể đủ điều kiện để được hưởng EB-5 ở mức đầu tư giảm. Chúng bao gồm giao thông, tiện ích hoặc hệ thống nước.",
+    "shortDescription": "Các dự án cơ sở hạ tầng do các cơ quan chính phủ hoặc các đối tác công tư quản lý có thể đủ điều kiện để được hưởng EB-5 ở mức đầu tư giảm…",
+    "examples": [
+      "Vốn EB-5 được sử dụng để hỗ trợ việc mở rộng một sân bay thành phố.",
+      "Một cơ quan công cộng hợp tác với các nhà phát triển tư nhân để nâng cấp các đường ống nước bằng vốn đầu tư EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1003,
+    "title": "Các dự án sản xuất và công nghiệp",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các nhà đầu tư EB-5 trực tiếp có thể chọn thành lập hoặc mở rộng các nhà máy, cơ sở sản xuất hoặc các doanh nghiệp công nghiệp khác. Các dự án này thường tạo ra số lượng lớn việc làm trực tiếp.",
+    "shortDescription": "Các nhà đầu tư EB-5 trực tiếp có thể chọn thành lập hoặc mở rộng các nhà máy, cơ sở sản xuất hoặc các doanh nghiệp công nghiệp khác.",
+    "examples": [
+      "Một nhà đầu tư mở một nhà máy sản xuất đồ nội thất tuyển dụng 20 công nhân.",
+      "Một công ty chế biến thực phẩm mở rộng sản xuất bằng cách sử dụng các quỹ EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1004,
+    "title": "Các hoạt động nhượng quyền và bán lẻ",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các nhà đầu tư EB-5 có thể mở và vận hành các doanh nghiệp nhượng quyền như nhà hàng hoặc cửa hàng bán lẻ. Các doanh nghiệp này có thể đủ điều kiện nếu họ tạo ra ít nhất 10 việc làm toàn thời gian.",
+    "shortDescription": "Các nhà đầu tư EB-5 có thể mở và vận hành các doanh nghiệp nhượng quyền như nhà hàng hoặc cửa hàng bán lẻ.",
+    "examples": [
+      "Một nhà đầu tư mở ba địa điểm nhượng quyền của Dunkin' với tổng số nhân viên là 30 người.",
+      "Một khoản đầu tư trực tiếp vào việc mở rộng một chuỗi siêu thị đủ điều kiện theo EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1005,
+    "title": "Các cơ sở y tế và chăm sóc sức khỏe",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các dự án EB-5 liên quan đến chăm sóc sức khỏe bao gồm bệnh viện, trung tâm dưỡng lão hoặc phòng khám y tế. Các dự án này thường được phát triển thông qua các trung tâm vùng và tạo ra việc làm lâu dài.",
+    "shortDescription": "Các dự án EB-5 liên quan đến chăm sóc sức khỏe bao gồm bệnh viện, trung tâm dưỡng lão hoặc phòng khám y tế.",
+    "examples": [
+      "Một viện dưỡng lão được tài trợ bởi EB-5 tạo ra hơn 60 việc làm cho y tá và nhân viên hỗ trợ.",
+      "Một trung tâm vùng phát triển một cơ sở y tế ngoại trú bằng vốn của nhà đầu tư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1006,
+    "title": "Các công ty khởi nghiệp công nghệ và đổi mới",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các nhà đầu tư EB-5 có kinh nghiệm kinh doanh có thể thành lập các công ty công nghệ trong các lĩnh vực như phần mềm, thương mại điện tử hoặc thiết bị y tế. Các dự án này thường yêu cầu một con đường EB-5 trực tiếp.",
+    "shortDescription": "Các nhà đầu tư EB-5 có kinh nghiệm kinh doanh có thể thành lập các công ty công nghệ trong các lĩnh vực như phần mềm, thương mại điện tử hoặc thiết bị y tế.",
+    "examples": [
+      "Một doanh nhân công nghệ sinh học thành lập một phòng thí nghiệm chẩn đoán và tuyển dụng 15 chuyên gia.",
+      "Một công ty phát triển ứng dụng di động thuê 12 kỹ sư phần mềm theo EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1007,
+    "title": "Các cơ sở giáo dục và đào tạo",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các khoản đầu tư vào các trường bán công, trung tâm đào tạo hoặc các cơ sở liên kết với trường đại học có thể đủ điều kiện để được hưởng EB-5 nếu chúng tạo ra các công việc đủ điều kiện và đáp ứng tất cả các tiêu chí của chương trình.",
+    "shortDescription": "Các khoản đầu tư vào các trường bán công, trung tâm đào tạo hoặc các cơ sở liên kết với trường đại học có thể đủ điều kiện để được hưởng EB-5 nếu chúng tạo ra các công việc đủ điều kiện…",
+    "examples": [
+      "Một trường bán công được phát triển bằng cách sử dụng các quỹ EB-5 và tuyển dụng giáo viên và nhân viên.",
+      "Một nhà đầu tư tài trợ cho một trung tâm đào tạo nghề ở một khu vực nông thôn theo chỉ định TEA."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1008,
+    "title": "Khách sạn và giải trí",
+    "category": "Đầu tư",
+    "subcategory": "Các loại dự án đầu tư",
+    "description": "Các khu phức hợp giải trí, trung tâm sự kiện và các dự án theo định hướng du lịch như khu nghỉ dưỡng là các khoản đầu tư EB-5 đủ điều kiện khi việc tạo việc làm được ghi lại rõ ràng.",
+    "shortDescription": "Các khu phức hợp giải trí, trung tâm sự kiện và các dự án theo định hướng du lịch như khu nghỉ dưỡng là các khoản đầu tư EB-5 đủ điều kiện khi việc tạo việc làm rõ ràng…",
+    "examples": [
+      "Một khu nghỉ dưỡng trong một công viên quốc gia mở rộng được tài trợ bằng vốn EB-5.",
+      "Một khu giải trí đa chức năng tạo ra hàng trăm việc làm và đủ điều kiện theo EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1101,
+    "title": "Tiết kiệm cá nhân hợp pháp",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Các nhà đầu tư EB-5 có thể sử dụng tiền tiết kiệm cá nhân tích lũy được thông qua thu nhập hợp pháp như tiền lương, tiền thưởng, cổ tức hoặc tự kinh doanh. Cần có tài liệu đầy đủ về lịch sử thu nhập.",
+    "shortDescription": "Các nhà đầu tư EB-5 có thể sử dụng tiền tiết kiệm cá nhân tích lũy được thông qua thu nhập hợp pháp như tiền lương, tiền thưởng, cổ tức hoặc tự kinh doanh.",
+    "examples": [
+      "Một nhà đầu tư sử dụng tiền tiết kiệm từ 10 năm lương tại một tập đoàn đa quốc gia.",
+      "Phiếu lương, hợp đồng lao động và tờ khai thuế được nộp làm bằng chứng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1102,
+    "title": "Tiền thu được từ việc bán bất động sản",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Các nhà đầu tư có thể sử dụng vốn thu được từ việc bán bất động sản hoặc các tài sản cá nhân khác. Các tài liệu phải chứng minh quyền sở hữu, giao dịch bán và chuyển tiền.",
+    "shortDescription": "Các nhà đầu tư có thể sử dụng vốn thu được từ việc bán bất động sản hoặc các tài sản cá nhân khác.",
+    "examples": [
+      "Một căn hộ được bán ở Dubai tạo ra 1 triệu đô la cho một khoản đầu tư EB-5.",
+      "Nhà đầu tư nộp giấy chứng nhận quyền sở hữu, hợp đồng mua bán và hồ sơ chuyển khoản ngân hàng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1103,
+    "title": "Quà tặng từ các thành viên gia đình",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Các quỹ EB-5 có thể được nhận dưới dạng quà tặng từ một người thân. Phải có một lá thư quà tặng có công chứng, và người tặng quà phải chứng minh nguồn gốc hợp pháp của các quỹ của họ.",
+    "shortDescription": "Các quỹ EB-5 có thể được nhận dưới dạng quà tặng từ một người thân.",
+    "examples": [
+      "Một phụ huynh tặng 800.000 đô la cho con của họ để đầu tư EB-5.",
+      "Phụ huynh cung cấp hồ sơ tài chính để chứng minh nguồn gốc của các quỹ được tặng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1104,
+    "title": "Thừa kế",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Tiền hoặc tài sản thừa kế có thể được sử dụng cho EB-5 miễn là tài liệu cho thấy sự chuyển nhượng hợp pháp và nguồn gốc hợp pháp của tài sản của người quá cố.",
+    "shortDescription": "Tiền hoặc tài sản thừa kế có thể được sử dụng cho EB-5 miễn là tài liệu cho thấy sự chuyển nhượng hợp pháp và nguồn gốc hợp pháp của tài sản của người quá cố…",
+    "examples": [
+      "Một nhà đầu tư thừa kế đất và bán nó để tài trợ cho đơn EB-5 của họ.",
+      "Di chúc, hồ sơ chứng thực và hồ sơ mua bán được sử dụng để truy tìm các quỹ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1105,
+    "title": "Lợi nhuận kinh doanh",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Lợi nhuận từ một doanh nghiệp do nhà đầu tư sở hữu hợp pháp có thể được sử dụng cho EB-5. Quyền sở hữu, tạo thu nhập và hồ sơ tài chính phải được trình bày.",
+    "shortDescription": "Lợi nhuận từ một doanh nghiệp do nhà đầu tư sở hữu hợp pháp có thể được sử dụng cho EB-5.",
+    "examples": [
+      "Một nhà đầu tư rút cổ tức từ một công ty hậu cần để tài trợ cho EB-5.",
+      "Các tờ khai thuế doanh nghiệp, sao kê ngân hàng và các tài liệu đăng ký được nộp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1106,
+    "title": "Các khoản vay cá nhân không có bảo đảm",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "USCIS cho phép sử dụng các khoản vay cá nhân không có bảo đảm trong EB-5, miễn là nhà đầu tư chịu trách nhiệm cá nhân và khoản vay không được bảo đảm bằng tài sản của doanh nghiệp EB-5.",
+    "shortDescription": "USCIS cho phép sử dụng các khoản vay cá nhân không có bảo đảm trong EB-5, miễn là nhà đầu tư chịu trách nhiệm cá nhân và khoản vay không được bảo đảm bằng EB-5…",
+    "examples": [
+      "Một nhà đầu tư vay ngân hàng bằng tín dụng cá nhân của họ và đầu tư các quỹ.",
+      "Hợp đồng vay và bằng chứng về trách nhiệm pháp lý được nộp cùng với đơn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1107,
+    "title": "Các khoản vay có bảo đảm (áp dụng các điều kiện)",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Các khoản vay được bảo đảm bằng tài sản cá nhân của nhà đầu tư (không phải tài sản của doanh nghiệp EB-5) có thể được cho phép. Phải có tài liệu thẩm định giá và thế chấp phù hợp.",
+    "shortDescription": "Các khoản vay được bảo đảm bằng tài sản cá nhân của nhà đầu tư (không phải tài sản của doanh nghiệp EB-5) có thể được cho phép.",
+    "examples": [
+      "Một khoản vay được bảo đảm bằng nhà riêng của nhà đầu tư được sử dụng cho EB-5.",
+      "Các tài liệu thẩm định và thế chấp được nộp cho USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1108,
+    "title": "Nhiều nguồn tài trợ",
+    "category": "Đầu tư",
+    "subcategory": "Các nguồn tài trợ",
+    "description": "Các nhà đầu tư có thể kết hợp các nguồn vốn hợp pháp khác nhau để đạt được ngưỡng đầu tư EB-5. Mỗi nguồn phải được ghi lại rõ ràng và có được một cách hợp pháp.",
+    "shortDescription": "Các nhà đầu tư có thể kết hợp các nguồn vốn hợp pháp khác nhau để đạt được ngưỡng đầu tư EB-5.",
+    "examples": [
+      "Một nhà đầu tư sử dụng một sự kết hợp của tiền tiết kiệm, thừa kế và một món quà từ gia đình.",
+      "Mỗi phần được ghi lại riêng và được bao gồm trong đơn I-526."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1201,
+    "title": "Hồ sơ dự án",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Xem xét lịch sử dự án trước đây của nhà phát triển và trung tâm vùng, bao gồm các lần hoàn thành EB-5 thành công, tạo việc làm và hoàn vốn cho các nhà đầu tư. Điều này giúp giảm rủi ro đầu tư.",
+    "shortDescription": "Xem xét lịch sử dự án trước đây của nhà phát triển và trung tâm vùng, bao gồm các lần hoàn thành EB-5 thành công, tạo việc làm và hoàn vốn cho…",
+    "examples": [
+      "Một nhà phát triển có lịch sử hoàn thành năm dự án EB-5 và hoàn vốn được coi là có rủi ro thấp hơn.",
+      "Tránh các dự án do các nhà phát triển lần đầu tiên dẫn dắt hoặc những dự án có những thất bại trong quá khứ chưa được giải quyết."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1202,
+    "title": "Vị trí và nhu cầu của dự án",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Đánh giá nhu cầu và nhân khẩu học của khu vực nơi dự án được đặt. Các bất động sản ở các khu vực đang phát triển với các động lực kinh tế mạnh mẽ có xu hướng thành công hơn.",
+    "shortDescription": "Đánh giá nhu cầu và nhân khẩu học của khu vực nơi dự án được đặt.",
+    "examples": [
+      "Một dự án nhà ở nhiều gia đình ở Austin, Texas có thể được hưởng lợi từ sự tăng trưởng dân số và nhu cầu nhà ở.",
+      "Một khách sạn nằm trong một khu du lịch đang suy giảm mang lại rủi ro trống phòng và tài chính cao hơn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1203,
+    "title": "Điều kiện TEA",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Các dự án trong Khu vực Việc làm Mục tiêu (TEA) đủ điều kiện để được hưởng ngưỡng đầu tư giảm và có thể mang lại lợi thế về thị thực dành riêng, đặc biệt là ở các khu vực nông thôn hoặc thất nghiệp cao.",
+    "shortDescription": "Các dự án trong Khu vực Việc làm Mục tiêu (TEA) đủ điều kiện để được hưởng ngưỡng đầu tư giảm và có thể mang lại lợi thế về thị thực dành riêng, đặc biệt là…",
+    "examples": [
+      "Một dự án nằm trong một TEA nông thôn có thể cho phép nhà đầu tư đủ điều kiện ở mức 800.000 đô la.",
+      "Tình trạng TEA có thể cung cấp việc xử lý thị thực ưu tiên và thời gian chờ đợi ngắn hơn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1204,
+    "title": "Minh bạch về cấu trúc vốn",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Đánh giá cách khoản đầu tư EB-5 phù hợp với cấu trúc vốn tổng thể của dự án. Các dự án có tỷ lệ nợ trên vốn chủ sở hữu lành mạnh và kế hoạch tài chính rõ ràng sẽ giảm rủi ro.",
+    "shortDescription": "Đánh giá cách khoản đầu tư EB-5 phù hợp với cấu trúc vốn tổng thể của dự án.",
+    "examples": [
+      "Một dự án với 25% vốn chủ sở hữu của nhà phát triển, 50% vay ngân hàng và 25% tài trợ EB-5 có thể được coi là cân bằng.",
+      "Nếu các quỹ EB-5 được sử dụng làm nguồn duy nhất hoặc đa số, rủi ro có thể tăng lên."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1205,
+    "title": "Chiến lược thoát vốn cho các nhà đầu tư EB-5",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Tìm kiếm một chiến lược thoát vốn được xác định rõ ràng và thực tế, nêu rõ khi nào và làm thế nào vốn của nhà đầu tư sẽ được hoàn trả, sau thời gian duy trì.",
+    "shortDescription": "Tìm kiếm một chiến lược thoát vốn được xác định rõ ràng và thực tế, nêu rõ khi nào và làm thế nào vốn của nhà đầu tư sẽ được hoàn trả, sau thời gian duy trì…",
+    "examples": [
+      "Một chiến lược thoát vốn gắn liền với việc bán hoặc tái cấp vốn bất động sản sau 5-7 năm là phổ biến.",
+      "Hãy cẩn thận với những lời hứa mơ hồ hoặc thiếu chi tiết về thời gian hoàn trả cho nhà đầu tư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1206,
+    "title": "Dự báo tạo việc làm",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Xem xét cách dự án dự định tạo việc làm. Tìm kiếm các dự án có vùng đệm tạo việc làm mạnh mẽ — hơn 10 việc làm cho mỗi nhà đầu tư — để giảm thiểu rủi ro thiếu hụt.",
+    "shortDescription": "Xem xét cách dự án dự định tạo việc làm.",
+    "examples": [
+      "Một dự án khách sạn dự kiến tạo ra 15 việc làm cho mỗi nhà đầu tư mang lại sự bảo vệ nhiều hơn so với một dự án dự kiến chính xác 10 việc làm.",
+      "Các dự án chỉ dựa vào việc tạo việc làm gián tiếp có thể rủi ro hơn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1207,
+    "title": "Thẩm định của bên thứ ba",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Các báo cáo thẩm định độc lập của các chuyên gia pháp lý, tài chính hoặc nhập cư có thể cung cấp những hiểu biết sâu sắc về sự tín nhiệm và cấu trúc của dự án.",
+    "shortDescription": "Các báo cáo thẩm định độc lập của các chuyên gia pháp lý, tài chính hoặc nhập cư có thể cung cấp những hiểu biết sâu sắc về sự tín nhiệm và cấu trúc của…",
+    "examples": [
+      "Các nhà đầu tư yêu cầu một ý kiến pháp lý của bên thứ ba về việc tuân thủ các quy tắc EB-5 của dự án.",
+      "Một báo cáo kinh tế từ một công ty uy tín đánh giá các giả định về tạo việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1208,
+    "title": "Cấu trúc ký quỹ và dòng tiền",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Lựa chọn các dự án bất động sản",
+    "description": "Hiểu cách các quỹ của nhà đầu tư được giữ và giải ngân. Các dự án mạnh mẽ sử dụng ký quỹ của bên thứ ba để giữ vốn cho đến khi I-526 được chấp thuận và duy trì tính minh bạch.",
+    "shortDescription": "Hiểu cách các quỹ của nhà đầu tư được giữ và giải ngân.",
+    "examples": [
+      "Các quỹ của nhà đầu tư chỉ được giải ngân khỏi ký quỹ sau khi USCIS chấp thuận đơn của họ.",
+      "Một số dự án giải ngân các quỹ ngay lập tức, điều này có thể làm tăng rủi ro nếu I-526 bị từ chối."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1301,
+    "title": "Bất động sản thương mại",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Các dự án bất động sản thương mại bao gồm các tòa nhà văn phòng, trung tâm mua sắm, khu công nghiệp và khách sạn. Đây là những khoản đầu tư EB-5 phổ biến do tiềm năng tạo việc làm cao và nhu cầu vốn quy mô lớn.",
+    "shortDescription": "Các dự án bất động sản thương mại bao gồm các tòa nhà văn phòng, trung tâm mua sắm, khu công nghiệp và khách sạn.",
+    "examples": [
+      "Một nhà đầu tư EB-5 tài trợ cho việc xây dựng một tòa tháp văn phòng 20 tầng cho các công ty công nghệ thuê.",
+      "Một tòa nhà thương mại đa chức năng bao gồm không gian bán lẻ và một trung tâm kinh doanh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1302,
+    "title": "Bất động sản nhà ở",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Các dự án nhà ở bao gồm các khu chung cư, căn hộ chung cư và các khu phát triển nhà ở. Các dự án này thường cung cấp nhà ở giá rẻ hoặc nhà ở cho người lao động ở các khu vực đô thị hoặc ngoại ô.",
+    "shortDescription": "Các dự án nhà ở bao gồm các khu chung cư, căn hộ chung cư và các khu phát triển nhà ở.",
+    "examples": [
+      "Một trung tâm vùng phát triển một khu chung cư 200 căn hộ trong một TEA.",
+      "Một khu phát triển nhà ở ngoại ô được xây dựng để đáp ứng nhu cầu nhà ở của các gia đình địa phương."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1303,
+    "title": "Các dự án phát triển đa chức năng",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Các dự án đa chức năng kết hợp các thành phần nhà ở, thương mại và đôi khi là khách sạn hoặc giải trí trong một dự án phát triển, làm tăng sự đa dạng trong việc tạo việc làm và sức hấp dẫn của người thuê.",
+    "shortDescription": "Các dự án đa chức năng kết hợp các thành phần nhà ở, thương mại và đôi khi là khách sạn hoặc giải trí trong một dự án phát triển, làm tăng…",
+    "examples": [
+      "Một dự án ở trung tâm thành phố kết hợp một khách sạn, trung tâm mua sắm bán lẻ và các đơn vị nhà ở.",
+      "Các nhà đầu tư được hưởng lợi từ nhiều nguồn doanh thu và nguồn việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1304,
+    "title": "Các dự án khách sạn",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Khách sạn, khu nghỉ dưỡng và trung tâm hội nghị thường được sử dụng trong EB-5 do tạo ra nhiều việc làm trong quá trình xây dựng và các hoạt động đang diễn ra như nhân sự, phục vụ ăn uống và quản lý.",
+    "shortDescription": "Khách sạn, khu nghỉ dưỡng và trung tâm hội nghị thường được sử dụng trong EB-5 do tạo ra nhiều việc làm trong quá trình xây dựng và các hoạt động đang diễn ra như…",
+    "examples": [
+      "Các nhà đầu tư EB-5 giúp tài trợ cho một khách sạn 300 phòng gần một trung tâm hội nghị.",
+      "Các dự án phát triển khu nghỉ dưỡng sang trọng bao gồm các sân gôn và spa, tạo ra các công việc đa dạng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1305,
+    "title": "Nhà ở cho sinh viên và người cao tuổi",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Các loại nhà ở chuyên biệt như ký túc xá hoặc các cơ sở sinh hoạt cho người cao tuổi là các loại tài sản EB-5 đang phát triển. Các dự án này cung cấp sự thuê mướn đáng tin cậy và tạo việc làm liên tục dựa trên nhân viên.",
+    "shortDescription": "Các loại nhà ở chuyên biệt như ký túc xá hoặc các cơ sở sinh hoạt cho người cao tuổi là các loại tài sản EB-5 đang phát triển.",
+    "examples": [
+      "Một khoản đầu tư EB-5 xây dựng các căn hộ sinh hoạt có hỗ trợ với nhân viên y tế và chăm sóc.",
+      "Các dự án nhà ở cho sinh viên gần các trường đại học có nhu cầu cao và thường được cho thuê hết."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1306,
+    "title": "Bất động sản công nghiệp",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Các dự án EB-5 công nghiệp bao gồm nhà kho, trung tâm phân phối và trung tâm hậu cần. Các dự án này có thể hấp dẫn do nhu cầu thương mại điện tử ngày càng tăng và tạo việc làm trong hoạt động.",
+    "shortDescription": "Các dự án EB-5 công nghiệp bao gồm nhà kho, trung tâm phân phối và trung tâm hậu cần.",
+    "examples": [
+      "Một dự án phát triển nhà kho EB-5 hỗ trợ một mạng lưới vận chuyển khu vực.",
+      "Một trung tâm hậu cần kho lạnh tuyển dụng các kỹ thuật viên, tài xế và nhân viên hỗ trợ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1307,
+    "title": "Các dự án nhà ở giá rẻ",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các loại hình đầu tư bất động sản",
+    "description": "Các dự án nhà ở giá rẻ đáp ứng nhu cầu của cộng đồng và thường nhận được sự hỗ trợ hoặc ưu đãi của địa phương. Chúng phù hợp với các mục tiêu của EB-5 về tạo việc làm và phát triển ở các khu vực chưa được phục vụ.",
+    "shortDescription": "Các dự án nhà ở giá rẻ đáp ứng nhu cầu của cộng đồng và thường nhận được sự hỗ trợ hoặc ưu đãi của địa phương.",
+    "examples": [
+      "Một nhà đầu tư giúp tài trợ cho nhà ở cho thuê thu nhập thấp trong một TEA đô thị.",
+      "Các dự án này thường đủ điều kiện để được hưởng các khoản tín dụng thuế bổ sung hoặc các khoản tài trợ công."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1401,
+    "title": "Tầm quan trọng của nhu cầu thị trường",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Phân tích thị trường",
+    "description": "Đánh giá nhu cầu thị trường là rất quan trọng để đảm bảo thành công của dự án và tạo việc làm. Nhu cầu mạnh mẽ làm giảm rủi ro trống phòng và tăng lợi nhuận, nâng cao khả năng có một kết quả EB-5 thành công.",
+    "shortDescription": "Đánh giá nhu cầu thị trường là rất quan trọng để đảm bảo thành công của dự án và tạo việc làm.",
+    "examples": [
+      "Một dự án phát triển nhà ở gần một trường đại học đang phát triển có tỷ lệ lấp đầy cao.",
+      "Phân tích thị trường cho thấy nhu cầu chưa được đáp ứng về các dịch vụ y tế ở một thị trấn nông thôn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1402,
+    "title": "Các xu hướng kinh tế và nhân khẩu học",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Phân tích thị trường",
+    "description": "Các nhà đầu tư nên kiểm tra sự tăng trưởng dân số, tỷ lệ việc làm và mức thu nhập ở khu vực mục tiêu. Các chỉ số này phản ánh khả năng tồn tại và bền vững lâu dài của một dự án.",
+    "shortDescription": "Các nhà đầu tư nên kiểm tra sự tăng trưởng dân số, tỷ lệ việc làm và mức thu nhập ở khu vực mục tiêu.",
+    "examples": [
+      "Một dự án hậu cần được hỗ trợ bởi sự tăng trưởng việc làm trong lĩnh vực thương mại điện tử khu vực.",
+      "Thu nhập trung bình cao và tỷ lệ thất nghiệp thấp hỗ trợ một khoản đầu tư căn hộ sang trọng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1403,
+    "title": "Bối cảnh cạnh tranh",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Phân tích thị trường",
+    "description": "Phân tích nguồn cung hiện có và các đối thủ cạnh tranh giúp đánh giá xem dự án có lấp đầy một khoảng trống trên thị trường hay phải đối mặt với tình trạng quá bão hòa, điều này có thể cản trở doanh thu và tạo việc làm.",
+    "shortDescription": "Phân tích nguồn cung hiện có và các đối thủ cạnh tranh giúp đánh giá xem dự án có lấp đầy một khoảng trống trên thị trường hay phải đối mặt với tình trạng quá bão hòa, điều này có thể…",
+    "examples": [
+      "Một nghiên cứu khả thi cho thấy sự thiếu hụt nhà ở cho sinh viên gần một trường đại học tiểu bang.",
+      "Một dự án tòa tháp văn phòng có thể gặp khó khăn trong một thị trường có tỷ lệ trống thương mại ngày càng tăng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1404,
+    "title": "Các nghiên cứu thị trường của bên thứ ba",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Phân tích thị trường",
+    "description": "Các nghiên cứu thị trường độc lập cung cấp những hiểu biết có giá trị và cải thiện sự tín nhiệm với USCIS và các bên cho vay. Các báo cáo này đánh giá tiềm năng tạo việc làm và sự phù hợp của dự án với các nhu cầu của khu vực.",
+    "shortDescription": "Các nghiên cứu thị trường độc lập cung cấp những hiểu biết có giá trị và cải thiện sự tín nhiệm với USCIS và các bên cho vay.",
+    "examples": [
+      "Một công ty nghiên cứu kinh tế cung cấp một nghiên cứu về nhu cầu thị trường cho một khu phức hợp bán lẻ.",
+      "Các bên cho vay và các nhà đầu tư dựa vào các báo cáo của bên thứ ba để xác minh các giả định."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1405,
+    "title": "Hỗ trợ của chính quyền địa phương và quy hoạch",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Phân tích thị trường",
+    "description": "Sự tán thành hoặc việc đưa vào các kế hoạch phát triển của thành phố hoặc tiểu bang có thể xác nhận nhu cầu và tăng cơ hội thành công của một dự án. Việc quy hoạch và cơ sở hạ tầng hỗ trợ là những tín hiệu quan trọng.",
+    "shortDescription": "Sự tán thành hoặc việc đưa vào các kế hoạch phát triển của thành phố hoặc tiểu bang có thể xác nhận nhu cầu và tăng cơ hội thành công của một dự án.",
+    "examples": [
+      "Một dự án được liệt kê trong kế hoạch tái phát triển của thành phố được cấp phép nhanh chóng.",
+      "Các ưu đãi của địa phương báo hiệu sự phù hợp với các mục tiêu phát triển kinh tế khu vực."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1406,
+    "title": "Các yếu tố rủi ro trong thời điểm thị trường",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Phân tích thị trường",
+    "description": "Thời điểm ra mắt một dự án không tốt có thể dẫn đến hiệu suất kém. Hãy xem xét các rủi ro chu kỳ như suy thoái kinh tế, biến động theo mùa hoặc thay đổi chính sách ảnh hưởng đến nhu cầu.",
+    "shortDescription": "Thời điểm ra mắt một dự án không tốt có thể dẫn đến hiệu suất kém.",
+    "examples": [
+      "Ra mắt một dự án khách sạn trong thời kỳ du lịch suy thoái có thể trì hoãn việc tạo việc làm.",
+      "Việc tăng lãi suất hoặc lạm phát chi phí xây dựng có thể làm hỏng các dự báo."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1501,
+    "title": "Lựa chọn địa điểm và tính khả thi",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Phát triển dự án bắt đầu bằng việc lựa chọn một địa điểm và đánh giá tính khả thi của nó. Điều này bao gồm việc mua đất, quy hoạch, tiếp cận tiện ích và ước tính chi phí ban đầu.",
+    "shortDescription": "Phát triển dự án bắt đầu bằng việc lựa chọn một địa điểm và đánh giá tính khả thi của nó.",
+    "examples": [
+      "Một nhà phát triển bất động sản chọn một lô đất ngoại ô gần các tuyến giao thông cho một dự án đa chức năng.",
+      "Nghiên cứu khả thi cho thấy nhu cầu của địa phương hỗ trợ cho việc phát triển được đề xuất."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1502,
+    "title": "Quy hoạch và thiết kế",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Các nhà phát triển thuê các kiến trúc sư, kỹ sư và chuyên gia tư vấn để thiết kế dự án. Các bản vẽ mặt bằng, bản vẽ kết cấu và các thiết kế thẩm mỹ được chuẩn bị ở giai đoạn này.",
+    "shortDescription": "Các nhà phát triển thuê các kiến trúc sư, kỹ sư và chuyên gia tư vấn để thiết kế dự án.",
+    "examples": [
+      "Các kiến trúc sư thiết kế một khách sạn với 250 phòng, không gian tổ chức sự kiện và một nhà hàng trên tầng thượng.",
+      "Các kỹ sư dân dụng đánh giá hệ thống thoát nước và tác động môi trường của địa điểm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1503,
+    "title": "Giấy phép và quyền lợi",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Giai đoạn này bao gồm việc xin giấy phép, giấy phép và sự chấp thuận của các cơ quan quản lý từ các cơ quan địa phương và tiểu bang. Nó có thể tốn thời gian nhưng cần thiết cho việc xây dựng hợp pháp.",
+    "shortDescription": "Giai đoạn này bao gồm việc xin giấy phép, giấy phép và sự chấp thuận của các cơ quan quản lý từ các cơ quan địa phương và tiểu bang.",
+    "examples": [
+      "Hội đồng quy hoạch thành phố cấp phép quy hoạch để tăng mật độ dân cư.",
+      "Nhà phát triển xin giấy phép xây dựng và giấy phép phòng cháy chữa cháy."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1504,
+    "title": "Huy động vốn và tài trợ",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Các nhà phát triển đảm bảo tài trợ từ một hỗn hợp các nguồn: vốn chủ sở hữu, các khoản vay và có thể là vốn EB-5. Một cấu trúc vốn rõ ràng là điều cần thiết để khởi động dự án.",
+    "shortDescription": "Các nhà phát triển đảm bảo tài trợ từ một hỗn hợp các nguồn: vốn chủ sở hữu, các khoản vay và có thể là vốn EB-5.",
+    "examples": [
+      "Các quỹ EB-5 chiếm 30% chi phí dự án cùng với một khoản vay cao cấp từ một ngân hàng thương mại.",
+      "Các nhà đầu tư xem xét cấu trúc vốn để đánh giá khả năng tài chính."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1505,
+    "title": "Giai đoạn xây dựng",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Dự án chuyển sang giai đoạn xây dựng sau khi tài trợ được hoàn tất. Đây là nơi diễn ra hầu hết việc tạo việc làm EB-5 thông qua việc làm trực tiếp và gián tiếp.",
+    "shortDescription": "Dự án chuyển sang giai đoạn xây dựng sau khi tài trợ được hoàn tất.",
+    "examples": [
+      "Hàng trăm công nhân xây dựng được thuê cho một lịch trình xây dựng 24 tháng.",
+      "Các nhà cung cấp và nhà thầu phụ tạo ra tác động kinh tế bổ sung."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1506,
+    "title": "Vận hành và ổn định",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Sau khi xây dựng, dự án được cho thuê, bán hoặc mở cửa hoạt động. Việc ổn định bao gồm việc đạt được tỷ lệ lấp đầy hoặc doanh thu mục tiêu, điều này hỗ trợ việc xác minh việc tạo việc làm EB-5.",
+    "shortDescription": "Sau khi xây dựng, dự án được cho thuê, bán hoặc mở cửa hoạt động.",
+    "examples": [
+      "Một khu chung cư đã hoàn thành đạt 90% tỷ lệ lấp đầy trong vòng sáu tháng.",
+      "Một trung tâm bán lẻ ký kết các thỏa thuận cho thuê dài hạn với các khách thuê chủ chốt."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1507,
+    "title": "Thoát vốn và hoàn trả cho các nhà đầu tư",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Chu kỳ phát triển dự án",
+    "description": "Giai đoạn cuối cùng bao gồm việc hoàn trả cho các nhà đầu tư sau khi các yêu cầu về tạo việc làm và duy trì được đáp ứng. Điều này thường được thực hiện thông qua tái cấp vốn, bán tài sản hoặc phân phối.",
+    "shortDescription": "Giai đoạn cuối cùng bao gồm việc hoàn trả cho các nhà đầu tư sau khi các yêu cầu về tạo việc làm và duy trì được đáp ứng.",
+    "examples": [
+      "Một bất động sản thương mại được bán cho các nhà đầu tư tổ chức, hoàn vốn cho những người tham gia EB-5.",
+      "Tái cấp vốn cho phép dự án hoàn trả cho các nhà đầu tư sau khi I-829 được chấp thuận."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1601,
+    "title": "Tổng quan về bất động sản thương mại",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Thương mại và nhà ở",
+    "description": "Bất động sản thương mại bao gồm các tòa nhà văn phòng, trung tâm mua sắm, khách sạn, nhà kho và các không gian công nghiệp. Các dự án này thường có vốn cao hơn, thời gian dài hơn và tạo ra nhiều việc làm hơn.",
+    "shortDescription": "Bất động sản thương mại bao gồm các tòa nhà văn phòng, trung tâm mua sắm, khách sạn, nhà kho và các không gian công nghiệp.",
+    "examples": [
+      "Một nhà đầu tư EB-5 giúp tài trợ cho một khách sạn với các cửa hàng bán lẻ và các cơ sở hội nghị.",
+      "Các dự án thương mại thường có các đội ngũ lớn hơn, thúc đẩy việc tạo việc làm gián tiếp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1602,
+    "title": "Tổng quan về bất động sản nhà ở",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Thương mại và nhà ở",
+    "description": "Các bất động sản nhà ở bao gồm các khu chung cư, căn hộ chung cư và nhà liền kề. Các dự án này có thể có thời gian xây dựng nhanh hơn và tỷ lệ lấp đầy ổn định hơn.",
+    "shortDescription": "Các bất động sản nhà ở bao gồm các khu chung cư, căn hộ chung cư và nhà liền kề.",
+    "examples": [
+      "Một nhà đầu tư hỗ trợ một tòa nhà chung cư 120 căn hộ ở một vùng ngoại ô đang phát triển.",
+      "Nhu cầu nhà ở được thúc đẩy bởi sự tăng trưởng dân số địa phương và tình trạng thiếu nhà ở."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1603,
+    "title": "Các mô hình doanh thu",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Thương mại và nhà ở",
+    "description": "Các bất động sản thương mại thường dựa vào việc cho thuê không gian cho các doanh nghiệp, điều này có thể mang lại lợi nhuận cao nhưng nhạy cảm với các chu kỳ thị trường. Bất động sản nhà ở tạo ra thu nhập từ tiền thuê và ít biến động hơn.",
+    "shortDescription": "Các bất động sản thương mại thường dựa vào việc cho thuê không gian cho các doanh nghiệp, điều này có thể mang lại lợi nhuận cao nhưng nhạy cảm với các chu kỳ thị trường.",
+    "examples": [
+      "Không gian văn phòng ở các khu vực trung tâm thành phố có giá thuê cao nhưng dao động theo điều kiện kinh tế.",
+      "Các tòa nhà chung cư tạo ra dòng tiền ổn định nếu tỷ lệ lấp đầy vẫn mạnh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1604,
+    "title": "Những cân nhắc về tạo việc làm",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Thương mại và nhà ở",
+    "description": "Các dự án thương mại thường tạo ra nhiều việc làm hơn, bao gồm các vai trò quản lý, bán lẻ, khách sạn và bảo trì. Các dự án nhà ở thường tạo ra ít việc làm lâu dài hơn nhưng tạo ra nhiều việc làm trong xây dựng.",
+    "shortDescription": "Các dự án thương mại thường tạo ra nhiều việc làm hơn, bao gồm các vai trò quản lý, bán lẻ, khách sạn và bảo trì.",
+    "examples": [
+      "Một dự án khách sạn tuyển dụng các đầu bếp, nhân viên lễ tân và nhân viên bảo trì lâu dài.",
+      "Một dự án phát triển nhà ở tạo ra việc làm chủ yếu trong giai đoạn xây dựng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1605,
+    "title": "Các chiến lược thoát vốn",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Thương mại và nhà ở",
+    "description": "Các lối thoát thương mại có thể liên quan đến việc tái cấp vốn hoặc bán cho các nhà đầu tư tổ chức. Các dự án nhà ở thường bán các đơn vị riêng lẻ hoặc toàn bộ các tòa nhà cho các nhà đầu tư địa phương hoặc các quỹ.",
+    "shortDescription": "Các lối thoát thương mại có thể liên quan đến việc tái cấp vốn hoặc bán cho các nhà đầu tư tổ chức.",
+    "examples": [
+      "Một trung tâm mua sắm thương mại được tái cấp vốn để hoàn trả vốn cho các nhà đầu tư.",
+      "Một dự án phát triển nhà ở bán các đơn vị đã hoàn thành theo từng giai đoạn để thu hồi vốn đầu tư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1606,
+    "title": "Hồ sơ rủi ro",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Thương mại và nhà ở",
+    "description": "Các dự án thương mại có thể có rủi ro cao hơn do phụ thuộc vào việc cho thuê của người thuê và các điều kiện kinh tế. Các dự án nhà ở có thể có rủi ro thấp hơn ở các thị trường nhà ở mạnh, nhưng mang lại lợi nhuận thấp hơn.",
+    "shortDescription": "Các dự án thương mại có thể có rủi ro cao hơn do phụ thuộc vào việc cho thuê của người thuê và các điều kiện kinh tế.",
+    "examples": [
+      "Một tòa nhà văn phòng ở một khu vực đô thị đang gặp khó khăn phải đối mặt với rủi ro trống cao.",
+      "Nhà ở ngoại ô có thể mang lại lợi nhuận ổn định nhưng tiềm năng tăng trưởng hạn chế."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1701,
+    "title": "Kế hoạch kinh doanh EB-5 là gì?",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Kế hoạch kinh doanh EB-5",
+    "description": "Một kế hoạch kinh doanh EB-5 nêu rõ cách vốn của nhà đầu tư sẽ được sử dụng và cách dự án sẽ đáp ứng các yêu cầu về tạo việc làm. Nó phải tuân thủ Vụ án Ho, một tiền lệ của USCIS xác định sự tín nhiệm của kế hoạch kinh doanh.",
+    "shortDescription": "Một kế hoạch kinh doanh EB-5 nêu rõ cách vốn của nhà đầu tư sẽ được sử dụng và cách dự án sẽ đáp ứng các yêu cầu về tạo việc làm.",
+    "examples": [
+      "Một kế hoạch kinh doanh mô tả cách một chuỗi nhà hàng mới sẽ tạo ra 15 việc làm toàn thời gian.",
+      "Kế hoạch bao gồm các mốc thời gian, biểu đồ nhân sự và các chiến lược tiếp thị."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1702,
+    "title": "Tuân thủ Vụ án Ho",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Kế hoạch kinh doanh EB-5",
+    "description": "Để được chấp thuận, các kế hoạch kinh doanh EB-5 phải đáp ứng các tiêu chuẩn của USCIS theo Vụ án Ho, bao gồm các lịch trình tuyển dụng chi tiết, dự báo ngân sách, phân tích thị trường và cấu trúc pháp lý.",
+    "shortDescription": "Để được chấp thuận, các kế hoạch kinh doanh EB-5 phải đáp ứng các tiêu chuẩn của USCIS theo Vụ án Ho, bao gồm các lịch trình tuyển dụng chi tiết, dự báo ngân sách,…",
+    "examples": [
+      "Một kế hoạch bao gồm một dự báo tài chính 5 năm và phân tích nhân viên theo bộ phận.",
+      "Việc không thể hiện mối liên hệ trực tiếp giữa việc sử dụng vốn và tạo việc làm có thể dẫn đến việc từ chối."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1703,
+    "title": "Các yếu tố của một kế hoạch tuân thủ",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Kế hoạch kinh doanh EB-5",
+    "description": "Các thành phần chính của một kế hoạch kinh doanh EB-5 mạnh mẽ bao gồm: tóm tắt điều hành, phân tích ngành, chiến lược hoạt động, kế hoạch nhân sự, nhu cầu thị trường, các yếu tố rủi ro và các dự báo tài chính.",
+    "shortDescription": "Các thành phần chính của một kế hoạch kinh doanh EB-5 mạnh mẽ bao gồm: tóm tắt điều hành, phân tích ngành, chiến lược hoạt động, kế hoạch nhân sự, thị trường…",
+    "examples": [
+      "Một dự án bao gồm một phân tích SWOT để xác định các điểm mạnh và rủi ro hoạt động.",
+      "Kế hoạch nhân sự nêu rõ 12 vai trò toàn thời gian sẽ được lấp đầy trong 18 tháng đầu tiên."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1704,
+    "title": "Vai trò của các báo cáo kinh tế",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Kế hoạch kinh doanh EB-5",
+    "description": "Đối với các dự án của trung tâm vùng, các báo cáo kinh tế được bao gồm trong kế hoạch kinh doanh để tính toán việc tạo việc làm bằng cách sử dụng các mô hình được USCIS phê duyệt như IMPLAN hoặc RIMS II.",
+    "shortDescription": "Đối với các dự án của trung tâm vùng, các báo cáo kinh tế được bao gồm trong kế hoạch kinh doanh để tính toán việc tạo việc làm bằng cách sử dụng các mô hình được USCIS phê duyệt như…",
+    "examples": [
+      "Một phân tích kinh tế cho thấy một dự án xây dựng sẽ tạo ra 150 việc làm trực tiếp và gián tiếp như thế nào.",
+      "Mô hình IMPLAN chứng minh rằng mỗi nhà đầu tư EB-5 được liên kết với ít nhất 10 việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1705,
+    "title": "Thời gian và các mốc quan trọng của dự án",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Kế hoạch kinh doanh EB-5",
+    "description": "Kế hoạch phải cho thấy một thời gian biểu thực tế cho việc phát triển dự án, tạo việc làm và sự tham gia của nhà đầu tư. Điều này giúp USCIS đánh giá tính khả thi và tuân thủ các thời hạn tạo việc làm.",
+    "shortDescription": "Kế hoạch phải cho thấy một thời gian biểu thực tế cho việc phát triển dự án, tạo việc làm và sự tham gia của nhà đầu tư.",
+    "examples": [
+      "Kế hoạch cho thấy việc xây dựng bắt đầu vào quý 3 và các đợt tuyển dụng đầu tiên diễn ra vào quý 4.",
+      "Vốn của nhà đầu tư dự kiến sẽ được triển khai trong vòng 60 ngày kể từ ngày USCIS chấp thuận."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1706,
+    "title": "Tính nhất quán trên các tài liệu EB-5",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Kế hoạch kinh doanh EB-5",
+    "description": "Kế hoạch kinh doanh phải phù hợp với các tài liệu EB-5 khác, bao gồm Mẫu I-526E, bản ghi nhớ chào bán riêng lẻ (PPM) và các tài liệu chào bán. Sự khác biệt có thể dẫn đến sự chậm trễ hoặc từ chối.",
+    "shortDescription": "Kế hoạch kinh doanh phải phù hợp với các tài liệu EB-5 khác, bao gồm Mẫu I-526E, bản ghi nhớ chào bán riêng lẻ (PPM) và chào bán…",
+    "examples": [
+      "Biểu đồ nhân sự trong kế hoạch kinh doanh khớp với số liệu tạo việc làm trong Mẫu I-526E.",
+      "Sự không khớp giữa cấu trúc vốn trong PPM và kế hoạch kinh doanh có thể gây ra một RFE."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1801,
+    "title": "Dự án khách sạn ở Florida",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các nghiên cứu tình huống",
+    "description": "Một nhóm gồm 40 nhà đầu tư EB-5 đã tài trợ cho một khu nghỉ dưỡng sang trọng gần Miami. Trung tâm vùng đã cấu trúc khoản đầu tư dưới dạng một khoản vay. Dự án đã vượt mục tiêu tạo việc làm và hoàn vốn sau 6 năm.",
+    "shortDescription": "Một nhóm gồm 40 nhà đầu tư EB-5 đã tài trợ cho một khu nghỉ dưỡng sang trọng gần Miami.",
+    "examples": [
+      "Mỗi nhà đầu tư đã tạo ra 14,2 việc làm theo một báo cáo tác động kinh tế.",
+      "Các nhà đầu tư đã nhận lại được vốn sau khi ổn định và tái cấp vốn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1802,
+    "title": "Cơ sở sản xuất nông thôn ở Ohio",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các nghiên cứu tình huống",
+    "description": "Một nhà đầu tư trực tiếp đã thành lập một nhà máy nhỏ ở một thị trấn nông thôn được chỉ định là TEA. Dự án đã tạo ra 16 việc làm trực tiếp và đáp ứng các yêu cầu duy trì của EB-5, dẫn đến việc chấp thuận I-829 thành công.",
+    "shortDescription": "Một nhà đầu tư trực tiếp đã thành lập một nhà máy nhỏ ở một thị trấn nông thôn được chỉ định là TEA.",
+    "examples": [
+      "Doanh nghiệp đã tuyển dụng 3 ca công nhân trong sản xuất và hậu cần.",
+      "Nhà đầu tư đã tích cực quản lý các hoạt động và mở rộng sau năm đầu tiên."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1803,
+    "title": "Trung tâm dưỡng lão ở California",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các nghiên cứu tình huống",
+    "description": "Một dự án EB-5 liên quan đến việc phát triển một cộng đồng dưỡng lão ở một khu vực ngoại ô của California. Hơn 100 việc làm đã được tạo ra, và trung tâm vùng đã tạo điều kiện cho việc hoàn trả đầy đủ sau 5 năm.",
+    "shortDescription": "Một dự án EB-5 liên quan đến việc phát triển một cộng đồng dưỡng lão ở một khu vực ngoại ô của California.",
+    "examples": [
+      "Y tá, nhân viên nhà bếp và quản trị viên là cốt lõi của việc làm trực tiếp.",
+      "Việc tạo việc làm được tính toán thông qua cả mô hình trực tiếp và gián tiếp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1804,
+    "title": "Trung tâm hậu cần ở Texas",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các nghiên cứu tình huống",
+    "description": "Một trung tâm vùng đã huy động được 40 triệu đô la từ các nhà đầu tư EB-5 để phát triển một trung tâm hậu cần ở miền nam Texas. Mặc dù bị chậm trễ trong xây dựng, dự án đã hoàn thành trong ngân sách và đúng tiến độ.",
+    "shortDescription": "Một trung tâm vùng đã huy động được 40 triệu đô la từ các nhà đầu tư EB-5 để phát triển một trung tâm hậu cần ở miền nam Texas.",
+    "examples": [
+      "Vùng đệm tạo việc làm cho phép dự án vẫn tuân thủ mặc dù có những thay đổi về thời gian biểu.",
+      "USCIS đã chấp thuận tất cả các đơn I-829 do việc theo dõi việc làm nhất quán."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1805,
+    "title": "Dự án đô thị đa chức năng ở New York",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các nghiên cứu tình huống",
+    "description": "Một dự án phát triển nổi bật ở Manhattan đã kết hợp các thành phần văn phòng, bán lẻ và nhà ở. Các nhà đầu tư EB-5 đã tham gia cùng với vốn chủ sở hữu của các tổ chức và các khoản vay ngân hàng.",
+    "shortDescription": "Một dự án phát triển nổi bật ở Manhattan đã kết hợp các thành phần văn phòng, bán lẻ và nhà ở.",
+    "examples": [
+      "Hơn 1.000 việc làm đã được tạo ra trong tất cả các giai đoạn của dự án.",
+      "Các nhà đầu tư đã trải qua sự chậm trễ trong thời gian thoát vốn do các tác động cho thuê liên quan đến đại dịch."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1806,
+    "title": "Mở rộng trường bán công ở Arizona",
+    "category": "Bất động sản & Kinh doanh",
+    "subcategory": "Các nghiên cứu tình huống",
+    "description": "Tài trợ EB-5 đã hỗ trợ việc xây dựng hai cơ sở trường bán công mới ở Phoenix. Dự án được hỗ trợ bởi tài trợ giáo dục của tiểu bang và đã tạo ra hơn 60 việc làm trực tiếp.",
+    "shortDescription": "Tài trợ EB-5 đã hỗ trợ việc xây dựng hai cơ sở trường bán công mới ở Phoenix.",
+    "examples": [
+      "Giáo viên, quản trị viên và nhân viên cơ sở vật chất được tính vào việc tạo việc làm.",
+      "Các dự án mở rộng trường bán công ngày càng trở nên phổ biến với EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1901,
+    "title": "Nộp đơn I-526 hoặc I-526E",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình đơn EB-5",
+    "description": "Quy trình EB-5 bắt đầu bằng việc nộp Đơn I-526 (đầu tư trực tiếp) hoặc I-526E (trung tâm vùng). Đơn này cho thấy nguồn tiền hợp pháp của nhà đầu tư và kế hoạch đầu tư tạo việc làm.",
+    "shortDescription": "Quy trình EB-5 bắt đầu bằng việc nộp Đơn I-526 (trực tiếp) hoặc I-526E (trung tâm vùng).",
+    "examples": [
+      "Một nhà đầu tư bao gồm hồ sơ ngân hàng, tờ khai thuế và một kế hoạch kinh doanh toàn diện cùng với đơn I-526.",
+      "Đối với các dự án trung tâm khu vực, I-526E được sử dụng và bao gồm tài liệu của trung tâm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1902,
+    "title": "Xem xét và xử lý của USCIS",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình đơn EB-5",
+    "description": "USCIS xem xét đơn về tính đủ điều kiện, khả năng truy xuất nguồn gốc của tiền và chiến lược tạo việc làm. Nếu cần, họ có thể đưa ra Yêu cầu bổ sung bằng chứng (RFE) hoặc Thông báo về ý định từ chối (NOID).",
+    "shortDescription": "USCIS xem xét đơn về tính đủ điều kiện, khả năng truy xuất nguồn gốc của tiền và chiến lược tạo việc làm.",
+    "examples": [
+      "USCIS yêu cầu làm rõ về tài liệu việc làm và thời gian trong một RFE.",
+      "Một nhà đầu tư nộp thêm bằng chứng chứng minh nguồn gốc hợp pháp của một món quà."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1903,
+    "title": "Phê duyệt và tình trạng sẵn có của Visa",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình đơn EB-5",
+    "description": "Sau khi Đơn I-526/I-526E được chấp thuận, nhà đầu tư phải kiểm tra Bản tin Thị thực để xác nhận xem có thị thực cho quốc gia của họ hay không. Nếu có, họ có thể tiến hành nộp đơn xin Thẻ xanh.",
+    "shortDescription": "Sau khi Đơn I-526/I-526E được chấp thuận, nhà đầu tư phải kiểm tra Bản tin Thị thực để xác nhận xem có thị thực cho quốc gia của họ hay không.",
+    "examples": [
+      "Một nhà đầu tư Ấn Độ đợi ngày ưu tiên của họ trở thành hiện tại trước khi tiếp tục.",
+      "Các nhà đầu tư từ các quốc gia có nhu cầu thấp có thể tiến hành ngay sau khi I-526 được chấp thuận."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1904,
+    "title": "Điều chỉnh tình trạng hoặc xử lý lãnh sự",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình đơn EB-5",
+    "description": "Nếu ở Hoa Kỳ, nhà đầu tư nộp Đơn I-485 để điều chỉnh tình trạng. Nếu ở nước ngoài, họ nộp đơn thông qua xử lý lãnh sự bằng DS-260 tại đại sứ quán Hoa Kỳ.",
+    "shortDescription": "Nếu ở Hoa Kỳ, nhà đầu tư nộp Đơn I-485 để điều chỉnh tình trạng.",
+    "examples": [
+      "Một sinh viên có thị thực F-1 tại Hoa Kỳ nộp đơn I-485 để điều chỉnh sang tình trạng EB-5.",
+      "Một nhà đầu tư sống ở nước ngoài lên lịch phỏng vấn tại lãnh sự quán sau khi nộp DS-260."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1905,
+    "title": "Cấp thẻ xanh có điều kiện",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình đơn EB-5",
+    "description": "Sau khi được chấp thuận điều chỉnh hoặc quy trình lãnh sự, nhà đầu tư sẽ nhận được Thẻ xanh có điều kiện hai năm. Họ phải đáp ứng các mục tiêu đầu tư và tạo việc làm trong giai đoạn này.",
+    "shortDescription": "Sau khi được chấp thuận điều chỉnh hoặc quy trình lãnh sự, nhà đầu tư sẽ nhận được Thẻ xanh có điều kiện hai năm.",
+    "examples": [
+      "Một nhà đầu tư nhận được Thẻ xanh có điều kiện và chuyển đến Hoa Kỳ cùng gia đình.",
+      "Nhà đầu tư nhận được Thẻ xanh có điều kiện và chuyển đến để quản lý doanh nghiệp.",
+      "Thời hạn hai năm bắt đầu vào ngày nhập cảnh Hoa Kỳ hoặc ngày chấp thuận điều chỉnh.",
+      "Thời hạn hai năm bắt đầu từ ngày nhập cảnh hoặc ngày chấp thuận điều chỉnh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 1906,
+    "title": "Nộp đơn I-829 để gỡ bỏ điều kiện",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình đơn EB-5",
+    "description": "Trong vòng 90 ngày trước ngày kỷ niệm thứ hai nhận được Thẻ xanh có điều kiện, nhà đầu tư phải nộp Đơn I-829 để chứng minh rằng khoản đầu tư đã được duy trì và các công việc đã được tạo ra.",
+    "shortDescription": "Trong vòng 90 ngày trước ngày kỷ niệm thứ hai nhận được Thẻ xanh có điều kiện, nhà đầu tư phải nộp Đơn I-829 để chứng minh…",
+    "examples": [
+      "Nhà đầu tư bao gồm hồ sơ trả lương, tài liệu thuế và báo cáo tài chính với I-829.",
+      "Không nộp I-829 kịp thời có thể dẫn đến mất quyền thường trú."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2001,
+    "title": "Đơn I-526 / I-526E – Đơn xin nhập cư",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các mẫu đơn EB-5",
+    "description": "Đơn I-526 (hoặc I-526E cho các nhà đầu tư trung tâm khu vực) khởi xướng quy trình EB-5. Nó chứng minh tính đủ điều kiện của nhà đầu tư, nguồn tiền hợp pháp và kế hoạch đầu tư tạo việc làm.",
+    "shortDescription": "Đơn I-526 (hoặc I-526E cho các nhà đầu tư trung tâm khu vực) khởi xướng quy trình EB-5.",
+    "examples": [
+      "Một nhà đầu tư EB-5 trực tiếp nộp Đơn I-526 với bằng chứng đầu tư vào một doanh nghiệp nhà hàng.",
+      "Một người tham gia trung tâm khu vực nộp Đơn I-526E cùng với báo cáo kinh tế của dự án."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2002,
+    "title": "Đơn I-485 – Điều chỉnh Tình trạng",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các mẫu đơn EB-5",
+    "description": "Nếu nhà đầu tư đã ở Hoa Kỳ, họ sẽ nộp Đơn I-485 để điều chỉnh tình trạng của mình thành thường trú nhân hợp pháp sau khi đơn I-526 của họ được chấp thuận và có thị thực.",
+    "shortDescription": "Nếu nhà đầu tư đã ở Hoa Kỳ, họ sẽ nộp Đơn I-485 để điều chỉnh tình trạng của mình thành thường trú nhân hợp pháp sau khi đơn I-526 của họ…",
+    "examples": [
+      "Một nhà đầu tư có thị thực H-1B sử dụng I-485 để chuyển sang tình trạng thường trú có điều kiện EB-5.",
+      "Đơn I-485 bao gồm sinh trắc học, khám sức khỏe và chi tiết lịch sử cá nhân."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2003,
+    "title": "Mẫu DS-260 – Xử lý tại Lãnh sự quán",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các mẫu đơn EB-5",
+    "description": "Các nhà đầu tư cư trú bên ngoài Hoa Kỳ sử dụng Mẫu DS-260 để xin thị thực nhập cư tại lãnh sự quán Hoa Kỳ sau khi được chấp thuận I-526/I-526E và có thị thực.",
+    "shortDescription": "Các nhà đầu tư cư trú bên ngoài Hoa Kỳ",
+    "examples": [
+      "Một nhà đầu tư ở Ấn Độ hoàn thành DS-260 để lên lịch phỏng vấn xin thị thực tại Đại sứ quán Hoa Kỳ.",
+      "Mẫu DS-260 được nộp trực tuyến qua cổng Trung tâm Thị thực Quốc gia."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2004,
+    "title": "Đơn I-829 – Gỡ bỏ Điều kiện",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các mẫu đơn EB-5",
+    "description": "Được nộp trong vòng 90 ngày trước khi hết hạn thời gian có điều kiện hai năm, Đơn I-829 yêu cầu gỡ bỏ các điều kiện và chứng minh rằng nhà đầu tư đã đáp ứng các yêu cầu về tạo việc làm và duy trì đầu tư.",
+    "shortDescription": "Được nộp trong vòng 90 ngày trước khi hết hạn thời gian có điều kiện hai năm, Đơn I-829 yêu cầu gỡ bỏ các điều kiện và chứng minh rằng nhà đầu tư…",
+    "examples": [
+      "I-829 bao gồm hồ sơ trả lương, giấy phép kinh doanh và sao kê ngân hàng đầu tư.",
+      "Sau khi được chấp thuận, nhà đầu tư và gia đình của họ sẽ nhận được Thẻ xanh vĩnh viễn có giá trị trong 10 năm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2005,
+    "title": "Đơn I-956K – Đăng ký đại lý",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các mẫu đơn EB-5",
+    "description": "Bất kỳ người nào đóng vai trò là người quảng bá, người tìm kiếm hoặc đại lý cho một dự án EB-5 phải nộp Đơn I-956K để tiết lộ mối quan hệ của họ với trung tâm khu vực và xác nhận tuân thủ các quy định của USCIS.",
+    "shortDescription": "Bất kỳ người nào đóng vai trò là người quảng bá, người tìm kiếm hoặc đại lý cho một dự án EB-5 phải nộp Đơn I-956K để tiết lộ mối quan hệ của họ với…",
+    "examples": [
+      "Một đại lý tiếp thị làm việc với một trung tâm khu vực nộp I-956K để đăng ký với USCIS.",
+      "Không nộp I-956K có thể dẫn đến việc bị loại khỏi các đơn xin của nhà đầu tư liên quan đến đại lý."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2006,
+    "title": "Đơn I-956F – Đơn xin dự án",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các mẫu đơn EB-5",
+    "description": "Mẫu I-956F phải được các trung tâm khu vực nộp cho mỗi đợt chào bán dự án EB-5. Nó chứa kế hoạch kinh doanh của dự án, báo cáo kinh tế, tài liệu chứng khoán và mô hình tạo việc làm.",
+    "shortDescription": "Mẫu I-956F phải được các trung tâm khu vực nộp cho mỗi đợt chào bán dự án EB-5.",
+    "examples": [
+      "Một trung tâm khu vực nộp I-956F với một bộ đầy đủ các tài liệu dự án trước khi các nhà đầu tư có thể nộp I-526E.",
+      "Dự án phải được chấp thuận theo I-956F để các nhà đầu tư tiến hành."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2102,
+    "title": "Quyền của Thường trú nhân có Điều kiện",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình Thẻ xanh",
+    "description": "Những người có Thẻ xanh có điều kiện EB-5 có toàn quyền sinh sống, làm việc và học tập tại Hoa Kỳ. Họ có thể đi du lịch, mở doanh nghiệp và cho con đi học tại các trường công.",
+    "shortDescription": "Những người có Thẻ xanh có điều kiện EB-5 có toàn quyền sinh sống, làm việc và học tập tại Hoa Kỳ.",
+    "examples": [
+      "Vợ/chồng của một nhà đầu tư bắt đầu kinh doanh trong khi con của họ theo học tại một trường đại học Hoa Kỳ.",
+      "Gia đình không phải tuân theo các hạn chế về thị thực sau khi được cấp tình trạng có điều kiện."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2103,
+    "title": "Gỡ bỏ điều kiện qua Mẫu I-829",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình Thẻ xanh",
+    "description": "Để chuyển Thẻ xanh có điều kiện thành thẻ vĩnh viễn, nhà đầu tư phải nộp Mẫu I-829 trong vòng 90 ngày trước khi thẻ hết hạn. Điều này chứng minh việc duy trì đầu tư và tạo việc làm.",
+    "shortDescription": "Để chuyển Thẻ xanh có điều kiện thành thẻ vĩnh viễn, nhà đầu tư phải nộp Mẫu I-829 trong vòng 90 ngày trước khi thẻ…",
+    "examples": [
+      "Nhà đầu tư nộp bảng lương, hồ sơ thuế và bằng chứng sử dụng vốn với Mẫu I-829.",
+      "Sau khi được chấp thuận, Thẻ xanh vô điều kiện 10 năm sẽ được cấp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2104,
+    "title": "Thẻ xanh 10 năm (Thường trú)",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình Thẻ xanh",
+    "description": "Sau khi Đơn I-829 được chấp thuận, nhà đầu tư và các thành viên gia đình đủ điều kiện của họ sẽ nhận được Thẻ xanh vĩnh viễn có giá trị trong 10 năm. Nó có thể được gia hạn và đóng vai trò là bằng chứng về tình trạng thường trú hợp pháp.",
+    "shortDescription": "Sau khi Đơn I-829 được chấp thuận, nhà đầu tư và các thành viên gia đình đủ điều kiện của họ sẽ nhận được Thẻ xanh vĩnh viễn có giá trị trong 10 năm.",
+    "examples": [
+      "Nhà đầu tư nhận được Thẻ xanh 10 năm và không còn cần phải chứng minh việc tạo việc làm.",
+      "Các thành viên trong gia đình nhận được tình trạng vĩnh viễn tương tự và được hưởng đầy đủ quyền cư trú."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2105,
+    "title": "Duy trì tình trạng Thẻ xanh",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình Thẻ xanh",
+    "description": "Để giữ tình trạng Thẻ xanh, thường trú nhân không được từ bỏ ý định sinh sống tại Hoa Kỳ, tránh vắng mặt lâu dài và tuân thủ các nghĩa vụ về thuế và cư trú.",
+    "shortDescription": "Để giữ tình trạng Thẻ xanh, thường trú nhân không được từ bỏ ý định sinh sống tại Hoa Kỳ, tránh vắng mặt lâu dài và tuân thủ các nghĩa vụ về thuế và…",
+    "examples": [
+      "Dành hơn 6 tháng ở nước ngoài có thể gây ra lo ngại về việc từ bỏ.",
+      "Nộp tờ khai thuế của Hoa Kỳ và duy trì mối quan hệ với Hoa Kỳ giúp duy trì tình trạng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2106,
+    "title": "Điều kiện để trở thành công dân Hoa Kỳ",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Quy trình Thẻ xanh",
+    "description": "Sau 5 năm thường trú hợp pháp (bao gồm cả tình trạng có điều kiện), các nhà đầu tư EB-5 có thể nộp đơn xin nhập tịch nếu họ đáp ứng các yêu cầu về sự hiện diện thực tế, ngôn ngữ và công dân.",
+    "shortDescription": "Sau 5 năm thường trú hợp pháp (bao gồm cả tình trạng có điều kiện), các nhà đầu tư EB-5 có thể nộp đơn xin nhập tịch nếu họ đáp ứng…",
+    "examples": [
+      "Một nhà đầu tư nộp đơn xin quốc tịch Hoa Kỳ sau năm năm nhận được Thẻ xanh có điều kiện của họ.",
+      "Quy trình nhập tịch bao gồm kiểm tra lý lịch và phỏng vấn quốc tịch."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2201,
+    "title": "Tổng quan về Điều chỉnh Tình trạng (AOS)",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Điều chỉnh Tình trạng so với Xử lý Lãnh sự",
+    "description": "Điều chỉnh Tình trạng cho phép các nhà đầu tư EB-5 đã ở Hoa Kỳ thay đổi từ tình trạng không định cư sang tình trạng định cư bằng cách nộp Đơn I-485 mà không cần rời khỏi đất nước.",
+    "shortDescription": "Điều chỉnh Tình trạng cho phép các nhà đầu tư EB-5 đã ở Hoa Kỳ.",
+    "examples": [
+      "Một sinh viên F-1 nộp I-485 sau khi được chấp thuận I-526 để trở thành người có Thẻ xanh có điều kiện.",
+      "Nhà đầu tư vẫn ở Hoa Kỳ trong quá trình xử lý và nhận được giấy phép làm việc/du lịch."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2202,
+    "title": "Tổng quan về Xử lý Lãnh sự",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Điều chỉnh Tình trạng so với Xử lý Lãnh sự",
+    "description": "Xử lý lãnh sự áp dụng cho các nhà đầu tư EB-5 sống bên ngoài Hoa Kỳ. Sau khi được chấp thuận I-526/I-526E, họ nộp đơn xin thị thực nhập cư thông qua lãnh sự quán Hoa Kỳ tại quốc gia của họ.",
+    "shortDescription": "Xử lý lãnh sự áp dụng cho các nhà đầu tư EB-5 sống bên ngoài Hoa Kỳ.",
+    "examples": [
+      "Một nhà đầu tư ở Trung Quốc lên lịch phỏng vấn xin thị thực tại Lãnh sự quán Hoa Kỳ tại Quảng Châu.",
+      "Sau khi được chấp thuận DS-260, nhà đầu tư sẽ nhận được thị thực và nhập cảnh vào Hoa Kỳ với tư cách là thường trú nhân có điều kiện."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2203,
+    "title": "Thời gian xử lý và lợi ích của AOS",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Điều chỉnh Tình trạng so với Xử lý Lãnh sự",
+    "description": "Điều chỉnh Tình trạng thường bao gồm việc tiếp cận nhanh hơn với giấy phép lao động và du lịch (EAD/AP) và tránh phải đi lại quốc tế. Thời gian xử lý thay đổi tùy theo khối lượng công việc của USCIS.",
+    "shortDescription": "Điều chỉnh Tình trạng thường bao gồm việc tiếp cận nhanh hơn với giấy phép lao động và du lịch (EAD/AP) và tránh phải đi lại quốc tế.",
+    "examples": [
+      "Một sinh viên nhận được thẻ EAD trong vòng 90 ngày kể từ ngày nộp Đơn I-485.",
+      "Giấy phép tạm tha trước cho phép nhà đầu tư đi du lịch nước ngoài trong khi AOS đang chờ xử lý."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2204,
+    "title": "Phỏng vấn tại Lãnh sự quán và Nhập cảnh vào Hoa Kỳ",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Điều chỉnh Tình trạng so với Xử lý Lãnh sự",
+    "description": "Trong quá trình xử lý lãnh sự, người nộp đơn phải tham dự một cuộc phỏng vấn xin thị thực ở nước ngoài. Sau khi được chấp thuận, họ nhập cảnh vào Hoa Kỳ và kích hoạt tình trạng Thẻ xanh EB-5 của họ khi đến nơi.",
+    "shortDescription": "Trong quá trình xử lý lãnh sự, người nộp đơn phải tham dự một cuộc phỏng vấn xin thị thực ở nước ngoài.",
+    "examples": [
+      "Dấu thị thực được cấp bởi lãnh sự quán sau khi khám sức khỏe và kiểm tra lý lịch.",
+      "Thẻ xanh được gửi qua đường bưu điện sau khi nhà đầu tư nhập cảnh vào Hoa Kỳ qua một cảng nhập cảnh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2205,
+    "title": "Các yếu tố khi lựa chọn giữa AOS và Lãnh sự",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Điều chỉnh Tình trạng so với Xử lý Lãnh sự",
+    "description": "Việc lựa chọn giữa Điều chỉnh Tình trạng và Xử lý Lãnh sự phụ thuộc vào vị trí hiện tại, tình trạng sẵn có của thị thực, nhu cầu đi lại và lịch sử nhập cư. Thường cần có tư vấn pháp lý.",
+    "shortDescription": "Việc lựa chọn giữa Điều chỉnh Tình trạng và Xử lý Lãnh sự phụ thuộc vào vị trí hiện tại, tình trạng sẵn có của thị thực, nhu cầu đi lại và lịch sử nhập cư…",
+    "examples": [
+      "Một khách doanh nhân có thị thực B-1 có thể không đủ điều kiện cho AOS do các vấn đề về ý định.",
+      "Một nhân viên H-1B có ý định kép có thể sử dụng AOS một cách an toàn trong khi vẫn đang làm việc."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2206,
+    "title": "Cân nhắc về việc đi lại trong quá trình xử lý",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Điều chỉnh Tình trạng so với Xử lý Lãnh sự",
+    "description": "Những người nộp đơn AOS phải tránh đi du lịch quốc tế mà không có giấy phép tạm tha trước. Các ứng viên lãnh sự nên ở lại nước ngoài cho đến khi thị thực của họ được cấp để tránh bị từ chối.",
+    "shortDescription": "Những người nộp đơn AOS phải tránh đi du lịch quốc tế mà không có giấy phép tạm tha trước.",
+    "examples": [
+      "Một người nộp đơn AOS đi du lịch mà không có giấy thông hành có nguy cơ bị hủy đơn.",
+      "Xử lý lãnh sự đòi hỏi sự kiên nhẫn trong khi chờ đợi lịch phỏng vấn ở nước ngoài."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2301,
+    "title": "Vai trò của Luật sư Di trú",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Luật sư Di trú & Tư vấn",
+    "description": "Luật sư di trú cung cấp tư vấn pháp lý, chuẩn bị và nộp các mẫu đơn EB-5, và giúp đảm bảo tuân thủ các quy định của USCIS. Họ là những chuyên gia được cấp phép và quản lý có chuyên môn về luật di trú.",
+    "shortDescription": "Luật sư di trú cung cấp tư vấn pháp lý, chuẩn bị và nộp các mẫu đơn EB-5, và giúp đảm bảo tuân thủ các quy định của USCIS.",
+    "examples": [
+      "Một luật sư soạn thảo Mẫu I-526 và xem xét kế hoạch kinh doanh để tuân thủ Matter of Ho.",
+      "Luật sư liên lạc với USCIS và trả lời các Yêu cầu Bổ sung Bằng chứng (RFE)."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2302,
+    "title": "Chọn một Luật sư EB-5 đủ điều kiện",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Luật sư Di trú & Tư vấn",
+    "description": "Các nhà đầu tư nên chọn các luật sư có kinh nghiệm về EB-5, có tài liệu tham khảo tốt và có thành tích được chấp thuận. Tránh các luật sư tổng quát hoặc những người không có sự hiểu biết sâu sắc về các quy tắc và tuân thủ EB-5.",
+    "shortDescription": "Các nhà đầu tư nên chọn các luật sư có kinh nghiệm về EB-5, có tài liệu tham khảo tốt và có thành tích được chấp thuận.",
+    "examples": [
+      "Một luật sư EB-5 có kinh nghiệm giúp tránh các lỗi phổ biến trong tài liệu tạo việc làm.",
+      "Kiểm tra lời chứng thực của khách hàng và lịch sử chấp thuận có thể giúp đánh giá uy tín."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2303,
+    "title": "Vai trò của các Đại lý và Tư vấn Di trú",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Luật sư Di trú & Tư vấn",
+    "description": "Các đại lý và nhà tư vấn di trú hỗ trợ lựa chọn dự án, tài liệu và phối hợp với các nhóm pháp lý. Họ không được cấp phép để cung cấp tư vấn pháp lý trừ khi họ cũng là luật sư.",
+    "shortDescription": "Các đại lý và nhà tư vấn di trú hỗ trợ lựa chọn dự án, tài liệu và phối hợp với các nhóm pháp lý.",
+    "examples": [
+      "Một đại lý giúp nhà đầu tư đánh giá các dự án của trung tâm khu vực và nộp hồ sơ tài chính.",
+      "Các nhà tư vấn không phải luật sư không thể đưa ra ý kiến pháp lý hoặc đại diện cho khách hàng trước USCIS."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2304,
+    "title": "Yêu cầu Đăng ký Đại lý (I-956K)",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Luật sư Di trú & Tư vấn",
+    "description": "Theo Đạo luật Cải cách và Liêm chính EB-5, tất cả các đại lý quảng bá các dự án EB-5 phải nộp Mẫu I-956K cho USCIS. Điều này đảm bảo tính minh bạch và trách nhiệm giải trình trong quá trình đầu tư.",
+    "shortDescription": "Theo Đạo luật Cải cách và Liêm chính EB-5, tất cả các đại lý quảng bá các dự án EB-5 phải nộp Mẫu I-956K cho USCIS.",
+    "examples": [
+      "Một nhà tư vấn quảng bá một dự án EB-5 phải đăng ký qua I-956K trước khi tiếp thị cho các nhà đầu tư.",
+      "Việc không đăng ký có thể làm mất tư cách của đơn xin của nhà đầu tư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2305,
+    "title": "Tránh các nhà tư vấn gian lận",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Luật sư Di trú & Tư vấn",
+    "description": "Các nhà đầu tư nên thận trọng với các đại lý chưa đăng ký, các tuyên bố phóng đại hoặc đảm bảo thành công. Chỉ các luật sư được cấp phép mới nên xử lý các hồ sơ và chiến lược pháp lý.",
+    "shortDescription": "Các nhà đầu tư nên thận trọng với các đại lý chưa đăng ký, các tuyên bố phóng đại hoặc đảm bảo thành công.",
+    "examples": [
+      "Một đại lý hứa hẹn Thẻ xanh được đảm bảo có khả năng vi phạm luật EB-5.",
+      "Nhà đầu tư kiểm tra đăng ký I-956K và lý lịch pháp lý của một nhà tư vấn trước khi tham gia."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2306,
+    "title": "Làm việc với một đội ngũ chuyên nghiệp",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Luật sư Di trú & Tư vấn",
+    "description": "Các ứng viên EB-5 thành công thường làm việc với một nhóm các chuyên gia bao gồm luật sư, nhà hoạch định tài chính, nhà phân tích dự án và dịch giả để đảm bảo tính chính xác và đầy đủ.",
+    "shortDescription": "Các ứng viên EB-5 thành công thường làm việc với một nhóm các chuyên gia bao gồm luật sư, nhà hoạch định tài chính, nhà phân tích dự án và…",
+    "examples": [
+      "Nhóm của nhà đầu tư bao gồm một luật sư di trú, CPA và nhà tư vấn EB-5.",
+      "Một cách tiếp cận hợp tác đảm bảo tuân thủ pháp luật và tài liệu quỹ phù hợp."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2401,
+    "title": "Thiếu tạo việc làm",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các vấn đề & Từ chối EB-5 phổ biến",
+    "description": "Không tạo ra ít nhất 10 việc làm toàn thời gian đủ điều kiện là một lý do hàng đầu dẫn đến việc từ chối đơn EB-5, đặc biệt là ở giai đoạn I-829.",
+    "shortDescription": "Không tạo ra ít nhất 10 việc làm toàn thời gian đủ điều kiện là một lý do hàng đầu dẫn đến việc từ chối đơn EB-5, đặc biệt là ở giai đoạn I-829.",
+    "examples": [
+      "Một dự án dự kiến ​​12 việc làm cho mỗi nhà đầu tư nhưng chỉ tạo ra 8 việc làm, dẫn đến việc bị từ chối.",
+      "Thiếu hồ sơ trả lương hoặc mô hình kinh tế đáng tin cậy có thể kích hoạt RFE liên quan đến việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2402,
+    "title": "Nguồn tiền không rõ ràng hoặc không thể xác minh",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các vấn đề & Từ chối EB-5 phổ biến",
+    "description": "USCIS yêu cầu tài liệu chi tiết về cách nhà đầu tư có được và chuyển tiền một cách hợp pháp. Bất kỳ thiếu sót, mâu thuẫn hoặc giao dịch đáng ngờ nào đều có thể dẫn đến việc bị từ chối.",
+    "shortDescription": "USCIS yêu cầu tài liệu chi tiết về cách nhà đầu tư có được và chuyển tiền một cách hợp pháp.",
+    "examples": [
+      "Một nhà đầu tư đã không ghi lại một khoản chuyển tiền lớn nhận được từ một tài khoản ở nước ngoài.",
+      "Thiếu tờ khai thuế hoặc giấy tờ mua bán làm dấy lên lo ngại về tính hợp pháp của quỹ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2403,
+    "title": "Sử dụng không đúng các điều khoản ký quỹ hoặc cho vay",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các vấn đề & Từ chối EB-5 phổ biến",
+    "description": "Các thỏa thuận đảm bảo hoàn vốn hoặc ràng buộc đầu tư với các mốc thời gian hoàn trả vi phạm quy tắc 'có rủi ro' của EB-5 và dẫn đến việc USCIS từ chối.",
+    "shortDescription": "Các thỏa thuận đảm bảo hoàn vốn hoặc ràng buộc đầu tư với các mốc thời gian hoàn trả vi phạm quy tắc 'có rủi ro' của EB-5 và dẫn đến việc USCIS…",
+    "examples": [
+      "Một thỏa thuận bên lề hứa hẹn hoàn vốn trong vòng năm năm bất kể việc tạo ra việc làm.",
+      "Tiền của nhà đầu tư không bao giờ rời khỏi ký quỹ, vì vậy chúng không được coi là có rủi ro."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2404,
+    "title": "Kế hoạch kinh doanh không đầy đủ",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các vấn đề & Từ chối EB-5 phổ biến",
+    "description": "Một kế hoạch kinh doanh thiếu uy tín, chi tiết hoặc chiến lược tạo việc làm có thể không đáp ứng các tiêu chuẩn của Matter of Ho và dẫn đến việc bị từ chối ở giai đoạn I-526 hoặc I-829.",
+    "shortDescription": "Một kế hoạch kinh doanh thiếu uy tín, chi tiết hoặc chiến lược tạo việc làm có thể không đáp ứng các tiêu chuẩn của Matter of Ho và dẫn đến việc bị từ chối ở…",
+    "examples": [
+      "Kế hoạch không cho thấy lịch trình tuyển dụng cụ thể hoặc cơ cấu việc làm.",
+      "Các công việc dự kiến ​​không được liên kết rõ ràng với việc triển khai vốn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2405,
+    "title": "Nộp hồ sơ muộn hoặc bỏ lỡ",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các vấn đề & Từ chối EB-5 phổ biến",
+    "description": "Không nộp Đơn I-829 trong vòng 90 ngày trước khi Thẻ xanh có điều kiện hết hạn có thể dẫn đến mất quyền cư trú và bị từ chối, ngay cả khi dự án đã đáp ứng tất cả các yêu cầu khác.",
+    "shortDescription": "Không nộp Đơn I-829 trong vòng 90 ngày trước khi Thẻ xanh có điều kiện hết hạn có thể dẫn đến mất quyền cư trú và bị từ chối, ngay cả khi…",
+    "examples": [
+      "Một nhà đầu tư đã bỏ lỡ thời hạn I-829 và mất tư cách thường trú nhân hợp pháp.",
+      "Ngay cả một trường hợp mạnh cũng có thể bị từ chối nếu nó được nộp muộn hoặc thiếu một lời giải thích hợp lệ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2406,
+    "title": "Gian lận hoặc Trình bày sai sự thật",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Các vấn đề & Từ chối EB-5 phổ biến",
+    "description": "Cung cấp tài liệu giả mạo hoặc trình bày sai sự thật trong bất kỳ phần nào của quy trình EB-5 có thể dẫn đến việc bị từ chối đơn, không được nhập cảnh vĩnh viễn và các hậu quả pháp lý.",
+    "shortDescription": "Cung cấp tài liệu giả mạo hoặc trình bày sai sự thật trong bất kỳ phần nào của quy trình EB-5 có thể dẫn đến việc bị từ chối đơn, vĩnh viễn…",
+    "examples": [
+      "Một nhà đầu tư tuyên bố đã tạo ra việc làm mà sau đó đã được chứng minh là bịa đặt bởi cuộc kiểm toán của USCIS.",
+      "Làm giả báo cáo thu nhập đã dẫn đến lệnh cấm vĩnh viễn vào Hoa Kỳ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2501,
+    "title": "Điều kiện của Vợ/chồng và Con cái",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Di trú gia đình qua EB-5",
+    "description": "Chương trình EB-5 cho phép vợ/chồng và con cái chưa kết hôn dưới 21 tuổi của nhà đầu tư nhận được Thẻ xanh có điều kiện với tư cách là người thụ hưởng phái sinh.",
+    "shortDescription": "Chương trình EB-5 cho phép vợ/chồng và con cái chưa kết hôn dưới 21 tuổi của nhà đầu tư nhận được Thẻ xanh có điều kiện với tư cách là người thụ hưởng phái sinh…",
+    "examples": [
+      "Một nhà đầu tư nộp đơn cùng vợ/chồng và hai con vị thành niên, tất cả đều nhận được Thẻ xanh.",
+      "Mỗi thành viên trong gia đình được bao gồm trong cùng một đơn I-526 hoặc I-526E."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2502,
+    "title": "Quyền học tập và làm việc cho gia đình",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Di trú gia đình qua EB-5",
+    "description": "Các thành viên trong gia đình nhận được Thẻ xanh có thể học tại các trường công lập hoặc tư thục và đủ điều kiện làm việc tại Hoa Kỳ mà không cần giấy phép bổ sung.",
+    "shortDescription": "Các thành viên trong gia đình nhận được Thẻ xanh có thể học tại các trường công lập hoặc tư thục và đủ điều kiện làm việc tại Hoa Kỳ.",
+    "examples": [
+      "Con của một nhà đầu tư EB-5 ghi danh vào một trường đại học của tiểu bang và đủ điều kiện được hưởng học phí nội bang.",
+      "Vợ/chồng của nhà đầu tư bắt đầu làm việc tại một phòng khám chăm sóc sức khỏe sau khi nhận được Thẻ xanh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2503,
+    "title": "Duy trì Tình trạng Phụ thuộc",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Di trú gia đình qua EB-5",
+    "description": "Con cái phải còn độc thân và dưới 21 tuổi tại thời điểm cấp thị thực để đủ điều kiện là người phụ thuộc. Đạo luật Bảo vệ Tình trạng Trẻ em (CSPA) có thể giúp duy trì tính đủ điều kiện bất chấp sự chậm trễ.",
+    "shortDescription": "Con cái phải còn độc thân và dưới 21 tuổi tại thời điểm cấp thị thực để đủ điều kiện là người phụ thuộc.",
+    "examples": [
+      "Một đứa trẻ bước sang tuổi 21 trong quá trình xử lý đơn nhưng vẫn đủ điều kiện theo CSPA.",
+      "Nếu đứa trẻ kết hôn, chúng sẽ mất tư cách là người thụ hưởng phái sinh."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2504,
+    "title": "Thường trú cho Gia đình",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Di trú gia đình qua EB-5",
+    "description": "Sau khi Đơn I-829 được chấp thuận, tất cả các thành viên gia đình đủ điều kiện sẽ nhận được Thẻ xanh vô điều kiện và giữ lại quyền thường trú độc lập với nhà đầu tư chính.",
+    "shortDescription": "Sau khi Đơn I-829 được chấp thuận, tất cả các thành viên gia đình đủ điều kiện sẽ nhận được Thẻ xanh vô điều kiện và giữ lại quyền thường trú…",
+    "examples": [
+      "Vợ/chồng và con cái của nhà đầu tư nhận được Thẻ xanh 10 năm sau khi I-829 được chấp thuận.",
+      "Các thành viên trong gia đình không bắt buộc phải nộp đơn lại riêng lẻ—họ được bao gồm trong I-829."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2506,
+    "title": "Các lựa chọn bảo lãnh gia đình trong tương lai",
+    "category": "Quy trình Nhập cư & Pháp lý",
+    "subcategory": "Di trú gia đình qua EB-5",
+    "description": "Khi một nhà đầu tư EB-5 trở thành thường trú nhân hoặc công dân, họ có thể bảo lãnh cho các thân nhân khác như cha mẹ, con cái trưởng thành hoặc anh chị em thông qua các kênh di trú dựa trên gia đình.",
+    "shortDescription": "Khi một nhà đầu tư EB-5 trở thành thường trú nhân hoặc công dân, họ có thể bảo lãnh cho các thân nhân khác như cha mẹ, con cái trưởng thành hoặc…",
+    "examples": [
+      "Một nhà đầu tư đã nhập tịch nộp đơn xin nhập cư cho cha mẹ già của họ.",
+      "Bảo lãnh gia đình không phải là một phần của EB-5 nhưng có thể theo sau khi có Thẻ xanh hoặc quốc tịch."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2601,
+    "title": "Rủi ro thất bại kinh doanh",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Rủi ro đầu tư EB-5",
+    "description": "Các khoản đầu tư EB-5 phải chịu những rủi ro tương tự như bất kỳ hoạt động kinh doanh thương mại nào. Nếu doanh nghiệp thất bại, nhà đầu tư có thể mất cả vốn và tư cách thường trú.",
+    "shortDescription": "Các khoản đầu tư EB-5 phải chịu những rủi ro tương tự như bất kỳ hoạt động kinh doanh thương mại nào.",
+    "examples": [
+      "Một nhà hàng đóng cửa do vị trí kém và điều kiện thị trường, không tạo ra việc làm.",
+      "Nhà đầu tư không thể gỡ bỏ các điều kiện mà không chứng minh được kết quả đầu tư thành công."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2602,
+    "title": "Thiếu tạo việc làm",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Rủi ro đầu tư EB-5",
+    "description": "Nếu một dự án không tạo ra hoặc duy trì ít nhất 10 việc làm toàn thời gian cho mỗi nhà đầu tư, USCIS có thể từ chối đơn I-829 và sẽ không được cấp thường trú.",
+    "shortDescription": "Nếu một dự án không tạo ra hoặc duy trì ít nhất 10 việc làm toàn thời gian cho mỗi nhà đầu tư, USCIS có thể từ chối đơn I-829 và thường trú…",
+    "examples": [
+      "Sự chậm trễ trong xây dựng ngăn cản việc tạo việc làm trong giai đoạn có điều kiện.",
+      "Hiệu suất kém dẫn đến sa thải nhân viên trước khi công việc có thể được ghi lại."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2603,
+    "title": "Trì hoãn hoặc hủy bỏ dự án",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Rủi ro đầu tư EB-5",
+    "description": "Các dự án phát triển có thể phải đối mặt với sự chậm trễ do các vấn đề cấp phép, thiếu hụt tài chính hoặc các yếu tố kinh tế bên ngoài, có thể ảnh hưởng đến các mốc thời gian và tuân thủ EB-5.",
+    "shortDescription": "Các dự án phát triển có thể phải đối mặt với sự chậm trễ do các vấn đề cấp phép, thiếu hụt tài chính hoặc các yếu tố kinh tế bên ngoài, có thể ảnh hưởng đến EB-5…",
+    "examples": [
+      "Một dự án khách sạn bị trì hoãn do tranh chấp quy hoạch, đẩy việc tạo việc làm vượt quá khung thời gian yêu cầu.",
+      "Việc nộp đơn I-829 của nhà đầu tư bị hoãn lại do việc xây dựng không đạt được các mốc quan trọng về việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2604,
+    "title": "Tồn đọng Visa và Giới hạn Quốc gia",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Rủi ro đầu tư EB-5",
+    "description": "Những người nộp đơn từ các quốc gia có nhu cầu EB-5 cao có thể phải đối mặt với thời gian chờ đợi lâu do giới hạn thị thực hàng năm cho mỗi quốc gia, điều này có thể làm trì hoãn việc cấp Thẻ xanh ngay cả sau khi được chấp thuận đầu tư.",
+    "shortDescription": "Những người nộp đơn từ các quốc gia có nhu cầu EB-5 cao có thể phải đối mặt với thời gian chờ đợi lâu do giới hạn thị thực hàng năm cho mỗi quốc gia, điều này có thể làm trì hoãn việc cấp Thẻ xanh…",
+    "examples": [
+      "Các nhà đầu tư từ Ấn Độ và Trung Quốc thường gặp phải sự chậm trễ nhiều năm do đăng ký quá nhiều.",
+      "Rủi ro quá tuổi của một đứa trẻ tăng lên trong khi chờ đợi một số thị thực có sẵn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2605,
+    "title": "Rủi ro gian lận hoặc quản lý yếu kém",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Rủi ro đầu tư EB-5",
+    "description": "Các nhà đầu tư có thể dễ bị tổn thương trước các nhà tài trợ dự án không trung thực hoặc các đại lý chưa đăng ký. Các dự án gian lận hoặc quản lý yếu kém có thể dẫn đến tổn thất tài chính và bị từ chối đơn.",
+    "shortDescription": "Các nhà đầu tư có thể dễ bị tổn thương trước các nhà tài trợ dự án không trung thực hoặc các đại lý chưa đăng ký.",
+    "examples": [
+      "Vụ án Jay Peak liên quan đến việc lạm dụng quỹ của nhà đầu tư và dẫn đến các cải cách lớn của USCIS.",
+      "Một nhà đầu tư vô tình tham gia một dự án với các dự báo việc làm bị thổi phồng và thực hiện kém."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2606,
+    "title": "Rủi ro kinh tế và chính trị",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Rủi ro đầu tư EB-5",
+    "description": "Suy thoái thị trường, thay đổi lãi suất, lạm phát hoặc thay đổi chính sách nhập cư đều có thể ảnh hưởng đến các khoản đầu tư EB-5, về mặt tài chính hoặc thủ tục.",
+    "shortDescription": "Suy thoái thị trường, thay đổi lãi suất, lạm phát hoặc thay đổi chính sách nhập cư đều có thể ảnh hưởng đến các khoản đầu tư EB-5, về mặt tài chính hoặc…",
+    "examples": [
+      "Một cuộc suy thoái làm giảm doanh thu khách sạn, hạn chế việc tạo việc làm và lợi nhuận của nhà đầu tư.",
+      "Sự chậm trễ lập pháp trong việc tái ủy quyền EB-5 tạo ra sự không chắc chắn của chương trình."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2701,
+    "title": "Hiểu cấu trúc dự án",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Quy trình thẩm định",
+    "description": "Trước khi đầu tư, các ứng viên EB-5 nên hiểu cách cấu trúc dự án—ai là nhà phát triển, tiền được sử dụng như thế nào và vai trò của mỗi bên là gì.",
+    "shortDescription": "Trước khi đầu tư, các ứng viên EB-5 nên hiểu cách cấu trúc dự án—ai là nhà phát triển, tiền được sử dụng như thế nào và…",
+    "examples": [
+      "Một nhà đầu tư xem xét sơ đồ tổ chức và sơ đồ cơ cấu vốn của một dự án.",
+      "Một nhà phát triển có uy tín với thành tích rõ ràng sẽ giảm thiểu rủi ro của dự án."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2702,
+    "title": "Đánh giá thông tin xác thực của Trung tâm Khu vực",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Quy trình thẩm định",
+    "description": "Xem xét kinh nghiệm, lịch sử chấp thuận và tính liêm chính của trung tâm khu vực tài trợ cho dự án. Một hồ sơ tuân thủ tốt và tỷ lệ chấp thuận I-829 là những chỉ số chính.",
+    "shortDescription": "Xem xét kinh nghiệm, lịch sử chấp thuận và tính liêm chính của trung tâm khu vực tài trợ cho dự án.",
+    "examples": [
+      "Một trung tâm khu vực với hàng trăm đơn được chấp thuận thành công sẽ đáng tin cậy hơn.",
+      "Nhà đầu tư yêu cầu một lịch sử tạo việc làm và hoàn vốn từ các dự án trước đây."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2703,
+    "title": "Xem xét các Báo cáo Kinh tế",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Quy trình thẩm định",
+    "description": "Các báo cáo tác động kinh tế của bên thứ ba giúp xác định xem các dự báo tạo việc làm có thực tế và dựa trên các kỹ thuật mô hình hóa hợp lý hay không.",
+    "shortDescription": "Các báo cáo tác động kinh tế của bên thứ ba giúp xác định xem các dự báo tạo việc làm có thực tế và dựa trên các kỹ thuật mô hình hóa hợp lý hay không.",
+    "examples": [
+      "Báo cáo IMPLAN dự báo việc tạo việc làm dựa trên 100 triệu đô la chi tiêu cho xây dựng.",
+      "Nhà đầu tư đảm bảo rằng các khoản dự phòng việc làm vượt quá yêu cầu tối thiểu 10 việc làm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2704,
+    "title": "Xem xét pháp lý và tài chính",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Quy trình thẩm định",
+    "description": "Một cuộc xem xét pháp lý và tài chính kỹ lưỡng giúp phát hiện các dấu hiệu cảnh báo tiềm ẩn. Các nhà đầu tư nên thuê luật sư và cố vấn tài chính để đánh giá các tài liệu chào bán và thỏa thuận ký quỹ.",
+    "shortDescription": "Một cuộc xem xét pháp lý và tài chính kỹ lưỡng giúp phát hiện các dấu hiệu cảnh báo tiềm ẩn.",
+    "examples": [
+      "Một luật sư xem xét các thỏa thuận PPM và ký quỹ để xác minh dòng tiền và tiết lộ rủi ro.",
+      "Một chuyên gia tài chính kiểm tra xem mô hình lợi nhuận có thực tế và tuân thủ SEC hay không."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2705,
+    "title": "Kiểm tra lý lịch của các nhà tài trợ",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Quy trình thẩm định",
+    "description": "Tiến hành kiểm tra lý lịch của các nhà phát triển, đối tác chung hoặc người quản lý của dự án EB-5 để xác định lịch sử kiện tụng, phá sản hoặc các dấu hiệu cảnh báo khác.",
+    "shortDescription": "Tiến hành kiểm tra lý lịch của các nhà phát triển, đối tác chung hoặc người quản lý của dự án EB-5 để xác định lịch sử kiện tụng,…",
+    "examples": [
+      "Một cuộc tìm kiếm lý lịch cho thấy một hiệu trưởng trước đây đã tham gia vào một dự án EB-5 thất bại.",
+      "Các nhà đầu tư xác minh rằng tất cả các bên chủ chốt đều có tư cách pháp lý tốt."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2706,
+    "title": "Đánh giá Chiến lược Thoát hiểm",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Quy trình thẩm định",
+    "description": "Một chiến lược rút lui được xác định rõ ràng sẽ cung cấp cho các nhà đầu tư một lộ trình về thời điểm và cách thức họ có thể nhận lại vốn. Hãy tìm kiếm các mốc thời gian thực tế và các dự báo được thị trường hỗ trợ.",
+    "shortDescription": "Một chiến lược rút lui được xác định rõ ràng sẽ cung cấp cho các nhà đầu tư một lộ trình về thời điểm và cách thức họ có thể nhận lại vốn.",
+    "examples": [
+      "Kế hoạch bao gồm một đợt tái cấp vốn hoặc bán tài sản dự kiến ​​vào năm thứ sáu.",
+      "Ngôn ngữ rút lui mơ hồ hoặc quá lạc quan có thể báo hiệu rủi ro tiềm ẩn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2801,
+    "title": "Nhận biết các dấu hiệu cảnh báo",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Phòng chống gian lận",
+    "description": "Các nhà đầu tư nên cảnh giác với các dấu hiệu gian lận tiềm ẩn, chẳng hạn như những lời hứa hẹn lợi nhuận phi thực tế, thiếu minh bạch, các đại lý chưa đăng ký hoặc các chi tiết dự án không thể xác minh.",
+    "shortDescription": "Các nhà đầu tư nên cảnh giác với các dấu hiệu gian lận tiềm ẩn, chẳng hạn như những lời hứa hẹn lợi nhuận phi thực tế, thiếu minh bạch, các đại lý chưa đăng ký hoặc…",
+    "examples": [
+      "Một dự án đảm bảo cả thành công nhập cư và hoàn vốn—một dấu hiệu cảnh báo ngay lập tức.",
+      "Trung tâm khu vực từ chối tiết lộ chi tiết tài chính hoặc cơ cấu sở hữu."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2802,
+    "title": "Xác minh đăng ký đại lý và dự án",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Phòng chống gian lận",
+    "description": "Các nhà đầu tư nên đảm bảo dự án của họ được liên kết với một trung tâm khu vực được USCIS chấp thuận và mọi trung gian đã nộp Mẫu I-956K để đăng ký với USCIS.",
+    "shortDescription": "Các nhà đầu tư nên đảm bảo dự án của họ được liên kết với một trung tâm khu vực được USCIS chấp thuận và mọi trung gian đã nộp Mẫu…",
+    "examples": [
+      "Nhà đầu tư kiểm tra trang web của USCIS để biết chỉ định của trung tâm khu vực.",
+      "Một đại lý cho thấy xác nhận I-956K của họ trước khi cung cấp các dịch vụ EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2803,
+    "title": "Yêu cầu minh bạch tài khoản ký quỹ",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Phòng chống gian lận",
+    "description": "Tài khoản ký quỹ giúp bảo vệ vốn của nhà đầu tư. Các nhà đầu tư nên yêu cầu tài liệu về các đại lý ký quỹ, điều kiện giải ngân và giám sát pháp lý.",
+    "shortDescription": "Tài khoản ký quỹ giúp bảo vệ vốn của nhà đầu tư.",
+    "examples": [
+      "Nhà đầu tư nhận được một bản sao của thỏa thuận ký quỹ phác thảo việc giải ngân sau khi được chấp thuận I-526.",
+      "Một người quản lý ký quỹ bên thứ ba xác nhận việc kiểm soát quyền truy cập quỹ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2804,
+    "title": "Xem xét kỹ lưỡng các tài liệu chào bán",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Phòng chống gian lận",
+    "description": "Xem xét kỹ lưỡng bản ghi nhớ chào bán tư nhân (PPM), thỏa thuận đăng ký và kế hoạch kinh doanh. Tất cả các tiết lộ, rủi ro và điều khoản phải được nêu rõ ràng và thực tế.",
+    "shortDescription": "Xem xét kỹ lưỡng bản ghi nhớ chào bán tư nhân (PPM), thỏa thuận đăng ký và kế hoạch kinh doanh.",
+    "examples": [
+      "Một luật sư xem xét PPM và chỉ ra những điểm không nhất quán trong mô hình tạo việc làm.",
+      "Nhà đầu tư xác minh rằng các điều khoản hoàn trả vốn phù hợp với các quy định EB-5."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2805,
+    "title": "Sử dụng các Cố vấn Pháp lý và Tài chính Độc lập",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Phòng chống gian lận",
+    "description": "Các cố vấn độc lập không liên kết với dự án có thể cung cấp các ý kiến khách quan và phát hiện rủi ro gian lận. Các nhà đầu tư nên tránh chỉ dựa vào đại diện của dự án.",
+    "shortDescription": "Các cố vấn độc lập không liên kết với dự án có thể cung cấp các ý kiến khách quan và phát hiện rủi ro gian lận.",
+    "examples": [
+      "Một luật sư di trú không liên kết xem xét việc tuân thủ các yêu cầu của USCIS.",
+      "Một CPA độc lập đánh giá các dự báo tài chính và dòng tiền."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2806,
+    "title": "Hiểu các quy tắc của chương trình EB-5",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Phòng chống gian lận",
+    "description": "Tự tìm hiểu về các quy tắc EB-5 giúp giảm thiểu khả năng bị trình bày sai sự thật. Các nhà đầu tư nên hiểu các yêu cầu về đầu tư, tạo việc làm và duy trì trước khi cam kết vốn.",
+    "shortDescription": "Tự tìm hiểu về các quy tắc EB-5 giúp giảm thiểu khả năng bị trình bày sai sự thật.",
+    "examples": [
+      "Một nhà đầu tư biết rằng lợi nhuận được đảm bảo không được phép theo luật EB-5.",
+      "Việc quen thuộc với nội dung của Mẫu I-526 giúp nhà đầu tư xác định bằng chứng còn thiếu."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2901,
+    "title": "Hiểu các nguyên tắc cơ bản về chiến lược rút lui",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Chiến lược rút lui khỏi dự án EB-5",
+    "description": "Một chiến lược rút lui phác thảo cách thức và thời điểm các nhà đầu tư EB-5 có thể được hoàn trả vốn sau khi hoàn thành các yêu cầu nhập cư. Đây là một phần quan trọng trong việc đánh giá dự án.",
+    "shortDescription": "Một chiến lược rút lui phác thảo cách thức và thời điểm các nhà đầu tư EB-5 có thể được hoàn trả vốn sau khi hoàn thành các yêu cầu nhập cư.",
+    "examples": [
+      "Kế hoạch dự án bao gồm một sự kiện tái cấp vốn được đề xuất vào năm thứ 6.",
+      "Một chiến lược rút lui gắn liền với việc bán tài sản sau giai đoạn tạo việc làm giúp đảm bảo tuân thủ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2902,
+    "title": "Thoát ra thông qua Tái cấp vốn",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Chiến lược rút lui khỏi dự án EB-5",
+    "description": "Nhiều dự án có kế hoạch hoàn trả cho các nhà đầu tư EB-5 thông qua việc tái cấp vốn sau khi ổn định. Điều này phổ biến trong lĩnh vực bất động sản, nơi các dòng doanh thu hỗ trợ tài chính mới để thay thế vốn EB-5.",
+    "shortDescription": "Nhiều dự án có kế hoạch hoàn trả cho các nhà đầu tư EB-5 thông qua việc tái cấp vốn sau khi ổn định.",
+    "examples": [
+      "Một khu chung cư nhiều gia đình được tái cấp vốn bằng một khoản vay ngân hàng, cho phép các nhà đầu tư EB-5 rút lui.",
+      "Việc tái cấp vốn diễn ra sau khi tỷ lệ lấp đầy đạt 90% và các mục tiêu NOI được đáp ứng."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2903,
+    "title": "Thoát ra thông qua Bán tài sản",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Chiến lược rút lui khỏi dự án EB-5",
+    "description": "Một số dự án EB-5 có kế hoạch bán tài sản đã phát triển sau khi hoàn thành và tạo việc làm. Tiền thu được từ việc bán sau đó được sử dụng để hoàn trả cho các nhà đầu tư.",
+    "shortDescription": "Một số dự án EB-5 có kế hoạch bán tài sản đã phát triển sau khi hoàn thành và tạo việc làm.",
+    "examples": [
+      "Nhà phát triển bán một khách sạn cho một công ty cổ phần tư nhân với giá mục tiêu để hoàn trả vốn EB-5.",
+      "Một kho công nghiệp được bán sau khi cho thuê cho các nhà đầu tư tổ chức."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2904,
+    "title": "Thoát ra thông qua Chia sẻ Doanh thu",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Chiến lược rút lui khỏi dự án EB-5",
+    "description": "Trong một số trường hợp hiếm hoi, các khoản đầu tư EB-5 được hoàn trả theo thời gian thông qua việc chia sẻ doanh thu. Mặc dù ít phổ biến hơn, phương pháp này có thể được sử dụng khi thu nhập dài hạn hỗ trợ việc phân phối theo lịch trình.",
+    "shortDescription": "Trong một số trường hợp hiếm hoi, các khoản đầu tư EB-5 được hoàn trả theo thời gian thông qua việc chia sẻ doanh thu.",
+    "examples": [
+      "Một địa điểm giải trí sử dụng doanh thu bán vé để hoàn trả vốn cho nhà đầu tư trong 8 năm.",
+      "Doanh nghiệp cung cấp các báo cáo hàng quý và thanh toán cổ tức dựa trên hiệu suất."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2905,
+    "title": "Hạn chế về thời gian rút lui",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Chiến lược rút lui khỏi dự án EB-5",
+    "description": "Các quỹ EB-5 phải được đầu tư và có rủi ro trong toàn bộ thời gian duy trì. Việc rút lui sớm không được phép trước khi nhà đầu tư nộp Đơn I-829. Các chiến lược rút lui phải tính đến thời gian này.",
+    "shortDescription": "Các quỹ EB-5 phải được đầu tư và có rủi ro trong toàn bộ thời gian duy trì.",
+    "examples": [
+      "Các nhà đầu tư không thể được hoàn trả cho đến khi kết thúc thời gian thường trú có điều kiện hai năm của họ.",
+      "Một đợt tái cấp vốn chỉ được lên kế hoạch sau khi cửa sổ nộp đơn I-829 cuối cùng hoàn tất."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 2906,
+    "title": "Minh bạch trong Kế hoạch Rút lui",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Chiến lược rút lui khỏi dự án EB-5",
+    "description": "Chiến lược rút lui phải được tiết lộ rõ ràng trong các tài liệu chào bán. Các nhà đầu tư nên tìm kiếm sự minh bạch về thời gian, phương thức hoàn trả, các trường hợp dự phòng và cơ cấu pháp lý.",
+    "shortDescription": "Chiến lược rút lui phải được tiết lộ rõ ràng trong các tài liệu chào bán.",
+    "examples": [
+      "Bản ghi nhớ chào bán tư nhân phác thảo các điều khoản tái cấp vốn, thời gian và các rủi ro tiềm ẩn.",
+      "Các nhà đầu tư xem xét các điều khoản rút lui với cố vấn pháp lý trước khi cam kết vốn."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3002,
+    "title": "Xem xét pháp lý các tài liệu chào bán",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Các biện pháp bảo vệ pháp lý và tài chính",
+    "description": "Các nhà đầu tư nên có cố vấn pháp lý xem xét Bản ghi nhớ chào bán tư nhân (PPM), thỏa thuận đăng ký và tất cả các tài liệu chào bán để xác định rủi ro và xác nhận việc tuân thủ EB-5.",
+    "shortDescription": "Các nhà đầu tư nên có cố vấn pháp lý xem xét Bản ghi nhớ chào bán tư nhân (PPM), thỏa thuận đăng ký và tất cả các tài liệu chào bán để…",
+    "examples": [
+      "Một luật sư di trú chỉ ra những điểm không nhất quán trong phần triển khai vốn của PPM.",
+      "Một luật sư chứng khoán xác nhận rằng quyền của nhà đầu tư được bảo vệ rõ ràng trong thỏa thuận."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3003,
+    "title": "Quản lý quỹ của bên thứ ba",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Các biện pháp bảo vệ pháp lý và tài chính",
+    "description": "Các quản trị viên quỹ độc lập đảm bảo việc kế toán và theo dõi sử dụng quỹ đúng đắn. Họ cung cấp sự minh bạch và giảm nguy cơ lạm dụng bởi các nhà phát triển hoặc các trung tâm khu vực.",
+    "shortDescription": "Các quản trị viên quỹ độc lập đảm bảo việc kế toán và theo dõi sử dụng quỹ đúng đắn.",
+    "examples": [
+      "Một người quản lý quỹ bên thứ ba giám sát việc triển khai vốn và cung cấp các báo cáo hàng quý cho các nhà đầu tư.",
+      "Các nhà đầu tư yêu cầu xác minh từ người quản trị trước khi chấp thuận giải ngân quỹ."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3004,
+    "title": "Cam kết Vốn chủ sở hữu của Nhà phát triển",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Các biện pháp bảo vệ pháp lý và tài chính",
+    "description": "Các dự án mà các nhà phát triển đóng góp vốn chủ sở hữu đáng kể cho thấy sự phù hợp mạnh mẽ với lợi ích của nhà đầu tư. Điều này làm giảm rủi ro và tăng khả năng hoàn thành dự án và bảo toàn vốn.",
+    "shortDescription": "Các dự án mà các nhà phát triển đóng góp vốn chủ sở hữu đáng kể cho thấy sự phù hợp mạnh mẽ với lợi ích của nhà đầu tư.",
+    "examples": [
+      "Nhà phát triển đóng góp 20% chi phí dự án từ quỹ riêng của họ trước khi chấp nhận vốn EB-5.",
+      "Sự tham gia vốn chủ sở hữu cao thể hiện cam kết và sự ổn định tài chính."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3005,
+    "title": "Tuân thủ Chứng khoán và Công bố thông tin",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Các biện pháp bảo vệ pháp lý và tài chính",
+    "description": "Các khoản đầu tư EB-5 phải tuân thủ luật chứng khoán của Hoa Kỳ. Các công bố phải giải thích rõ ràng các rủi ro, phí, xung đột lợi ích và việc sử dụng vốn. Cần phải đăng ký hoặc miễn trừ phù hợp.",
+    "shortDescription": "Các khoản đầu tư EB-5 phải tuân thủ luật chứng khoán của Hoa Kỳ.",
+    "examples": [
+      "PPM bao gồm các tiết lộ bắt buộc theo Quy định D của SEC.",
+      "Thông tin sai lệch hoặc thiếu sót có thể khiến nhà phát hành phải chịu trách nhiệm pháp lý và gây nguy hiểm cho tình trạng của nhà đầu tư."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  },
+  {
+    "id": 3006,
+    "title": "Báo cáo thường xuyên và minh bạch",
+    "category": "Quản lý rủi ro",
+    "subcategory": "Các biện pháp bảo vệ pháp lý và tài chính",
+    "description": "Các cập nhật và tiết lộ liên tục giúp các nhà đầu tư theo dõi tiến độ và tuân thủ. Các dự án đáng tin cậy chia sẻ các mốc quan trọng trong xây dựng, dữ liệu tạo việc làm và các cập nhật tài chính một cách thường xuyên.",
+    "shortDescription": "Các cập nhật và tiết lộ liên tục giúp các nhà đầu tư theo dõi tiến độ và tuân thủ.",
+    "examples": [
+      "Nhà đầu tư nhận được các cập nhật hàng tháng từ dự án với các chỉ số việc làm và các mốc thời gian.",
+      "Giao tiếp minh bạch giúp cải thiện sự tự tin và giúp xác định các vấn đề sớm."
+    ],
+    "dayNumber": 1,
+    "isCompleted": false
+  }
+]

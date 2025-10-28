@@ -172,6 +172,15 @@
 // Base
 ///////////////////////////
 "base.placeholder" = "基础内容";
+"base.back" = "返回";
+"base.completed_format" = "已完成：%lld/%lld";
+"base.examples" = "示例";
+"base.article.mark_completed" = "标记为已完成";
+"base.article.completed" = "已完成";
+"base.article.completed_badge" = "已完成";
+"base.article.unavailable" = "当前语言中暂不可用。";
+"base.favorite.add" = "添加到收藏";
+"base.favorite.remove" = "从收藏中移除";
 
 
 ///////////////////////////

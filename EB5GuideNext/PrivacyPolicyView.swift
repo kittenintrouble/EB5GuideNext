@@ -24,7 +24,7 @@ struct PrivacyPolicyView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 24) {
                         Text(selectedTab.headerKey)
-                            .font(.title2).bold()
+                            .font(.title3.weight(.semibold))
                             .padding(.top, 8)
 
                         Text(selectedTab.introKey)
@@ -299,4 +299,3 @@ private enum PolicyTab: Int, CaseIterable, Identifiable {
         }
     }
 }
-

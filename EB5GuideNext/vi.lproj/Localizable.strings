@@ -172,6 +172,15 @@
 // Base
 ///////////////////////////
 "base.placeholder" = "Nội dung cơ bản";
+"base.back" = "Quay lại";
+"base.completed_format" = "Đã hoàn thành: %lld/%lld";
+"base.examples" = "Ví dụ";
+"base.article.mark_completed" = "Đánh dấu đã hoàn thành";
+"base.article.completed" = "Đã hoàn thành";
+"base.article.completed_badge" = "Đã hoàn thành";
+"base.article.unavailable" = "Bài viết này không khả dụng ở ngôn ngữ hiện tại.";
+"base.favorite.add" = "Thêm vào mục yêu thích";
+"base.favorite.remove" = "Xóa khỏi mục yêu thích";
 
 
 ///////////////////////////

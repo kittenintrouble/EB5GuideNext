@@ -43,7 +43,8 @@ struct OnboardingView: View {
 
                 // Title
                 Text(LocalizedStringKey("onboarding.title"))
-                    .font(.system(size: 34, weight: .regular))
+                    .font(.system(size: 34, weight: .light))
+                    .kerning(-0.3)
                     .multilineTextAlignment(.center)
                     .padding(.top, 20)
                     .padding(.horizontal, 24)
@@ -60,7 +61,7 @@ struct OnboardingView: View {
                 // Section: language
                 VStack(alignment: .leading, spacing: 12) {
                     Text(LocalizedStringKey("onboarding.choose_language"))
-                        .font(.system(size: 20, weight: .semibold))
+                        .font(.system(size: 18, weight: .semibold))
                         .padding(.top, 28)
                         .padding(.horizontal, 24)
 
