@@ -8,17 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var languageManager: LanguageManager
+    @AppStorage("hasOnboarded") private var hasOnboarded: Bool = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group {
+            if hasOnboarded {
+                MainTabView()
+            } else {
+                OnboardingView(onComplete: {
+                    hasOnboarded = true
+                })
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(LanguageManager())
 }

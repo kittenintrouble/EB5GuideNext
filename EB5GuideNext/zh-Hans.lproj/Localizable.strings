@@ -1,0 +1,193 @@
+/* Simplified Chinese localization */
+
+///////////////////////////
+// Onboarding
+///////////////////////////
+
+// Screen UI
+"onboarding.title" = "欢迎使用 EB-5 指南";
+"onboarding.subtitle" = "投资。获利。移民。— 通过 EB-5 项目获得美国居留权与真实收益。";
+"onboarding.choose_language" = "请选择您的语言";
+"onboarding.agree_prefix" = "点击按钮即表示我同意";
+"onboarding.company" = "公司政策规则";
+"onboarding.agree_suffix" = "";
+"onboarding.lets_go" = "开始体验";
+
+// Select Language
+"language.english" = "English";
+"language.chinese_simplified" = "简体中文";
+"language.vietnamese" = "Tiếng Việt";
+"language.korean" = "한국어";
+
+
+///////////////////////////
+// Legal & Privacy
+///////////////////////////
+
+// UI
+"policy.nav_title" = "法律与隐私";
+"policy.action.close" = "关闭";
+"policy.picker.title" = "政策类别";
+"policy.tab.disclaimer" = "免责声明";
+"policy.tab.terms" = "使用条款";
+"policy.tab.privacy" = "隐私政策";
+"policy.bullet.prefix" = "\U2022";
+
+// Text Disclaimer
+"policy.disclaimer.title" = "免责声明";
+"policy.disclaimer.intro" = "请阅读以下说明，了解 EB-5 Guide 如何展示项目信息。";
+"policy.disclaimer.purpose.title" = "目的与范围";
+"policy.disclaimer.purpose.body" = "EB-5 Guide（“平台”）是一个 EB-5 项目信息目录。平台内容按“原样”提供，仅供一般信息参考。平台上的任何内容均不构成投资、法律、移民或税务建议，也不会形成顾问、经纪、代理或客户关系。";
+"policy.disclaimer.offer.title" = "非要约或招揽";
+"policy.disclaimer.offer.body" = "平台不提供或出售证券，任何内容都不应被视为购买或出售任何证券或投资产品的要约或招揽。任何投资（如有）只能基于项目发起方的正式募资文件，并且仅向符合适用法律规定的合格投资者开放。";
+"policy.disclaimer.independence.title" = "独立性与无交易性报酬";
+"policy.disclaimer.independence.body" = "EB-5 Guide 不是经纪自营商、募资代理、投资顾问、律师事务所或移民咨询机构。我们不经手投资人资金或证券，不代表客户谈判投资，也不收取与交易挂钩的补偿。平台可能展示赞助或付费列表与广告，但这类展示不构成推荐或背书。";
+"policy.disclaimer.info_sources.title" = "信息来源与不予核实";
+"policy.disclaimer.info_sources.body" = "项目描述和数据可能由第三方提供，或整理自公开渠道。我们不会独立审计或核实所有信息，也不对其准确性、完整性、时效性或可靠性作出任何陈述或保证。项目在平台上的展示不代表获得批准、尽调或适合性。";
+"policy.disclaimer.forward_looking.title" = "前瞻性陈述与风险";
+"policy.disclaimer.forward_looking.body" = "任何预测、目标或前瞻性陈述都具有不确定性，实际结果可能存在重大差异。投资伴随重大风险，包括可能损失本金。我们不保证创造就业、取得财务绩效、获得移民权益或任何其他结果。";
+"policy.disclaimer.investor_responsibility.title" = "投资者责任";
+"policy.disclaimer.investor_responsibility.body" = "用户必须自行开展尽职调查，并在决策前咨询具备资质的金融、法律、税务和移民专业人士。您对平台的使用以及对其内容的依赖完全由您自行承担风险。";
+"policy.disclaimer.government.title" = "政府不背书";
+"policy.disclaimer.government.body" = "涉及移民流程或审批的引用，并不表示获得任何政府机构的背书。与 EB-5 相关的政府批准（包括区域中心认定）并不代表对任何项目、发起人或投资的认可。";
+"policy.disclaimer.liability.title" = "无担保与责任限制";
+"policy.disclaimer.liability.body" = "我们免责声明一切明示或默示担保，包括适销性、特定用途适用性、不侵权、准确性与可用性。在法律允许的最大范围内，EB-5 Guide 及其关联方对因您使用平台而引发或相关的任何间接、附带、特殊、后果性、示范性或惩罚性损害概不负责。";
+
+// Text Terms of Use
+"policy.terms.title" = "使用条款";
+"policy.terms.intro" = "本条款规范您对平台的访问与使用。";
+"policy.terms.updated.title" = "最近更新";
+"policy.terms.updated.body" = "最近更新：2025 年 10 月 28 日";
+"policy.terms.acceptance.title" = "条款接受";
+"policy.terms.acceptance.body" = "访问或使用 EB-5 Guide 网站或应用（“平台”）即表示您同意本使用条款（“条款”）。如果您不同意，请勿使用平台。我们可能更新本条款；若您继续使用，则视为接受更改。";
+"policy.terms.eligibility.title" = "资格要求";
+"policy.terms.eligibility.body" = "您必须年满 18 岁（或所在司法辖区的法定成年年龄）方可使用平台。";
+"policy.terms.role.title" = "平台角色";
+"policy.terms.role.body" = "平台是信息目录。我们不是经纪自营商、投资顾问、律师事务所或移民咨询机构；我们不销售证券、不提供建议、不撮合交易、不经手资金或证券，也不收取与交易相关的报酬。";
+"policy.terms.accounts.title" = "账户与验证";
+"policy.terms.accounts.body" = "部分功能可能需要注册，并可能要求身份或手机号验证（包括一次性短信验证码）。您必须提供准确的信息并妥善保管凭据，您需对账户下的一切活动负责。";
+"policy.terms.conduct.title" = "用户行为";
+"policy.terms.conduct.body" = "您同意不得：";
+"policy.terms.conduct.item1" = "将平台用于违法、欺诈或滥用目的。";
+"policy.terms.conduct.item2" = "尝试未授权访问、破坏安全措施或干扰运营。";
+"policy.terms.conduct.item3" = "未经许可抓取、收集或复制平台内容。";
+"policy.terms.conduct.item4" = "冒充他人或歪曲您的身份或关联。";
+"policy.terms.conduct.item5" = "提交误导性、违法、侵权或有害的内容。";
+"policy.terms.third_party.title" = "第三方内容与列表";
+"policy.terms.third_party.body" = "项目数据可能由第三方提供或整理自公共来源。我们不控制或背书第三方内容，也不对其准确性、完整性、合法性或时效性负责。使用第三方内容的风险由您自行承担。您与项目发起方的任何交易仅在您与该发起方之间进行。";
+"policy.terms.inquiries.title" = "咨询提交与引荐";
+"policy.terms.inquiries.body" = "如您请求项目信息，即授权我们将您的咨询和联系方式分享给相关项目发起方，以便其回复。对于之后的沟通、协议或交易，我们不参与且不承担任何责任。";
+"policy.terms.advertising.title" = "广告与赞助内容";
+"policy.terms.advertising.body" = "平台可能展示广告或赞助列表。付费展示不构成推荐或背书。";
+"policy.terms.ip.title" = "知识产权";
+"policy.terms.ip.body" = "平台的设计、文字、汇编、标识、图形和软件由 EB-5 Guide, LLC 或其许可方拥有，并受法律保护。我们授予您一项有限的、非独占、不可转让的许可，仅可出于个人、非商业目的访问和使用平台。未经事先书面许可，您不得复制、分发、展示或创作衍生作品。第三方的商标和标识仍归原权利人所有，仅用于识别。";
+"policy.terms.no_advice.title" = "非专业建议";
+"policy.terms.no_advice.body" = "平台内容仅供一般信息参考，并非投资、法律、移民或税务建议。请咨询具备资质的专业人士。";
+"policy.terms.disclaimers.title" = "免责声明与责任限制";
+"policy.terms.disclaimers.body" = "平台按“现状”与“可用性”提供，不附带任何形式的保证。在法律允许的最大范围内，EB-5 Guide, LLC 及其关联方不承担任何间接、附带、特殊、后果性、示范性或惩罚性损害，亦不对利润、数据、商誉或机会的损失负责。我们对您的总责任不超过您为访问平台所支付的金额（如有）。";
+"policy.terms.indemnification.title" = "赔偿";
+"policy.terms.indemnification.body" = "因您使用平台、提交的内容或违反本条款而引起的任何索赔、损害、损失、责任和费用（包括合理的律师费），您同意赔偿并使 EB-5 Guide, LLC 及其关联方免受损害。";
+"policy.terms.compliance.title" = "遵守证券与移民法律";
+"policy.terms.compliance.body" = "项目发起方须自行确保其列表符合适用的证券和移民法律，包括对公开募资和投资者资格的限制。如法律要求，我们可能限制某些内容或功能的可见性（例如仅对预先合格或非美国人士开放）。";
+"policy.terms.governing_law.title" = "适用法律与管辖";
+"policy.terms.governing_law.body" = "本条款受美国及德克萨斯州法律管辖，而不考虑法律冲突原则。您同意德克萨斯州境内的州或联邦法院享有专属管辖和审判地点。";
+"policy.terms.changes.title" = "平台变更";
+"policy.terms.changes.body" = "我们可能随时修改、暂停或停止平台的任何部分，恕不另行通知。";
+"policy.terms.contact.title" = "联系方式";
+"policy.terms.contact.body" = "如对本条款有疑问，请发送邮件至 support@eb-5.app。";
+
+// Text Privacy Policy
+"policy.privacy.title" = "隐私政策";
+"policy.privacy.intro" = "了解我们如何收集、使用并保护个人信息。";
+"policy.privacy.last_updated.title" = "最近更新";
+"policy.privacy.last_updated.body" = "最近更新：2025 年 10 月 28 日";
+"policy.privacy.overview.title" = "概述";
+"policy.privacy.overview.body" = "本隐私政策说明 EB-5 Guide, LLC（“我们”）在您使用我们的网站和应用（“平台”）时如何收集、使用、披露并保护个人信息。使用平台即表示您同意本政策。";
+"policy.privacy.info_collect.title" = "我们收集的信息";
+"policy.privacy.info_collect.body" = "我们会收集以下类别的信息：";
+"policy.privacy.info_collect.item1" = "您提供的信息：姓名、电子邮件、电话号码、国家/地区、留言内容以及您提交的其他详情（例如咨询表单）。";
+"policy.privacy.info_collect.item2" = "验证数据：用于一次性短信验证的手机号及确认状态。";
+"policy.privacy.info_collect.item3" = "使用数据：IP 地址、设备和浏览器数据、访问页面、时间戳以及诊断日志。";
+"policy.privacy.info_collect.item4" = "Cookie 及类似技术：用于运营网站、记住偏好、执行分析以及支持有限的广告/赞助功能。";
+"policy.privacy.info_collect.note" = "我们不会明知地收集 18 岁以下个人的信息。如发现误收，我们将予以删除。";
+"policy.privacy.use.title" = "我们如何使用信息";
+"policy.privacy.use.body" = "我们将个人信息用于：";
+"policy.privacy.use.item1" = "提供并改进平台：运行功能、回应咨询、促成与项目发起方的联系、优化内容与性能。";
+"policy.privacy.use.item2" = "沟通联络：发送确认、回复、更新，以及在取得同意后发送新闻通讯或推广信息。";
+"policy.privacy.use.item3" = "安全与防欺诈：检测、调查并防止滥用或未授权活动。";
+"policy.privacy.use.item4" = "符合法律：遵守适用法律、法规及合法请求。";
+"policy.privacy.use.item5" = "在取得同意时：用于您授权的其他目的。";
+"policy.privacy.share.title" = "我们如何共享信息";
+"policy.privacy.share.body" = "我们可能在以下情况下共享个人信息：";
+"policy.privacy.share.item1" = "项目发起方（依您指示）：当您请求项目信息时，我们会将您的咨询和联系方式分享给相关发起方，以便其回复。";
+"policy.privacy.share.item2" = "服务提供商：主机托管、存储、分析、电子邮件/短信发送、客户支持——并受保密与用途限制约束。";
+"policy.privacy.share.item3" = "广告/分析合作伙伴：用于衡量或改进赞助内容的有限使用与基于 Cookie 的指标；未经同意，我们不会向广告方分享您的身份。";
+"policy.privacy.share.item4" = "法律原因：为遵守法律或保护权利、安全与财产。";
+"policy.privacy.share.item5" = "商业交易：在合并、收购、融资或资产转让过程中，且受保密义务约束时。";
+"policy.privacy.share.item6" = "经您同意：依照您授予的其他授权。";
+"policy.privacy.share.item7" = "汇总/去标识数据：不指向个人的洞察信息。";
+"policy.privacy.share.footer" = "我们不会以金钱为对价出售您的个人信息。";
+"policy.privacy.cookies.title" = "Cookie 与跟踪";
+"policy.privacy.cookies.body" = "我们使用必要的 Cookie（站点运营）、偏好 Cookie、分析 Cookie 以及有限的广告 Cookie。您可通过浏览器设置或我们提供的 Cookie 控件进行管理；禁用 Cookie 可能影响站点功能。";
+"policy.privacy.cookies.note" = "部分嵌入的第三方内容（如视频或社交组件）可能设置自己的 Cookie。由于缺乏统一标准，我们目前无法响应“请勿追踪”信号。";
+"policy.privacy.security.title" = "数据所在地、安全与保留";
+"policy.privacy.security.body" = "个人数据存储在美国的安全服务器上。使用平台即表示您同意在美国传输和处理数据。我们采取合理的行政、技术和物理防护措施（包括 HTTPS/TLS 传输、访问控制和监控）。任何传输或存储方式都不是 100% 安全。我们仅在实现所述目的所需期间保留个人数据，包括法律、会计或合规要求；当不再需要时，我们将删除或去标识相关数据。";
+"policy.privacy.rights.title" = "您的权利与选择";
+"policy.privacy.rights.body" = "根据您所在司法辖区，您可能享有以下权利：";
+"policy.privacy.rights.item1" = "访问、更正或删除您的个人信息（受法律例外约束）。";
+"policy.privacy.rights.item2" = "在法律允许的情况下，反对或请求限制特定处理活动。";
+"policy.privacy.rights.item3" = "请求获取您提供的某些数据的机器可读副本（数据可携权）。";
+"policy.privacy.rights.item4" = "在基于同意进行处理时，可随时撤回同意（例如退订营销信息）。";
+"policy.privacy.rights.item5" = "管理通信偏好：电子邮件（使用退订链接）、短信（回复 STOP/HELP）、电话（请求加入不拨名单）以及 Cookie（通过浏览器或产品内控制）。";
+"policy.privacy.rights.note" = "我们不会因您行使隐私权而歧视您。";
+"policy.privacy.california.title" = "加州隐私权（CCPA/CPRA）";
+"policy.privacy.california.body" = "加州居民享有知情、访问特定数据、更正不准确信息、删除（在适用例外下）以及在适用情况下选择退出出售/共享的权利。我们不会以金钱为目的出售个人信息，且在未经您同意的情况下不会为跨情境行为广告“共享”个人信息。如有变化，我们将提供“不出售或共享我的个人信息”选项。您也可在适用时限制敏感个人信息的使用（我们通常不收集此类数据）。";
+"policy.privacy.eu.title" = "欧盟/英国隐私（GDPR）";
+"policy.privacy.eu.body" = "在 GDPR 适用的情形下，我们的法律依据包括：履行合同（如处理您的咨询）、同意（如发送新闻通讯）、合法权益（如安全、分析、改进服务）以及法律义务。您可能享有访问、更正、删除、限制、反对（包括拒绝直接营销）、数据可携和向监管机构投诉的权利。对于跨境数据传输，我们可能采用适当的保障措施（如标准合同条款）。";
+"policy.privacy.children.title" = "儿童隐私";
+"policy.privacy.children.body" = "平台不面向 18 岁以下人员。我们不会明知地收集其数据，如发现将予以删除。";
+"policy.privacy.changes.title" = "政策变更";
+"policy.privacy.changes.body" = "我们可能更新本政策。如有重大变更，我们将更新“最近更新”日期，并在适当时提供进一步通知。";
+
+
+///////////////////////////
+// Application
+///////////////////////////
+
+// Navigation
+"tab.home" = "首页";
+"tab.base" = "基础";
+"tab.quizzes" = "测验";
+"tab.news" = "新闻";
+"tab.projects" = "项目";
+
+
+///////////////////////////
+// Home
+///////////////////////////
+"home.placeholder" = "首页";
+
+
+///////////////////////////
+// Base
+///////////////////////////
+"base.placeholder" = "基础内容";
+
+
+///////////////////////////
+// Quizzes
+///////////////////////////
+"quizzes.placeholder" = "通过测验检验自己";
+
+
+///////////////////////////
+// News
+///////////////////////////
+"news.placeholder" = "最新新闻与更新";
+
+
+///////////////////////////
+// Projects
+///////////////////////////
+"projects.placeholder" = "探索 EB-5 项目";
+

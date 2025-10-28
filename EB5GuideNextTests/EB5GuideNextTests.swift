@@ -1,17 +1,7 @@
-//
-//  EB5GuideNextTests.swift
-//  EB5GuideNextTests
-//
-//  Created by Vadim Alexeev on 28.10.25.
-//
-
 import Testing
 @testable import EB5GuideNext
 
+@Suite("EB5GuideNext Empty Tests")
 struct EB5GuideNextTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
-    }
-
+    // Intentionally left empty. Remove this target in Xcode if you don't need tests.
 }

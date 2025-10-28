@@ -1,0 +1,193 @@
+/* Base localization fallback */
+
+///////////////////////////
+// Onboarding
+///////////////////////////
+
+// Screen UI
+"onboarding.title" = "Welcome to EB-5 Guide";
+"onboarding.subtitle" = "Invest. Earn. Immigrate. — The EB-5 to U.S. residency and real returns.";
+"onboarding.choose_language" = "Choose Your Language";
+"onboarding.agree_prefix" = "By pressing the button, I agree to the";
+"onboarding.company" = "company policy rules";
+"onboarding.agree_suffix" = "";
+"onboarding.lets_go" = "Let's Go";
+
+// Select Language
+"language.english" = "English";
+"language.chinese_simplified" = "简体中文";
+"language.vietnamese" = "Tiếng Việt";
+"language.korean" = "한국어";
+
+
+///////////////////////////
+// Legal & Privacy
+///////////////////////////
+
+// UI
+"policy.nav_title" = "Legal & Privacy";
+"policy.action.close" = "Close";
+"policy.picker.title" = "Policy Section";
+"policy.tab.disclaimer" = "Disclaimer";
+"policy.tab.terms" = "Terms of Use";
+"policy.tab.privacy" = "Privacy Policy";
+"policy.bullet.prefix" = "\U2022";
+
+// Text Disclaimer
+"policy.disclaimer.title" = "Disclaimer";
+"policy.disclaimer.intro" = "Review the statements below to understand how EB-5 Guide presents project information.";
+"policy.disclaimer.purpose.title" = "Purpose and Scope";
+"policy.disclaimer.purpose.body" = "EB-5 Guide (the \"Platform\") is an informational catalog of EB-5 projects. Content is provided \"as is\" for general information only. Nothing on the Platform is investment, legal, immigration, or tax advice, and nothing here forms an advisory, brokerage, agent, or client relationship.";
+"policy.disclaimer.offer.title" = "No Offer or Solicitation";
+"policy.disclaimer.offer.body" = "The Platform does not offer or sell securities, and no content should be construed as an offer to buy or a solicitation to sell any security or investment product. Any investment may be made, if at all, only on the basis of official offering documents from the project sponsor and only to eligible investors under applicable law.";
+"policy.disclaimer.independence.title" = "Independence, No Transaction-Based Compensation";
+"policy.disclaimer.independence.body" = "EB-5 Guide is not a broker-dealer, placement agent, investment adviser, law firm, or immigration consultancy. We do not handle investor funds or securities, do not negotiate investments, and do not receive transaction-based compensation. Sponsored or paid listings and advertising may appear; such placement does not constitute an endorsement or recommendation.";
+"policy.disclaimer.info_sources.title" = "Information Sources, No Verification";
+"policy.disclaimer.info_sources.body" = "Project descriptions and data may be provided by third parties or compiled from publicly available sources. We do not independently audit or verify all information and make no representation or warranty as to accuracy, completeness, timeliness, or reliability. Listings on the Platform do not imply approval, due diligence, or suitability.";
+"policy.disclaimer.forward_looking.title" = "Forward-Looking Statements and Risks";
+"policy.disclaimer.forward_looking.body" = "Any projections, targets, or forward-looking statements are inherently uncertain and may differ materially from actual results. Investing involves significant risk, including the potential loss of principal. There is no assurance of job creation, financial performance, immigration benefit, or any other outcome.";
+"policy.disclaimer.investor_responsibility.title" = "Investor Responsibility";
+"policy.disclaimer.investor_responsibility.body" = "Users must conduct their own due diligence and consult qualified financial, legal, tax, and immigration professionals before making decisions. Your use of the Platform and reliance on its content are solely at your own risk.";
+"policy.disclaimer.government.title" = "Government Non-Endorsement";
+"policy.disclaimer.government.body" = "References to immigration processes or approvals do not imply endorsement by any government agency. Government approvals related to EB-5 (including any regional center designation) are not endorsements of any project, sponsor, or investment.";
+"policy.disclaimer.liability.title" = "No Warranties; Limitation of Liability";
+"policy.disclaimer.liability.body" = "We disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, non-infringement, accuracy, and availability. To the fullest extent permitted by law, EB-5 Guide and its affiliates are not liable for any indirect, incidental, special, consequential, exemplary, or punitive damages arising from or relating to your use of the Platform.";
+
+// Text Terms of Use
+"policy.terms.title" = "Terms of Use";
+"policy.terms.intro" = "These Terms govern your access to and use of the Platform.";
+"policy.terms.updated.title" = "Last Updated";
+"policy.terms.updated.body" = "Last Updated: October 28, 2025";
+"policy.terms.acceptance.title" = "Acceptance of Terms";
+"policy.terms.acceptance.body" = "By accessing or using the EB-5 Guide website or app (the \"Platform\"), you agree to these Terms of Use (the \"Terms\"). If you do not agree, do not use the Platform. We may update these Terms; continued use signifies acceptance of changes.";
+"policy.terms.eligibility.title" = "Eligibility";
+"policy.terms.eligibility.body" = "You must be 18 years of age (or the age of majority in your jurisdiction) to use the Platform.";
+"policy.terms.role.title" = "Platform Role";
+"policy.terms.role.body" = "The Platform is an informational directory. We are not a broker-dealer, investment adviser, law firm, or immigration consultancy; we do not sell securities, provide advice, negotiate transactions, handle funds or securities, or receive transaction-based compensation.";
+"policy.terms.accounts.title" = "Accounts and Verification";
+"policy.terms.accounts.body" = "Some features may require registration and optional identity or phone verification (including one-time SMS codes). You must provide accurate information and safeguard your credentials. You are responsible for all activity under your account.";
+"policy.terms.conduct.title" = "User Conduct";
+"policy.terms.conduct.body" = "You agree not to:";
+"policy.terms.conduct.item1" = "Use the Platform for unlawful, fraudulent, or abusive purposes.";
+"policy.terms.conduct.item2" = "Attempt unauthorized access, interfere with security, or disrupt operations.";
+"policy.terms.conduct.item3" = "Scrape, harvest, or reproduce content without permission.";
+"policy.terms.conduct.item4" = "Impersonate others or misrepresent your affiliation.";
+"policy.terms.conduct.item5" = "Submit content that is misleading, unlawful, infringing, or harmful.";
+"policy.terms.third_party.title" = "Third-Party Content and Listings";
+"policy.terms.third_party.body" = "Project data may be provided by third parties or compiled from public sources. We do not control or endorse third-party content and are not responsible for accuracy, completeness, legality, or timeliness. Use third-party content at your own risk. Any dealings you have with a project sponsor are solely between you and that sponsor.";
+"policy.terms.inquiries.title" = "Submission of Inquiries; Introductions";
+"policy.terms.inquiries.body" = "If you request information about a project, you authorize us to share your inquiry and contact details with the relevant project sponsor so they can respond. We are not a party to, and have no responsibility for, any subsequent communications, agreements, or transactions.";
+"policy.terms.advertising.title" = "Advertising and Sponsored Content";
+"policy.terms.advertising.body" = "The Platform may display advertising or sponsored listings. Paid placement does not constitute an endorsement or a recommendation.";
+"policy.terms.ip.title" = "Intellectual Property";
+"policy.terms.ip.body" = "The Platform’s design, text, compilations, logos, graphics, and software are owned by EB-5 Guide, LLC or its licensors and protected by law. You are granted a limited, non-exclusive, non-transferable license to access and use the Platform for personal, non-commercial purposes. You may not copy, distribute, display, or create derivative works without prior written permission. Trademarks and logos of third parties remain the property of their respective owners and are used for identification only.";
+"policy.terms.no_advice.title" = "No Professional Advice";
+"policy.terms.no_advice.body" = "Content is general information only and is not investment, legal, immigration, or tax advice. You should consult qualified professionals.";
+"policy.terms.disclaimers.title" = "Disclaimers; Limitation of Liability";
+"policy.terms.disclaimers.body" = "The Platform is provided \"AS IS\" and \"AS AVAILABLE,\" without warranties of any kind. To the fullest extent permitted by law, EB-5 Guide, LLC and its affiliates are not liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of profits, data, goodwill, or opportunities. Our aggregate liability to you will not exceed the amount you paid to us, if any, for access to the Platform.";
+"policy.terms.indemnification.title" = "Indemnification";
+"policy.terms.indemnification.body" = "You agree to indemnify and hold harmless EB-5 Guide, LLC and its affiliates from any claims, damages, losses, liabilities, and expenses (including reasonable attorneys’ fees) arising from your use of the Platform, your content, or your breach of these Terms.";
+"policy.terms.compliance.title" = "Compliance with Securities and Immigration Laws";
+"policy.terms.compliance.body" = "Project sponsors are solely responsible for ensuring their listings comply with applicable securities and immigration laws, including restrictions on general solicitation and investor eligibility. We may restrict visibility of certain content or features when legally required (e.g., to pre-qualified or non-U.S. persons).";
+"policy.terms.governing_law.title" = "Governing Law; Venue";
+"policy.terms.governing_law.body" = "These Terms are governed by the laws of the United States and the State of Texas, without regard to conflicts of law. You consent to exclusive jurisdiction and venue in state or federal courts located in Texas.";
+"policy.terms.changes.title" = "Changes to the Platform";
+"policy.terms.changes.body" = "We may modify, suspend, or discontinue any part of the Platform at any time without notice.";
+"policy.terms.contact.title" = "Contact";
+"policy.terms.contact.body" = "Questions about these Terms: support@eb-5.app";
+
+// Text Privacy Policy
+"policy.privacy.title" = "Privacy Policy";
+"policy.privacy.intro" = "Learn how we collect, use, and safeguard personal information.";
+"policy.privacy.last_updated.title" = "Last Updated";
+"policy.privacy.last_updated.body" = "Last Updated: October 28, 2025";
+"policy.privacy.overview.title" = "Overview";
+"policy.privacy.overview.body" = "This Privacy Policy explains how EB-5 Guide, LLC (\"we,\" \"us,\" \"our\") collects, uses, discloses, and protects personal information when you use our website and app (the \"Platform\"). By using the Platform, you agree to this Policy.";
+"policy.privacy.info_collect.title" = "Information We Collect";
+"policy.privacy.info_collect.body" = "We collect the following categories of information:";
+"policy.privacy.info_collect.item1" = "Information you provide: name, email, phone number, country, message content, and any other details you submit (e.g., inquiry forms).";
+"policy.privacy.info_collect.item2" = "Verification data: phone number and confirmation status for one-time SMS verification.";
+"policy.privacy.info_collect.item3" = "Usage data: IP address, device and browser data, pages viewed, timestamps, and diagnostic logs.";
+"policy.privacy.info_collect.item4" = "Cookies and similar technologies: to operate the site, remember preferences, perform analytics, and support limited advertising/sponsorship functions.";
+"policy.privacy.info_collect.note" = "We do not knowingly collect information from individuals under 18. If we learn we have, we will delete it.";
+"policy.privacy.use.title" = "How We Use Information";
+"policy.privacy.use.body" = "We use personal information to:";
+"policy.privacy.use.item1" = "Provide and improve the Platform: operate features, respond to inquiries, facilitate connections with project sponsors, improve content and performance.";
+"policy.privacy.use.item2" = "Communicate: send confirmations, responses, updates, and (with consent) newsletters or promotional messages.";
+"policy.privacy.use.item3" = "Security and fraud prevention: detect, investigate, and prevent abusive or unauthorized activity.";
+"policy.privacy.use.item4" = "Legal compliance: comply with applicable laws, regulations, and lawful requests.";
+"policy.privacy.use.item5" = "With consent: for any other purpose you authorize.";
+"policy.privacy.share.title" = "How We Share Information";
+"policy.privacy.share.body" = "We may share personal information as follows:";
+"policy.privacy.share.item1" = "Project sponsors (at your direction): when you request information about a project, we share your inquiry and contact details with that sponsor so they can respond.";
+"policy.privacy.share.item2" = "Service providers: hosting, storage, analytics, email/SMS delivery, customer support—bound by confidentiality and use restrictions.";
+"policy.privacy.share.item3" = "Advertising/analytics partners: limited usage and cookie-based metrics to measure or improve sponsored content; we do not share your identity with advertisers without consent.";
+"policy.privacy.share.item4" = "Legal reasons: to comply with law or protect rights, safety, and property.";
+"policy.privacy.share.item5" = "Business transfers: as part of a merger, acquisition, financing, or sale of assets, subject to confidentiality.";
+"policy.privacy.share.item6" = "With your consent: as otherwise authorized by you.";
+"policy.privacy.share.item7" = "Aggregated/de-identified data: insights that do not identify individuals.";
+"policy.privacy.share.footer" = "We do not sell your personal information for monetary consideration.";
+"policy.privacy.cookies.title" = "Cookies & Tracking";
+"policy.privacy.cookies.body" = "We use necessary cookies (site operation), preference cookies, analytics cookies, and limited advertising cookies. You can control cookies through your browser settings or any cookie controls we provide. Disabling cookies may affect site functionality.";
+"policy.privacy.cookies.note" = "Some embedded third-party content (e.g., video or social widgets) may set their own cookies. We currently do not respond to \"Do Not Track\" signals due to the absence of a consistent industry standard.";
+"policy.privacy.security.title" = "Data Location, Security, and Retention";
+"policy.privacy.security.body" = "Personal data is stored on secure servers in the United States. By using the Platform, you consent to transfer and processing in the U.S. We use reasonable administrative, technical, and physical safeguards (including HTTPS/TLS in transit, access controls, and monitoring). No method of transmission or storage is 100% secure. We retain personal data only as long as necessary for the purposes described, including legal, accounting, or reporting requirements. When no longer needed, we delete or de-identify data.";
+"policy.privacy.rights.title" = "Your Rights and Choices";
+"policy.privacy.rights.body" = "Depending on your jurisdiction, you may have the following rights:";
+"policy.privacy.rights.item1" = "Access, correction, or deletion of your personal information, subject to legal exceptions.";
+"policy.privacy.rights.item2" = "Object to, or request restriction of, certain processing where permitted by law.";
+"policy.privacy.rights.item3" = "Request a machine-readable copy of certain data you provided (data portability).";
+"policy.privacy.rights.item4" = "Withdraw consent at any time when processing is based on consent (e.g., unsubscribe from marketing).";
+"policy.privacy.rights.item5" = "Manage communications preferences: emails (unsubscribe links), SMS (reply STOP/HELP), calls (request do-not-call), and cookies (browser or in-product controls).";
+"policy.privacy.rights.note" = "We will not discriminate against you for exercising your privacy rights.";
+"policy.privacy.california.title" = "California Privacy (CCPA/CPRA)";
+"policy.privacy.california.body" = "California residents have rights to know, access specific pieces of data, correct inaccuracies, delete information (subject to exceptions), and opt out of sale/sharing where applicable. We do not sell personal information for money and do not \"share\" personal information for cross-context behavioral advertising without your consent. If this changes, we will provide a \"Do Not Sell or Share My Personal Information\" option. You may also limit the use of sensitive personal information where applicable (we generally do not collect such data).";
+"policy.privacy.eu.title" = "EU/UK Privacy (GDPR)";
+"policy.privacy.eu.body" = "Where the GDPR applies, our legal bases include: performance of a contract (e.g., handling your inquiry), consent (e.g., newsletters), legitimate interests (e.g., security, analytics, improving services), and legal obligations. You may have rights to access, rectify, erase, restrict, object (including to direct marketing), data portability, and to lodge a complaint with a supervisory authority. We may use appropriate safeguards (such as standard contractual clauses) for cross-border transfers.";
+"policy.privacy.children.title" = "Children’s Privacy";
+"policy.privacy.children.body" = "The Platform is not directed to individuals under 18. We do not knowingly collect their data, and will delete any such data we discover.";
+"policy.privacy.changes.title" = "Changes to this Policy";
+"policy.privacy.changes.body" = "We may update this Policy. Material changes will be indicated by a new \"Last Updated\" date and, where appropriate, additional notice.";
+
+
+///////////////////////////
+// Application
+///////////////////////////
+
+// Navigation
+"tab.home" = "Home";
+"tab.base" = "Base";
+"tab.quizzes" = "Quizzes";
+"tab.news" = "News";
+"tab.projects" = "Projects";
+
+
+///////////////////////////
+// Home
+///////////////////////////
+"home.placeholder" = "Home screen";
+
+
+///////////////////////////
+// Base
+///////////////////////////
+"base.placeholder" = "Base content";
+
+
+///////////////////////////
+// Quizzes
+///////////////////////////
+"quizzes.placeholder" = "Test yourself with quizzes";
+
+
+///////////////////////////
+// News
+///////////////////////////
+"news.placeholder" = "Latest news and updates";
+
+
+///////////////////////////
+// Projects
+///////////////////////////
+"projects.placeholder" = "Explore EB-5 projects";
+

@@ -1,0 +1,193 @@
+/* Vietnamese localization */
+
+///////////////////////////
+// Onboarding
+///////////////////////////
+
+// Screen UI
+"onboarding.title" = "Chào mừng đến với EB-5 Guide";
+"onboarding.subtitle" = "Đầu tư. Kiếm lợi. Định cư. — Con đường EB-5 tới quyền cư trú Mỹ và lợi nhuận thực tế.";
+"onboarding.choose_language" = "Chọn ngôn ngữ của bạn";
+"onboarding.agree_prefix" = "Bằng cách nhấn nút, tôi đồng ý với";
+"onboarding.company" = "các quy định chính sách của công ty";
+"onboarding.agree_suffix" = "";
+"onboarding.lets_go" = "Bắt đầu";
+
+// Select Language
+"language.english" = "English";
+"language.chinese_simplified" = "简体中文";
+"language.vietnamese" = "Tiếng Việt";
+"language.korean" = "한국어";
+
+
+///////////////////////////
+// Legal & Privacy
+///////////////////////////
+
+// UI
+"policy.nav_title" = "Pháp lý & Quyền riêng tư";
+"policy.action.close" = "Đóng";
+"policy.picker.title" = "Chọn mục";
+"policy.tab.disclaimer" = "Tuyên bố miễn trừ";
+"policy.tab.terms" = "Điều khoản sử dụng";
+"policy.tab.privacy" = "Chính sách quyền riêng tư";
+"policy.bullet.prefix" = "\U2022";
+
+// Text Disclaimer
+"policy.disclaimer.title" = "Tuyên bố miễn trừ";
+"policy.disclaimer.intro" = "Hãy đọc các lưu ý dưới đây để hiểu cách EB-5 Guide trình bày thông tin dự án.";
+"policy.disclaimer.purpose.title" = "Mục đích và Phạm vi";
+"policy.disclaimer.purpose.body" = "EB-5 Guide (\"Nền tảng\") là danh mục thông tin về các dự án EB-5. Nội dung được cung cấp \"nguyên trạng\", chỉ nhằm mục đích tham khảo chung. Mọi thông tin trên Nền tảng không phải là tư vấn đầu tư, pháp lý, nhập cư hay thuế và không tạo ra bất kỳ mối quan hệ tư vấn, môi giới, đại lý hay khách hàng nào.";
+"policy.disclaimer.offer.title" = "Không phải Chào bán hay Chào mời";
+"policy.disclaimer.offer.body" = "Nền tảng không chào bán hoặc bán chứng khoán và không nội dung nào được hiểu là lời mời mua hay chào bán bất kỳ chứng khoán hoặc sản phẩm đầu tư nào. Mọi khoản đầu tư (nếu có) chỉ có thể thực hiện dựa trên hồ sơ chào bán chính thức của đơn vị tài trợ dự án và chỉ dành cho nhà đầu tư đủ điều kiện theo luật hiện hành.";
+"policy.disclaimer.independence.title" = "Tính độc lập, Không nhận thù lao theo giao dịch";
+"policy.disclaimer.independence.body" = "EB-5 Guide không phải là công ty môi giới chứng khoán, đại lý phân phối, cố vấn đầu tư, hãng luật hay đơn vị tư vấn nhập cư. Chúng tôi không quản lý tiền hay chứng khoán của nhà đầu tư, không đàm phán giao dịch và không nhận thù lao gắn với giao dịch. Có thể xuất hiện danh sách hoặc quảng cáo được tài trợ; việc hiển thị đó không cấu thành khuyến nghị hay sự bảo chứng.";
+"policy.disclaimer.info_sources.title" = "Nguồn thông tin, Không thẩm tra";
+"policy.disclaimer.info_sources.body" = "Mô tả dự án và dữ liệu có thể do bên thứ ba cung cấp hoặc tổng hợp từ nguồn công khai. Chúng tôi không kiểm toán hoặc xác minh độc lập mọi thông tin và không đảm bảo về độ chính xác, đầy đủ, kịp thời hay độ tin cậy. Việc dự án xuất hiện trên Nền tảng không đồng nghĩa với việc đã được phê duyệt, thẩm định hay phù hợp cho bất kỳ nhà đầu tư nào.";
+"policy.disclaimer.forward_looking.title" = "Các tuyên bố hướng về tương lai và Rủi ro";
+"policy.disclaimer.forward_looking.body" = "Mọi dự báo, mục tiêu hay tuyên bố hướng về tương lai đều tiềm ẩn bất định và có thể khác biệt đáng kể so với kết quả thực tế. Đầu tư luôn chứa rủi ro lớn, bao gồm khả năng mất vốn gốc. Không có đảm bảo nào về việc tạo việc làm, hiệu quả tài chính, lợi ích nhập cư hay bất kỳ kết quả nào khác.";
+"policy.disclaimer.investor_responsibility.title" = "Trách nhiệm của Nhà đầu tư";
+"policy.disclaimer.investor_responsibility.body" = "Người dùng phải tự tiến hành thẩm định và tham khảo ý kiến của các chuyên gia tài chính, pháp lý, thuế và nhập cư đủ điều kiện trước khi ra quyết định. Việc bạn sử dụng Nền tảng và dựa vào nội dung của chúng tôi hoàn toàn do bạn tự chịu rủi ro.";
+"policy.disclaimer.government.title" = "Không có sự bảo chứng của Chính phủ";
+"policy.disclaimer.government.body" = "Các tham chiếu đến quy trình hay phê duyệt nhập cư không ngụ ý rằng có cơ quan chính phủ nào bảo chứng. Những phê duyệt liên quan đến EB-5 (bao gồm chỉ định trung tâm vùng) không phải là sự chứng nhận cho bất kỳ dự án, đơn vị tài trợ hay khoản đầu tư nào.";
+"policy.disclaimer.liability.title" = "Miễn trừ đảm bảo; Giới hạn trách nhiệm";
+"policy.disclaimer.liability.body" = "Chúng tôi miễn trừ mọi đảm bảo, dù rõ ràng hay ngụ ý, bao gồm tính thương mại, phù hợp với mục đích cụ thể, không vi phạm, độ chính xác và khả dụng. Trong phạm vi tối đa theo luật cho phép, EB-5 Guide và các đơn vị liên kết không chịu trách nhiệm đối với bất kỳ thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hệ quả, làm gương hoặc mang tính trừng phạt nào phát sinh từ việc bạn sử dụng Nền tảng.";
+
+// Text Terms of Use
+"policy.terms.title" = "Điều khoản sử dụng";
+"policy.terms.intro" = "Các Điều khoản này điều chỉnh việc bạn truy cập và sử dụng Nền tảng.";
+"policy.terms.updated.title" = "Cập nhật lần cuối";
+"policy.terms.updated.body" = "Cập nhật lần cuối: 28 tháng 10, 2025";
+"policy.terms.acceptance.title" = "Chấp nhận Điều khoản";
+"policy.terms.acceptance.body" = "Khi truy cập hoặc sử dụng website hay ứng dụng EB-5 Guide (\"Nền tảng\"), bạn đồng ý với các Điều khoản sử dụng này (\"Điều khoản\"). Nếu không đồng ý, vui lòng không sử dụng Nền tảng. Chúng tôi có thể cập nhật Điều khoản; việc bạn tiếp tục sử dụng đồng nghĩa chấp nhận các thay đổi.";
+"policy.terms.eligibility.title" = "Đủ điều kiện";
+"policy.terms.eligibility.body" = "Bạn phải từ 18 tuổi trở lên (hoặc đạt độ tuổi thành niên tại nơi cư trú) để dùng Nền tảng.";
+"policy.terms.role.title" = "Vai trò của Nền tảng";
+"policy.terms.role.body" = "Nền tảng là thư mục thông tin. Chúng tôi không phải công ty môi giới chứng khoán, cố vấn đầu tư, hãng luật hay đơn vị tư vấn nhập cư; chúng tôi không bán chứng khoán, không đưa ra lời khuyên, không đàm phán giao dịch, không quản lý tiền hay chứng khoán và không nhận thù lao gắn với giao dịch.";
+"policy.terms.accounts.title" = "Tài khoản và xác minh";
+"policy.terms.accounts.body" = "Một số tính năng có thể yêu cầu đăng ký và xác minh danh tính hoặc số điện thoại (bao gồm mã SMS một lần). Bạn phải cung cấp thông tin chính xác và bảo vệ thông tin đăng nhập; bạn chịu trách nhiệm về mọi hoạt động trong tài khoản.";
+"policy.terms.conduct.title" = "Quy tắc ứng xử";
+"policy.terms.conduct.body" = "Bạn đồng ý không:";
+"policy.terms.conduct.item1" = "Sử dụng Nền tảng cho mục đích bất hợp pháp, gian lận hoặc lạm dụng.";
+"policy.terms.conduct.item2" = "Cố gắng truy cập trái phép, can thiệp bảo mật hoặc làm gián đoạn hoạt động.";
+"policy.terms.conduct.item3" = "Thu thập, sao chép nội dung khi chưa được phép.";
+"policy.terms.conduct.item4" = "Giả mạo người khác hoặc sai lệch thông tin về bản thân hay tổ chức liên quan.";
+"policy.terms.conduct.item5" = "Gửi nội dung sai lệch, bất hợp pháp, vi phạm hoặc gây hại.";
+"policy.terms.third_party.title" = "Nội dung và danh sách bên thứ ba";
+"policy.terms.third_party.body" = "Dữ liệu dự án có thể do bên thứ ba cung cấp hoặc tổng hợp từ nguồn công khai. Chúng tôi không kiểm soát hay bảo chứng nội dung của bên thứ ba và không chịu trách nhiệm về độ chính xác, đầy đủ, hợp pháp hay kịp thời. Việc bạn sử dụng nội dung của bên thứ ba hoàn toàn do bạn chịu rủi ro. Mọi giao dịch với đơn vị tài trợ dự án chỉ giữa bạn và đơn vị đó.";
+"policy.terms.inquiries.title" = "Gửi yêu cầu thông tin; Giới thiệu";
+"policy.terms.inquiries.body" = "Khi bạn yêu cầu thông tin về dự án, bạn cho phép chúng tôi chia sẻ yêu cầu và thông tin liên hệ của bạn cho đơn vị tài trợ dự án tương ứng để họ phản hồi. Chúng tôi không tham gia và không chịu trách nhiệm về các trao đổi, thỏa thuận hay giao dịch tiếp theo.";
+"policy.terms.advertising.title" = "Quảng cáo và nội dung tài trợ";
+"policy.terms.advertising.body" = "Nền tảng có thể hiển thị quảng cáo hoặc danh sách được tài trợ. Việc hiển thị có trả phí không phải là sự khuyến nghị hay bảo chứng.";
+"policy.terms.ip.title" = "Sở hữu trí tuệ";
+"policy.terms.ip.body" = "Thiết kế, văn bản, dữ liệu tổng hợp, logo, đồ họa và phần mềm của Nền tảng thuộc quyền sở hữu của EB-5 Guide, LLC hoặc các bên được cấp phép và được pháp luật bảo vệ. Bạn được cấp quyền hạn chế, không độc quyền, không thể chuyển nhượng để truy cập và sử dụng Nền tảng cho mục đích cá nhân, phi thương mại. Bạn không được sao chép, phân phối, hiển thị hay tạo sản phẩm phái sinh khi chưa có văn bản chấp thuận. Nhãn hiệu và logo của bên thứ ba vẫn thuộc về chủ sở hữu tương ứng và chỉ dùng để nhận diện.";
+"policy.terms.no_advice.title" = "Không phải tư vấn chuyên môn";
+"policy.terms.no_advice.body" = "Nội dung chỉ mang tính thông tin chung và không phải tư vấn đầu tư, pháp lý, nhập cư hay thuế. Hãy tham khảo các chuyên gia đủ điều kiện.";
+"policy.terms.disclaimers.title" = "Miễn trừ trách nhiệm; Giới hạn trách nhiệm";
+"policy.terms.disclaimers.body" = "Nền tảng được cung cấp \"NGUYÊN TRẠNG\" và \"SẴN CÓ\", không kèm bất kỳ bảo đảm nào. Trong phạm vi tối đa theo luật cho phép, EB-5 Guide, LLC và các bên liên kết không chịu trách nhiệm với mọi thiệt hại gián tiếp, ngẫu nhiên, đặc biệt, hậu quả, mang tính răn đe hoặc trừng phạt, cũng như việc mất lợi nhuận, dữ liệu, uy tín hay cơ hội. Tổng trách nhiệm của chúng tôi đối với bạn sẽ không vượt quá số tiền bạn đã trả (nếu có) để truy cập Nền tảng.";
+"policy.terms.indemnification.title" = "Bồi thường";
+"policy.terms.indemnification.body" = "Bạn đồng ý bồi thường và bảo vệ EB-5 Guide, LLC cùng các bên liên kết khỏi mọi khiếu nại, thiệt hại, tổn thất, trách nhiệm và chi phí (bao gồm phí luật sư hợp lý) phát sinh từ việc bạn sử dụng Nền tảng, nội dung bạn cung cấp hoặc việc bạn vi phạm các Điều khoản này.";
+"policy.terms.compliance.title" = "Tuân thủ luật chứng khoán và nhập cư";
+"policy.terms.compliance.body" = "Các đơn vị tài trợ dự án tự chịu trách nhiệm đảm bảo danh sách của họ tuân thủ luật chứng khoán và nhập cư hiện hành, bao gồm các giới hạn về chào mời công khai và điều kiện nhà đầu tư. Khi luật yêu cầu, chúng tôi có thể hạn chế hiển thị một số nội dung hoặc tính năng (ví dụ chỉ cho người dùng đã được xác nhận hoặc người ngoài Hoa Kỳ).";
+"policy.terms.governing_law.title" = "Luật điều chỉnh và Thẩm quyền";
+"policy.terms.governing_law.body" = "Các Điều khoản này được điều chỉnh bởi luật Hoa Kỳ và bang Texas, không xét đến xung đột pháp luật. Bạn đồng ý trao thẩm quyền xét xử độc quyền cho tòa án bang hoặc liên bang tại Texas.";
+"policy.terms.changes.title" = "Thay đổi đối với Nền tảng";
+"policy.terms.changes.body" = "Chúng tôi có thể sửa đổi, tạm dừng hoặc ngừng bất kỳ phần nào của Nền tảng vào bất kỳ thời điểm nào mà không cần thông báo.";
+"policy.terms.contact.title" = "Liên hệ";
+"policy.terms.contact.body" = "Mọi câu hỏi về Điều khoản xin gửi tới support@eb-5.app.";
+
+// Text Privacy Policy
+"policy.privacy.title" = "Chính sách quyền riêng tư";
+"policy.privacy.intro" = "Tìm hiểu cách chúng tôi thu thập, sử dụng và bảo vệ thông tin cá nhân.";
+"policy.privacy.last_updated.title" = "Cập nhật lần cuối";
+"policy.privacy.last_updated.body" = "Cập nhật lần cuối: 28 tháng 10, 2025";
+"policy.privacy.overview.title" = "Tổng quan";
+"policy.privacy.overview.body" = "Chính sách quyền riêng tư này giải thích cách EB-5 Guide, LLC (\"chúng tôi\") thu thập, sử dụng, tiết lộ và bảo vệ thông tin cá nhân khi bạn dùng website và ứng dụng (\"Nền tảng\"). Việc sử dụng Nền tảng đồng nghĩa bạn chấp nhận Chính sách này.";
+"policy.privacy.info_collect.title" = "Thông tin chúng tôi thu thập";
+"policy.privacy.info_collect.body" = "Chúng tôi thu thập các nhóm thông tin sau:";
+"policy.privacy.info_collect.item1" = "Thông tin bạn cung cấp: tên, email, số điện thoại, quốc gia, nội dung tin nhắn và mọi dữ liệu bạn gửi (ví dụ biểu mẫu yêu cầu).";
+"policy.privacy.info_collect.item2" = "Dữ liệu xác minh: số điện thoại và trạng thái xác nhận cho mã SMS một lần.";
+"policy.privacy.info_collect.item3" = "Dữ liệu sử dụng: địa chỉ IP, thông tin thiết bị và trình duyệt, trang đã xem, dấu thời gian và nhật ký chẩn đoán.";
+"policy.privacy.info_collect.item4" = "Cookie và công nghệ tương tự: để vận hành trang, ghi nhớ tùy chọn, phân tích và hỗ trợ một số chức năng quảng cáo/tài trợ.";
+"policy.privacy.info_collect.note" = "Chúng tôi không cố ý thu thập thông tin từ người dưới 18 tuổi. Nếu phát hiện, chúng tôi sẽ xóa dữ liệu đó.";
+"policy.privacy.use.title" = "Cách chúng tôi sử dụng thông tin";
+"policy.privacy.use.body" = "Chúng tôi sử dụng thông tin cá nhân nhằm:";
+"policy.privacy.use.item1" = "Cung cấp và cải thiện Nền tảng: vận hành tính năng, phản hồi yêu cầu, kết nối với đơn vị tài trợ, tối ưu nội dung và hiệu suất.";
+"policy.privacy.use.item2" = "Giao tiếp: gửi xác nhận, phản hồi, cập nhật và (khi được đồng ý) bản tin hoặc thông điệp quảng bá.";
+"policy.privacy.use.item3" = "Bảo mật và chống gian lận: phát hiện, điều tra và ngăn chặn hoạt động lạm dụng hoặc trái phép.";
+"policy.privacy.use.item4" = "Tuân thủ pháp luật: đáp ứng luật, quy định và yêu cầu hợp pháp.";
+"policy.privacy.use.item5" = "Theo sự đồng ý: cho bất kỳ mục đích nào khác mà bạn cho phép.";
+"policy.privacy.share.title" = "Cách chúng tôi chia sẻ thông tin";
+"policy.privacy.share.body" = "Chúng tôi có thể chia sẻ thông tin cá nhân trong các trường hợp sau:";
+"policy.privacy.share.item1" = "Đơn vị tài trợ dự án (theo yêu cầu của bạn): khi bạn hỏi về dự án, chúng tôi chuyển yêu cầu và thông tin liên hệ của bạn cho đơn vị tài trợ để họ phản hồi.";
+"policy.privacy.share.item2" = "Đối tác cung cấp dịch vụ: lưu trữ, lưu giữ, phân tích, gửi email/SMS, hỗ trợ khách hàng—được ràng buộc bởi nghĩa vụ bảo mật và giới hạn sử dụng.";
+"policy.privacy.share.item3" = "Đối tác quảng cáo/phân tích: sử dụng giới hạn và số liệu dựa trên cookie nhằm đo lường hoặc cải thiện nội dung tài trợ; chúng tôi không chia sẻ danh tính của bạn cho nhà quảng cáo nếu chưa có sự đồng ý.";
+"policy.privacy.share.item4" = "Lý do pháp lý: để tuân thủ pháp luật hoặc bảo vệ quyền lợi, an toàn và tài sản.";
+"policy.privacy.share.item5" = "Chuyển giao kinh doanh: trong quá trình sáp nhập, mua lại, huy động vốn hoặc chuyển giao tài sản, với điều kiện bảo mật.";
+"policy.privacy.share.item6" = "Theo sự đồng ý của bạn: cho những mục đích khác mà bạn ủy quyền.";
+"policy.privacy.share.item7" = "Dữ liệu tổng hợp/đã ẩn danh: các thông tin phân tích không xác định cá nhân.";
+"policy.privacy.share.footer" = "Chúng tôi không bán thông tin cá nhân của bạn để lấy tiền.";
+"policy.privacy.cookies.title" = "Cookie & Theo dõi";
+"policy.privacy.cookies.body" = "Chúng tôi sử dụng cookie cần thiết (vận hành trang), cookie tùy chọn, cookie phân tích và một số cookie quảng cáo. Bạn có thể điều chỉnh cookie qua cài đặt trình duyệt hoặc công cụ kiểm soát do chúng tôi cung cấp; vô hiệu hóa cookie có thể ảnh hưởng đến chức năng trang.";
+"policy.privacy.cookies.note" = "Một số nội dung nhúng của bên thứ ba (ví dụ video hoặc tiện ích mạng xã hội) có thể tự đặt cookie. Do thiếu tiêu chuẩn thống nhất, hiện chúng tôi chưa phản hồi tín hiệu \"Do Not Track\".";
+"policy.privacy.security.title" = "Vị trí dữ liệu, Bảo mật và Lưu giữ";
+"policy.privacy.security.body" = "Dữ liệu cá nhân được lưu trên máy chủ an toàn tại Hoa Kỳ. Khi sử dụng Nền tảng, bạn đồng ý việc truyền và xử lý dữ liệu tại Hoa Kỳ. Chúng tôi áp dụng các biện pháp hành chính, kỹ thuật và vật lý hợp lý (bao gồm HTTPS/TLS, kiểm soát truy cập và giám sát). Không phương thức truyền hoặc lưu trữ nào bảo đảm an toàn tuyệt đối. Chúng tôi chỉ lưu dữ liệu cá nhân trong thời gian cần thiết cho các mục đích đã nêu, bao gồm yêu cầu pháp lý, kế toán hoặc báo cáo; khi không còn cần thiết, chúng tôi sẽ xóa hoặc ẩn danh dữ liệu.";
+"policy.privacy.rights.title" = "Quyền và lựa chọn của bạn";
+"policy.privacy.rights.body" = "Tùy thuộc nơi bạn sinh sống, bạn có thể có các quyền sau:";
+"policy.privacy.rights.item1" = "Yêu cầu truy cập, chỉnh sửa hoặc xóa thông tin cá nhân (phụ thuộc ngoại lệ pháp luật).";
+"policy.privacy.rights.item2" = "Phản đối hoặc yêu cầu hạn chế một số hoạt động xử lý khi luật cho phép.";
+"policy.privacy.rights.item3" = "Yêu cầu bản sao dữ liệu ở định dạng máy đọc được đối với một số thông tin bạn đã cung cấp.";
+"policy.privacy.rights.item4" = "Thu hồi sự đồng ý bất cứ lúc nào nếu việc xử lý dựa trên đồng ý (ví dụ hủy đăng ký email marketing).";
+"policy.privacy.rights.item5" = "Quản lý tùy chọn liên lạc: email (sử dụng liên kết hủy), SMS (trả lời STOP/HELP), cuộc gọi (yêu cầu đưa vào danh sách không gọi) và cookie (qua trình duyệt hoặc công cụ điều khiển).";
+"policy.privacy.rights.note" = "Chúng tôi sẽ không phân biệt đối xử khi bạn thực hiện các quyền về quyền riêng tư.";
+"policy.privacy.california.title" = "Quyền riêng tư tại California (CCPA/CPRA)";
+"policy.privacy.california.body" = "Cư dân California có quyền được biết, truy cập dữ liệu cụ thể, sửa thông tin không chính xác, yêu cầu xóa (trong phạm vi ngoại lệ) và từ chối việc bán/chia sẻ khi áp dụng. Chúng tôi không bán thông tin cá nhân để lấy tiền và không \"chia sẻ\" thông tin cho quảng cáo hành vi theo ngữ cảnh nếu chưa có sự đồng ý của bạn. Nếu điều này thay đổi, chúng tôi sẽ cung cấp tùy chọn \"Không bán hoặc chia sẻ thông tin cá nhân của tôi\". Bạn cũng có thể hạn chế việc sử dụng dữ liệu cá nhân nhạy cảm khi phù hợp (chúng tôi thường không thu thập loại dữ liệu này).";
+"policy.privacy.eu.title" = "Quyền riêng tư EU/Anh (GDPR)";
+"policy.privacy.eu.body" = "Khi GDPR áp dụng, cơ sở pháp lý của chúng tôi bao gồm: thực hiện hợp đồng (ví dụ xử lý yêu cầu của bạn), sự đồng ý (ví dụ bản tin), lợi ích hợp pháp (ví dụ bảo mật, phân tích, cải tiến dịch vụ) và nghĩa vụ pháp lý. Bạn có thể có quyền truy cập, sửa, xóa, hạn chế, phản đối (bao gồm chống lại marketing trực tiếp), mang dữ liệu và khiếu nại với cơ quan quản lý. Khi chuyển dữ liệu xuyên biên giới, chúng tôi có thể áp dụng các biện pháp bảo vệ phù hợp (như điều khoản hợp đồng mẫu).";
+"policy.privacy.children.title" = "Quyền riêng tư của trẻ vị thành niên";
+"policy.privacy.children.body" = "Nền tảng không hướng tới người dưới 18 tuổi. Chúng tôi không cố ý thu thập dữ liệu của họ và sẽ xóa nếu phát hiện.";
+"policy.privacy.changes.title" = "Thay đổi Chính sách";
+"policy.privacy.changes.body" = "Chúng tôi có thể cập nhật Chính sách này. Khi có thay đổi quan trọng, chúng tôi sẽ cập nhật ngày \"Cập nhật lần cuối\" và, nếu phù hợp, cung cấp thông báo bổ sung.";
+
+
+///////////////////////////
+// Application
+///////////////////////////
+
+// Navigation
+"tab.home" = "Trang chủ";
+"tab.base" = "Cơ bản";
+"tab.quizzes" = "Bài kiểm tra";
+"tab.news" = "Tin tức";
+"tab.projects" = "Dự án";
+
+
+///////////////////////////
+// Home
+///////////////////////////
+"home.placeholder" = "Màn hình trang chủ";
+
+
+///////////////////////////
+// Base
+///////////////////////////
+"base.placeholder" = "Nội dung cơ bản";
+
+
+///////////////////////////
+// Quizzes
+///////////////////////////
+"quizzes.placeholder" = "Tự kiểm tra bằng các bài kiểm tra";
+
+
+///////////////////////////
+// News
+///////////////////////////
+"news.placeholder" = "Tin tức và cập nhật mới nhất";
+
+
+///////////////////////////
+// Projects
+///////////////////////////
+"projects.placeholder" = "Khám phá các dự án EB-5";
+

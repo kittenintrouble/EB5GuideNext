@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FABD18BB2EB0E01A0045C6FF /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18BA2EB0E01A0045C6FF /* en.lproj */; };
+		FABD18BE2EB0E0320045C6FF /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18BD2EB0E0320045C6FF /* zh-Hans.lproj */; };
+		FABD18C02EB0E03D0045C6FF /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18BF2EB0E03D0045C6FF /* vi.lproj */; };
+		FABD18C22EB0E0460045C6FF /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18C12EB0E0460045C6FF /* ko.lproj */; };
+		FABD18C42EB0E0840045C6FF /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FABD18C32EB0E0840045C6FF /* Base.lproj */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		FABD18862EB0CEC70045C6FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +35,29 @@
 		FABD18782EB0CEC70045C6FF /* EB5GuideNext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EB5GuideNext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABD18852EB0CEC70045C6FF /* EB5GuideNextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EB5GuideNextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABD188F2EB0CEC70045C6FF /* EB5GuideNextUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EB5GuideNextUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABD18BA2EB0E01A0045C6FF /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = en.lproj; path = EB5GuideNext/en.lproj; sourceTree = "<group>"; };
+		FABD18BD2EB0E0320045C6FF /* zh-Hans.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "EB5GuideNext/zh-Hans.lproj"; sourceTree = "<group>"; };
+		FABD18BF2EB0E03D0045C6FF /* vi.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = vi.lproj; path = EB5GuideNext/vi.lproj; sourceTree = "<group>"; };
+		FABD18C12EB0E0460045C6FF /* ko.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ko.lproj; path = EB5GuideNext/ko.lproj; sourceTree = "<group>"; };
+		FABD18C32EB0E0840045C6FF /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base.lproj; path = EB5GuideNext/Base.lproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		FABD18B92EB0DF630045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"/Localized: Localizable.strings",
+			);
+			target = FABD18772EB0CEC70045C6FF /* EB5GuideNext */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FABD187A2EB0CEC70045C6FF /* EB5GuideNext */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				FABD18B92EB0DF630045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */,
+			);
 			path = EB5GuideNext;
 			sourceTree = "<group>";
 		};
@@ -75,6 +101,11 @@
 		FABD186F2EB0CEC70045C6FF = {
 			isa = PBXGroup;
 			children = (
+				FABD18C32EB0E0840045C6FF /* Base.lproj */,
+				FABD18C12EB0E0460045C6FF /* ko.lproj */,
+				FABD18BF2EB0E03D0045C6FF /* vi.lproj */,
+				FABD18BD2EB0E0320045C6FF /* zh-Hans.lproj */,
+				FABD18BA2EB0E01A0045C6FF /* en.lproj */,
 				FABD187A2EB0CEC70045C6FF /* EB5GuideNext */,
 				FABD18882EB0CEC70045C6FF /* EB5GuideNextTests */,
 				FABD18922EB0CEC70045C6FF /* EB5GuideNextUITests */,
@@ -192,6 +223,9 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				vi,
+				ko,
 			);
 			mainGroup = FABD186F2EB0CEC70045C6FF;
 			minimizedProjectReferenceProxies = 1;
@@ -212,6 +246,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABD18C42EB0E0840045C6FF /* Base.lproj in Resources */,
+				FABD18C22EB0E0460045C6FF /* ko.lproj in Resources */,
+				FABD18C02EB0E03D0045C6FF /* vi.lproj in Resources */,
+				FABD18BE2EB0E0320045C6FF /* zh-Hans.lproj in Resources */,
+				FABD18BB2EB0E01A0045C6FF /* en.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -380,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -395,22 +434,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6BNFTTA76P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "EB-5 Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eb5.EB5GuideNext;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eb5.eb5guideapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -427,22 +470,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6BNFTTA76P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "EB-5 Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = eb5.EB5GuideNext;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eb5.eb5guideapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
