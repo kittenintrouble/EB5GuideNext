@@ -182,12 +182,14 @@ final class BaseContentStore: ObservableObject {
     }
 
     func toggleCompleted(for articleID: Int) {
-        if completedIDs.contains(articleID) {
-            completedIDs.remove(articleID)
-        } else {
-            completedIDs.insert(articleID)
+        performOnMain {
+            if self.completedIDs.contains(articleID) {
+                self.completedIDs.remove(articleID)
+            } else {
+                self.completedIDs.insert(articleID)
+            }
+            self.persist(self.completedIDs, key: BaseContentStore.completedKey)
         }
-        persist(completedIDs, key: BaseContentStore.completedKey)
     }
 
     func isFavorite(_ articleID: Int) -> Bool {
@@ -195,12 +197,14 @@ final class BaseContentStore: ObservableObject {
     }
 
     func toggleFavorite(for articleID: Int) {
-        if favoriteIDs.contains(articleID) {
-            favoriteIDs.remove(articleID)
-        } else {
-            favoriteIDs.insert(articleID)
+        performOnMain {
+            if self.favoriteIDs.contains(articleID) {
+                self.favoriteIDs.remove(articleID)
+            } else {
+                self.favoriteIDs.insert(articleID)
+            }
+            self.persist(self.favoriteIDs, key: BaseContentStore.favoritesKey)
         }
-        persist(favoriteIDs, key: BaseContentStore.favoritesKey)
     }
 
     // MARK: - Helpers
@@ -221,6 +225,16 @@ final class BaseContentStore: ObservableObject {
             }
 
             self.articles = decoded
+        }
+    }
+
+    private func performOnMain(_ updates: @escaping () -> Void) {
+        if Thread.isMainThread {
+            updates()
+        } else {
+            DispatchQueue.main.async {
+                updates()
+            }
         }
     }
 

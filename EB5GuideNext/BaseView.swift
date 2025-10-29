@@ -1,11 +1,19 @@
 import SwiftUI
 
+enum BaseRoute: Hashable {
+    case category(name: String)
+    case subcategory(category: String, name: String)
+    case article(category: String, subcategory: String, articleID: Int)
+}
+
 struct BaseView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var store: BaseContentStore
+    @Binding var navigationPath: [BaseRoute]
+    let onRequestNavigation: (BaseNavigationRequest) -> Void
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             Group {
                 if store.categories.isEmpty {
                     ProgressView()
@@ -19,9 +27,7 @@ struct BaseView: View {
                                 let completed = store.completionCount(for: category.articles)
                                 let appearanceName = store.appearanceCategoryName(for: category.articles) ?? category.name
                                 let appearance = CategoryAppearance.forCategory(appearanceName)
-                                NavigationLink {
-                                    CategoryDetailView(store: store, categoryName: category.name)
-                                } label: {
+                                NavigationLink(value: BaseRoute.category(name: category.name)) {
                                     CategoryRowView(
                                         title: category.name,
                                         completed: completed,
@@ -40,6 +46,9 @@ struct BaseView: View {
             .background(Color(.systemGroupedBackground))
             .navigationTitle(LocalizedStringKey("tab.base"))
             .navigationBarTitleDisplayMode(.large)
+            .navigationDestination(for: BaseRoute.self) { route in
+                destination(for: route)
+            }
         }
         .id(languageManager.currentLocale.identifier)
         .onAppear {
@@ -51,24 +60,62 @@ struct BaseView: View {
     }
 }
 
+private extension BaseView {
+    @ViewBuilder
+    func destination(for route: BaseRoute) -> some View {
+        switch route {
+        case .category(let name):
+            CategoryDetailView(
+                store: store,
+                categoryName: name,
+                onRequestNavigation: onRequestNavigation
+            )
+        case .subcategory(let category, let name):
+            SubcategoryDetailView(
+                store: store,
+                categoryName: category,
+                subcategoryName: name,
+                onRequestNavigation: onRequestNavigation
+            )
+        case .article(let category, let subcategory, let articleID):
+            ArticleDetailView(
+                store: store,
+                categoryName: category,
+                subcategoryName: subcategory,
+                articleID: articleID,
+                onRequestNavigation: onRequestNavigation
+            )
+        }
+    }
+}
+
 private struct CategoryDetailView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @ObservedObject var store: BaseContentStore
     let categoryName: String
-    let onTapBase: (() -> Void)?
+    let onRequestNavigation: (BaseNavigationRequest) -> Void
     @Environment(\.dismiss) private var dismiss
 
-    init(store: BaseContentStore, categoryName: String, onTapBase: (() -> Void)? = nil) {
+    init(
+        store: BaseContentStore,
+        categoryName: String,
+        onRequestNavigation: @escaping (BaseNavigationRequest) -> Void
+    ) {
         self.store = store
         self.categoryName = categoryName
-        self.onTapBase = onTapBase
+        self.onRequestNavigation = onRequestNavigation
     }
 
     var body: some View {
         let crumbs = [
             BreadcrumbItem(title: .localizedKey("tab.base"), action: {
-                dismiss()
-                onTapBase?()
+                triggerBreadcrumbNavigation(
+                    request: BaseNavigationRequest(
+                        path: [],
+                        animate: true,
+                        activateTab: false
+                    )
+                )
             }),
             BreadcrumbItem(title: .plain(categoryName), action: nil)
         ]
@@ -87,18 +134,7 @@ private struct CategoryDetailView: View {
                         let baseAppearance = CategoryAppearance.forCategory(appearanceName)
                         let appearance = CategoryAppearance.iconName(forSubcategory: canonicalSubcategory).map { baseAppearance.withIcon($0) } ?? baseAppearance
 
-                        NavigationLink {
-                            SubcategoryDetailView(
-                                store: store,
-                                categoryName: categoryName,
-                                subcategoryName: subcategory.name,
-                                onTapBase: {
-                                    dismiss()
-                                    onTapBase?()
-                                }
-                            )
-                            .environmentObject(languageManager)
-                        } label: {
+                        NavigationLink(value: BaseRoute.subcategory(category: categoryName, name: subcategory.name)) {
                             CategoryRowView(
                                 title: subcategory.name,
                                 completed: completed,
@@ -118,6 +154,18 @@ private struct CategoryDetailView: View {
         .navigationTitle(categoryName)
         .navigationBarTitleDisplayMode(.inline)
     }
+
+    private func triggerBreadcrumbNavigation(request: BaseNavigationRequest?) {
+        if let request {
+            DispatchQueue.main.async {
+                onRequestNavigation(request)
+            }
+        } else {
+            withAnimation(.easeInOut(duration: 0.24)) {
+                dismiss()
+            }
+        }
+    }
 }
 
 private struct SubcategoryDetailView: View {
@@ -125,14 +173,19 @@ private struct SubcategoryDetailView: View {
     @ObservedObject var store: BaseContentStore
     let categoryName: String
     let subcategoryName: String
-    let onTapBase: (() -> Void)?
+    let onRequestNavigation: (BaseNavigationRequest) -> Void
     @Environment(\.dismiss) private var dismiss
 
-    init(store: BaseContentStore, categoryName: String, subcategoryName: String, onTapBase: (() -> Void)? = nil) {
+    init(
+        store: BaseContentStore,
+        categoryName: String,
+        subcategoryName: String,
+        onRequestNavigation: @escaping (BaseNavigationRequest) -> Void
+    ) {
         self.store = store
         self.categoryName = categoryName
         self.subcategoryName = subcategoryName
-        self.onTapBase = onTapBase
+        self.onRequestNavigation = onRequestNavigation
     }
 
     var body: some View {
@@ -141,11 +194,24 @@ private struct SubcategoryDetailView: View {
 
         let crumbs = [
             BreadcrumbItem(title: .localizedKey("tab.base"), action: {
-                dismiss()
-                onTapBase?()
+                triggerBreadcrumbNavigation(
+                    request: BaseNavigationRequest(
+                        path: [],
+                        animate: true,
+                        activateTab: false
+                    )
+                )
             }),
             BreadcrumbItem(title: .plain(categoryName), action: {
-                dismiss()
+                triggerBreadcrumbNavigation(
+                    request: BaseNavigationRequest(
+                        path: [
+                            .category(name: categoryName)
+                        ],
+                        animate: true,
+                        activateTab: false
+                    )
+                )
             }),
             BreadcrumbItem(title: .plain(subcategoryName), action: nil)
         ]
@@ -156,31 +222,19 @@ private struct SubcategoryDetailView: View {
                     .padding(.top, 4)
 
                 ForEach(enumeratedArticles, id: \.element.id) { _, article in
-                    NavigationLink {
-                        ArticleDetailView(
-                            store: store,
-                            categoryName: categoryName,
-                            subcategoryName: subcategoryName,
-                            articleID: article.id,
-                            onTapCategory: {
-                                dismiss()
-                            },
-                            onTapBase: {
-                                dismiss()
-                                onTapBase?()
-                            }
-                        )
-                        .environmentObject(languageManager)
-                    } label: {
-                        ArticleRowView(
-                            title: article.title,
-                            isFavorite: store.isFavorite(article.id),
-                            isCompleted: store.isCompleted(article.id)
-                        ) {
+                    ArticleRowView(
+                        title: article.title,
+                        isFavorite: store.isFavorite(article.id),
+                        isCompleted: store.isCompleted(article.id),
+                        route: .article(
+                            category: categoryName,
+                            subcategory: subcategoryName,
+                            articleID: article.id
+                        ),
+                        onToggleFavorite: {
                             store.toggleFavorite(for: article.id)
                         }
-                    }
-                    .buttonStyle(.plain)
+                    )
                 }
             }
             .padding(.horizontal, 20)
@@ -190,25 +244,41 @@ private struct SubcategoryDetailView: View {
         .navigationTitle(subcategoryName)
         .navigationBarTitleDisplayMode(.inline)
     }
+
+    private func triggerBreadcrumbNavigation(request: BaseNavigationRequest?) {
+        if let request {
+            DispatchQueue.main.async {
+                onRequestNavigation(request)
+            }
+        } else {
+            withAnimation(.easeInOut(duration: 0.24)) {
+                dismiss()
+            }
+        }
+    }
 }
 
-private struct ArticleDetailView: View {
+struct ArticleDetailView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @ObservedObject var store: BaseContentStore
     let categoryName: String
     let subcategoryName: String
     let articleID: Int
-    let onTapCategory: (() -> Void)?
-    let onTapBase: (() -> Void)?
+    let onRequestNavigation: (BaseNavigationRequest) -> Void
     @Environment(\.dismiss) private var dismiss
 
-    init(store: BaseContentStore, categoryName: String, subcategoryName: String, articleID: Int, onTapCategory: (() -> Void)? = nil, onTapBase: (() -> Void)? = nil) {
+    init(
+        store: BaseContentStore,
+        categoryName: String,
+        subcategoryName: String,
+        articleID: Int,
+        onRequestNavigation: @escaping (BaseNavigationRequest) -> Void
+    ) {
         self.store = store
         self.categoryName = categoryName
         self.subcategoryName = subcategoryName
         self.articleID = articleID
-        self.onTapCategory = onTapCategory
-        self.onTapBase = onTapBase
+        self.onRequestNavigation = onRequestNavigation
     }
 
     var body: some View {
@@ -220,15 +290,36 @@ private struct ArticleDetailView: View {
 
                 let crumbs = [
                     BreadcrumbItem(title: .localizedKey("tab.base"), action: {
-                        dismiss()
-                        onTapBase?()
+                        triggerBreadcrumbNavigation(
+                            request: BaseNavigationRequest(
+                                path: [],
+                                animate: true,
+                                activateTab: false
+                            )
+                        )
                     }),
                     BreadcrumbItem(title: .plain(categoryName), action: {
-                        dismiss()
-                        onTapCategory?()
+                        triggerBreadcrumbNavigation(
+                            request: BaseNavigationRequest(
+                                path: [
+                                    .category(name: categoryName)
+                                ],
+                                animate: true,
+                                activateTab: false
+                            )
+                        )
                     }),
                     BreadcrumbItem(title: .plain(subcategoryName), action: {
-                        dismiss()
+                        triggerBreadcrumbNavigation(
+                            request: BaseNavigationRequest(
+                                path: [
+                                    .category(name: categoryName),
+                                    .subcategory(category: categoryName, name: subcategoryName)
+                                ],
+                                animate: true,
+                                activateTab: false
+                            )
+                        )
                     }),
                     BreadcrumbItem(title: .plain(article.title), action: nil)
                 ]
@@ -320,6 +411,18 @@ private struct ArticleDetailView: View {
             }
         }
     }
+
+    private func triggerBreadcrumbNavigation(request: BaseNavigationRequest?) {
+        if let request {
+            DispatchQueue.main.async {
+                onRequestNavigation(request)
+            }
+        } else {
+            withAnimation(.easeInOut(duration: 0.24)) {
+                dismiss()
+            }
+        }
+    }
 }
 
 private struct CategoryRowView: View {
@@ -378,38 +481,41 @@ private struct ArticleRowView: View {
     let title: String
     let isFavorite: Bool
     let isCompleted: Bool
-    let toggleFavorite: () -> Void
-    var tint: Color
+    let tint: Color
+    let route: BaseRoute
+    let onToggleFavorite: () -> Void
 
-    init(title: String, isFavorite: Bool, isCompleted: Bool, tint: Color = Color(red: 0.92, green: 0.21, blue: 0.32), toggleFavorite: @escaping () -> Void) {
+    init(
+        title: String,
+        isFavorite: Bool,
+        isCompleted: Bool,
+        tint: Color = Color(red: 0.92, green: 0.21, blue: 0.32),
+        route: BaseRoute,
+        onToggleFavorite: @escaping () -> Void
+    ) {
         self.title = title
         self.isFavorite = isFavorite
         self.isCompleted = isCompleted
         self.tint = tint
-        self.toggleFavorite = toggleFavorite
+        self.route = route
+        self.onToggleFavorite = onToggleFavorite
     }
 
     var body: some View {
         HStack(spacing: 12) {
             FavoriteButton(
                 isFavorite: isFavorite,
-                action: toggleFavorite,
+                action: onToggleFavorite,
                 tint: tint
             )
 
-            Text(title)
-                .font(.body.weight(.semibold))
-                .foregroundStyle(.primary)
-                .multilineTextAlignment(.leading)
-
-            Spacer()
-
-            if isCompleted {
-                CompletedBadge()
+            NavigationLink(value: route) {
+                ArticleRowMainContent(
+                    title: title,
+                    isCompleted: isCompleted
+                )
             }
-
-            Image(systemName: "chevron.right")
-                .foregroundStyle(Color(.tertiaryLabel))
+            .buttonStyle(.plain)
         }
         .padding(.vertical, 14)
         .padding(.horizontal, 16)
@@ -424,13 +530,43 @@ private struct ArticleRowView: View {
     }
 }
 
+private struct ArticleRowMainContent: View {
+    let title: String
+    let isCompleted: Bool
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Text(title)
+                .font(isCompleted ? .footnote.weight(.semibold) : .body.weight(.semibold))
+                .foregroundStyle(.primary)
+                .multilineTextAlignment(.leading)
+
+            Spacer()
+
+            if isCompleted {
+                CompletedBadge()
+            }
+
+            Image(systemName: "chevron.right")
+                .foregroundStyle(Color(.tertiaryLabel))
+        }
+        .contentShape(Rectangle())
+    }
+}
+
 private struct FavoriteButton: View {
     let isFavorite: Bool
     let action: () -> Void
     var tint: Color = Color(red: 0.92, green: 0.21, blue: 0.32)
 
     var body: some View {
-        Button(action: action) {
+        Button {
+            var transaction = Transaction()
+            transaction.disablesAnimations = true
+            withTransaction(transaction) {
+                action()
+            }
+        } label: {
             Image(systemName: isFavorite ? "heart.fill" : "heart")
                 .font(.system(size: 20, weight: .semibold))
                 .foregroundStyle(isFavorite ? tint : Color(.tertiaryLabel))
@@ -475,7 +611,7 @@ private struct CompletedButtonLabel: View {
 private struct CompletedBadge: View {
     var body: some View {
         Text("base.article.completed_badge")
-            .font(.caption.bold())
+            .font(.caption2.weight(.semibold))
             .foregroundStyle(Color.green)
             .padding(.horizontal, 10)
             .padding(.vertical, 4)
@@ -535,6 +671,7 @@ private struct BreadcrumbBar: View {
     let activeID: UUID?
 
     @State private var scrollTrigger = UUID()
+    @State private var isScrollScheduled = false
 
     var body: some View {
         ScrollViewReader { proxy in
@@ -602,13 +739,18 @@ private struct BreadcrumbBar: View {
     }
 
     private func scheduleScroll() {
-        scrollTrigger = UUID()
+        guard !isScrollScheduled else { return }
+        isScrollScheduled = true
+        DispatchQueue.main.async {
+            scrollTrigger = UUID()
+            isScrollScheduled = false
+        }
     }
 
     private func scrollToActive(proxy: ScrollViewProxy) {
         let targetID = activeID ?? items.last?.id
         guard let id = targetID else { return }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.08) {
+        DispatchQueue.main.async {
             withAnimation(.easeOut(duration: 0.25)) {
                 proxy.scrollTo(id, anchor: .trailing)
             }

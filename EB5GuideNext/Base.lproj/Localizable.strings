@@ -166,6 +166,21 @@
 // Home
 ///////////////////////////
 "home.placeholder" = "Home screen";
+"home.title" = "EB-5 HUB";
+"home.language.english" = "English";
+"home.language.chinese" = "简体中文";
+"home.language.vietnamese" = "Tiếng Việt";
+"home.language.korean" = "한국어";
+"home.section.articles.title" = "Articles";
+"home.section.articles.button" = "Explore EB-5 Base";
+"home.favorites.title" = "Favorites";
+"home.favorites.empty" = "Nothing saved yet.";
+"home.favorites.news" = "Favorite News";
+"home.favorites.projects" = "Favorite Projects";
+"home.language.sheet.title" = "Choose language";
+"common.cancel" = "Cancel";
+"home.article.unavailable" = "This item is unavailable.";
+"home.article.title" = "Article";
 
 
 ///////////////////////////

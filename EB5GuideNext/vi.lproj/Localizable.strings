@@ -166,6 +166,21 @@
 // Home
 ///////////////////////////
 "home.placeholder" = "Màn hình trang chủ";
+"home.title" = "EB-5 HUB";
+"home.language.english" = "English";
+"home.language.chinese" = "简体中文";
+"home.language.vietnamese" = "Tiếng Việt";
+"home.language.korean" = "한국어";
+"home.section.articles.title" = "Bài viết";
+"home.section.articles.button" = "Khám phá EB-5 Base";
+"home.favorites.title" = "Mục yêu thích";
+"home.favorites.empty" = "Chưa có mục nào được lưu.";
+"home.favorites.news" = "Tin tức yêu thích";
+"home.favorites.projects" = "Dự án yêu thích";
+"home.language.sheet.title" = "Chọn ngôn ngữ";
+"common.cancel" = "Hủy";
+"home.article.unavailable" = "Nội dung này hiện không khả dụng.";
+"home.article.title" = "Bài viết";
 
 
 ///////////////////////////

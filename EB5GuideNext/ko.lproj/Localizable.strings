@@ -166,6 +166,21 @@
 // Home
 ///////////////////////////
 "home.placeholder" = "홈 화면";
+"home.title" = "EB-5 HUB";
+"home.language.english" = "English";
+"home.language.chinese" = "简体中文";
+"home.language.vietnamese" = "Tiếng Việt";
+"home.language.korean" = "한국어";
+"home.section.articles.title" = "기사";
+"home.section.articles.button" = "EB-5 Base 둘러보기";
+"home.favorites.title" = "즐겨찾기";
+"home.favorites.empty" = "아직 저장한 항목이 없습니다.";
+"home.favorites.news" = "즐겨찾는 뉴스";
+"home.favorites.projects" = "즐겨찾는 프로젝트";
+"home.language.sheet.title" = "언어 선택";
+"common.cancel" = "취소";
+"home.article.unavailable" = "이 항목을 사용할 수 없습니다.";
+"home.article.title" = "기사";
 
 
 ///////////////////////////

@@ -166,6 +166,21 @@
 // Home
 ///////////////////////////
 "home.placeholder" = "首页";
+"home.title" = "EB-5 HUB";
+"home.language.english" = "English";
+"home.language.chinese" = "简体中文";
+"home.language.vietnamese" = "Tiếng Việt";
+"home.language.korean" = "한국어";
+"home.section.articles.title" = "文章";
+"home.section.articles.button" = "探索 EB-5 Base";
+"home.favorites.title" = "收藏夹";
+"home.favorites.empty" = "暂无收藏内容。";
+"home.favorites.news" = "收藏的新闻";
+"home.favorites.projects" = "收藏的项目";
+"home.language.sheet.title" = "选择语言";
+"common.cancel" = "取消";
+"home.article.unavailable" = "该内容暂不可用。";
+"home.article.title" = "文章";
 
 
 ///////////////////////////
