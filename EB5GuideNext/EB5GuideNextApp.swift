@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct EB5GuideNextApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var languageManager = LanguageManager()
     @AppStorage("hasOnboarded") private var hasOnboarded: Bool = false
 

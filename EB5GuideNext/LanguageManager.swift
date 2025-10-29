@@ -2,22 +2,39 @@ import SwiftUI
 import Combine
 
 final class LanguageManager: ObservableObject {
-    @AppStorage("selectedLanguageCode") private var storedCode: String = "en"
+    static let languageDidChangeNotification = Notification.Name("LanguageManager.languageDidChange")
+    static let storageKey = "selectedLanguageCode"
+    static let supportedLanguageCodes: [String] = ["en", "zh-Hans", "vi", "ko"]
+    static func messagingCode(for normalizedCode: String) -> String {
+        switch normalizedCode.lowercased() {
+        case "zh-hans":
+            return "zh"
+        case "en", "vi", "ko":
+            return normalizedCode.lowercased()
+        default:
+            return normalizedCode.lowercased()
+        }
+    }
+
+    @AppStorage(LanguageManager.storageKey) private var storedCode: String = "en"
 
     @Published var currentLocale: Locale = Locale(identifier: "en")
     private var cachedBundles: [String: Bundle] = [:]
 
     init() {
-        currentLocale = Locale(identifier: storedCode)
+        let normalized = LanguageManager.normalizedCode(for: storedCode)
+        storedCode = normalized
+        currentLocale = Locale(identifier: normalized)
     }
 
     func setLanguage(code: String) {
         // Normalize a few common codes to match your .lproj folders
-        let normalized = normalize(code)
+        let normalized = LanguageManager.normalizedCode(for: code)
         storedCode = normalized
         cachedBundles.removeAll()
         // Always assign a new Locale to trigger UI updates even if the code didn't change
         currentLocale = Locale(identifier: normalized)
+        NotificationCenter.default.post(name: LanguageManager.languageDidChangeNotification, object: normalized)
     }
 
     func localizedString(for key: String) -> String {
@@ -41,7 +58,7 @@ final class LanguageManager: ObservableObject {
         localizedFormat("base.completed_format", completed, total)
     }
 
-    private func normalize(_ code: String) -> String {
+    static func normalizedCode(for code: String) -> String {
         switch code.lowercased() {
         case "zh", "zh-cn", "zh-hans": return "zh-Hans"
         case "en-us", "en": return "en"

@@ -179,6 +179,7 @@
 "home.favorites.projects" = "Favorite Projects";
 "home.language.sheet.title" = "Choose language";
 "common.cancel" = "Cancel";
+"common.retry" = "Try Again";
 "home.article.unavailable" = "This item is unavailable.";
 "home.article.title" = "Article";
 
@@ -227,7 +228,18 @@
 ///////////////////////////
 // News
 ///////////////////////////
-"news.placeholder" = "Latest news and updates";
+"news.loading" = "Loading headlines...";
+"news.empty.title" = "No stories yet";
+"news.empty.subtitle" = "Check back soon for the latest EB-5 insights.";
+"news.error.title" = "Can't load news";
+"news.data_version" = "Updated data version %@";
+"news.favorites.add" = "Save to Favorites";
+"news.favorites.remove" = "Remove Favorite";
+"news.detail.title" = "News";
+"news.detail.category_default" = "EB-5 Update";
+"news.share" = "Share Article";
+"news.reading_time.minutes" = "%d min read";
+"news.error.partial_refresh" = "We couldn't refresh every section. Pull to refresh to try again.";
 
 
 ///////////////////////////

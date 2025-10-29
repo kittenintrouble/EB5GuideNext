@@ -179,6 +179,7 @@
 "home.favorites.projects" = "즐겨찾는 프로젝트";
 "home.language.sheet.title" = "언어 선택";
 "common.cancel" = "취소";
+"common.retry" = "다시 시도";
 "home.article.unavailable" = "이 항목을 사용할 수 없습니다.";
 "home.article.title" = "기사";
 
@@ -227,7 +228,18 @@
 ///////////////////////////
 // News
 ///////////////////////////
-"news.placeholder" = "최신 뉴스와 업데이트";
+"news.loading" = "뉴스를 불러오는 중…";
+"news.empty.title" = "등록된 뉴스가 없습니다";
+"news.empty.subtitle" = "잠시 후 EB-5 최신 소식을 다시 확인해 주세요.";
+"news.error.title" = "뉴스를 불러올 수 없습니다";
+"news.data_version" = "데이터 버전 %@";
+"news.favorites.add" = "즐겨찾기에 추가";
+"news.favorites.remove" = "즐겨찾기에서 제거";
+"news.detail.title" = "뉴스";
+"news.detail.category_default" = "EB-5 업데이트";
+"news.share" = "기사 공유";
+"news.reading_time.minutes" = "읽는 데 약 %d분";
+"news.error.partial_refresh" = "일부 콘텐츠를 새로고침하지 못했습니다. 아래로 당겨 다시 시도하세요.";
 
 
 ///////////////////////////

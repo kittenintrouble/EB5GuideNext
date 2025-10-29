@@ -179,6 +179,7 @@
 "home.favorites.projects" = "Dự án yêu thích";
 "home.language.sheet.title" = "Chọn ngôn ngữ";
 "common.cancel" = "Hủy";
+"common.retry" = "Thử lại";
 "home.article.unavailable" = "Nội dung này hiện không khả dụng.";
 "home.article.title" = "Bài viết";
 
@@ -227,7 +228,18 @@
 ///////////////////////////
 // News
 ///////////////////////////
-"news.placeholder" = "Tin tức và cập nhật mới nhất";
+"news.loading" = "Đang tải bản tin…";
+"news.empty.title" = "Chưa có tin tức";
+"news.empty.subtitle" = "Quay lại sau để xem các thông tin EB-5 mới nhất.";
+"news.error.title" = "Không thể tải tin tức";
+"news.data_version" = "Phiên bản dữ liệu %@";
+"news.favorites.add" = "Lưu vào mục ưa thích";
+"news.favorites.remove" = "Bỏ khỏi mục ưa thích";
+"news.detail.title" = "Tin tức";
+"news.detail.category_default" = "Cập nhật EB-5";
+"news.share" = "Chia sẻ bài viết";
+"news.reading_time.minutes" = "Đọc khoảng %d phút";
+"news.error.partial_refresh" = "Không thể làm mới toàn bộ nội dung. Kéo xuống để thử lại.";
 
 
 ///////////////////////////

@@ -15,6 +15,7 @@ struct BaseNavigationRequest {
 struct HomeView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var baseStore: BaseContentStore
+    @EnvironmentObject private var newsStore: NewsStore
     @Binding var homeNavigationPath: NavigationPath
     let onRequestBaseNavigation: (BaseNavigationRequest) -> Void
 
@@ -64,11 +65,37 @@ struct HomeView: View {
         }
     }
 
-    private var favoriteNewsItems: [FavoriteCardContent] {
-        []
+    private var favoriteNewsItems: [HomeFavoriteSimpleItem] {
+        let favorites = newsStore.favorites.compactMap { id -> HomeFavoriteSimpleItem? in
+            guard let article = newsStore.summary(withID: id) else { return nil }
+            return HomeFavoriteSimpleItem(
+                id: article.id,
+                title: article.title,
+                subtitle: article.formattedDate(locale: languageManager.currentLocale),
+                destination: .news(id: article.id),
+                isFavorite: newsStore.isFavorite(id: article.id),
+                sortDate: article.publishedDate
+            )
+        }
+
+        return favorites.sorted { lhs, rhs in
+            switch (lhs.sortDate, rhs.sortDate) {
+            case let (lhsDate?, rhsDate?):
+                if lhsDate == rhsDate {
+                    return lhs.title.localizedCaseInsensitiveCompare(rhs.title) == .orderedAscending
+                }
+                return lhsDate > rhsDate
+            case (_?, nil):
+                return true
+            case (nil, _?):
+                return false
+            case (nil, nil):
+                return lhs.title.localizedCaseInsensitiveCompare(rhs.title) == .orderedAscending
+            }
+        }
     }
 
-    private var favoriteProjectItems: [FavoriteCardContent] {
+    private var favoriteProjectItems: [HomeFavoriteSimpleItem] {
         []
     }
 
@@ -91,7 +118,12 @@ struct HomeView: View {
                         title: languageManager.localizedString(for: "home.favorites.news"),
                         emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
                         items: favoriteNewsItems,
-                        iconSystemName: "newspaper"
+                        iconSystemName: "newspaper",
+                        onToggleFavorite: { item in
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                newsStore.toggleFavorite(id: item.id)
+                            }
+                        }
                     )
 
                     FavoritesSimpleSection(
@@ -147,6 +179,8 @@ private extension HomeView {
         switch destination {
         case .article(let id, let disableBaseAnimation):
             articleDetailView(articleID: id, disableBaseNavigationAnimation: disableBaseAnimation)
+        case .news(let id):
+            NewsDetailView(articleID: id, initialSummary: newsStore.summary(withID: id))
         }
     }
 }
@@ -310,14 +344,16 @@ private struct HomeCompletedBadge: View {
 private struct FavoritesSimpleSection: View {
     let title: String
     let emptyMessage: String
-    let items: [FavoriteCardContent]
+    let items: [HomeFavoriteSimpleItem]
     let iconSystemName: String?
+    let onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)?
 
-    init(title: String, emptyMessage: String, items: [FavoriteCardContent], iconSystemName: String? = nil) {
+    init(title: String, emptyMessage: String, items: [HomeFavoriteSimpleItem], iconSystemName: String? = nil, onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)? = nil) {
         self.title = title
         self.emptyMessage = emptyMessage
         self.items = items
         self.iconSystemName = iconSystemName
+        self.onToggleFavorite = onToggleFavorite
     }
 
     var body: some View {
@@ -359,7 +395,7 @@ private struct FavoritesSimpleSection: View {
         }
     }
 
-    private func simpleRow(for item: FavoriteCardContent) -> some View {
+    private func simpleRow(for item: HomeFavoriteSimpleItem) -> some View {
         HStack(alignment: .center, spacing: 12) {
             VStack(alignment: .leading, spacing: 4) {
                 Text(item.title)
@@ -367,14 +403,31 @@ private struct FavoritesSimpleSection: View {
                     .foregroundStyle(.primary)
                     .lineLimit(2)
 
+                if let subtitle = item.subtitle {
+                    Text(subtitle)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
             }
 
             Spacer()
 
             if item.isFavorite {
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 16, weight: .semibold))
-                    .foregroundColor(Color.red)
+                if let onToggleFavorite {
+                    Button {
+                        onToggleFavorite(item)
+                    } label: {
+                        Image(systemName: "heart.fill")
+                            .font(.system(size: 16, weight: .semibold))
+                            .foregroundColor(Color.red)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(Text(LocalizedStringKey("news.favorites.remove")))
+                } else {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 16, weight: .semibold))
+                        .foregroundColor(Color.red)
+                }
             } else if item.destination != nil {
                 Image(systemName: "chevron.right")
                     .font(.system(size: 14, weight: .semibold))
@@ -408,8 +461,18 @@ private struct FavoriteCardContent: Identifiable {
     }
 }
 
+private struct HomeFavoriteSimpleItem: Identifiable {
+    let id: String
+    let title: String
+    let subtitle: String?
+    let destination: FavoriteNavigationDestination?
+    let isFavorite: Bool
+    let sortDate: Date?
+}
+
 private enum FavoriteNavigationDestination: Hashable {
     case article(id: Int, disableBaseAnimation: Bool = false)
+    case news(id: String)
 }
 
 extension HomeView {

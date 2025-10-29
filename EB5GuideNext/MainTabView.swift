@@ -1,13 +1,17 @@
 import SwiftUI
+import Combine
 
 struct MainTabView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @StateObject private var baseStore: BaseContentStore
     @StateObject private var quizStore: QuizContentStore
+    @StateObject private var newsStore: NewsStore
     @State private var selectedTab: Tab = .home
     @State private var baseNavigationPath: [BaseRoute] = []
     @State private var homeNavigationPath = NavigationPath()
     @State private var pendingBaseNavigationRequest: BaseNavigationRequest?
+    @State private var pendingNewsArticleID: String?
+    private let pendingNewsDefaultsKey = "PendingNewsArticleID"
 
     enum Tab: Hashable {
         case home
@@ -19,8 +23,10 @@ struct MainTabView: View {
 
     init() {
         let baseStore = BaseContentStore()
+        let newsStore = NewsStore()
         _baseStore = StateObject(wrappedValue: baseStore)
         _quizStore = StateObject(wrappedValue: QuizContentStore(baseStore: baseStore))
+        _newsStore = StateObject(wrappedValue: newsStore)
     }
 
     var body: some View {
@@ -53,8 +59,18 @@ struct MainTabView: View {
         }
         .environmentObject(baseStore)
         .environmentObject(quizStore)
+        .environmentObject(newsStore)
         .onAppear {
             baseStore.loadArticles(for: languageManager.currentLocale.identifier)
+            Task {
+                await newsStore.refresh(language: languageManager.currentLocale.identifier, force: false)
+            }
+            if pendingNewsArticleID == nil,
+               let stored = UserDefaults.standard.string(forKey: pendingNewsDefaultsKey) {
+                pendingNewsArticleID = stored
+                selectedTab = .news
+                triggerNewsDeepLinkIfNeeded(stored)
+            }
         }
         .onChange(of: selectedTab) { newValue in
             if newValue == .home {
@@ -65,6 +81,8 @@ struct MainTabView: View {
                 } else {
                     resetBaseNavigationPath()
                 }
+            } else if newValue == .news, let articleID = pendingNewsArticleID {
+                triggerNewsDeepLinkIfNeeded(articleID)
             }
         }
         .onChange(of: languageManager.currentLocale.identifier) { newValue in
@@ -72,6 +90,15 @@ struct MainTabView: View {
             baseNavigationPath = []
             homeNavigationPath = NavigationPath()
             pendingBaseNavigationRequest = nil
+            Task {
+                await newsStore.refresh(language: newValue, force: true)
+            }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .newsNotificationReceived)) { notification in
+            guard let articleID = notification.userInfo?["article_id"] as? String else { return }
+            pendingNewsArticleID = articleID
+            selectedTab = .news
+            triggerNewsDeepLinkIfNeeded(articleID)
         }
     }
 
@@ -125,14 +152,13 @@ struct MainTabView: View {
             baseNavigationPath = []
         }
     }
-}
 
-struct NewsView: View {
-    var body: some View {
-        NavigationStack {
-            Text("news.placeholder")
-                .navigationTitle("tab.news")
-                .navigationBarTitleDisplayMode(.large)
+    private func triggerNewsDeepLinkIfNeeded(_ articleID: String) {
+        guard selectedTab == .news else { return }
+        DispatchQueue.main.async {
+            newsStore.requestOpenArticle(id: articleID)
+            pendingNewsArticleID = nil
+            UserDefaults.standard.removeObject(forKey: pendingNewsDefaultsKey)
         }
     }
 }

@@ -179,6 +179,7 @@
 "home.favorites.projects" = "收藏的项目";
 "home.language.sheet.title" = "选择语言";
 "common.cancel" = "取消";
+"common.retry" = "重试";
 "home.article.unavailable" = "该内容暂不可用。";
 "home.article.title" = "文章";
 
@@ -227,7 +228,18 @@
 ///////////////////////////
 // News
 ///////////////////////////
-"news.placeholder" = "最新新闻与更新";
+"news.loading" = "正在加载新闻…";
+"news.empty.title" = "暂无新闻";
+"news.empty.subtitle" = "稍后回来查看最新的 EB-5 资讯。";
+"news.error.title" = "无法加载新闻";
+"news.data_version" = "数据版本 %@";
+"news.favorites.add" = "加入收藏";
+"news.favorites.remove" = "移出收藏";
+"news.detail.title" = "新闻";
+"news.detail.category_default" = "EB-5 更新";
+"news.share" = "分享文章";
+"news.reading_time.minutes" = "预计阅读 %d 分钟";
+"news.error.partial_refresh" = "部分内容未能刷新，请下拉重新加载。";
 
 
 ///////////////////////////
