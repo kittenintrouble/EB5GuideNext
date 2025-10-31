@@ -27,6 +27,10 @@ final class LanguageManager: ObservableObject {
         currentLocale = Locale(identifier: normalized)
     }
 
+    var currentAPICode: String {
+        LanguageManager.apiCode(for: currentLocale.identifier)
+    }
+
     func setLanguage(code: String) {
         // Normalize a few common codes to match your .lproj folders
         let normalized = LanguageManager.normalizedCode(for: code)
@@ -65,6 +69,16 @@ final class LanguageManager: ObservableObject {
         case "vi-vn", "vi": return "vi"
         case "ko-kr", "ko": return "ko"
         default: return code
+        }
+    }
+
+    static func apiCode(for code: String) -> String {
+        let normalized = normalizedCode(for: code)
+        switch normalized {
+        case "zh-Hans":
+            return "zh"
+        default:
+            return normalized.lowercased()
         }
     }
 

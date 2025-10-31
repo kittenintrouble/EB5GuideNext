@@ -6,6 +6,7 @@ struct MainTabView: View {
     @StateObject private var baseStore: BaseContentStore
     @StateObject private var quizStore: QuizContentStore
     @StateObject private var newsStore: NewsStore
+    @StateObject private var projectsStore = ProjectsStore()
     @State private var selectedTab: Tab = .home
     @State private var baseNavigationPath: [BaseRoute] = []
     @State private var homeNavigationPath = NavigationPath()
@@ -60,6 +61,7 @@ struct MainTabView: View {
         .environmentObject(baseStore)
         .environmentObject(quizStore)
         .environmentObject(newsStore)
+        .environmentObject(projectsStore)
         .onAppear {
             baseStore.loadArticles(for: languageManager.currentLocale.identifier)
             Task {
@@ -159,16 +161,6 @@ struct MainTabView: View {
             newsStore.requestOpenArticle(id: articleID)
             pendingNewsArticleID = nil
             UserDefaults.standard.removeObject(forKey: pendingNewsDefaultsKey)
-        }
-    }
-}
-
-struct ProjectsView: View {
-    var body: some View {
-        NavigationStack {
-            Text("projects.placeholder")
-                .navigationTitle("tab.projects")
-                .navigationBarTitleDisplayMode(.large)
         }
     }
 }

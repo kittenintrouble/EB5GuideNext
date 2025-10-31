@@ -16,8 +16,10 @@ struct HomeView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var baseStore: BaseContentStore
     @EnvironmentObject private var newsStore: NewsStore
+    @EnvironmentObject private var projectsStore: ProjectsStore
     @Binding var homeNavigationPath: NavigationPath
     let onRequestBaseNavigation: (BaseNavigationRequest) -> Void
+    @StateObject private var projectImageLoader = ProjectImageLoadingCoordinator()
 
     private var languageOptions: [LanguageOption] { LanguageOption.supported }
 
@@ -74,7 +76,8 @@ struct HomeView: View {
                 subtitle: article.formattedDate(locale: languageManager.currentLocale),
                 destination: .news(id: article.id),
                 isFavorite: newsStore.isFavorite(id: article.id),
-                sortDate: article.publishedDate
+                sortDate: article.publishedDate,
+                project: nil
             )
         }
 
@@ -96,7 +99,26 @@ struct HomeView: View {
     }
 
     private var favoriteProjectItems: [HomeFavoriteSimpleItem] {
-        []
+        let items: [HomeFavoriteSimpleItem] = projectsStore.favorites.compactMap { id in
+            guard let project = projectsStore.project(withID: id) else { return nil }
+            return HomeFavoriteSimpleItem(
+                id: project.id,
+                title: project.title,
+                subtitle: project.location,
+                destination: .project(id: project.id),
+                isFavorite: true,
+                sortDate: nil,
+                project: project
+            )
+        }
+
+        return items.sorted { lhs, rhs in
+            lhs.title.localizedCaseInsensitiveCompare(rhs.title) == .orderedAscending
+        }
+    }
+
+    private var favoriteProjectImageURLs: [String] {
+        favoriteProjectItems.compactMap { $0.project?.images.first?.url }
     }
 
     var body: some View {
@@ -119,6 +141,7 @@ struct HomeView: View {
                         emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
                         items: favoriteNewsItems,
                         iconSystemName: "newspaper",
+                        languageManager: languageManager,
                         onToggleFavorite: { item in
                             withAnimation(.easeInOut(duration: 0.2)) {
                                 newsStore.toggleFavorite(id: item.id)
@@ -130,8 +153,24 @@ struct HomeView: View {
                         title: languageManager.localizedString(for: "home.favorites.projects"),
                         emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
                         items: favoriteProjectItems,
-                        iconSystemName: "folder"
+                        iconSystemName: "folder",
+                        languageManager: languageManager,
+                        onToggleFavorite: { item in
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                projectsStore.toggleFavorite(id: item.id)
+                            }
+                        }
                     )
+                    .environmentObject(projectImageLoader)
+                    .onAppear {
+                        projectImageLoader.activateList(with: favoriteProjectImageURLs)
+                    }
+                    .onDisappear {
+                        projectImageLoader.pauseList()
+                    }
+                    .onChange(of: favoriteProjectImageURLs) { urls in
+                        projectImageLoader.activateList(with: urls)
+                    }
                 }
                 .padding(.horizontal, 20)
                 .padding(.top, 24)
@@ -181,6 +220,8 @@ private extension HomeView {
             articleDetailView(articleID: id, disableBaseNavigationAnimation: disableBaseAnimation)
         case .news(let id):
             NewsDetailView(articleID: id, initialSummary: newsStore.summary(withID: id))
+        case .project(let id):
+            ProjectDetailView(projectID: id)
         }
     }
 }
@@ -347,13 +388,15 @@ private struct FavoritesSimpleSection: View {
     let items: [HomeFavoriteSimpleItem]
     let iconSystemName: String?
     let onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)?
+    let languageManager: LanguageManager?
 
-    init(title: String, emptyMessage: String, items: [HomeFavoriteSimpleItem], iconSystemName: String? = nil, onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)? = nil) {
+    init(title: String, emptyMessage: String, items: [HomeFavoriteSimpleItem], iconSystemName: String? = nil, languageManager: LanguageManager? = nil, onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)? = nil) {
         self.title = title
         self.emptyMessage = emptyMessage
         self.items = items
         self.iconSystemName = iconSystemName
         self.onToggleFavorite = onToggleFavorite
+        self.languageManager = languageManager
     }
 
     var body: some View {
@@ -395,51 +438,63 @@ private struct FavoritesSimpleSection: View {
         }
     }
 
+    @ViewBuilder
     private func simpleRow(for item: HomeFavoriteSimpleItem) -> some View {
-        HStack(alignment: .center, spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                Text(item.title)
-                    .font(.callout)
-                    .foregroundStyle(.primary)
-                    .lineLimit(2)
+        if let project = item.project, let languageManager {
+            ProjectCardView(
+                project: project,
+                isFavorite: item.isFavorite,
+                onToggleFavorite: {
+                    onToggleFavorite?(item)
+                },
+                languageManager: languageManager
+            )
+        } else {
+            HStack(alignment: .center, spacing: 12) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text(item.title)
+                        .font(.callout)
+                        .foregroundStyle(.primary)
+                        .lineLimit(2)
 
-                if let subtitle = item.subtitle {
-                    Text(subtitle)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+                    if let subtitle = item.subtitle {
+                        Text(subtitle)
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                 }
-            }
 
-            Spacer()
+                Spacer()
 
-            if item.isFavorite {
-                if let onToggleFavorite {
-                    Button {
-                        onToggleFavorite(item)
-                    } label: {
+                if item.isFavorite {
+                    if let onToggleFavorite {
+                        Button {
+                            onToggleFavorite(item)
+                        } label: {
+                            Image(systemName: "heart.fill")
+                                .font(.system(size: 16, weight: .semibold))
+                                .foregroundColor(Color.red)
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel(Text(LocalizedStringKey("news.favorites.remove")))
+                    } else {
                         Image(systemName: "heart.fill")
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundColor(Color.red)
                     }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel(Text(LocalizedStringKey("news.favorites.remove")))
-                } else {
-                    Image(systemName: "heart.fill")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundColor(Color.red)
+                } else if item.destination != nil {
+                    Image(systemName: "chevron.right")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(Color(.tertiaryLabel))
                 }
-            } else if item.destination != nil {
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(Color(.tertiaryLabel))
             }
+            .padding(16)
+            .background(
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .fill(Color(.systemBackground))
+                    .shadow(color: Color.black.opacity(0.03), radius: 6, x: 0, y: 3)
+            )
         }
-        .padding(16)
-        .background(
-            RoundedRectangle(cornerRadius: 18, style: .continuous)
-                .fill(Color(.systemBackground))
-                .shadow(color: Color.black.opacity(0.03), radius: 6, x: 0, y: 3)
-        )
     }
 }
 
@@ -468,11 +523,13 @@ private struct HomeFavoriteSimpleItem: Identifiable {
     let destination: FavoriteNavigationDestination?
     let isFavorite: Bool
     let sortDate: Date?
+    let project: Project?
 }
 
 private enum FavoriteNavigationDestination: Hashable {
     case article(id: Int, disableBaseAnimation: Bool = false)
     case news(id: String)
+    case project(id: String)
 }
 
 extension HomeView {

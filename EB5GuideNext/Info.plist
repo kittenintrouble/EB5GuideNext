@@ -12,8 +12,8 @@
 	<string>Light</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+	<key>NSAllowsArbitraryLoads</key>
+	<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>api.eb-5.app</key>

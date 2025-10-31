@@ -346,7 +346,7 @@ struct ArticleDetailView: View {
 
                             Spacer()
 
-                            FavoriteButton(
+                            ArticleFavoriteButton(
                                 isFavorite: store.isFavorite(article.id),
                                 action: { store.toggleFavorite(for: article.id) }
                             )
@@ -503,7 +503,7 @@ private struct ArticleRowView: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            FavoriteButton(
+            ArticleFavoriteButton(
                 isFavorite: isFavorite,
                 action: onToggleFavorite,
                 tint: tint
@@ -554,7 +554,7 @@ private struct ArticleRowMainContent: View {
     }
 }
 
-private struct FavoriteButton: View {
+private struct ArticleFavoriteButton: View {
     let isFavorite: Bool
     let action: () -> Void
     var tint: Color = Color(red: 0.92, green: 0.21, blue: 0.32)
