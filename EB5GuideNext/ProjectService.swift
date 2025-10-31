@@ -9,7 +9,8 @@ final class ProjectService: ObservableObject {
     private let formBaseURL = "https://news-service.replit.app"
     private let session: URLSession
     private let sessionDelegate = TrustingURLSessionDelegate()
-    private let inquiryURL: URL
+    private let primaryInquiryURL = URL(string: "https://api.eb-5.app/api/project-form")!
+    private let fallbackInquiryURL = URL(string: "https://news-service.replit.app/api/project-form")!
 
     init() {
         let configuration = URLSessionConfiguration.default
@@ -18,7 +19,6 @@ final class ProjectService: ObservableObject {
         configuration.timeoutIntervalForResource = 12
         configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         session = URLSession(configuration: configuration, delegate: sessionDelegate, delegateQueue: nil)
-        inquiryURL = URL(string: "\(formBaseURL)/api/project-form")!
     }
 
     func fetchProjects(lang: String) async throws -> ProjectsResponse {
@@ -34,41 +34,48 @@ final class ProjectService: ObservableObject {
     }
 
     func submitInquiry(form: ProjectInquiry) async throws -> InquiryResponse {
-        var request = URLRequest(url: inquiryURL)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
-        request.httpBody = try encoder.encode(form)
+        let body = try encoder.encode(form)
 
-        do {
-            let (data, response) = try await session.data(for: request)
+        var lastError: Error?
+        for url in [primaryInquiryURL, fallbackInquiryURL] {
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = body
 
-            guard let httpResponse = response as? HTTPURLResponse else {
-                throw URLError(.badServerResponse)
-            }
+            do {
+                let (data, response) = try await session.data(for: request)
+
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    throw URLError(.badServerResponse)
+                }
 
 #if DEBUG
-            print("📍 Inquiry URL:", inquiryURL.absoluteString)
-            print("📊 Inquiry Status:", httpResponse.statusCode)
-            if let preview = String(data: data, encoding: .utf8) {
-                print("📦 Inquiry Response:", preview.prefix(400))
-            }
+                print("📍 Inquiry URL:", url.absoluteString)
+                print("📊 Inquiry Status:", httpResponse.statusCode)
+                if let preview = String(data: data, encoding: .utf8) {
+                    print("📦 Inquiry Response:", preview.prefix(400))
+                }
 #endif
 
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
 
-            if httpResponse.statusCode == 201 {
-                return try decoder.decode(InquiryResponse.self, from: data)
+                if httpResponse.statusCode == 201 {
+                    return try decoder.decode(InquiryResponse.self, from: data)
+                }
+
+                let errorResponse = try decoder.decode(InquiryResponse.self, from: data)
+                throw ProjectError.inquiryFailed(errorResponse.error ?? errorResponse.message ?? NSLocalizedString("projects.inquiry.error.generic", comment: ""))
+            } catch {
+                lastError = error
+                continue
             }
-
-            let errorResponse = try decoder.decode(InquiryResponse.self, from: data)
-            throw ProjectError.inquiryFailed(errorResponse.error ?? errorResponse.message ?? NSLocalizedString("projects.inquiry.error.generic", comment: ""))
-        } catch {
-            throw error
         }
+
+        throw lastError ?? URLError(.cannotLoadFromNetwork)
     }
 
     private func requestWithFallback<T: Decodable>(path: String, queryItems: [URLQueryItem]) async throws -> T {

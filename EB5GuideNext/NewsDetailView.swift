@@ -16,6 +16,7 @@ struct NewsDetailView: View {
     @State private var errorMessage: String?
     @State private var isLoadingImage: Bool = false
     @State private var heroImageTask: Task<Void, Never>? = nil
+    @State private var loadedHeroImageURL: URL? = nil
 
     init(articleID: String, initialSummary: NewsArticleSummary?) {
         self.articleID = articleID
@@ -43,7 +44,10 @@ struct NewsDetailView: View {
         guard let path = heroMetadata?.url, !path.trimmingCharacters(in: .whitespaces).isEmpty else {
             return nil
         }
-        return URL(string: path)
+        if let normalized = RemoteImageURLNormalizer.url(from: path) {
+            return normalized
+        }
+        return nil
     }
 
     private var heroImageCredit: String? {
@@ -175,7 +179,7 @@ struct NewsDetailView: View {
             summary = newsStore.summary(withID: articleID)
             Task {
                 await loadDetail(force: true)
-                await scheduleHeroImageLoad(force: true)
+                await scheduleHeroImageLoad(force: false)
             }
         }
         .onDisappear {
@@ -285,8 +289,23 @@ private extension NewsDetailView {
     @MainActor
     func scheduleHeroImageLoad(force: Bool) async {
         await cancelHeroImageLoad()
-        guard heroImageStore == nil || force else { return }
-        heroImageTask = Task { await ensureHeroImage(force: force) }
+        guard let currentURL = heroImageURL else {
+            heroImageStore = nil
+            loadedHeroImageURL = nil
+            return
+        }
+
+        let urlChanged = loadedHeroImageURL != currentURL
+        let needsReload = force || heroImageStore == nil || urlChanged
+
+        guard needsReload else { return }
+
+        if urlChanged {
+            heroImageStore = nil
+            loadedHeroImageURL = nil
+        }
+
+        heroImageTask = Task { await ensureHeroImage(force: force || urlChanged) }
     }
 
     @MainActor
@@ -304,46 +323,41 @@ private extension NewsDetailView {
         defer { Task { await MainActor.run(body: endHeroImageLoad) } }
         guard !Task.isCancelled else { return }
 
-        let candidates = candidateImageURLs(from: url)
-
-        if !force, let existing = heroImageStore {
-            for key in candidates {
-                RemoteImageCache.shared.store(existing, for: key)
+        if let existing = heroImageStore, !force {
+            RemoteImageCache.shared.store(existing, for: url)
+            await MainActor.run {
+                loadedHeroImageURL = url
             }
             return
         }
 
-        for key in candidates {
-            if Task.isCancelled { return }
-            if let cached = RemoteImageCache.shared.image(for: key) {
-                for target in candidates {
-                    RemoteImageCache.shared.store(cached, for: target)
-                }
-                await MainActor.run { heroImageStore = cached }
-                if !force {
-                    return
-                }
+        if let cached = RemoteImageCache.shared.image(for: url) {
+            await MainActor.run {
+                heroImageStore = cached
+                loadedHeroImageURL = url
+            }
+            if !force {
+                return
             }
         }
 
-        for key in candidates {
-            if Task.isCancelled { return }
-            do {
-                var request = URLRequest(url: key)
-                request.cachePolicy = force ? .reloadIgnoringLocalCacheData : .returnCacheDataElseLoad
-                request.timeoutInterval = 30
-                let (data, _) = try await NewsImageLoader.shared.dataTask(for: request)
-                if let uiImage = UIImage(data: data) {
-                    for target in candidates {
-                        RemoteImageCache.shared.store(uiImage, for: target)
-                    }
-                    await MainActor.run { heroImageStore = uiImage }
-                    return
+        do {
+            var request = URLRequest(url: url)
+            request.cachePolicy = force ? .reloadIgnoringLocalCacheData : .returnCacheDataElseLoad
+            request.timeoutInterval = 45
+            let (data, _) = try await NewsImageLoader.shared.dataTask(for: request)
+            if let uiImage = UIImage(data: data), uiImage.size.width > 0, uiImage.size.height > 0 {
+                RemoteImageCache.shared.store(uiImage, for: url)
+                await MainActor.run {
+                    heroImageStore = uiImage
+                    loadedHeroImageURL = url
                 }
-            } catch {
-                if Task.isCancelled { return }
-                continue
             }
+        } catch {
+            if Task.isCancelled { return }
+#if DEBUG
+            print("⚠️ Failed to load news image:", url.absoluteString, error.localizedDescription)
+#endif
         }
     }
 
@@ -362,51 +376,6 @@ private extension NewsDetailView {
         heroImageTask = nil
     }
 
-    @MainActor
-    func candidateImageURLs(from url: URL) -> [URL] {
-        guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false) else {
-            return [url]
-        }
-
-        let normalizedHost = components.host?.lowercased()
-        let path = components.path.lowercased()
-        let isStaticAsset = path.contains("/app-img/")
-
-        var hosts: [String] = []
-        if isStaticAsset {
-            hosts.append("eb-5.app")
-            hosts.append("api.eb-5.app")
-            hosts.append("news-service.replit.app")
-            if let normalizedHost, !normalizedHost.isEmpty {
-                hosts.append(normalizedHost)
-            }
-        } else {
-            if let normalizedHost, !normalizedHost.isEmpty {
-                hosts.append(normalizedHost)
-            }
-            hosts.append(contentsOf: ["api.eb-5.app", "news-service.replit.app"])
-        }
-
-        let priorityHosts = hosts.uniqued(prepending: nil)
-
-        var unique: [URL] = []
-        var seen = Set<String>()
-
-        for host in priorityHosts {
-            guard !host.isEmpty else { continue }
-            components.scheme = "https"
-            components.host = host
-            if let candidate = components.url {
-                let key = candidate.absoluteString
-                if !seen.contains(key) {
-                    unique.append(candidate)
-                    seen.insert(key)
-                }
-            }
-        }
-
-        return unique
-    }
 }
 
 // MARK: - Subviews
@@ -627,23 +596,5 @@ private struct NewsCalloutStyle {
             tint = Color.accentColor
             background = Color.accentColor.opacity(0.1)
         }
-    }
-}
-
-extension Array where Element == String {
-    func uniqued(prepending value: String?) -> [String] {
-        var result: [String] = []
-        var seen = Set<String>()
-        if let v = value, !v.isEmpty, !seen.contains(v) {
-            result.append(v)
-            seen.insert(v)
-        }
-        for element in self {
-            if !seen.contains(element) {
-                result.append(element)
-                seen.insert(element)
-            }
-        }
-        return result
     }
 }

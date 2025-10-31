@@ -101,6 +101,48 @@ struct Project: Codable, Identifiable, Equatable {
         case publishedAt
     }
 
+    init(
+        id: String,
+        title: String,
+        name: String?,
+        slug: String?,
+        shortDescription: String,
+        fullDescription: String,
+        location: String,
+        type: String,
+        status: String,
+        developer: String,
+        expectedOpening: String,
+        images: [ProjectImage],
+        financials: Financials,
+        uscis: USCIS,
+        tea: TEA,
+        jobs: Jobs,
+        loanStructure: LoanStructure,
+        published: Bool,
+        publishedAt: String?
+    ) {
+        self.id = id
+        self.title = title
+        self.name = name
+        self.slug = slug
+        self.shortDescription = shortDescription
+        self.fullDescription = fullDescription
+        self.location = location
+        self.type = type
+        self.status = status
+        self.developer = developer
+        self.expectedOpening = expectedOpening
+        self.images = images
+        self.financials = financials
+        self.uscis = uscis
+        self.tea = tea
+        self.jobs = jobs
+        self.loanStructure = loanStructure
+        self.published = published
+        self.publishedAt = publishedAt
+    }
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(String.self, forKey: .id)

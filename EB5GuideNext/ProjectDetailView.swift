@@ -10,6 +10,7 @@ struct ProjectDetailView: View {
 
     @State private var isLoading = false
     @State private var errorMessage: String?
+    @State private var hasLoadedDetail = false
 
     private var project: Project? {
         projectsStore.project(withID: projectID)
@@ -80,8 +81,12 @@ struct ProjectDetailView: View {
         }
         .onDisappear {
             imageLoader.pauseDetail(for: projectID)
+            imageLoader.resumeList()
         }
         .onChange(of: project) { _ in
+            updateDetailImageLoading()
+        }
+        .onChange(of: hasLoadedDetail) { _ in
             updateDetailImageLoading()
         }
     }
@@ -94,21 +99,28 @@ struct ProjectDetailView: View {
         guard !isLoading || force else { return }
         isLoading = true
         errorMessage = nil
+        if force {
+            hasLoadedDetail = false
+        }
         do {
             _ = try await projectsStore.fetchProjectDetail(
                 id: projectID,
                 language: languageIdentifier,
                 force: force
             )
+            hasLoadedDetail = true
         } catch {
             errorMessage = error.localizedDescription
+            if project?.fullDescription.nonEmpty == nil {
+                hasLoadedDetail = false
+            }
         }
         isLoading = false
     }
 
     private func updateDetailImageLoading() {
         let urls = project?.images.map { $0.url } ?? []
-        if urls.isEmpty {
+        if urls.isEmpty || !hasLoadedDetail {
             imageLoader.pauseDetail(for: projectID)
         } else {
             imageLoader.activateDetail(projectID: projectID, urls: urls)
@@ -463,7 +475,8 @@ private struct ProjectImageCarousel: View {
                 RoundedRectangle(cornerRadius: 24, style: .continuous)
                     .fill(Color(.secondarySystemBackground))
 
-                if let loaded = imageLoader.image(for: image.url) {
+                if let loaded = imageLoader.image(for: image.url),
+                   loaded.isRenderable {
                     Image(uiImage: loaded)
                         .resizable()
                         .scaledToFill()
@@ -551,7 +564,8 @@ private struct ProjectImageGalleryFullScreen: View {
         ZStack {
             Color.black
 
-            if let loaded = imageLoader.image(for: image.url) {
+            if let loaded = imageLoader.image(for: image.url),
+               loaded.isRenderable {
                 Image(uiImage: loaded)
                     .resizable()
                     .scaledToFit()
@@ -741,7 +755,12 @@ private struct ProjectInquiryForm: View {
     @State private var submissionSuccessMessage: String?
     @State private var isSubmitting = false
     @State private var showValidation = false
-    @State private var showConsentSheet = false
+    @State private var activeSheet: ActiveSheet?
+    @FocusState private var focusedField: Field?
+
+    private var countries: [Country] {
+        Self.countries(for: languageManager.currentLocale)
+    }
 
     private var isFormValid: Bool {
         validateFirstName()
@@ -784,10 +803,6 @@ private struct ProjectInquiryForm: View {
             if let success = submissionSuccessMessage {
                 SuccessBanner(message: success)
             } else {
-                if let error = submissionError {
-                    ErrorBanner(message: error)
-                }
-
                 VStack(alignment: .leading, spacing: 14) {
                     LabeledInput(
                         title: languageManager.localizedString(for: "projects.form.first_name"),
@@ -796,7 +811,9 @@ private struct ProjectInquiryForm: View {
                         placeholder: languageManager.localizedString(for: "projects.form.first_name.placeholder"),
                         textContentType: .givenName,
                         autocapitalization: .words,
-                        onEditingChanged: { _ in if showValidation { validateFirstName() } }
+                        onEditingChanged: { _ in if showValidation { validateFirstName() } },
+                        focusBinding: $focusedField,
+                        focusValue: .firstName
                     )
 
                     LabeledInput(
@@ -806,7 +823,9 @@ private struct ProjectInquiryForm: View {
                         placeholder: languageManager.localizedString(for: "projects.form.last_name.placeholder"),
                         textContentType: .familyName,
                         autocapitalization: .words,
-                        onEditingChanged: { _ in if showValidation { validateLastName() } }
+                        onEditingChanged: { _ in if showValidation { validateLastName() } },
+                        focusBinding: $focusedField,
+                        focusValue: .lastName
                     )
 
                     LabeledInput(
@@ -818,7 +837,9 @@ private struct ProjectInquiryForm: View {
                         textContentType: .emailAddress,
                         autocapitalization: .never,
                         disableAutocorrection: true,
-                        onEditingChanged: { _ in if showValidation { validateEmail() } }
+                        onEditingChanged: { _ in if showValidation { validateEmail() } },
+                        focusBinding: $focusedField,
+                        focusValue: .email
                     )
 
                     LabeledInput(
@@ -828,25 +849,33 @@ private struct ProjectInquiryForm: View {
                         placeholder: languageManager.localizedString(for: "projects.form.phone.placeholder"),
                         keyboardType: .phonePad,
                         textContentType: .telephoneNumber,
-                        onEditingChanged: { _ in if showValidation { validatePhone() } }
+                        onEditingChanged: { _ in if showValidation { validatePhone() } },
+                        focusBinding: $focusedField,
+                        focusValue: .phoneNumber
                     )
 
-                    LabeledInput(
+                    CountrySelectionField(
                         title: languageManager.localizedString(for: "projects.form.country_birth"),
-                        text: $countryOfBirth,
-                        error: $birthCountryError,
                         placeholder: languageManager.localizedString(for: "projects.form.country_birth.placeholder"),
-                        autocapitalization: .words,
-                        onEditingChanged: { _ in if showValidation { validateCountryOfBirth() } }
+                        selectedCountry: $countryOfBirth,
+                        error: $birthCountryError,
+                        selectedFlag: flagForCountry(countryOfBirth),
+                        onTap: {
+                            focusedField = nil
+                            activeSheet = .birthCountry
+                        }
                     )
 
-                    LabeledInput(
+                    CountrySelectionField(
                         title: languageManager.localizedString(for: "projects.form.current_country"),
-                        text: $currentCountry,
-                        error: $currentCountryError,
                         placeholder: languageManager.localizedString(for: "projects.form.current_country.placeholder"),
-                        autocapitalization: .words,
-                        onEditingChanged: { _ in if showValidation { validateCurrentCountry() } }
+                        selectedCountry: $currentCountry,
+                        error: $currentCountryError,
+                        selectedFlag: flagForCountry(currentCountry),
+                        onTap: {
+                            focusedField = nil
+                            activeSheet = .currentCountry
+                        }
                     )
 
                     VStack(alignment: .leading, spacing: 6) {
@@ -857,6 +886,7 @@ private struct ProjectInquiryForm: View {
                         Menu {
                             ForEach(VisaStatus.allCases) { status in
                                 Button(action: {
+                                    focusedField = nil
                                     selectedVisaStatus = status
                                     if showValidation { validateVisaStatus() }
                                 }) {
@@ -884,6 +914,9 @@ private struct ProjectInquiryForm: View {
                                     .stroke(Color(.quaternaryLabel), lineWidth: 1)
                             )
                         }
+                        .simultaneousGesture(
+                            TapGesture().onEnded { focusedField = nil }
+                        )
 
                         if let visaStatusError {
                             ValidationText(message: visaStatusError)
@@ -892,8 +925,12 @@ private struct ProjectInquiryForm: View {
 
                     AccreditationToggle(
                         isOn: $isAccredited,
-                        onInfoTap: { showConsentSheet = true },
+                        onInfoTap: {
+                            focusedField = nil
+                            activeSheet = .consent
+                        },
                         onToggle: { _ in
+                            focusedField = nil
                             if showValidation { validateAccredited() }
                         }
                     ) {
@@ -903,6 +940,10 @@ private struct ProjectInquiryForm: View {
                     if let accreditedError {
                         ValidationText(message: accreditedError)
                     }
+                }
+
+                if let error = submissionError {
+                    ErrorBanner(message: error)
                 }
 
                 Button {
@@ -929,13 +970,44 @@ private struct ProjectInquiryForm: View {
                 .fill(Color(.systemBackground))
                 .shadow(color: Color.black.opacity(0.05), radius: 12, x: 0, y: 6)
         )
-        .sheet(isPresented: $showConsentSheet) {
-            ConsentNoticeView()
+        .contentShape(Rectangle())
+        .gesture(
+            TapGesture().onEnded { focusedField = nil },
+            including: .gesture
+        )
+        .sheet(item: $activeSheet) { sheet in
+            switch sheet {
+            case .birthCountry:
+                CountryPickerSheet(
+                    title: languageManager.localizedString(for: "projects.form.country_birth"),
+                    searchPrompt: languageManager.localizedString(for: "projects.form.country_birth.placeholder"),
+                    selectedCountry: $countryOfBirth,
+                    countries: countries,
+                    onSelection: { _ in
+                        if showValidation { validateCountryOfBirth() }
+                    }
+                )
                 .environmentObject(languageManager)
+            case .currentCountry:
+                CountryPickerSheet(
+                    title: languageManager.localizedString(for: "projects.form.current_country"),
+                    searchPrompt: languageManager.localizedString(for: "projects.form.current_country.placeholder"),
+                    selectedCountry: $currentCountry,
+                    countries: countries,
+                    onSelection: { _ in
+                        if showValidation { validateCurrentCountry() }
+                    }
+                )
+                .environmentObject(languageManager)
+            case .consent:
+                ConsentNoticeView()
+                    .environmentObject(languageManager)
+            }
         }
     }
 
     private func submit() {
+        focusedField = nil
         showValidation = true
         guard isFormValid else { return }
         guard let visaStatus = selectedVisaStatus else { return }
@@ -982,6 +1054,13 @@ private struct ProjectInquiryForm: View {
                 }
             }
         }
+    }
+
+    private func flagForCountry(_ name: String) -> String {
+        guard let country = countries.first(where: { $0.localizedName == name }) else {
+            return ""
+        }
+        return country.flagEmoji
     }
 
     @discardableResult
@@ -1086,15 +1165,201 @@ private struct ProjectInquiryForm: View {
         )
         .font(.subheadline)
     }
+
+    enum Field: Hashable {
+        case firstName
+        case lastName
+        case email
+        case phoneNumber
+        case birthCountry
+        case currentCountry
+    }
+
+    private enum ActiveSheet: Identifiable {
+        case birthCountry
+        case currentCountry
+        case consent
+
+        var id: Int { hashValue }
+    }
+
+    private struct Country: Identifiable {
+        let code: String
+        let localizedName: String
+
+        var id: String { code }
+
+        var flagEmoji: String {
+            guard code.count == 2 else { return "" }
+            let base: UInt32 = 0x1F1E6
+            let scalars = code.uppercased().unicodeScalars.compactMap { scalar -> UnicodeScalar? in
+                let value = scalar.value
+                guard value >= 65 && value <= 90 else { return nil }
+                return UnicodeScalar(base + (value - 65))
+            }
+            guard scalars.count == 2 else { return "" }
+            return String(scalars.map { Character($0) })
+        }
+    }
+
+    private static var countryCache: [String: [Country]] = [:]
+
+    private static func countries(for locale: Locale) -> [Country] {
+        let identifier = locale.identifier
+        if let cached = countryCache[identifier] {
+            return cached
+        }
+
+        let fallback = Locale(identifier: "en_US_POSIX")
+        let regionCodes: [String]
+        if #available(iOS 16.0, *) {
+            regionCodes = Locale.Region.isoRegions.map { $0.identifier }
+        } else {
+            regionCodes = NSLocale.isoCountryCodes
+        }
+
+        let countries = regionCodes.compactMap { code -> Country? in
+            guard code.count == 2 else { return nil }
+            guard let name = locale.localizedString(forRegionCode: code)
+                ?? fallback.localizedString(forRegionCode: code) else {
+                return nil
+            }
+            if name.trimmingCharacters(in: .whitespacesAndNewlines).lowercased() == "world" {
+                return nil
+            }
+            return Country(code: code, localizedName: name)
+        }
+        .sorted {
+            $0.localizedName.localizedCaseInsensitiveCompare($1.localizedName) == .orderedAscending
+        }
+
+        countryCache[identifier] = countries
+        return countries
+    }
+
+    private struct CountrySelectionField: View {
+        let title: String
+        let placeholder: String
+        @Binding var selectedCountry: String
+        @Binding var error: String?
+        let selectedFlag: String
+        let onTap: () -> Void
+
+        var body: some View {
+            VStack(alignment: .leading, spacing: 6) {
+                Text(title)
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+
+                HStack(spacing: 12) {
+                    if selectedCountry.isEmpty {
+                        Text(placeholder)
+                            .foregroundColor(.secondary)
+                    } else {
+                        if !selectedFlag.isEmpty {
+                            Text(selectedFlag)
+                        }
+                        Text(selectedCountry)
+                            .foregroundColor(.primary)
+                    }
+                    Spacer()
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(.secondary)
+                }
+                .padding(.horizontal, 12)
+                .padding(.vertical, 12)
+                .frame(maxWidth: .infinity)
+                .background(
+                    RoundedRectangle(cornerRadius: 12)
+                        .stroke(Color(.quaternaryLabel), lineWidth: 1)
+                )
+
+                if let error {
+                    ValidationText(message: error)
+                }
+            }
+            .contentShape(Rectangle())
+            .onTapGesture(perform: onTap)
+            .accessibilityElement(children: .combine)
+            .accessibilityAddTraits(.isButton)
+        }
+
+    }
+
+    private struct CountryPickerSheet: View {
+        let title: String
+        let searchPrompt: String
+        @Binding var selectedCountry: String
+        let countries: [Country]
+        let onSelection: (Country) -> Void
+
+        @EnvironmentObject private var languageManager: LanguageManager
+        @Environment(\.dismiss) private var dismiss
+        @State private var searchText = ""
+
+        private var filteredCountries: [Country] {
+            let trimmed = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !trimmed.isEmpty else { return countries }
+            return countries.filter {
+                $0.localizedName.range(of: trimmed, options: .caseInsensitive) != nil
+            }
+        }
+
+        var body: some View {
+            NavigationStack {
+                List(filteredCountries) { country in
+                    Button {
+                        selectedCountry = country.localizedName
+                        onSelection(country)
+                        dismiss()
+                    } label: {
+                        HStack(spacing: 12) {
+                            Text(country.flagEmoji)
+                                .frame(width: 28, alignment: .leading)
+                            Text(country.localizedName)
+                                .multilineTextAlignment(.leading)
+                            Spacer()
+                            if selectedCountry == country.localizedName {
+                                Image(systemName: "checkmark")
+                                    .foregroundColor(.accentColor)
+                            }
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle())
+                    }
+                    .buttonStyle(.plain)
+                }
+                .listStyle(.plain)
+                .searchable(
+                    text: $searchText,
+                    placement: .navigationBarDrawer(displayMode: .always),
+                    prompt: Text(searchPrompt)
+                )
+                .navigationTitle(title)
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: { dismiss() }) {
+                            Text(LocalizedStringKey("common.cancel"))
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 private enum VisaStatus: CaseIterable, Identifiable {
-    case citizen
-    case greenCard
-    case visaE2
     case visaH1B
-    case visaL1
     case visaF1
+    case visaB1B2
+    case visaO1
+    case visaL1
+    case visaJ1
+    case visaE2
+    case visaTN
+    case greenCard
+    case citizen
     case visaOther
     case noVisa
 
@@ -1102,25 +1367,33 @@ private enum VisaStatus: CaseIterable, Identifiable {
 
     var apiValue: String {
         switch self {
-        case .citizen: return "U.S. Citizen"
+        case .visaH1B: return "H-1B"
+        case .visaF1: return "F-1"
+        case .visaB1B2: return "B-1/B-2"
+        case .visaO1: return "O-1"
+        case .visaL1: return "L-1"
+        case .visaJ1: return "J-1"
+        case .visaE2: return "E-2"
+        case .visaTN: return "TN"
         case .greenCard: return "U.S. Green Card"
-        case .visaE2: return "Visa: E-2"
-        case .visaH1B: return "Visa: H-1B"
-        case .visaL1: return "Visa: L-1"
-        case .visaF1: return "Visa: F-1"
-        case .visaOther: return "Visa: Other"
-        case .noVisa: return "No U.S. Visa"
+        case .citizen: return "U.S. Citizen"
+        case .visaOther: return "Other"
+        case .noVisa: return "No USA visa"
         }
     }
 
     private var localizationKey: String {
         switch self {
-        case .citizen: return "projects.form.visa.citizen"
-        case .greenCard: return "projects.form.visa.greenCard"
-        case .visaE2: return "projects.form.visa.visaE2"
         case .visaH1B: return "projects.form.visa.visaH1B"
-        case .visaL1: return "projects.form.visa.visaL1"
         case .visaF1: return "projects.form.visa.visaF1"
+        case .visaB1B2: return "projects.form.visa.visaB1B2"
+        case .visaO1: return "projects.form.visa.visaO1"
+        case .visaL1: return "projects.form.visa.visaL1"
+        case .visaJ1: return "projects.form.visa.visaJ1"
+        case .visaE2: return "projects.form.visa.visaE2"
+        case .visaTN: return "projects.form.visa.visaTN"
+        case .greenCard: return "projects.form.visa.greenCard"
+        case .citizen: return "projects.form.visa.citizen"
         case .visaOther: return "projects.form.visa.visaOther"
         case .noVisa: return "projects.form.visa.noVisa"
         }
@@ -1223,6 +1496,8 @@ private struct LabeledInput: View {
     var autocapitalization: TextInputAutocapitalization? = nil
     var disableAutocorrection: Bool? = nil
     var onEditingChanged: (Bool) -> Void
+    var focusBinding: FocusState<ProjectInquiryForm.Field?>.Binding? = nil
+    var focusValue: ProjectInquiryForm.Field? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -1244,17 +1519,32 @@ private struct LabeledInput: View {
                     .textContentType(textContentType)
                     .optionalAutocapitalization(autocapitalization)
                     .optionalAutocorrectionDisabled(disableAutocorrection)
+                    .applyFocus(focusBinding, value: focusValue)
                     .padding(.horizontal, 12)
                     .padding(.vertical, 10)
             }
             .background(
                 RoundedRectangle(cornerRadius: 12)
-                    .stroke(Color(.quaternaryLabel), lineWidth: 1)
+                .stroke(Color(.quaternaryLabel), lineWidth: 1)
             )
 
             if let error {
                 ValidationText(message: error)
             }
+        }
+    }
+}
+
+private extension View {
+    @ViewBuilder
+    func applyFocus(
+        _ focusBinding: FocusState<ProjectInquiryForm.Field?>.Binding?,
+        value: ProjectInquiryForm.Field?
+    ) -> some View {
+        if let binding = focusBinding, let value {
+            focused(binding, equals: value)
+        } else {
+            self
         }
     }
 }

@@ -5,19 +5,24 @@ import Combine
 
 @MainActor
 final class ProjectImageLoadingCoordinator: ObservableObject {
+    private struct ImageRequest: Equatable, Hashable {
+        let original: String
+        let fetch: URL
+    }
+
     private enum Mode: Equatable {
         case idle
-        case list(urls: [URL])
-        case detail(projectID: String, urls: [URL])
+        case list(requests: [ImageRequest])
+        case detail(projectID: String, requests: [ImageRequest])
 
-        var urls: [URL] {
+        var requests: [ImageRequest] {
             switch self {
             case .idle:
                 return []
-            case .list(let urls):
-                return urls
-            case .detail(_, let urls):
-                return urls
+            case .list(let requests):
+                return requests
+            case .detail(_, let requests):
+                return requests
             }
         }
     }
@@ -28,19 +33,25 @@ final class ProjectImageLoadingCoordinator: ObservableObject {
     private var loadingTask: Task<Void, Never>?
     private let cache: RemoteImageCache
     private let session: URLSession
+    private var lastListRequests: [ImageRequest] = []
 
     init(cache: RemoteImageCache? = nil, session: URLSession? = nil) {
         self.cache = cache ?? RemoteImageCache.shared
-        self.session = session ?? URLSession.shared
+        self.session = session ?? ProjectImageLoadingCoordinator.defaultSession
     }
 
     func image(for urlString: String) -> UIImage? {
-        images[urlString]
+        if let image = images[urlString] {
+            return image
+        }
+        guard let normalized = normalizedURL(from: urlString) else { return nil }
+        return cache.image(for: normalized)
     }
 
     func activateList(with urlStrings: [String]) {
-        let ordered = uniqueURLs(from: urlStrings)
-        switchToMode(.list(urls: ordered))
+        let requests = imageRequests(from: urlStrings)
+        lastListRequests = requests
+        switchToMode(.list(requests: requests))
     }
 
     func pauseList() {
@@ -49,9 +60,14 @@ final class ProjectImageLoadingCoordinator: ObservableObject {
         }
     }
 
+    func resumeList() {
+        guard !lastListRequests.isEmpty else { return }
+        switchToMode(.list(requests: lastListRequests))
+    }
+
     func activateDetail(projectID: String, urls urlStrings: [String]) {
-        let ordered = uniqueURLs(from: urlStrings)
-        switchToMode(.detail(projectID: projectID, urls: ordered))
+        let requests = imageRequests(from: urlStrings)
+        switchToMode(.detail(projectID: projectID, requests: requests))
     }
 
     func pauseDetail(for projectID: String) {
@@ -67,24 +83,23 @@ final class ProjectImageLoadingCoordinator: ObservableObject {
         loadingTask = nil
         currentMode = mode
 
-        let urls = mode.urls
-        publishCachedImages(for: urls)
+        let requests = mode.requests
+        publishCachedImages(for: requests)
 
-        guard !urls.isEmpty, mode != .idle else { return }
+        guard !requests.isEmpty, mode != .idle else { return }
 
         loadingTask = Task { [weak self] in
             guard let self else { return }
-            await self.loadSequentially(urls: urls)
+            await self.loadSequentially(requests: requests)
         }
     }
 
-    private func publishCachedImages(for urls: [URL]) {
+    private func publishCachedImages(for requests: [ImageRequest]) {
         var updated = images
-        for url in urls {
-            let key = url.absoluteString
-            if updated[key] != nil { continue }
-            if let cached = cache.image(for: url) {
-                updated[key] = cached
+        for request in requests {
+            if updated[request.original] != nil { continue }
+            if let cached = cache.image(for: request.fetch) {
+                updated[request.original] = cached
             }
         }
 
@@ -93,31 +108,39 @@ final class ProjectImageLoadingCoordinator: ObservableObject {
         }
     }
 
-    private func loadSequentially(urls: [URL]) async {
-        for url in urls {
+    private func loadSequentially(requests: [ImageRequest]) async {
+        for request in requests {
             if Task.isCancelled { break }
-            if hasImage(for: url) { continue }
+            if hasImage(for: request) { continue }
 
             do {
-                if let image = try await fetchImage(from: url) {
+                if let image = try await fetchImage(for: request) {
                     if Task.isCancelled { break }
-                    cache.store(image, for: url)
-                    images[url.absoluteString] = image
+                    var snapshot = images
+                    snapshot[request.original] = image
+                    images = snapshot
                 }
             } catch {
+                if error is CancellationError { continue }
+                if (error as? URLError)?.code == .cancelled { continue }
 #if DEBUG
-                print("⚠️ Failed to load project image:", url.absoluteString, error.localizedDescription)
+                print("⚠️ Failed to load project image:", request.fetch.absoluteString, error.localizedDescription)
 #endif
             }
         }
     }
 
-    private func fetchImage(from url: URL) async throws -> UIImage? {
-        if let cached = cache.image(for: url) {
+    private func fetchImage(for request: ImageRequest) async throws -> UIImage? {
+        if let cached = cache.image(for: request.fetch) {
+            images[request.original] = cached
             return cached
         }
 
-        let (data, response) = try await session.data(from: url)
+        var urlRequest = URLRequest(url: request.fetch)
+        urlRequest.cachePolicy = .returnCacheDataElseLoad
+        urlRequest.timeoutInterval = 35
+
+        let (data, response) = try await session.data(for: urlRequest)
 
         if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
             throw URLError(.badServerResponse)
@@ -127,30 +150,53 @@ final class ProjectImageLoadingCoordinator: ObservableObject {
             throw URLError(.cannotDecodeContentData)
         }
 
+        if image.size.width <= 0 || image.size.height <= 0 {
+            throw URLError(.cannotDecodeContentData)
+        }
+
+        cache.store(image, for: request.fetch)
         return image
     }
 
-    private func hasImage(for url: URL) -> Bool {
-        if images[url.absoluteString] != nil {
-            return true
+    private func hasImage(for request: ImageRequest) -> Bool {
+        if let memory = images[request.original] {
+            if memory.isRenderable {
+                return true
+            } else {
+                images.removeValue(forKey: request.original)
+            }
         }
-        if cache.image(for: url) != nil {
+        if let cached = cache.image(for: request.fetch) {
+            images[request.original] = cached
             return true
         }
         return false
     }
 
-    private func uniqueURLs(from strings: [String]) -> [URL] {
-        var seen = Set<URL>()
-        var ordered: [URL] = []
+    private func imageRequests(from strings: [String]) -> [ImageRequest] {
+        var seenOriginal = Set<String>()
+        var requests: [ImageRequest] = []
 
         for string in strings {
-            guard let url = URL(string: string) else { continue }
-            if seen.insert(url).inserted {
-                ordered.append(url)
-            }
+            guard seenOriginal.insert(string).inserted else { continue }
+            guard let normalized = normalizedURL(from: string) else { continue }
+            requests.append(ImageRequest(original: string, fetch: normalized))
         }
 
-        return ordered
+        return requests
+    }
+
+    private static let defaultSession: URLSession = {
+        let configuration = URLSessionConfiguration.default
+        configuration.waitsForConnectivity = true
+        configuration.timeoutIntervalForRequest = 35
+        configuration.timeoutIntervalForResource = 90
+        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        configuration.httpMaximumConnectionsPerHost = 2
+        return URLSession(configuration: configuration)
+    }()
+
+    private func normalizedURL(from urlString: String) -> URL? {
+        RemoteImageURLNormalizer.url(from: urlString)
     }
 }

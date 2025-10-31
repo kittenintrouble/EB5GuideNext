@@ -32,7 +32,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
         if let remoteLaunchInfo = launchOptions?[.remoteNotification] as? [AnyHashable: Any] {
             print("📬 App launched from notification: \(remoteLaunchInfo)")
             if shouldDisplayNotification(userInfo: remoteLaunchInfo, applicationState: .inactive) {
-                handleNotification(userInfo: remoteLaunchInfo, applicationState: .inactive)
+                handleNotification(userInfo: remoteLaunchInfo, applicationState: .inactive, triggeredByUser: true)
             } else {
                 print("⚠️ Launch notification ignored due to language mismatch")
             }
@@ -53,6 +53,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate {
     private var hasAPNSToken = false
     private let subscribedLanguageKey = "MessagingSubscribedLanguage"
     private let pendingNewsArticleDefaultsKey = "PendingNewsArticleID"
+    private let pendingProjectDefaultsKey = "PendingProjectID"
     private var apnsTokenType: MessagingAPNSTokenType {
 #if DEBUG
         return .sandbox
@@ -263,7 +264,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         print("📬 Silent notification payload: \(userInfo)")
         let state = application.applicationState
         if shouldDisplayNotification(userInfo: userInfo, applicationState: state) {
-            handleNotification(userInfo: userInfo, applicationState: state)
+            handleNotification(userInfo: userInfo, applicationState: state, triggeredByUser: false)
         } else {
             print("⚠️ Notification dropped due to language mismatch")
         }
@@ -304,7 +305,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             completionHandler([])
             return
         }
-        handleNotification(userInfo: userInfo, applicationState: state)
+        handleNotification(userInfo: userInfo, applicationState: state, triggeredByUser: false)
 
         var options: UNNotificationPresentationOptions = [.sound, .badge]
         if #available(iOS 14.0, *) {
@@ -327,7 +328,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             completionHandler()
             return
         }
-        handleNotification(userInfo: userInfo, applicationState: UIApplication.shared.applicationState)
+        handleNotification(
+            userInfo: userInfo,
+            applicationState: UIApplication.shared.applicationState,
+            triggeredByUser: true
+        )
 
         completionHandler()
     }
@@ -349,31 +354,75 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         return normalizedTarget.caseInsensitiveCompare(currentLanguageCode()) == .orderedSame
     }
 
-    private func handleNotification(userInfo: [AnyHashable: Any], applicationState: UIApplication.State) {
-        guard let type = userInfo["type"] as? String else {
+    private func handleNotification(
+        userInfo: [AnyHashable: Any],
+        applicationState: UIApplication.State,
+        triggeredByUser: Bool
+    ) {
+        guard let rawType = userInfo["type"] as? String else {
+            print("⚠️ Notification missing type field: \(userInfo)")
             return
         }
 
-        guard type == "news", let articleID = userInfo["article_id"] as? String else { return }
+        let normalizedType = rawType.lowercased()
+        let shouldTriggerNavigation = triggeredByUser || applicationState == .inactive || applicationState == .background
 
-        UserDefaults.standard.set(articleID, forKey: pendingNewsArticleDefaultsKey)
-
-        switch applicationState {
-        case .inactive, .background:
+        switch normalizedType {
+        case "news":
+            guard let articleID = userInfo["article_id"] as? String, !articleID.isEmpty else {
+                print("⚠️ News notification missing article_id: \(userInfo)")
+                return
+            }
+            UserDefaults.standard.set(articleID, forKey: pendingNewsArticleDefaultsKey)
+            guard shouldTriggerNavigation else { return }
             DispatchQueue.main.async {
                 NotificationCenter.default.post(
                     name: .newsNotificationReceived,
                     object: nil,
-                    userInfo: ["article_id": articleID, "state": applicationState.rawValue]
+                    userInfo: [
+                        "article_id": articleID,
+                        "state": applicationState.rawValue,
+                        "triggered_by_user": triggeredByUser
+                    ]
                 )
             }
-        case .active:
-            break
-        @unknown default:
-            break
+        case "project", "projects":
+            guard let projectID = projectIdentifier(from: userInfo) else {
+                print("⚠️ Project notification missing project identifier: \(userInfo)")
+                return
+            }
+            UserDefaults.standard.set(projectID, forKey: pendingProjectDefaultsKey)
+            guard shouldTriggerNavigation else { return }
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(
+                    name: .projectNotificationReceived,
+                    object: nil,
+                    userInfo: [
+                        "project_id": projectID,
+                        "state": applicationState.rawValue,
+                        "triggered_by_user": triggeredByUser
+                    ]
+                )
+            }
+        default:
+            print("ℹ️ Ignoring notification of unsupported type: \(normalizedType)")
         }
     }
 
+    private func projectIdentifier(from userInfo: [AnyHashable: Any]) -> String? {
+        let keys = ["project_id", "projectId", "projectID", "id"]
+        for key in keys {
+            if let value = userInfo[key] {
+                if let stringValue = value as? String, !stringValue.isEmpty {
+                    return stringValue
+                }
+                if let numberValue = value as? NSNumber {
+                    return numberValue.stringValue
+                }
+            }
+        }
+        return nil
+    }
 }
 
 #if canImport(FirebaseMessaging)
@@ -396,4 +445,5 @@ extension AppDelegate: MessagingDelegate {
 
 extension Notification.Name {
     static let newsNotificationReceived = Notification.Name("NewsNotificationReceived")
+    static let projectNotificationReceived = Notification.Name("ProjectNotificationReceived")
 }

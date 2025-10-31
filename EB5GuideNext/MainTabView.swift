@@ -12,7 +12,9 @@ struct MainTabView: View {
     @State private var homeNavigationPath = NavigationPath()
     @State private var pendingBaseNavigationRequest: BaseNavigationRequest?
     @State private var pendingNewsArticleID: String?
+    @State private var pendingProjectID: String?
     private let pendingNewsDefaultsKey = "PendingNewsArticleID"
+    private let pendingProjectDefaultsKey = "PendingProjectID"
 
     enum Tab: Hashable {
         case home
@@ -73,6 +75,12 @@ struct MainTabView: View {
                 selectedTab = .news
                 triggerNewsDeepLinkIfNeeded(stored)
             }
+            if pendingProjectID == nil,
+               let storedProject = UserDefaults.standard.string(forKey: pendingProjectDefaultsKey) {
+                pendingProjectID = storedProject
+                selectedTab = .projects
+                triggerProjectDeepLinkIfNeeded(storedProject)
+            }
         }
         .onChange(of: selectedTab) { newValue in
             if newValue == .home {
@@ -85,6 +93,8 @@ struct MainTabView: View {
                 }
             } else if newValue == .news, let articleID = pendingNewsArticleID {
                 triggerNewsDeepLinkIfNeeded(articleID)
+            } else if newValue == .projects, let projectID = pendingProjectID {
+                triggerProjectDeepLinkIfNeeded(projectID)
             }
         }
         .onChange(of: languageManager.currentLocale.identifier) { newValue in
@@ -101,6 +111,18 @@ struct MainTabView: View {
             pendingNewsArticleID = articleID
             selectedTab = .news
             triggerNewsDeepLinkIfNeeded(articleID)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .projectNotificationReceived)) { notification in
+            let userInfo = notification.userInfo ?? [:]
+            let idCandidates: [Any?] = [
+                userInfo["project_id"],
+                userInfo["projectId"],
+                userInfo["projectID"]
+            ]
+            guard let projectID = idCandidates.compactMap({ $0 as? String }).first else { return }
+            pendingProjectID = projectID
+            selectedTab = .projects
+            triggerProjectDeepLinkIfNeeded(projectID)
         }
     }
 
@@ -161,6 +183,15 @@ struct MainTabView: View {
             newsStore.requestOpenArticle(id: articleID)
             pendingNewsArticleID = nil
             UserDefaults.standard.removeObject(forKey: pendingNewsDefaultsKey)
+        }
+    }
+
+    private func triggerProjectDeepLinkIfNeeded(_ projectID: String) {
+        guard selectedTab == .projects else { return }
+        DispatchQueue.main.async {
+            projectsStore.requestOpenProject(id: projectID)
+            pendingProjectID = nil
+            UserDefaults.standard.removeObject(forKey: pendingProjectDefaultsKey)
         }
     }
 }

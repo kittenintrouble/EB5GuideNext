@@ -1,17 +1,19 @@
 import SwiftUI
+import Combine
 
 struct ProjectsView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var projectsStore: ProjectsStore
     @StateObject private var imageLoader = ProjectImageLoadingCoordinator()
     @State private var isActive = false
+    @State private var navigationPath = NavigationPath()
 
     private var languageIdentifier: String {
         languageManager.currentLocale.identifier
     }
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $navigationPath) {
             Group {
                 if projectsStore.isLoadingList && projectsStore.projects.isEmpty {
                     ProgressView()
@@ -36,9 +38,7 @@ struct ProjectsView: View {
                     ScrollView {
                         LazyVStack(spacing: 20) {
                             ForEach(projectsStore.projects) { project in
-                                NavigationLink {
-                                    ProjectDetailView(projectID: project.id)
-                                } label: {
+                                NavigationLink(value: ProjectRoute.detail(project.id)) {
                                     ProjectCardView(
                                         project: project,
                                         isFavorite: projectsStore.isFavorite(id: project.id),
@@ -47,7 +47,8 @@ struct ProjectsView: View {
                                                 projectsStore.toggleFavorite(id: project.id)
                                             }
                                         },
-                                        languageManager: languageManager
+                                        languageManager: languageManager,
+                                        variant: .standard
                                     )
                                 }
                                 .buttonStyle(.plain)
@@ -72,19 +73,37 @@ struct ProjectsView: View {
                     LanguageSwitcher(languageManager: languageManager)
                 }
             }
+            .navigationDestination(for: ProjectRoute.self) { route in
+                switch route {
+                case .detail(let projectID):
+                    ProjectDetailView(projectID: projectID)
+                }
+            }
             .onAppear {
                 isActive = true
-                imageLoader.activateList(with: previewImageURLs)
+                if !projectsStore.isLoadingList {
+                    imageLoader.activateList(with: previewImageURLs)
+                }
                 Task {
                     await projectsStore.loadProjects(
                         language: languageIdentifier,
                         force: projectsStore.projects.isEmpty
                     )
                 }
+                if let pending = projectsStore.pendingProjectID {
+                    openProjectDetail(pending)
+                }
             }
             .onDisappear {
                 isActive = false
                 imageLoader.pauseList()
+            }
+            .onChange(of: projectsStore.isLoadingList) { newValue in
+                if newValue {
+                    imageLoader.pauseList()
+                } else if isActive {
+                    imageLoader.activateList(with: previewImageURLs)
+                }
             }
             .onChange(of: languageManager.currentLocale.identifier) { newValue in
                 Task {
@@ -92,11 +111,14 @@ struct ProjectsView: View {
                 }
             }
             .onChange(of: projectsStore.projects) { _ in
-                guard isActive else { return }
+                guard isActive, !projectsStore.isLoadingList else { return }
                 imageLoader.activateList(with: previewImageURLs)
             }
         }
         .environmentObject(imageLoader)
+        .onReceive(projectsStore.$pendingProjectID.compactMap { $0 }) { projectID in
+            openProjectDetail(projectID)
+        }
     }
 
     private var previewImageURLs: [String] {
@@ -104,26 +126,62 @@ struct ProjectsView: View {
     }
 }
 
+private extension ProjectsView {
+    enum ProjectRoute: Hashable {
+        case detail(String)
+    }
+
+    func openProjectDetail(_ projectID: String) {
+        navigationPath = NavigationPath()
+        navigationPath.append(ProjectRoute.detail(projectID))
+        projectsStore.clearPendingProject(id: projectID)
+    }
+}
+
 struct ProjectCardView: View {
+    enum Variant {
+        case standard
+        case compact
+    }
+
     let project: Project
     let isFavorite: Bool
     let onToggleFavorite: () -> Void
     let languageManager: LanguageManager
+    let variant: Variant
+
+    init(
+        project: Project,
+        isFavorite: Bool,
+        onToggleFavorite: @escaping () -> Void,
+        languageManager: LanguageManager,
+        variant: Variant = .standard
+    ) {
+        self.project = project
+        self.isFavorite = isFavorite
+        self.onToggleFavorite = onToggleFavorite
+        self.languageManager = languageManager
+        self.variant = variant
+    }
+
+    private var imageHeight: CGFloat {
+        switch variant {
+        case .standard:
+            return 200
+        case .compact:
+            return 140
+        }
+    }
+
+    private var showsDescription: Bool { variant == .standard }
+    private var showsFlexibleInfo: Bool { variant == .standard }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            ZStack(alignment: .topTrailing) {
-                ProjectImageView(url: project.images.first?.url)
-
-                ProjectsFavoriteButton(isFavorite: isFavorite, languageManager: languageManager, action: onToggleFavorite)
-                    .padding(12)
-            }
+            imageSection
 
             VStack(alignment: .leading, spacing: 12) {
-                Text(project.displayTitle)
-                    .font(.headline)
-                    .foregroundStyle(.primary)
-                    .multilineTextAlignment(.leading)
+                titleRow
 
                 Label(project.location, systemImage: "mappin.circle.fill")
                     .font(.callout)
@@ -140,13 +198,17 @@ struct ProjectCardView: View {
                     )
                 }
 
-                Text(project.shortDescription)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.leading)
-                    .lineLimit(3)
+                if showsDescription {
+                    Text(project.shortDescription)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(3)
+                }
 
-                FlexibleInfoRow(project: project, languageManager: languageManager)
+                if showsFlexibleInfo {
+                    FlexibleInfoRow(project: project, languageManager: languageManager)
+                }
             }
             .padding(.horizontal, 16)
             .padding(.bottom, 16)
@@ -157,15 +219,61 @@ struct ProjectCardView: View {
                 .shadow(color: Color.black.opacity(0.08), radius: 12, x: 0, y: 6)
         )
     }
+
+    private var imageSection: some View {
+        Group {
+            switch variant {
+            case .standard:
+                ZStack(alignment: .topTrailing) {
+                    ProjectImageView(url: project.images.first?.url, height: imageHeight)
+
+                    ProjectsFavoriteButton(
+                        isFavorite: isFavorite,
+                        languageManager: languageManager,
+                        action: onToggleFavorite,
+                        variant: .overlay
+                    )
+                    .padding(12)
+                }
+            case .compact:
+                ProjectImageView(url: project.images.first?.url, height: imageHeight)
+            }
+        }
+    }
+
+    private var titleRow: some View {
+            HStack(alignment: .center, spacing: 12) {
+            Text(project.displayTitle)
+                .font(.headline)
+                .foregroundStyle(.primary)
+                .multilineTextAlignment(.leading)
+                .lineLimit(2)
+
+            Spacer()
+
+            if variant == .compact {
+                ProjectsFavoriteButton(
+                    isFavorite: isFavorite,
+                    languageManager: languageManager,
+                    action: onToggleFavorite,
+                    variant: .inline
+                )
+                .fixedSize()
+            }
+        }
+    }
 }
 
 struct ProjectImageView: View {
     let url: String?
+    let height: CGFloat
     @EnvironmentObject private var imageLoader: ProjectImageLoadingCoordinator
 
     var body: some View {
         Group {
-            if let url, let image = imageLoader.image(for: url) {
+            if let url,
+               let image = imageLoader.image(for: url),
+               image.isRenderable {
                 Image(uiImage: image)
                     .resizable()
                     .scaledToFill()
@@ -176,26 +284,45 @@ struct ProjectImageView: View {
                     }
             }
         }
-        .frame(height: 200)
+        .frame(height: height)
         .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 }
 
 struct ProjectsFavoriteButton: View {
+    enum Variant {
+        case overlay
+        case inline
+    }
+
     let isFavorite: Bool
     let languageManager: LanguageManager
     let action: () -> Void
+    let variant: Variant
 
     var body: some View {
         Button(action: action) {
+            content
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(Text(languageManager.localizedString(for: isFavorite ? "projects.favorite.remove" : "projects.favorite.add")))
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        switch variant {
+        case .overlay:
             Image(systemName: isFavorite ? "heart.fill" : "heart")
                 .font(.system(size: 22, weight: .semibold))
                 .foregroundStyle(isFavorite ? Color.red : Color.white)
                 .padding(10)
                 .background(.ultraThinMaterial, in: Circle())
+        case .inline:
+            Image(systemName: isFavorite ? "heart.fill" : "heart")
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundStyle(isFavorite ? Color.red : Color(.tertiaryLabel))
+                .padding(6)
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel(Text(languageManager.localizedString(for: isFavorite ? "projects.favorite.remove" : "projects.favorite.add")))
     }
 }
 

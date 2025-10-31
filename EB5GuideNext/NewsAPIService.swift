@@ -163,9 +163,9 @@ final class NewsAPIService {
 enum NewsNetwork {
     static let sharedSession: URLSession = {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 12
-        configuration.timeoutIntervalForResource = 30
-            configuration.waitsForConnectivity = true
+        configuration.timeoutIntervalForRequest = 35
+        configuration.timeoutIntervalForResource = 90
+        configuration.waitsForConnectivity = true
         configuration.requestCachePolicy = .returnCacheDataElseLoad
         return URLSession(configuration: configuration, delegate: NewsAPISessionDelegate.shared, delegateQueue: nil)
     }()

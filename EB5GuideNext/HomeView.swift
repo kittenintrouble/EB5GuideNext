@@ -20,6 +20,8 @@ struct HomeView: View {
     @Binding var homeNavigationPath: NavigationPath
     let onRequestBaseNavigation: (BaseNavigationRequest) -> Void
     @StateObject private var projectImageLoader = ProjectImageLoadingCoordinator()
+    @State private var isLoadingFavoriteNews = false
+    @State private var isLoadingFavoriteProjects = false
 
     private var languageOptions: [LanguageOption] { LanguageOption.supported }
 
@@ -121,6 +123,16 @@ struct HomeView: View {
         favoriteProjectItems.compactMap { $0.project?.images.first?.url }
     }
 
+    private var favoriteProjectsTaskKey: String {
+        let ids = projectsStore.favorites.sorted()
+        return ids.joined(separator: ",") + "|lang:\(languageManager.currentLocale.identifier)"
+    }
+
+    private var favoriteNewsTaskKey: String {
+        let ids = newsStore.favorites.sorted()
+        return ids.joined(separator: ",") + "|lang:\(languageManager.currentLocale.identifier)"
+    }
+
     var body: some View {
         NavigationStack(path: $homeNavigationPath) {
             ScrollView {
@@ -141,6 +153,7 @@ struct HomeView: View {
                         emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
                         items: favoriteNewsItems,
                         iconSystemName: "newspaper",
+                        isLoading: isLoadingFavoriteNews,
                         languageManager: languageManager,
                         onToggleFavorite: { item in
                             withAnimation(.easeInOut(duration: 0.2)) {
@@ -154,6 +167,7 @@ struct HomeView: View {
                         emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
                         items: favoriteProjectItems,
                         iconSystemName: "folder",
+                        isLoading: isLoadingFavoriteProjects,
                         languageManager: languageManager,
                         onToggleFavorite: { item in
                             withAnimation(.easeInOut(duration: 0.2)) {
@@ -166,12 +180,12 @@ struct HomeView: View {
                         projectImageLoader.activateList(with: favoriteProjectImageURLs)
                     }
                     .onDisappear {
-                        projectImageLoader.pauseList()
-                    }
-                    .onChange(of: favoriteProjectImageURLs) { urls in
-                        projectImageLoader.activateList(with: urls)
-                    }
+                    projectImageLoader.pauseList()
                 }
+                .onChange(of: favoriteProjectImageURLs) { urls in
+                    projectImageLoader.activateList(with: urls)
+                }
+            }
                 .padding(.horizontal, 20)
                 .padding(.top, 24)
                 .padding(.bottom, 40)
@@ -190,6 +204,12 @@ struct HomeView: View {
             .navigationDestination(for: FavoriteNavigationDestination.self) { destination in
                 destinationView(for: destination)
             }
+        }
+        .task(id: favoriteProjectsTaskKey) {
+            await ensureFavoriteProjectsLoaded()
+        }
+        .task(id: favoriteNewsTaskKey) {
+            await ensureFavoriteNewsLoaded()
         }
     }
 }
@@ -222,6 +242,73 @@ private extension HomeView {
             NewsDetailView(articleID: id, initialSummary: newsStore.summary(withID: id))
         case .project(let id):
             ProjectDetailView(projectID: id)
+                .environmentObject(projectImageLoader)
+        }
+    }
+
+    func ensureFavoriteProjectsLoaded() async {
+        if await MainActor.run(body: { isLoadingFavoriteProjects }) { return }
+
+        let (missingIDs, language) = await MainActor.run { () -> ([String], String) in
+            let ids = Array(projectsStore.favorites)
+            let missing = ids.filter { projectsStore.project(withID: $0) == nil }
+            let lang = languageManager.currentLocale.identifier
+            return (missing, lang)
+        }
+
+        guard !missingIDs.isEmpty else { return }
+
+        await MainActor.run { isLoadingFavoriteProjects = true }
+
+        for id in missingIDs {
+            do {
+                _ = try await projectsStore.fetchProjectDetail(
+                    id: id,
+                    language: language,
+                    force: false
+                )
+            } catch {
+#if DEBUG
+                print("⚠️ Failed to load favorite project detail:", id, error.localizedDescription)
+#endif
+            }
+        }
+
+        await MainActor.run {
+            isLoadingFavoriteProjects = false
+            projectImageLoader.activateList(with: favoriteProjectImageURLs)
+        }
+    }
+
+    func ensureFavoriteNewsLoaded() async {
+        if await MainActor.run(body: { isLoadingFavoriteNews }) { return }
+
+        let (missingIDs, language) = await MainActor.run { () -> ([String], String) in
+            let ids = Array(newsStore.favorites)
+            let missing = ids.filter { newsStore.summary(withID: $0) == nil }
+            let lang = languageManager.currentLocale.identifier
+            return (missing, lang)
+        }
+
+        guard !missingIDs.isEmpty else { return }
+
+        await MainActor.run { isLoadingFavoriteNews = true }
+
+        for id in missingIDs {
+            do {
+                _ = try await newsStore.fetchDetail(
+                    for: id,
+                    language: language
+                )
+            } catch {
+#if DEBUG
+                print("⚠️ Failed to load favorite news detail:", id, error.localizedDescription)
+#endif
+            }
+        }
+
+        await MainActor.run {
+            isLoadingFavoriteNews = false
         }
     }
 }
@@ -389,14 +476,24 @@ private struct FavoritesSimpleSection: View {
     let iconSystemName: String?
     let onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)?
     let languageManager: LanguageManager?
+    let isLoading: Bool
 
-    init(title: String, emptyMessage: String, items: [HomeFavoriteSimpleItem], iconSystemName: String? = nil, languageManager: LanguageManager? = nil, onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)? = nil) {
+    init(
+        title: String,
+        emptyMessage: String,
+        items: [HomeFavoriteSimpleItem],
+        iconSystemName: String? = nil,
+        isLoading: Bool = false,
+        languageManager: LanguageManager? = nil,
+        onToggleFavorite: ((HomeFavoriteSimpleItem) -> Void)? = nil
+    ) {
         self.title = title
         self.emptyMessage = emptyMessage
         self.items = items
         self.iconSystemName = iconSystemName
         self.onToggleFavorite = onToggleFavorite
         self.languageManager = languageManager
+        self.isLoading = isLoading
     }
 
     var body: some View {
@@ -415,7 +512,11 @@ private struct FavoritesSimpleSection: View {
                     .foregroundStyle(.primary)
             }
 
-            if items.isEmpty {
+            if isLoading {
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .padding(.vertical, 12)
+            } else if items.isEmpty {
                 Text(emptyMessage)
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
@@ -447,7 +548,8 @@ private struct FavoritesSimpleSection: View {
                 onToggleFavorite: {
                     onToggleFavorite?(item)
                 },
-                languageManager: languageManager
+                languageManager: languageManager,
+                variant: .compact
             )
         } else {
             HStack(alignment: .center, spacing: 12) {
