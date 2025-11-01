@@ -5,7 +5,7 @@ struct NewsView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var newsStore: NewsStore
 
-    @State private var lastRequestedLanguage: String?
+    @State private var lastRequestedLanguageCode: String?
     @State private var navigationPath = NavigationPath()
 
     private var articles: [NewsArticleSummary] { newsStore.articles }
@@ -25,18 +25,28 @@ struct NewsView: View {
                     contentView
                 }
             }
-            .navigationTitle("tab.news")
+            .navigationTitle(languageManager.localizedString(for: "nav.title.news"))
             .navigationBarTitleDisplayMode(.large)
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
             .navigationDestination(for: NewsRoute.self) { route in
                 NewsDetailDestination(route: route)
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    LanguageSwitchMenu(
+                        languageManager: languageManager,
+                        beforeChange: {
+                            navigationPath = NavigationPath()
+                        }
+                    )
+                }
             }
         }
         .task {
             await loadIfNeeded()
         }
         .onChange(of: languageManager.currentLocale.identifier) { newValue in
-            Task { await reload(for: newValue, force: true) }
+            Task { await reload(for: LanguageManager.apiCode(for: newValue), force: true) }
         }
         .onReceive(newsStore.$pendingArticleID.compactMap { $0 }) { articleID in
             openArticleDetail(articleID)
@@ -138,19 +148,22 @@ private extension NewsView {
         .background(Color(.systemGroupedBackground))
     }
 
+    @MainActor
     func loadIfNeeded() async {
         await reloadCurrentLanguage(force: articles.isEmpty)
     }
 
+    @MainActor
     func reloadCurrentLanguage(force: Bool) async {
-        let identifier = languageManager.currentLocale.identifier
-        await reload(for: identifier, force: force)
+        let languageCode = languageManager.currentAPICode
+        await reload(for: languageCode, force: force)
     }
 
-    func reload(for identifier: String, force: Bool) async {
-        if lastRequestedLanguage != identifier || force {
-            lastRequestedLanguage = identifier
-            await newsStore.refresh(language: identifier, force: force)
+    @MainActor
+    func reload(for languageCode: String, force: Bool) async {
+        if lastRequestedLanguageCode != languageCode || force {
+            lastRequestedLanguageCode = languageCode
+            await newsStore.refresh(language: languageCode, force: force)
         }
     }
 

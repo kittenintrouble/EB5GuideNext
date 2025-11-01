@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 
+@MainActor
 final class LanguageManager: ObservableObject {
     static let languageDidChangeNotification = Notification.Name("LanguageManager.languageDidChange")
     static let storageKey = "selectedLanguageCode"
@@ -20,6 +21,8 @@ final class LanguageManager: ObservableObject {
 
     @Published var currentLocale: Locale = Locale(identifier: "en")
     private var cachedBundles: [String: Bundle] = [:]
+    @Published var isSwitchingLanguage = false
+    private var languageSwitchTask: Task<Void, Never>?
 
     init() {
         let normalized = LanguageManager.normalizedCode(for: storedCode)
@@ -34,11 +37,26 @@ final class LanguageManager: ObservableObject {
     func setLanguage(code: String) {
         // Normalize a few common codes to match your .lproj folders
         let normalized = LanguageManager.normalizedCode(for: code)
+        guard normalized != currentLocale.identifier else { return }
+
+        languageSwitchTask?.cancel()
+        isSwitchingLanguage = true
         storedCode = normalized
         cachedBundles.removeAll()
         // Always assign a new Locale to trigger UI updates even if the code didn't change
         currentLocale = Locale(identifier: normalized)
         NotificationCenter.default.post(name: LanguageManager.languageDidChangeNotification, object: normalized)
+
+        languageSwitchTask = Task { @MainActor [weak self] in
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
+            guard !Task.isCancelled else { return }
+            self?.endSwitchingIfNeeded()
+        }
+    }
+
+    private func endSwitchingIfNeeded() {
+        isSwitchingLanguage = false
+        languageSwitchTask = nil
     }
 
     func localizedString(for key: String) -> String {

@@ -161,16 +161,24 @@
 "tab.news" = "新闻";
 "tab.projects" = "项目";
 
+// Titles
+"home.title" = "EB-5 中心";
+"nav.title.base" = "EB-5 基础";
+"quiz.title" = "EB-5 测验";
+"nav.title.news" = "EB-5 新闻";
+"nav.title.projects" = "EB-5 项目";
+
 
 ///////////////////////////
 // Home
 ///////////////////////////
 "home.placeholder" = "首页";
-"home.title" = "EB-5 HUB";
 "home.language.english" = "English";
 "home.language.chinese" = "简体中文";
 "home.language.vietnamese" = "Tiếng Việt";
 "home.language.korean" = "한국어";
+"language.switching" = "正在切换语言...";
+"language.switcher.accessibility" = "切换语言";
 "home.section.articles.title" = "文章";
 "home.section.articles.button" = "探索 EB-5 Base";
 "home.favorites.title" = "收藏夹";
@@ -206,7 +214,6 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "通过测验检验自己";
-"quiz.title" = "EB-5 测验";
 "quiz.row.progress_format" = "正确 %1$d / %2$d";
 "quiz.progress_format" = "%1$d / %2$d";
 "quiz.action.next" = "下一题";
@@ -278,7 +285,7 @@
 "projects.uscis.i956f.not_filed" = "未递交";
 "projects.uscis.i526e.open" = "开放募资";
 "projects.uscis.i526e.full" = "名额已满";
-"projects.uscis.i526e.na" = "不适用";
+"projects.uscis.i526e.na" = "N/A (Pre‑RIA / No I‑526E)";
 "projects.uscis.i526e.closed" = "已关闭";
 "projects.tea_label" = "TEA 信息";
 "projects.tea.type" = "类型";
@@ -377,7 +384,7 @@
 "projects.inquiry.field.phone" = "联系电话";
 "projects.inquiry.field.message" = "留言";
 "projects.inquiry.submit" = "提交咨询";
-"projects.inquiry.success" = "感谢！我们将尽快与您联系。";
+"projects.inquiry.success" = "谢谢！您的消息已成功发送。";
 "projects.inquiry.error.generic" = "请求未成功发送，请稍后重试。";
 "projects.inquiry.validation.name" = "姓名至少需要 2 个字符。";
 "projects.inquiry.validation.email" = "请输入有效的邮箱地址。";

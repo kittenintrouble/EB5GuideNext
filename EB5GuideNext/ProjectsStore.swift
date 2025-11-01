@@ -9,12 +9,16 @@ final class ProjectsStore: ObservableObject {
     @Published private(set) var favorites: Set<String>
     @Published private(set) var dataVersion: String?
     @Published private(set) var totalAvailable: Int = 0
-    @Published private(set) var pendingProjectID: String?
+    @Published private(set) var statusCache: [String: ProjectStatus] = [:]
+    @Published private(set) var pendingNavigation: PendingProjectNavigation?
 
     private var detailCache: [String: Project] = [:]
     private var detailLanguageCache: [String: String] = [:]
     private var currentListLanguage: String?
     private var pendingListRequest: (language: String, force: Bool, languageChanged: Bool)?
+    private var baseLanguageProjectsByID: [String: Project] = [:]
+    private var baseLanguageDataVersion: String?
+    private let baseLanguageCode = LanguageManager.normalizedCode(for: "en")
 
     private let service: ProjectService
     private let defaults: UserDefaults
@@ -69,12 +73,56 @@ final class ProjectsStore: ObservableObject {
         let previousProjectsByID = Dictionary(uniqueKeysWithValues: projects.map { ($0.id, $0) })
 
         do {
+            let normalizedLanguage = LanguageManager.normalizedCode(for: language)
             let apiCode = LanguageManager.apiCode(for: language)
             let response = try await service.fetchProjects(lang: apiCode)
-            let mergedItems = mergeProjectList(response.items, fallback: previousProjectsByID)
-            projects = mergedItems
-            dataVersion = response.dataVersion
-            totalAvailable = response.total
+            var localizedItems = response.items
+            var fallbackDataVersion: String?
+            var fallbackTotal: Int?
+
+            if normalizedLanguage != baseLanguageCode {
+                var englishProjectsByID = baseLanguageProjectsByID
+                var englishResponse: ProjectsResponse?
+
+                do {
+                    let englishAPI = LanguageManager.apiCode(for: baseLanguageCode)
+                    let fetchedEnglish = try await service.fetchProjects(lang: englishAPI)
+                    englishResponse = fetchedEnglish
+                    englishProjectsByID = Dictionary(uniqueKeysWithValues: fetchedEnglish.items.map { ($0.id, $0) })
+                    baseLanguageProjectsByID = englishProjectsByID
+                    baseLanguageDataVersion = fetchedEnglish.dataVersion
+                } catch {
+                    print("⚠️ Failed to load English fallback projects:", error.localizedDescription)
+                }
+
+                if !englishProjectsByID.isEmpty {
+                    localizedItems = localizedItems.map { project in
+                        guard let fallback = englishProjectsByID[project.id] else { return project }
+                        return project.fillingBlanks(using: fallback)
+                    }
+                    fallbackDataVersion = baseLanguageDataVersion
+                    fallbackTotal = englishResponse?.total ?? englishProjectsByID.count
+                } else {
+                    fallbackDataVersion = baseLanguageDataVersion
+                    fallbackTotal = nil
+                }
+            } else {
+                baseLanguageProjectsByID = Dictionary(uniqueKeysWithValues: localizedItems.map { ($0.id, $0) })
+                baseLanguageDataVersion = response.dataVersion
+            }
+
+            let mergedItems = mergeProjectList(localizedItems, fallback: previousProjectsByID)
+            let normalizedItems = mergedItems
+            cacheStatuses(from: normalizedItems, allowPlanningOverride: !languageChanged || statusCache.isEmpty)
+            projects = normalizedItems
+            dataVersion = response.dataVersion ?? fallbackDataVersion
+            if response.total > 0 {
+                totalAvailable = response.total
+            } else if let fallbackTotal {
+                totalAvailable = fallbackTotal
+            } else {
+                totalAvailable = normalizedItems.count
+            }
             currentListLanguage = language
             print("📦 Loaded projects:", projects.count, "lang:", language)
             if let first = projects.first {
@@ -110,6 +158,7 @@ final class ProjectsStore: ObservableObject {
         let detail = fallbackProject.map { fetchedDetail.fillingBlanks(using: $0) } ?? fetchedDetail
         detailCache[id] = detail
         detailLanguageCache[id] = normalized
+        cacheStatuses(from: [detail], allowPlanningOverride: true)
 
         if let index = projects.firstIndex(where: { $0.id == id }) {
             projects[index] = detail
@@ -143,12 +192,12 @@ final class ProjectsStore: ObservableObject {
     }
 
     func requestOpenProject(id: String) {
-        pendingProjectID = id
+        pendingNavigation = PendingProjectNavigation(projectID: id, token: UUID())
     }
 
-    func clearPendingProject(id: String) {
-        if pendingProjectID == id {
-            pendingProjectID = nil
+    func consumePendingProject(token: UUID) {
+        if pendingNavigation?.token == token {
+            pendingNavigation = nil
         }
     }
 
@@ -162,6 +211,46 @@ final class ProjectsStore: ObservableObject {
             return project.fillingBlanks(using: fallbackProject)
         }
     }
+
+    private func cacheStatuses(from projects: [Project], allowPlanningOverride: Bool) {
+        for project in projects {
+            guard let parsed = parsedStatus(from: project) else { continue }
+            if let existing = statusCache[project.id] {
+                if allowPlanningOverride || (parsed != .planning && parsed != existing) {
+                    statusCache[project.id] = parsed
+                }
+            } else {
+                statusCache[project.id] = parsed
+            }
+        }
+    }
+
+    func cachedStatus(for project: Project) -> ProjectStatus? {
+        if let cached = statusCache[project.id] {
+            return cached
+        }
+        return parsedStatus(from: project)
+    }
+
+    private func parsedStatus(from project: Project) -> ProjectStatus? {
+        if let parsed = ProjectStatus(apiValue: project.status) {
+            return parsed
+        }
+        if let fallback = baseLanguageProjectsByID[project.id],
+           let english = ProjectStatus(apiValue: fallback.status) {
+            return english
+        }
+        return nil
+    }
+}
+
+extension ProjectsStore {
+    struct PendingProjectNavigation: Identifiable, Equatable {
+        let projectID: String
+        let token: UUID
+
+        var id: UUID { token }
+    }
 }
 
 fileprivate func prefer(_ primary: String, fallback: String) -> String {
@@ -171,6 +260,25 @@ fileprivate func prefer(_ primary: String, fallback: String) -> String {
         return fallbackTrimmed
     }
     return primary
+}
+
+fileprivate func preferStatus(_ primary: String, fallback: String) -> String {
+    let trimmed = primary.trimmingCharacters(in: .whitespacesAndNewlines)
+    let fallbackTrimmed = fallback.trimmingCharacters(in: .whitespacesAndNewlines)
+
+    if let fallbackStatus = ProjectStatus(apiValue: fallbackTrimmed) {
+        return fallbackStatus.rawValue
+    }
+
+    if let primaryStatus = ProjectStatus(apiValue: trimmed) {
+        return primaryStatus.rawValue
+    }
+
+    if trimmed.isEmpty, !fallbackTrimmed.isEmpty {
+        return fallbackTrimmed
+    }
+
+    return trimmed
 }
 
 fileprivate func preferOptional(_ primary: String?, fallback: String?) -> String? {
@@ -194,7 +302,7 @@ private extension Project {
             fullDescription: prefer(fullDescription, fallback: fallback.fullDescription),
             location: prefer(location, fallback: fallback.location),
             type: prefer(type, fallback: fallback.type),
-            status: prefer(status, fallback: fallback.status),
+            status: preferStatus(status, fallback: fallback.status),
             developer: prefer(developer, fallback: fallback.developer),
             expectedOpening: prefer(expectedOpening, fallback: fallback.expectedOpening),
             images: images.isEmpty ? fallback.images : images,

@@ -365,16 +365,21 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         }
 
         let normalizedType = rawType.lowercased()
-        let shouldTriggerNavigation = triggeredByUser || applicationState == .inactive || applicationState == .background
+        let shouldTriggerNavigation = triggeredByUser || applicationState == .inactive
 
         switch normalizedType {
         case "news":
-            guard let articleID = userInfo["article_id"] as? String, !articleID.isEmpty else {
+            guard let articleID = newsArticleIdentifier(from: userInfo) else {
                 print("⚠️ News notification missing article_id: \(userInfo)")
                 return
             }
-            UserDefaults.standard.set(articleID, forKey: pendingNewsArticleDefaultsKey)
-            guard shouldTriggerNavigation else { return }
+            guard shouldTriggerNavigation else {
+                print("ℹ️ News notification ignored without user interaction")
+                return
+            }
+            if applicationState != .active {
+                UserDefaults.standard.set(articleID, forKey: pendingNewsArticleDefaultsKey)
+            }
             DispatchQueue.main.async {
                 NotificationCenter.default.post(
                     name: .newsNotificationReceived,
@@ -391,8 +396,13 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 print("⚠️ Project notification missing project identifier: \(userInfo)")
                 return
             }
-            UserDefaults.standard.set(projectID, forKey: pendingProjectDefaultsKey)
-            guard shouldTriggerNavigation else { return }
+            guard shouldTriggerNavigation else {
+                print("ℹ️ Project notification ignored without user interaction")
+                return
+            }
+            if applicationState != .active {
+                UserDefaults.standard.set(projectID, forKey: pendingProjectDefaultsKey)
+            }
             DispatchQueue.main.async {
                 NotificationCenter.default.post(
                     name: .projectNotificationReceived,
@@ -411,6 +421,21 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
     private func projectIdentifier(from userInfo: [AnyHashable: Any]) -> String? {
         let keys = ["project_id", "projectId", "projectID", "id"]
+        for key in keys {
+            if let value = userInfo[key] {
+                if let stringValue = value as? String, !stringValue.isEmpty {
+                    return stringValue
+                }
+                if let numberValue = value as? NSNumber {
+                    return numberValue.stringValue
+                }
+            }
+        }
+        return nil
+    }
+
+    private func newsArticleIdentifier(from userInfo: [AnyHashable: Any]) -> String? {
+        let keys = ["article_id", "articleId", "articleID", "id", "news_id", "newsId", "newsID"]
         for key in keys {
             if let value = userInfo[key] {
                 if let stringValue = value as? String, !stringValue.isEmpty {

@@ -1,12 +1,13 @@
 import SwiftUI
 import Combine
 
+@available(iOS 16.0, *)
 struct ProjectsView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var projectsStore: ProjectsStore
     @StateObject private var imageLoader = ProjectImageLoadingCoordinator()
     @State private var isActive = false
-    @State private var navigationPath = NavigationPath()
+    @State private var navigationPath: [String] = []
 
     private var languageIdentifier: String {
         languageManager.currentLocale.identifier
@@ -14,73 +15,38 @@ struct ProjectsView: View {
 
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            Group {
-                if projectsStore.isLoadingList && projectsStore.projects.isEmpty {
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                } else if let error = projectsStore.listErrorMessage, projectsStore.projects.isEmpty {
-                    ErrorStateView(message: error) {
-                        Task {
-                            await projectsStore.loadProjects(language: languageIdentifier, force: true)
-                        }
-                    }
-                } else if projectsStore.projects.isEmpty {
-                    EmptyStateView(
-                        title: languageManager.localizedString(for: "projects.empty.title"),
-                        message: languageManager.localizedString(for: "projects.empty.subtitle")
-                    ) {
-                        Task {
-                            await projectsStore.loadProjects(language: languageIdentifier, force: true)
-                        }
-                    }
-                } else {
-                    ScrollView {
-                        LazyVStack(spacing: 20) {
-                            ForEach(projectsStore.projects) { project in
-                                NavigationLink(value: ProjectRoute.detail(project.id)) {
-                                    ProjectCardView(
-                                        project: project,
-                                        isFavorite: projectsStore.isFavorite(id: project.id),
-                                        onToggleFavorite: {
-                                            withAnimation(.easeInOut(duration: 0.2)) {
-                                                projectsStore.toggleFavorite(id: project.id)
-                                            }
-                                        },
-                                        languageManager: languageManager,
-                                        variant: .standard
-                                    )
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        }
-                        .padding(.vertical, 24)
-                        .padding(.horizontal, 20)
-                    }
-                    .overlay(alignment: .bottom) {
-                        if projectsStore.isLoadingList {
-                            ProgressView()
-                                .progressViewStyle(.circular)
-                                .padding()
-                        }
-                    }
+            navigationDecoratedContent
+                .navigationDestination(for: String.self) { projectID in
+                    ProjectDetailView(projectID: projectID)
                 }
-            }
-            .navigationTitle("tab.projects")
+        }
+        .environmentObject(imageLoader)
+        .onReceive(projectsStore.$pendingNavigation.compactMap { $0 }) { navigation in
+            openProjectDetail(navigation.projectID, pendingToken: navigation.token)
+        }
+    }
+
+    private var previewImageURLs: [String] {
+        projectsStore.projects.compactMap { $0.images.first?.url }
+    }
+
+    private var navigationDecoratedContent: some View {
+        mainContent
+            .navigationTitle(languageManager.localizedString(for: "nav.title.projects"))
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    LanguageSwitcher(languageManager: languageManager)
-                }
-            }
-            .navigationDestination(for: ProjectRoute.self) { route in
-                switch route {
-                case .detail(let projectID):
-                    ProjectDetailView(projectID: projectID)
+                    LanguageSwitchMenu(
+                        languageManager: languageManager,
+                        beforeChange: {
+                            resetNavigationSelection()
+                        }
+                    )
                 }
             }
             .onAppear {
                 isActive = true
+                resetNavigationSelection()
                 if !projectsStore.isLoadingList {
                     imageLoader.activateList(with: previewImageURLs)
                 }
@@ -90,8 +56,8 @@ struct ProjectsView: View {
                         force: projectsStore.projects.isEmpty
                     )
                 }
-                if let pending = projectsStore.pendingProjectID {
-                    openProjectDetail(pending)
+                if let pending = projectsStore.pendingNavigation {
+                    openProjectDetail(pending.projectID, pendingToken: pending.token)
                 }
             }
             .onDisappear {
@@ -106,6 +72,7 @@ struct ProjectsView: View {
                 }
             }
             .onChange(of: languageManager.currentLocale.identifier) { newValue in
+                resetNavigationSelection()
                 Task {
                     await projectsStore.loadProjects(language: newValue, force: true)
                 }
@@ -114,29 +81,97 @@ struct ProjectsView: View {
                 guard isActive, !projectsStore.isLoadingList else { return }
                 imageLoader.activateList(with: previewImageURLs)
             }
-        }
-        .environmentObject(imageLoader)
-        .onReceive(projectsStore.$pendingProjectID.compactMap { $0 }) { projectID in
-            openProjectDetail(projectID)
+    }
+
+    @ViewBuilder
+    private var mainContent: some View {
+        if projectsStore.isLoadingList && projectsStore.projects.isEmpty {
+            loadingView
+        } else if let error = projectsStore.listErrorMessage, projectsStore.projects.isEmpty {
+            errorView(message: error)
+        } else if projectsStore.projects.isEmpty {
+            emptyView
+        } else {
+            projectsList
         }
     }
 
-    private var previewImageURLs: [String] {
-        projectsStore.projects.compactMap { $0.images.first?.url }
+    private var loadingView: some View {
+        ProgressView()
+            .progressViewStyle(.circular)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+    }
+
+    private func errorView(message: String) -> some View {
+        ErrorStateView(message: message) {
+            Task {
+                await projectsStore.loadProjects(language: languageIdentifier, force: true)
+            }
+        }
+    }
+
+    private var emptyView: some View {
+        EmptyStateView(
+            title: languageManager.localizedString(for: "projects.empty.title"),
+            message: languageManager.localizedString(for: "projects.empty.subtitle")
+        ) {
+            Task {
+                await projectsStore.loadProjects(language: languageIdentifier, force: true)
+            }
+        }
+    }
+
+    private var projectsList: some View {
+        ScrollView {
+            LazyVStack(spacing: 20) {
+                ForEach(projectsStore.projects) { project in
+                    navigationLink(for: project)
+                }
+            }
+            .padding(.vertical, 24)
+            .padding(.horizontal, 20)
+        }
+        .overlay(alignment: .bottom) {
+            if projectsStore.isLoadingList {
+                ProgressView()
+                    .progressViewStyle(.circular)
+                    .padding()
+            }
+        }
+    }
+
+    private func navigationLink(for project: Project) -> some View {
+        NavigationLink(value: project.id) {
+            ProjectCardView(
+                project: project,
+                isFavorite: projectsStore.isFavorite(id: project.id),
+                onToggleFavorite: {
+                    withAnimation(.easeInOut(duration: 0.2)) {
+                        projectsStore.toggleFavorite(id: project.id)
+                    }
+                },
+                languageManager: languageManager,
+                variant: .standard
+            )
+        }
+        .buttonStyle(.plain)
     }
 }
 
 private extension ProjectsView {
-    enum ProjectRoute: Hashable {
-        case detail(String)
+    func openProjectDetail(_ projectID: String, pendingToken: UUID? = nil) {
+        navigationPath.removeAll()
+        navigationPath.append(projectID)
+        if let token = pendingToken {
+            projectsStore.consumePendingProject(token: token)
+        }
     }
 
-    func openProjectDetail(_ projectID: String) {
-        navigationPath = NavigationPath()
-        navigationPath.append(ProjectRoute.detail(projectID))
-        projectsStore.clearPendingProject(id: projectID)
+    func resetNavigationSelection() {
+        navigationPath.removeAll()
     }
 }
+
 
 struct ProjectCardView: View {
     enum Variant {
@@ -149,6 +184,7 @@ struct ProjectCardView: View {
     let onToggleFavorite: () -> Void
     let languageManager: LanguageManager
     let variant: Variant
+    @EnvironmentObject private var projectsStore: ProjectsStore
 
     init(
         project: Project,
@@ -207,7 +243,11 @@ struct ProjectCardView: View {
                 }
 
                 if showsFlexibleInfo {
-                    FlexibleInfoRow(project: project, languageManager: languageManager)
+                    FlexibleInfoRow(
+                        project: project,
+                        languageManager: languageManager,
+                        statusOverride: projectsStore.cachedStatus(for: project)
+                    )
                 }
             }
             .padding(.horizontal, 16)
@@ -301,11 +341,14 @@ struct ProjectsFavoriteButton: View {
     let variant: Variant
 
     var body: some View {
-        Button(action: action) {
-            content
-        }
-        .buttonStyle(.plain)
-        .accessibilityLabel(Text(languageManager.localizedString(for: isFavorite ? "projects.favorite.remove" : "projects.favorite.add")))
+        content
+            .contentShape(Rectangle())
+            .onTapGesture(perform: action)
+            .accessibilityElement()
+            .accessibilityAddTraits(.isButton)
+            .accessibilityLabel(
+                Text(languageManager.localizedString(for: isFavorite ? "projects.favorite.remove" : "projects.favorite.add"))
+            )
     }
 
     @ViewBuilder
@@ -329,6 +372,7 @@ struct ProjectsFavoriteButton: View {
 struct FlexibleInfoRow: View {
     let project: Project
     let languageManager: LanguageManager
+    let statusOverride: ProjectStatus?
 
     var body: some View {
         let badges = badgeItems
@@ -345,7 +389,7 @@ struct FlexibleInfoRow: View {
 
     private var badgeItems: [BadgeItem] {
         var items: [BadgeItem] = []
-        if let type = project.typeEnum?.localizedName ?? project.type.nonEmpty {
+        if let type = localizedProjectType() {
             items.append(
                 BadgeItem(
                     label: languageManager.localizedString(for: "projects.type_label"),
@@ -355,17 +399,26 @@ struct FlexibleInfoRow: View {
                 )
             )
         }
-        if let status = project.statusEnum {
-            let tintColor = status == .completed ? status.color.opacity(0.12) : status.color.opacity(0.15)
-            let foreground: Color
-            if status == .completed {
-                foreground = Color(red: 0.6, green: 0.19, blue: 0.25)
-            } else {
-                foreground = status.color
-            }
-            items.append(BadgeItem(label: languageManager.localizedString(for: "projects.status_label"), value: status.localizedName, tint: tintColor, foreground: foreground))
+        if let status = statusOverride ?? project.statusEnum ?? ProjectStatus(apiValue: project.status) {
+            let palette = statusPalette(for: status)
+            let localizedStatus = languageManager.localizedString(for: status.localizationKey)
+            items.append(
+                BadgeItem(
+                    label: languageManager.localizedString(for: "projects.status_label"),
+                    value: localizedStatus,
+                    tint: palette.tint,
+                    foreground: palette.foreground
+                )
+            )
         } else if let statusRaw = project.status.nonEmpty {
-            items.append(BadgeItem(label: languageManager.localizedString(for: "projects.status_label"), value: statusRaw, tint: Color(.secondarySystemBackground).opacity(0.12), foreground: Color.primary))
+            items.append(
+                BadgeItem(
+                    label: languageManager.localizedString(for: "projects.status_label"),
+                    value: statusRaw,
+                    tint: Color(.secondarySystemBackground).opacity(0.12),
+                    foreground: Color.primary
+                )
+            )
         }
         return items
     }
@@ -391,6 +444,21 @@ struct FlexibleInfoRow: View {
         let value: String
         let tint: Color?
         let foreground: Color?
+    }
+
+    private func statusPalette(for status: ProjectStatus) -> (tint: Color, foreground: Color) {
+        let baseColor = status.color
+        if status == .completed {
+            return (baseColor.opacity(0.12), Color(red: 0.6, green: 0.19, blue: 0.25))
+        }
+        return (baseColor.opacity(0.15), baseColor)
+    }
+
+    private func localizedProjectType() -> String? {
+        if let typeEnum = project.typeEnum {
+            return languageManager.localizedString(for: typeEnum.localizationKey)
+        }
+        return project.type.nonEmpty
     }
 }
 
@@ -469,56 +537,6 @@ private struct EmptyStateView: View {
             }
         }
         .padding(.horizontal, 32)
-    }
-}
-
-private struct LanguageSwitcher: View {
-    @ObservedObject var languageManager: LanguageManager
-
-    var body: some View {
-        Menu {
-            ForEach(LanguageOption.allCases, id: \.self) { option in
-                Button {
-                    languageManager.setLanguage(code: option.raw)
-                } label: {
-                    HStack {
-                        Text(option.label)
-                        if languageManager.currentLocale.identifier == option.identifier {
-                            Image(systemName: "checkmark")
-                        }
-                    }
-                }
-            }
-        } label: {
-            Image(systemName: "globe")
-        }
-    }
-}
-
-private enum LanguageOption: CaseIterable {
-    case english
-    case chineseSimplified
-    case vietnamese
-    case korean
-
-    var raw: String {
-        switch self {
-        case .english: return "en"
-        case .chineseSimplified: return "zh-Hans"
-        case .vietnamese: return "vi"
-        case .korean: return "ko"
-        }
-    }
-
-    var identifier: String { raw }
-
-    var label: String {
-        switch self {
-        case .english: return "🇺🇸 English"
-        case .chineseSimplified: return "🇨🇳 中文"
-        case .vietnamese: return "🇻🇳 Tiếng Việt"
-        case .korean: return "🇰🇷 한국어"
-        }
     }
 }
 

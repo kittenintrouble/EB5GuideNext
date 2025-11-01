@@ -1,6 +1,20 @@
 import Foundation
 import SwiftUI
 
+fileprivate func normalizedLookupKey(_ value: String) -> String {
+    let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+    if trimmed.isEmpty { return "" }
+    let replaced = trimmed
+        .replacingOccurrences(of: "_", with: " ")
+        .replacingOccurrences(of: "-", with: " ")
+    let components = replaced
+        .components(separatedBy: .whitespacesAndNewlines)
+        .filter { !$0.isEmpty }
+    let joined = components.joined(separator: " ")
+    let locale = Locale(identifier: "en_US_POSIX")
+    return joined.folding(options: [.diacriticInsensitive, .widthInsensitive, .caseInsensitive], locale: locale)
+}
+
 struct ProjectsResponse: Codable {
     let dataVersion: String?
     let items: [Project]
@@ -66,8 +80,8 @@ struct Project: Codable, Identifiable, Equatable {
     let published: Bool
     let publishedAt: String?
 
-    var typeEnum: ProjectType? { ProjectType(rawValue: type) }
-    var statusEnum: ProjectStatus? { ProjectStatus(rawValue: status) }
+    var typeEnum: ProjectType? { ProjectType(apiValue: type) }
+    var statusEnum: ProjectStatus? { ProjectStatus(apiValue: status) }
     var displayTitle: String {
         if let display = title.trimmedNonEmpty { return display }
         if let name = name?.trimmedNonEmpty {
@@ -442,9 +456,7 @@ enum ProjectStatus: String, CaseIterable {
     case underConstruction = "Under Construction"
     case completed = "Completed"
 
-    var localizedName: String {
-        NSLocalizedString("project.status.\(rawValue)", comment: "")
-    }
+    var localizationKey: String { "project.status.\(rawValue)" }
 
     var color: Color {
         switch self {
@@ -456,6 +468,115 @@ enum ProjectStatus: String, CaseIterable {
             return Color(red: 0.6, green: 0.19, blue: 0.25)
         }
     }
+
+    init?(apiValue: String) {
+        let normalized = ProjectStatus.normalize(apiValue)
+        if let match = ProjectStatus.localizedLookup[normalized] {
+            self = match
+            return
+        }
+        if ProjectStatus.matchesPlanning(normalized) {
+            self = .planning
+            return
+        }
+        if ProjectStatus.matchesUnderConstruction(normalized) {
+            self = .underConstruction
+            return
+        }
+        if ProjectStatus.matchesCompleted(normalized) {
+            self = .completed
+            return
+        }
+        return nil
+    }
+
+    private static let localizedLookup: [String: ProjectStatus] = {
+        var mapping: [String: ProjectStatus] = [:]
+
+        func register(_ value: String, status: ProjectStatus) {
+            let key = normalize(value)
+            guard !key.isEmpty else { return }
+            mapping[key] = status
+        }
+
+        let bundles: [Bundle] = {
+            var result: [Bundle] = [Bundle.main]
+            let codes = LanguageManager.supportedLanguageCodes
+
+            for code in codes {
+                if let path = Bundle.main.path(forResource: code, ofType: "lproj"),
+                   let bundle = Bundle(path: path) {
+                    result.append(bundle)
+                }
+            }
+
+            if let basePath = Bundle.main.path(forResource: "Base", ofType: "lproj"),
+               let baseBundle = Bundle(path: basePath) {
+                result.append(baseBundle)
+            }
+
+            return result
+        }()
+
+        for status in ProjectStatus.allCases {
+            register(status.rawValue, status: status)
+            register(status.rawValue.lowercased(), status: status)
+
+            let localizationKey = status.localizationKey
+            for bundle in bundles {
+                let localized = bundle.localizedString(forKey: localizationKey, value: nil, table: nil)
+                if localized != localizationKey {
+                    register(localized, status: status)
+                }
+            }
+        }
+
+        let manualMappings: [(String, ProjectStatus)] = [
+            ("规划阶段", .planning),
+            ("计划阶段", .planning),
+            ("Đang quy hoạch", .planning),
+            ("계획 단계", .planning),
+            ("建设中", .underConstruction),
+            ("施工中", .underConstruction),
+            ("Đang xây dựng", .underConstruction),
+            ("공사 중", .underConstruction),
+            ("已完成", .completed),
+            ("完工", .completed),
+            ("Đã hoàn thành", .completed),
+            ("완료", .completed)
+        ]
+
+        for (value, status) in manualMappings {
+            register(value, status: status)
+        }
+
+        return mapping
+    }()
+
+    private static func normalize(_ value: String) -> String {
+        normalizedLookupKey(value)
+    }
+
+    private static func matchesPlanning(_ normalized: String) -> Bool {
+        guard !normalized.isEmpty else { return false }
+        if normalized.contains("plan") { return true }
+        return false
+    }
+
+    private static func matchesUnderConstruction(_ normalized: String) -> Bool {
+        guard !normalized.isEmpty else { return false }
+        if normalized.contains("construct") { return true }
+        if normalized.contains("build") { return true }
+        return false
+    }
+
+    private static func matchesCompleted(_ normalized: String) -> Bool {
+        guard !normalized.isEmpty else { return false }
+        if normalized.contains("complete") { return true }
+        if normalized.contains("finish") { return true }
+        if normalized.contains("done") { return true }
+        return false
+    }
 }
 
 enum ProjectType: String, CaseIterable {
@@ -466,8 +587,18 @@ enum ProjectType: String, CaseIterable {
     case infrastructure = "Infrastructure"
     case other = "Other"
 
-    var localizedName: String {
-        NSLocalizedString("project.type.\(rawValue)", comment: "")
+    var localizationKey: String {
+        "project.type.\(rawValue)"
+    }
+
+    init?(apiValue: String) {
+        let normalized = normalizedLookupKey(apiValue)
+        guard !normalized.isEmpty else { return nil }
+        if let match = ProjectType.allCases.first(where: { normalizedLookupKey($0.rawValue) == normalized }) {
+            self = match
+        } else {
+            return nil
+        }
     }
 }
 
@@ -476,14 +607,14 @@ enum I956FStatus: String, CaseIterable {
     case pending = "Pending"
     case notFiled = "Not Filed"
 
-    var localizedName: String {
+    var localizationKey: String {
         switch self {
         case .approved:
-            return NSLocalizedString("projects.uscis.i956f.approved", comment: "")
+            return "projects.uscis.i956f.approved"
         case .pending:
-            return NSLocalizedString("projects.uscis.i956f.pending", comment: "")
+            return "projects.uscis.i956f.pending"
         case .notFiled:
-            return NSLocalizedString("projects.uscis.i956f.not_filed", comment: "")
+            return "projects.uscis.i956f.not_filed"
         }
     }
 
@@ -497,6 +628,16 @@ enum I956FStatus: String, CaseIterable {
             return .gray
         }
     }
+
+    init?(apiValue: String) {
+        let normalized = normalizedLookupKey(apiValue)
+        guard !normalized.isEmpty else { return nil }
+        if let match = I956FStatus.allCases.first(where: { normalizedLookupKey($0.rawValue) == normalized }) {
+            self = match
+        } else {
+            return nil
+        }
+    }
 }
 
 enum I526EStatus: String, CaseIterable {
@@ -505,16 +646,16 @@ enum I526EStatus: String, CaseIterable {
     case notApplicable = "N/A (Pre‑RIA / No I‑526E)"
     case closed = "Closed (Not Accepting New Investors)"
 
-    var localizedName: String {
+    var localizationKey: String {
         switch self {
         case .openToInvestment:
-            return NSLocalizedString("projects.uscis.i526e.open", comment: "")
+            return "projects.uscis.i526e.open"
         case .fullySubscribed:
-            return NSLocalizedString("projects.uscis.i526e.full", comment: "")
+            return "projects.uscis.i526e.full"
         case .notApplicable:
-            return NSLocalizedString("projects.uscis.i526e.na", comment: "")
+            return "projects.uscis.i526e.na"
         case .closed:
-            return NSLocalizedString("projects.uscis.i526e.closed", comment: "")
+            return "projects.uscis.i526e.closed"
         }
     }
 
@@ -530,6 +671,16 @@ enum I526EStatus: String, CaseIterable {
             return .red
         }
     }
+
+    init?(apiValue: String) {
+        let normalized = normalizedLookupKey(apiValue)
+        guard !normalized.isEmpty else { return nil }
+        if let match = I526EStatus.allCases.first(where: { normalizedLookupKey($0.rawValue) == normalized }) {
+            self = match
+        } else {
+            return nil
+        }
+    }
 }
 
 enum TEAType: String, CaseIterable {
@@ -537,14 +688,24 @@ enum TEAType: String, CaseIterable {
     case highUnemploymentAreas = "High-Unemployment Areas"
     case none = "None"
 
-    var localizedName: String {
+    var localizationKey: String {
         switch self {
         case .ruralAreas:
-            return NSLocalizedString("projects.tea.rural", comment: "")
+            return "projects.tea.rural"
         case .highUnemploymentAreas:
-            return NSLocalizedString("projects.tea.high_unemployment", comment: "")
+            return "projects.tea.high_unemployment"
         case .none:
-            return NSLocalizedString("projects.tea.none", comment: "")
+            return "projects.tea.none"
+        }
+    }
+
+    init?(apiValue: String) {
+        let normalized = normalizedLookupKey(apiValue)
+        guard !normalized.isEmpty else { return nil }
+        if let match = TEAType.allCases.first(where: { normalizedLookupKey($0.rawValue) == normalized }) {
+            self = match
+        } else {
+            return nil
         }
     }
 }
@@ -555,16 +716,26 @@ enum LoanType: String, CaseIterable {
     case equity = "Equity"
     case other = "Other"
 
-    var localizedName: String {
+    var localizationKey: String {
         switch self {
         case .loan:
-            return NSLocalizedString("projects.loan.type.loan", comment: "")
+            return "projects.loan.type.loan"
         case .mezzanine:
-            return NSLocalizedString("projects.loan.type.mezzanine", comment: "")
+            return "projects.loan.type.mezzanine"
         case .equity:
-            return NSLocalizedString("projects.loan.type.equity", comment: "")
+            return "projects.loan.type.equity"
         case .other:
-            return NSLocalizedString("projects.loan.type.other", comment: "")
+            return "projects.loan.type.other"
+        }
+    }
+
+    init?(apiValue: String) {
+        let normalized = normalizedLookupKey(apiValue)
+        guard !normalized.isEmpty else { return nil }
+        if let match = LoanType.allCases.first(where: { normalizedLookupKey($0.rawValue) == normalized }) {
+            self = match
+        } else {
+            return nil
         }
     }
 }

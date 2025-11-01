@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import Security
 
 @MainActor
 final class ProjectService: ObservableObject {
@@ -150,15 +151,33 @@ enum ProjectError: LocalizedError {
 }
 
 private final class TrustingURLSessionDelegate: NSObject, URLSessionDelegate {
+    private let allowedHosts: Set<String> = ["api.eb-5.app", "news-service.replit.app"]
+
     func urlSession(
         _ session: URLSession,
         didReceive challenge: URLAuthenticationChallenge,
         completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void
     ) {
-        if let trust = challenge.protectionSpace.serverTrust {
-            completionHandler(.useCredential, URLCredential(trust: trust))
-        } else {
+        guard let trust = challenge.protectionSpace.serverTrust,
+              allowedHosts.contains(challenge.protectionSpace.host) else {
             completionHandler(.performDefaultHandling, nil)
+            return
+        }
+
+        if #available(iOS 13.0, *) {
+            if SecTrustEvaluateWithError(trust, nil) {
+                completionHandler(.useCredential, URLCredential(trust: trust))
+            } else {
+                completionHandler(.cancelAuthenticationChallenge, nil)
+            }
+        } else {
+            var result = SecTrustResultType.invalid
+            let status = SecTrustEvaluate(trust, &result)
+            if status == errSecSuccess {
+                completionHandler(.useCredential, URLCredential(trust: trust))
+            } else {
+                completionHandler(.cancelAuthenticationChallenge, nil)
+            }
         }
     }
 }

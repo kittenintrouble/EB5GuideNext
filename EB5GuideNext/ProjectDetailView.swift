@@ -7,6 +7,7 @@ struct ProjectDetailView: View {
     @EnvironmentObject private var projectsStore: ProjectsStore
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var imageLoader: ProjectImageLoadingCoordinator
+    @Environment(\.dismiss) private var dismiss
 
     @State private var isLoading = false
     @State private var errorMessage: String?
@@ -58,14 +59,20 @@ struct ProjectDetailView: View {
         .navigationTitle(project?.title ?? languageManager.localizedString(for: "projects.detail.title"))
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
+            ToolbarItemGroup(placement: .topBarTrailing) {
+                if let shareURL = shareURL {
+                    ShareLink(item: shareURL) {
+                        Image(systemName: "square.and.arrow.up")
+                    }
+                }
+
                 Button {
                     withAnimation(.easeInOut(duration: 0.2)) {
                         projectsStore.toggleFavorite(id: projectID)
                     }
                 } label: {
                     Image(systemName: isFavorite ? "heart.fill" : "heart")
-                        .foregroundStyle(isFavorite ? Color.red : Color.primary)
+                        .foregroundColor(.red)
                 }
                 .accessibilityLabel(Text(languageManager.localizedString(for: isFavorite ? "projects.favorite.remove" : "projects.favorite.add")))
             }
@@ -95,6 +102,14 @@ struct ProjectDetailView: View {
         "\(projectID)-\(languageIdentifier)"
     }
 
+    private var shareURL: URL? {
+        let slug = project?.slug.flatMap { $0.nonEmpty }
+        let identifier = slug ?? project?.id
+        guard let path = identifier else { return nil }
+        return URL(string: "https://eb-5.app/projects/\(path)")
+    }
+
+    @MainActor
     private func loadDetail(force: Bool) async {
         guard !isLoading || force else { return }
         isLoading = true
@@ -132,6 +147,7 @@ private struct ProjectDetailContent: View {
     let project: Project
 
     @EnvironmentObject private var languageManager: LanguageManager
+    @EnvironmentObject private var projectsStore: ProjectsStore
     @EnvironmentObject private var imageLoader: ProjectImageLoadingCoordinator
     @State private var currentImageIndex = 0
     @State private var isGalleryPresented = false
@@ -169,9 +185,9 @@ private struct ProjectDetailContent: View {
                         .font(.subheadline)
                         .lineLimit(2)
 
-                    if let status = project.statusEnum {
+                    if let status = projectsStore.cachedStatus(for: project) ?? project.statusEnum ?? ProjectStatus(apiValue: project.status) {
                         StatusBadge(
-                            value: status.localizedName,
+                            value: languageManager.localizedString(for: status.localizationKey),
                             tint: status.color
                         )
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -321,25 +337,31 @@ private struct ProjectDetailContent: View {
     private var uscisRows: [InfoRowEntry] {
         var rows: [InfoRowEntry] = []
         if let filingDate = project.uscis.i956fFilingDate?.nonEmpty {
+            let localizedDate = localizedUSCISDate(from: filingDate)
             rows.append((
                 languageManager.localizedString(for: "projects.uscis.i956f_filing_date"),
-                filingDate,
+                localizedDate ?? filingDate,
                 false
             ))
         }
         if let approvalDate = project.uscis.i956fApprovalDate?.nonEmpty {
+            let localizedDate = localizedUSCISDate(from: approvalDate)
             rows.append((
                 languageManager.localizedString(for: "projects.uscis.i956f_approval_date"),
-                approvalDate,
+                localizedDate ?? approvalDate,
                 false
             ))
         }
         if let i956StatusRaw = project.uscis.i956fStatus?.nonEmpty {
-            let localized = I956FStatus(rawValue: i956StatusRaw)?.localizedName ?? i956StatusRaw
+            let localized = I956FStatus(apiValue: i956StatusRaw)
+                .map { languageManager.localizedString(for: $0.localizationKey) }
+                .flatMap { $0.nonEmpty } ?? i956StatusRaw
             rows.append(("I-956F", localized, false))
         }
         if let i526StatusRaw = project.uscis.i526eStatus?.nonEmpty {
-            let localized = I526EStatus(rawValue: i526StatusRaw)?.localizedName ?? i526StatusRaw
+            let localized = I526EStatus(apiValue: i526StatusRaw)
+                .map { languageManager.localizedString(for: $0.localizationKey) }
+                .flatMap { $0.nonEmpty } ?? i526StatusRaw
             rows.append(("I-526E", localized, false))
         }
         return rows
@@ -347,8 +369,10 @@ private struct ProjectDetailContent: View {
 
     private var teaRows: [InfoRowEntry] {
         var rows: [InfoRowEntry] = []
-        let teaTypeRaw = TEAType(rawValue: project.tea.type)?.localizedName ?? project.tea.type
-        if let typeValue = teaTypeRaw.nonEmpty {
+        let teaTypeValue = TEAType(apiValue: project.tea.type)
+            .map { languageManager.localizedString(for: $0.localizationKey) }
+            .flatMap { $0.nonEmpty } ?? project.tea.type.nonEmpty
+        if let typeValue = teaTypeValue {
             rows.append((
                 languageManager.localizedString(for: "projects.tea.type"),
                 typeValue,
@@ -368,8 +392,10 @@ private struct ProjectDetailContent: View {
     private var loanRows: [InfoRowEntry] {
         var rows: [InfoRowEntry] = []
 
-        let loanTypeRaw = LoanType(rawValue: project.loanStructure.type)?.localizedName ?? project.loanStructure.type
-        if let typeValue = loanTypeRaw.nonEmpty {
+        let loanTypeValue = LoanType(apiValue: project.loanStructure.type)
+            .map { languageManager.localizedString(for: $0.localizationKey) }
+            .flatMap { $0.nonEmpty } ?? project.loanStructure.type.nonEmpty
+        if let typeValue = loanTypeValue {
             rows.append((
                 languageManager.localizedString(for: "projects.loan_type"),
                 typeValue,
@@ -424,6 +450,53 @@ private struct ProjectDetailContent: View {
             ))
         }
         return rows
+    }
+
+    private func localizedUSCISDate(from raw: String) -> String? {
+        ProjectDetailView.localizedUSCISDate(from: raw, locale: languageManager.currentLocale)
+    }
+}
+
+private extension ProjectDetailView {
+    static let iso8601WithFraction: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
+    static let iso8601Basic: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime]
+        return formatter
+    }()
+
+    static let fallbackDateParser: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+
+    static func localizedDateFormatter(locale: Locale) -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = locale
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        return formatter
+    }
+
+    static func localizedUSCISDate(from raw: String, locale: Locale) -> String? {
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return nil }
+
+        let parsed = iso8601WithFraction.date(from: trimmed)
+            ?? iso8601Basic.date(from: trimmed)
+            ?? fallbackDateParser.date(from: trimmed)
+
+        guard let date = parsed else { return nil }
+
+        return localizedDateFormatter(locale: locale).string(from: date)
     }
 }
 
@@ -640,8 +713,11 @@ private struct ProjectKeyFactsView: View {
     }
 
     private var typeDisplay: String? {
-        let base = project.typeEnum?.localizedName ?? project.type
-        return base.nonEmpty
+        if let typeEnum = project.typeEnum {
+            let localized = languageManager.localizedString(for: typeEnum.localizationKey)
+            return localized.nonEmpty ?? project.type.nonEmpty
+        }
+        return project.type.nonEmpty
     }
 
     private var hasAnyFacts: Bool {
@@ -1042,15 +1118,15 @@ private struct ProjectInquiryForm: View {
                 await MainActor.run {
                     isSubmitting = false
                     if response.success {
-                        submissionSuccessMessage = response.message ?? languageManager.localizedString(for: "projects.inquiry.success")
+                        submissionSuccessMessage = localizedSuccessMessage(response.message)
                     } else {
-                        submissionError = response.error ?? languageManager.localizedString(for: "projects.inquiry.error.generic")
+                        submissionError = localizedErrorMessage(response.error ?? response.message)
                     }
                 }
             } catch {
                 await MainActor.run {
                     isSubmitting = false
-                    submissionError = error.localizedDescription
+                    submissionError = localizedErrorMessage(error.localizedDescription)
                 }
             }
         }
@@ -1061,6 +1137,32 @@ private struct ProjectInquiryForm: View {
             return ""
         }
         return country.flagEmoji
+    }
+
+    private func localizedSuccessMessage(_ message: String?) -> String {
+        guard let trimmed = message?.trimmingCharacters(in: .whitespacesAndNewlines), !trimmed.isEmpty else {
+            return languageManager.localizedString(for: "projects.inquiry.success")
+        }
+        switch trimmed.lowercased() {
+        case "form submitted successfully":
+            return languageManager.localizedString(for: "projects.inquiry.success")
+        default:
+            return trimmed
+        }
+    }
+
+    private func localizedErrorMessage(_ message: String?) -> String {
+        guard let trimmed = message?.trimmingCharacters(in: .whitespacesAndNewlines), !trimmed.isEmpty else {
+            return languageManager.localizedString(for: "projects.inquiry.error.generic")
+        }
+        switch trimmed.lowercased() {
+        case "form submitted successfully":
+            return languageManager.localizedString(for: "projects.inquiry.success")
+        case "an error occurred", "something went wrong", "failed to submit form", "unable to submit form", "submission failed":
+            return languageManager.localizedString(for: "projects.inquiry.error.generic")
+        default:
+            return trimmed
+        }
     }
 
     @discardableResult

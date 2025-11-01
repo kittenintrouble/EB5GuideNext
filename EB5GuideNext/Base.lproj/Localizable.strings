@@ -161,12 +161,18 @@
 "tab.news" = "News";
 "tab.projects" = "Projects";
 
+// Titles
+"home.title" = "EB-5 HUB";
+"nav.title.base" = "EB-5 Base";
+"quiz.title" = "EB-5 Quizzes";
+"nav.title.news" = "EB-5 News";
+"nav.title.projects" = "EB-5 Projects";
+
 
 ///////////////////////////
 // Home
 ///////////////////////////
 "home.placeholder" = "Home screen";
-"home.title" = "EB-5 HUB";
 "home.language.english" = "English";
 "home.language.chinese" = "简体中文";
 "home.language.vietnamese" = "Tiếng Việt";
@@ -177,7 +183,7 @@
 "home.favorites.empty" = "Nothing saved yet.";
 "home.favorites.news" = "Favorite News";
 "home.favorites.projects" = "Favorite Projects";
-"home.language.sheet.title" = "Choose language";
+"home.language.sheet.title" = "Choose Your Language";
 "common.cancel" = "Cancel";
 "common.done" = "Done";
 "common.retry" = "Try Again";
@@ -206,7 +212,6 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "Test yourself with quizzes";
-"quiz.title" = "EB-5 Quizzes";
 "quiz.row.progress_format" = "%1$d / %2$d correct";
 "quiz.progress_format" = "%1$d of %2$d";
 "quiz.action.next" = "Next";
@@ -278,7 +283,7 @@
 "projects.uscis.i956f.not_filed" = "Not filed";
 "projects.uscis.i526e.open" = "Open to investment";
 "projects.uscis.i526e.full" = "Fully subscribed";
-"projects.uscis.i526e.na" = "Not applicable";
+"projects.uscis.i526e.na" = "N/A (Pre‑RIA / No I‑526E)";
 "projects.uscis.i526e.closed" = "Closed";
 "projects.tea_label" = "TEA information";
 "projects.tea.type" = "Type";
@@ -377,7 +382,7 @@
 "projects.inquiry.field.phone" = "Phone";
 "projects.inquiry.field.message" = "Message";
 "projects.inquiry.submit" = "Submit inquiry";
-"projects.inquiry.success" = "Thanks! Our team will reach out shortly.";
+"projects.inquiry.success" = "Thanks! Your message has been sent successfully.";
 "projects.inquiry.error.generic" = "We couldn't send your request. Please try again.";
 "projects.inquiry.validation.name" = "Enter at least 2 characters.";
 "projects.inquiry.validation.email" = "Enter a valid email address.";

@@ -40,7 +40,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FABD18F02EB2571D0045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */ = {
+		FABD192D2EB571850045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -53,7 +53,7 @@
 		FABD187A2EB0CEC70045C6FF /* EB5GuideNext */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				FABD18F02EB2571D0045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */,
+				FABD192D2EB571850045C6FF /* Exceptions for "EB5GuideNext" folder in "EB5GuideNext" target */,
 			);
 			path = EB5GuideNext;
 			sourceTree = "<group>";

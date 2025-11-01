@@ -24,6 +24,14 @@ struct MainTabView: View {
         case projects
     }
 
+    private func tabLabel(for key: String, systemImage: String) -> some View {
+        Label {
+            Text(languageManager.localizedString(for: key))
+        } icon: {
+            Image(systemName: systemImage)
+        }
+    }
+
     init() {
         let baseStore = BaseContentStore()
         let newsStore = NewsStore()
@@ -38,36 +46,39 @@ struct MainTabView: View {
                 homeNavigationPath: $homeNavigationPath,
                 onRequestBaseNavigation: handleBaseNavigationRequest
             )
-                .tabItem { Label("tab.home", systemImage: "house.fill") }
+                .tabItem { tabLabel(for: "tab.home", systemImage: "house.fill") }
                 .tag(Tab.home)
 
             BaseView(
                 navigationPath: $baseNavigationPath,
                 onRequestNavigation: handleBaseNavigationRequest
             )
-                .tabItem { Label("tab.base", systemImage: "square.grid.2x2.fill") }
+                .tabItem { tabLabel(for: "tab.base", systemImage: "square.grid.2x2.fill") }
                 .tag(Tab.base)
 
             QuizzesView()
-                .tabItem { Label("tab.quizzes", systemImage: "questionmark.circle.fill") }
+                .tabItem { tabLabel(for: "tab.quizzes", systemImage: "questionmark.circle.fill") }
                 .tag(Tab.quizzes)
 
             NewsView()
-                .tabItem { Label("tab.news", systemImage: "newspaper.fill") }
+                .tabItem { tabLabel(for: "tab.news", systemImage: "newspaper.fill") }
                 .tag(Tab.news)
 
             ProjectsView()
-                .tabItem { Label("tab.projects", systemImage: "folder.fill") }
+                .tabItem { tabLabel(for: "tab.projects", systemImage: "folder.fill") }
                 .tag(Tab.projects)
         }
         .environmentObject(baseStore)
         .environmentObject(quizStore)
         .environmentObject(newsStore)
         .environmentObject(projectsStore)
+        .overlay {
+            LanguageSwitchOverlay(languageManager: languageManager)
+        }
         .onAppear {
             baseStore.loadArticles(for: languageManager.currentLocale.identifier)
             Task {
-                await newsStore.refresh(language: languageManager.currentLocale.identifier, force: false)
+                await newsStore.refresh(language: languageManager.currentAPICode, force: false)
             }
             if pendingNewsArticleID == nil,
                let stored = UserDefaults.standard.string(forKey: pendingNewsDefaultsKey) {
@@ -77,6 +88,7 @@ struct MainTabView: View {
             }
             if pendingProjectID == nil,
                let storedProject = UserDefaults.standard.string(forKey: pendingProjectDefaultsKey) {
+                UserDefaults.standard.removeObject(forKey: pendingProjectDefaultsKey)
                 pendingProjectID = storedProject
                 selectedTab = .projects
                 triggerProjectDeepLinkIfNeeded(storedProject)
@@ -103,7 +115,7 @@ struct MainTabView: View {
             homeNavigationPath = NavigationPath()
             pendingBaseNavigationRequest = nil
             Task {
-                await newsStore.refresh(language: newValue, force: true)
+                await newsStore.refresh(language: LanguageManager.apiCode(for: newValue), force: true)
             }
         }
         .onReceive(NotificationCenter.default.publisher(for: .newsNotificationReceived)) { notification in

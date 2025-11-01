@@ -161,16 +161,24 @@
 "tab.news" = "Tin tức";
 "tab.projects" = "Dự án";
 
+// Titles
+"home.title" = "Trung tâm EB-5";
+"nav.title.base" = "EB-5 Cơ bản";
+"quiz.title" = "Bài kiểm tra EB-5";
+"nav.title.news" = "Tin tức EB-5";
+"nav.title.projects" = "Dự án EB-5";
+
 
 ///////////////////////////
 // Home
 ///////////////////////////
 "home.placeholder" = "Màn hình trang chủ";
-"home.title" = "EB-5 HUB";
 "home.language.english" = "English";
 "home.language.chinese" = "简体中文";
 "home.language.vietnamese" = "Tiếng Việt";
 "home.language.korean" = "한국어";
+"language.switching" = "Đang chuyển ngôn ngữ...";
+"language.switcher.accessibility" = "Thay đổi ngôn ngữ";
 "home.section.articles.title" = "Bài viết";
 "home.section.articles.button" = "Khám phá EB-5 Base";
 "home.favorites.title" = "Mục yêu thích";
@@ -206,7 +214,6 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "Tự kiểm tra bằng các bài kiểm tra";
-"quiz.title" = "Bài kiểm tra EB-5";
 "quiz.row.progress_format" = "%1$d / %2$d câu đúng";
 "quiz.progress_format" = "%1$d trên %2$d";
 "quiz.action.next" = "Tiếp tục";
@@ -278,7 +285,7 @@
 "projects.uscis.i956f.not_filed" = "Chưa nộp";
 "projects.uscis.i526e.open" = "Mở nhận đầu tư";
 "projects.uscis.i526e.full" = "Đã đủ nhà đầu tư";
-"projects.uscis.i526e.na" = "Không áp dụng";
+"projects.uscis.i526e.na" = "N/A (Pre‑RIA / No I‑526E)";
 "projects.uscis.i526e.closed" = "Đã đóng";
 "projects.tea_label" = "Thông tin TEA";
 "projects.tea.type" = "Loại";
@@ -377,7 +384,7 @@
 "projects.inquiry.field.phone" = "Điện thoại";
 "projects.inquiry.field.message" = "Tin nhắn";
 "projects.inquiry.submit" = "Gửi yêu cầu";
-"projects.inquiry.success" = "Cảm ơn! Chúng tôi sẽ liên hệ sớm.";
+"projects.inquiry.success" = "Cảm ơn bạn! Tin nhắn của bạn đã được gửi thành công.";
 "projects.inquiry.error.generic" = "Không gửi được yêu cầu, vui lòng thử lại.";
 "projects.inquiry.validation.name" = "Tên phải có ít nhất 2 ký tự.";
 "projects.inquiry.validation.email" = "Vui lòng nhập email hợp lệ.";

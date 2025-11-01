@@ -44,13 +44,22 @@ struct BaseView: View {
                 }
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle(LocalizedStringKey("tab.base"))
+            .navigationTitle(languageManager.localizedString(for: "nav.title.base"))
             .navigationBarTitleDisplayMode(.large)
             .navigationDestination(for: BaseRoute.self) { route in
                 destination(for: route)
             }
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    LanguageSwitchMenu(
+                        languageManager: languageManager,
+                        beforeChange: {
+                            navigationPath = []
+                        }
+                    )
+                }
+            }
         }
-        .id(languageManager.currentLocale.identifier)
         .onAppear {
             store.loadArticles(for: languageManager.currentLocale.identifier)
         }

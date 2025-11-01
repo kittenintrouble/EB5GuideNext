@@ -37,8 +37,13 @@ struct QuizzesView: View {
                 }
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("quiz.title")
+            .navigationTitle(languageManager.localizedString(for: "quiz.title"))
             .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    LanguageSwitchMenu(languageManager: languageManager)
+                }
+            }
         }
     }
 }

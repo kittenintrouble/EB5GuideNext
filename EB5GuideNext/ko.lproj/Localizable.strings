@@ -161,16 +161,24 @@
 "tab.news" = "뉴스";
 "tab.projects" = "프로젝트";
 
+// Titles
+"home.title" = "EB-5 허브";
+"nav.title.base" = "EB-5 기본";
+"quiz.title" = "EB-5 퀴즈";
+"nav.title.news" = "EB-5 뉴스";
+"nav.title.projects" = "EB-5 프로젝트";
+
 
 ///////////////////////////
 // Home
 ///////////////////////////
 "home.placeholder" = "홈 화면";
-"home.title" = "EB-5 HUB";
 "home.language.english" = "English";
 "home.language.chinese" = "简体中文";
 "home.language.vietnamese" = "Tiếng Việt";
 "home.language.korean" = "한국어";
+"language.switching" = "언어를 변경하는 중...";
+"language.switcher.accessibility" = "언어 변경";
 "home.section.articles.title" = "기사";
 "home.section.articles.button" = "EB-5 Base 둘러보기";
 "home.favorites.title" = "즐겨찾기";
@@ -206,7 +214,6 @@
 // Quizzes
 ///////////////////////////
 "quizzes.placeholder" = "퀴즈로 스스로를 테스트하세요";
-"quiz.title" = "EB-5 퀴즈";
 "quiz.row.progress_format" = "정답 %1$d / %2$d";
 "quiz.progress_format" = "%1$d / %2$d";
 "quiz.action.next" = "다음";
@@ -278,7 +285,7 @@
 "projects.uscis.i956f.not_filed" = "미제출";
 "projects.uscis.i526e.open" = "투자 모집 중";
 "projects.uscis.i526e.full" = "모집 완료";
-"projects.uscis.i526e.na" = "해당 없음";
+"projects.uscis.i526e.na" = "N/A (Pre‑RIA / No I‑526E)";
 "projects.uscis.i526e.closed" = "모집 종료";
 "projects.tea_label" = "TEA 정보";
 "projects.tea.type" = "유형";
@@ -377,7 +384,7 @@
 "projects.inquiry.field.phone" = "전화번호";
 "projects.inquiry.field.message" = "문의 내용";
 "projects.inquiry.submit" = "문의 보내기";
-"projects.inquiry.success" = "감사합니다! 곧 연락드리겠습니다.";
+"projects.inquiry.success" = "감사합니다! 메시지가 성공적으로 전송되었습니다.";
 "projects.inquiry.error.generic" = "문의 전송에 실패했습니다. 다시 시도해 주세요.";
 "projects.inquiry.validation.name" = "이름은 최소 2자 이상 입력해 주세요.";
 "projects.inquiry.validation.email" = "유효한 이메일 주소를 입력해 주세요.";

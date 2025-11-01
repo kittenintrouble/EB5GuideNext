@@ -1,4 +1,5 @@
 import Foundation
+import Security
 
 enum NewsAPIError: Error, LocalizedError {
     case invalidURL
@@ -27,10 +28,26 @@ final class NewsAPISessionDelegate: NSObject, URLSessionDelegate {
         }
 
         let host = challenge.protectionSpace.host
-        if host == "news-service.replit.app" || host == "eb-5.app" || host == "api.eb-5.app" {
-            completionHandler(.useCredential, URLCredential(trust: trust))
-        } else {
+        let trustedHosts = ["news-service.replit.app", "eb-5.app", "api.eb-5.app"]
+        guard trustedHosts.contains(host) else {
             completionHandler(.performDefaultHandling, nil)
+            return
+        }
+
+        if #available(iOS 13.0, *) {
+            if SecTrustEvaluateWithError(trust, nil) {
+                completionHandler(.useCredential, URLCredential(trust: trust))
+            } else {
+                completionHandler(.cancelAuthenticationChallenge, nil)
+            }
+        } else {
+            var result = SecTrustResultType.invalid
+            let status = SecTrustEvaluate(trust, &result)
+            if status == errSecSuccess {
+                completionHandler(.useCredential, URLCredential(trust: trust))
+            } else {
+                completionHandler(.cancelAuthenticationChallenge, nil)
+            }
         }
     }
 }

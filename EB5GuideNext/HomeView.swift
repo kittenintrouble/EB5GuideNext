@@ -23,21 +23,6 @@ struct HomeView: View {
     @State private var isLoadingFavoriteNews = false
     @State private var isLoadingFavoriteProjects = false
 
-    private var languageOptions: [LanguageOption] { LanguageOption.supported }
-
-    private var currentLanguageOption: LanguageOption {
-        let identifier = languageManager.currentLocale.identifier
-        if let exactMatch = languageOptions.first(where: { $0.matches(localeIdentifier: identifier) }) {
-            return exactMatch
-        }
-
-        if let languageCode = languageManager.currentLocale.language.languageCode?.identifier,
-           let languageMatch = languageOptions.first(where: { $0.matches(localeIdentifier: languageCode) }) {
-            return languageMatch
-        }
-
-        return languageOptions.first(where: { $0.code == "en" })!
-    }
 
     private var completedArticlesCount: Int {
         baseStore.completedIDs.count
@@ -149,20 +134,6 @@ struct HomeView: View {
                     )
 
                     FavoritesSimpleSection(
-                        title: languageManager.localizedString(for: "home.favorites.news"),
-                        emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
-                        items: favoriteNewsItems,
-                        iconSystemName: "newspaper",
-                        isLoading: isLoadingFavoriteNews,
-                        languageManager: languageManager,
-                        onToggleFavorite: { item in
-                            withAnimation(.easeInOut(duration: 0.2)) {
-                                newsStore.toggleFavorite(id: item.id)
-                            }
-                        }
-                    )
-
-                    FavoritesSimpleSection(
                         title: languageManager.localizedString(for: "home.favorites.projects"),
                         emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
                         items: favoriteProjectItems,
@@ -180,24 +151,40 @@ struct HomeView: View {
                         projectImageLoader.activateList(with: favoriteProjectImageURLs)
                     }
                     .onDisappear {
-                    projectImageLoader.pauseList()
+                        projectImageLoader.pauseList()
+                    }
+                    .onChange(of: favoriteProjectImageURLs) { urls in
+                        projectImageLoader.activateList(with: urls)
+                    }
+
+                    FavoritesSimpleSection(
+                        title: languageManager.localizedString(for: "home.favorites.news"),
+                        emptyMessage: languageManager.localizedString(for: "home.favorites.empty"),
+                        items: favoriteNewsItems,
+                        iconSystemName: "newspaper",
+                        isLoading: isLoadingFavoriteNews,
+                        languageManager: languageManager,
+                        onToggleFavorite: { item in
+                            withAnimation(.easeInOut(duration: 0.2)) {
+                                newsStore.toggleFavorite(id: item.id)
+                            }
+                        }
+                    )
                 }
-                .onChange(of: favoriteProjectImageURLs) { urls in
-                    projectImageLoader.activateList(with: urls)
-                }
-            }
                 .padding(.horizontal, 20)
                 .padding(.top, 24)
                 .padding(.bottom, 40)
             }
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
-            .navigationTitle("home.title")
+            .navigationTitle(languageManager.localizedString(for: "home.title"))
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    LanguageSelector(
-                        options: languageOptions,
-                        current: currentLanguageOption
+                    LanguageSwitchMenu(
+                        languageManager: languageManager,
+                        beforeChange: {
+                            homeNavigationPath = NavigationPath()
+                        }
                     )
                 }
             }
@@ -632,137 +619,6 @@ private enum FavoriteNavigationDestination: Hashable {
     case article(id: Int, disableBaseAnimation: Bool = false)
     case news(id: String)
     case project(id: String)
-}
-
-extension HomeView {
-    fileprivate struct LanguageOption: Identifiable {
-        let code: String
-        let flag: String
-        let nameKey: String
-
-        var id: String { code }
-
-        var displayName: String {
-            nameKey
-        }
-
-        static let supported: [LanguageOption] = [
-            LanguageOption(code: "en", flag: "🇺🇸", nameKey: "home.language.english"),
-            LanguageOption(code: "zh-Hans", flag: "🇨🇳", nameKey: "home.language.chinese"),
-            LanguageOption(code: "vi", flag: "🇻🇳", nameKey: "home.language.vietnamese"),
-            LanguageOption(code: "ko", flag: "🇰🇷", nameKey: "home.language.korean")
-        ]
-
-        func matches(localeIdentifier: String) -> Bool {
-            let loweredIdentifier = localeIdentifier.lowercased()
-            let normalizedCode = code.lowercased()
-
-            if loweredIdentifier == normalizedCode { return true }
-            if loweredIdentifier.replacingOccurrences(of: "-", with: "_") == normalizedCode { return true }
-
-            let identifierBase = loweredIdentifier.split(separator: "-").first?.lowercased()
-            if identifierBase == normalizedCode { return true }
-
-            if let codeBase = normalizedCode.split(separator: "-").first?.lowercased(), codeBase == loweredIdentifier {
-                return true
-            }
-
-            if let codeBase = normalizedCode.split(separator: "-").first?.lowercased(), codeBase == identifierBase {
-                return true
-            }
-
-            return false
-        }
-    }
-}
-
-private struct LanguageSelector: View {
-    @EnvironmentObject private var languageManager: LanguageManager
-    let options: [HomeView.LanguageOption]
-    let current: HomeView.LanguageOption
-
-    @State private var isPresented = false
-
-    var body: some View {
-        Button {
-            isPresented = true
-        } label: {
-            HStack(spacing: 8) {
-                Text(current.flag)
-                Text(LocalizedStringKey(current.displayName))
-                    .font(.subheadline.weight(.semibold))
-                Image(systemName: "chevron.down")
-                    .font(.system(size: 10, weight: .semibold))
-            }
-            .frame(minWidth: 140)
-            .padding(.vertical, 8)
-            .padding(.horizontal, 12)
-            .background(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .fill(Color(.systemBackground))
-            )
-            .overlay(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
-                    .stroke(Color.black.opacity(0.08), lineWidth: 1)
-            )
-            .foregroundColor(.primary)
-        }
-        .buttonStyle(.plain)
-        .sheet(isPresented: $isPresented) {
-            LanguageSelectionSheet(
-                options: options,
-                isPresented: $isPresented
-            )
-            .environmentObject(languageManager)
-        }
-    }
-}
-
-private struct LanguageSelectionSheet: View {
-    let options: [HomeView.LanguageOption]
-    @EnvironmentObject private var languageManager: LanguageManager
-    @Binding var isPresented: Bool
-
-    private var currentIdentifier: String { languageManager.currentLocale.identifier }
-
-    var body: some View {
-        NavigationStack {
-            List(options) { option in
-                Button {
-                    if !option.matches(localeIdentifier: currentIdentifier) {
-                        languageManager.setLanguage(code: option.code)
-                    }
-                    isPresented = false
-                } label: {
-                    HStack(spacing: 12) {
-                        Text(option.flag)
-                        Text(LocalizedStringKey(option.displayName))
-                            .foregroundStyle(.primary)
-                        Spacer()
-                        if option.matches(localeIdentifier: currentIdentifier) {
-                            Image(systemName: "checkmark")
-                                .foregroundStyle(Color.accentColor)
-                        }
-                    }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .contentShape(Rectangle())
-                }
-                .buttonStyle(.plain)
-                .disabled(option.matches(localeIdentifier: currentIdentifier))
-            }
-            .listStyle(.insetGrouped)
-            .listRowSeparator(.hidden)
-            .navigationTitle(LocalizedStringKey("home.language.sheet.title"))
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(LocalizedStringKey("common.cancel")) {
-                        isPresented = false
-                    }
-                }
-            }
-        }
-        .presentationDetents([.medium, .large])
-    }
 }
 
 private struct HomeArticleDetailView: View {

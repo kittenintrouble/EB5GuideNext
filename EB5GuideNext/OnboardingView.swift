@@ -106,6 +106,9 @@ struct OnboardingView: View {
             PrivacyPolicyView()
                 .environmentObject(languageManager)
         }
+        .overlay {
+            LanguageSwitchOverlay(languageManager: languageManager)
+        }
     }
 
     private var languageCard: some View {

@@ -5,6 +5,7 @@ import UIKit
 struct NewsDetailView: View {
     @EnvironmentObject private var languageManager: LanguageManager
     @EnvironmentObject private var newsStore: NewsStore
+    @Environment(\.dismiss) private var dismiss
 
     let articleID: String
     let initialSummary: NewsArticleSummary?
@@ -270,13 +271,14 @@ private extension NewsDetailView {
         newsStore.toggleFavorite(id: articleID)
     }
 
+    @MainActor
     func loadDetail(force: Bool = false) async {
         if !force, detail != nil { return }
         isLoading = true
         errorMessage = nil
 
         do {
-            let fetched = try await newsStore.fetchDetail(for: articleID, language: languageManager.currentLocale.identifier)
+            let fetched = try await newsStore.fetchDetail(for: articleID, language: languageManager.currentAPICode)
             detail = fetched
             summary = fetched.asSummary
         } catch {
