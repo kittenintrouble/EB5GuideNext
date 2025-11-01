@@ -8,6 +8,7 @@ struct ProjectsView: View {
     @StateObject private var imageLoader = ProjectImageLoadingCoordinator()
     @State private var isActive = false
     @State private var navigationPath: [String] = []
+    @State private var lastHandledPendingNavigationToken: UUID?
 
     private var languageIdentifier: String {
         languageManager.currentLocale.identifier
@@ -21,8 +22,13 @@ struct ProjectsView: View {
                 }
         }
         .environmentObject(imageLoader)
+        .onChange(of: navigationPath.isEmpty) { isEmpty in
+            if isEmpty {
+                lastHandledPendingNavigationToken = nil
+            }
+        }
         .onReceive(projectsStore.$pendingNavigation.compactMap { $0 }) { navigation in
-            openProjectDetail(navigation.projectID, pendingToken: navigation.token)
+            handlePendingNavigation(navigation)
         }
     }
 
@@ -57,7 +63,7 @@ struct ProjectsView: View {
                     )
                 }
                 if let pending = projectsStore.pendingNavigation {
-                    openProjectDetail(pending.projectID, pendingToken: pending.token)
+                    handlePendingNavigation(pending)
                 }
             }
             .onDisappear {
@@ -155,20 +161,39 @@ struct ProjectsView: View {
             )
         }
         .buttonStyle(.plain)
+        .simultaneousGesture(
+            TapGesture().onEnded {
+                clearPendingNavigationIfNeeded()
+            }
+        )
     }
 }
 
 private extension ProjectsView {
-    func openProjectDetail(_ projectID: String, pendingToken: UUID? = nil) {
-        navigationPath.removeAll()
-        navigationPath.append(projectID)
-        if let token = pendingToken {
-            projectsStore.consumePendingProject(token: token)
-        }
+    func handlePendingNavigation(_ pending: ProjectsStore.PendingProjectNavigation) {
+        guard pending.token != lastHandledPendingNavigationToken else { return }
+        lastHandledPendingNavigationToken = pending.token
+        navigateToProject(with: pending.projectID)
+        projectsStore.consumePendingProject(token: pending.token)
+    }
+
+    func navigateToProject(with projectID: String) {
+        navigationPath = [projectID]
     }
 
     func resetNavigationSelection() {
+        lastHandledPendingNavigationToken = nil
         navigationPath.removeAll()
+    }
+
+    func clearPendingNavigationIfNeeded() {
+        if let pending = projectsStore.pendingNavigation {
+            projectsStore.consumePendingProject(token: pending.token)
+        }
+        lastHandledPendingNavigationToken = nil
+        if !navigationPath.isEmpty {
+            navigationPath.removeAll()
+        }
     }
 }
 
